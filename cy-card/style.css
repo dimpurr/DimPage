@@ -1,0 +1,224 @@
+@font-face{
+	font-family: Century Gothic;
+	src: local('Century Gothic'), url(http://img1.cheny.org/cyfont/CenturyGothic.TTF) format('ttf');
+}
+
+@media all and (min-width: 600px) {
+
+h1.h2,h3,h4,h5,h6,p,pre {
+	padding: 0;
+	margin: 0;
+}
+
+#up {
+	height: 100px;
+}
+
+#page {
+	width: 500px;
+	height: *;
+	background: #F0F0F0;
+	border-radius: 15px 15px 0 15px;
+}
+
+#left {
+	width: 100px;
+	float: left;
+	background: none;
+}
+
+#head {
+	border-radius: 5px;
+}
+
+#right {
+	width: 400px;
+	float: right;
+	text-align: left;
+}
+
+#name {
+	float:left;
+	width: 250px;
+	height: 50px;
+	padding: 5px 20px 5px 20px;
+}
+
+#name h1 {
+	font-family: "Century Gothic", "微软雅黑", Arial, "Times New Roman";
+	font-size: 24px;
+	color: #000000;
+}
+
+#home {
+	float: right;
+	text-align:right;
+	height: 50px;
+	margin: 20px 5px 20px 5px;
+}
+
+#home a {
+	background: #666666;
+	padding: 5px 10px 5px 10px;
+	margin: 5px 10px 5px 10px;
+	border-radius: 5px;
+	font-family: "微软雅黑", Arial;
+	font-size: 18px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#home a:hover {
+	background: #999999;
+}
+
+#home a:active {
+	background: #CCCCCC;
+}
+
+#info {
+	width: 400px;
+	padding-left: 20px;
+	margin: 0 0 0 0;
+}
+
+#info p {
+	font-family: "Times New Roman";
+	font-size: 14px;
+	font-style: italic;
+	padding-bottom: 5px;
+}
+
+#text {
+	padding: 5px 0 0 10px;
+	margin: 0 0 0 10px;
+	background: #FFFFFF;
+	border-radius: 5px 0 0 5px;
+}
+
+#text p {
+	padding: 3px 0 8px 0;
+	font-family: "微软雅黑", Arial;
+	font-size: 16px;
+}
+
+.left {
+	float: left;
+	height: 50px;
+	width: 50px;
+	font-family: "微软雅黑", Arial;
+	font-size: 18px;
+	color: #000000;
+}
+
+#about {
+	padding: 20px 0 20px 0;
+}
+
+#aboutright {
+	float: right;
+	height: 50px;
+	width: 350px;
+}
+
+#aboutright a {
+	background: #CCCCCC;
+	padding: 5px 10px 5px 10px;
+	margin: 5px 7px 5px 7px;
+	border-radius: 5px;
+	font-family: "微软雅黑", Arial;
+	font-size: 18px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#aboutright a:hover {
+	background: #999999;
+}
+
+#aboutright a:active {
+	background: #000000;
+}
+
+#link {
+	padding: 5px 0 5px 0;
+	width: 400px;
+}
+
+.linktext {
+	background: #CCCCCC;
+	padding: 5px 10px 5px 10px;
+	margin: 5px 7px 5px 7px;
+	border-radius: 5px;
+	font-family: "微软雅黑", Arial;
+	font-size: 18px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#linkright {
+	float: right;
+	height: 100px;
+	width: 350px;
+}
+
+/* 87x100 7,10,60 80,10,10 */
+
+.link {
+	float: left;
+	background: #CCCCCC;
+	width: 75px;
+	height: 100px;
+	border-radius:5px;
+	margin: 5px 7px 5px 7px;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.link:hover {
+	background: #999999;
+	color: #FFFFFF;
+}
+
+.link:active {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+.link p {
+	background: none;
+	font-family: "微软雅黑", Arial;
+	font-size: 14px;
+	padding: 10px 0 0 0;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.link p a:active,.link p a:hover {
+	color:#FFFFFF;
+}
+
+}
+
+@media all and (min-width: 10px) {
+
+#page ｛
+	background: #F1F0F0;
+}
+
+#aboutright a , #home a  {
+	background: #CCCCCC;
+	padding: 5px 10px 5px 10px;
+	margin: 5px 7px 5px 7px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.link p {
+	padding: 10px 0 0 0;
+	text-decoration: none;
+}
+
+}

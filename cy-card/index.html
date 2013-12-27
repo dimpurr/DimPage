@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+
+	<meta charset="UTF-8" />
+	<title>Dimpurr Cheny (钉子) @ WEB / UI / ACGMN</title>
+
+	<script src="http://res.cheny.org/jquery/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<meta name="author" content="dimpurr" />
+	<meta name="description" content="Dimpurr Cheny (钉子) WEB/UI/ACMN 千里之行始于足下. - 一点也不可爱的男孩子。萝莉控一只，苦逼初三党。方向是交互和前端，技能HTML5、PHP、Python。希望成为菊苣！" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="home" href="http://dimpurr.com" />
+	
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script>
+	var home = '#技术宅 #交互&amp;前端 #LOLI控 #中二一只 千里之行始于足下.';
+	var jianjie = '<p>一点也不可爱的男孩子。萝莉控一只。苦逼初三党，正处在迷之中二时期。以前喜欢涂涂画画，但因为父母影响天赋技能点不幸消耗殆尽成为画渣。</p><p>感兴趣的方向是交互和前端。主攻网络技术，本地编程渣，掌握HTML5、PHP、jQuery，Python、C++学习中。希望成为菊苣！</p>';
+	var xinqing = '…… TaiG 的事情还没结束又来了么 在国内耍流氓就算了 还把脸丢到国外去 ……</p><p>在钉子的示范效应下同桌三人花了一节英语课 (……) 各出了一张意义不明的圣诞贺图<b>(2013/5/5)</b>';
+	var guanzhu = '「360真是毫无底线啊，为了抢入口连越狱这块都伸手了。」越狱了的小伙伴们感觉如何 (σ≧∀≦)σ﻿</p><p>一辆载着 Apple 员工的 Google 大巴 Windows 被砸了 ……﻿';
+	var xiangmu = '没什么大项目。在画 COS V5.1 Privew (Railgun) ，预计PSD会同步制作。同时在做个人故事页面，用 BootStrap 框架，欢迎随时关注进度。</p><p>还是想开Web项目……遨云栈是一个选项，但是技术难度确实高，域名也买不到。那做啥呢……';
+	var note = '<p><b>2-12 V0.1：</b>撰写了第一代页面和CSS，全部格式由css+div实现。使用了浮动、远程字体、伪类按钮。尝试渐变失败。</p><p><b>2-18 V0.2：</b>加入HTML5验证，使用JS处理介绍和Home链接。使用了函数，因为函数实参为中文和innerHTML纠结了半天。</p><p><b>2-18 V0.21：</b>增加隐藏开发笔记，修改text段落边距，增加page背景高度自适应。page高度自适应使用div style="clear:both"，为何底部有边距尚不明就里。</p><p><b>4-11 V0.3：</b>更改介绍为关于，添加并撰写了简介、心情、关注、项目，添加点击头像进入笔记，添加搜索引擎元数据。';
+	function changeText(str){document.getElementById("textp").innerHTML=str;}
+	</script>
+
+</head>
+
+<body>
+
+<div align="center" id="center">
+
+<div id="up"></div>
+
+<div id="page">
+
+<div id="left">
+	<div id="head">
+	<a href="javascript:void(0)" onClick="changeText(note);">
+		<img src="head.jpg" width="100" height="100" alt="Dimpurr" longdesc="http://www.dimpurr.com" />
+	</a>
+	</div>
+</div>
+
+<div id="right">
+
+	<div id="name">
+    	<h1>Dimpurr_钉子</h1>
+	</div>
+
+	<div id="home">
+    	<a href="javascript:void(0)" onClick="changeText(home);">签名</a>
+	</div>
+
+	<div id="info">
+    	<p>March,30&nbsp;Guangdong,Huizhou</p>
+	</div>
+
+	<div id="text">
+    	<p id="textp">#技术宅 #交互&amp;前端 #LOLI控 #中二一只 千里之行始于足下.</p>
+	</div>
+
+<div id="about">
+
+    	<div class="left">
+	<p>关于</p>
+    	</div>
+    	
+	<div id="aboutright">
+		<a href="javascript:void(0)" onClick="changeText(jianjie);">简介</a>
+		<a href="javascript:void(0)" onClick="changeText(xinqing);">心情</a>
+		<a href="javascript:void(0)" onClick="changeText(guanzhu);">关注</a>
+		<a href="javascript:void(0)" onClick="changeText(xiangmu);">项目</a>
+	</div>
+
+</div>
+
+<div id="link">
+
+    	<div class="left">
+		<p>链接</p>
+    	</div>
+    	
+	<div id="linkright">
+	
+	<a href="#">
+	<div class="link">
+		<img src="blog.png" width="64" height="64" alt="blog">
+                <p>钉子の次元</p>
+	</div>
+	</a>
+
+	<a href="#">
+	<div class="link">
+		<img src="blog.png" width="64" height="64" alt="blog">
+                <p>某人の微博</p>
+	</div>
+	</a>
+
+	<a href="#">
+	<div class="link">
+		<img src="blog.png" width="64" height="64" alt="blog">
+                <p>PO主の坑</p>
+	</div>
+	</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div style="clear:both;"></div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
