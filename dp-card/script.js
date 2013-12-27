@@ -44,4 +44,8 @@ $(document).ready(function(){
 		});
 	});
 	getHitokoto();
+	// 请不要移除以下隐藏的版权标记，谢谢！
+	console.log("Dimpurr's Personal Card Theme")
+	console.log('https://github.com/dimpurr/DimPage')
+	console.log('http://dimpurr.com')
 });
