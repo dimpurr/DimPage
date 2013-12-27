@@ -1,0 +1,181 @@
+body {
+	background-image: url(./halloween.jpg);
+	background-color: #F6F6E6;
+	background-position: right bottom;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	color: #454647;
+	text-align: center;
+	font-family: "YaHei Consolas Hybrid","微软雅黑","Segoe UI", "Consolas",Arial, "Times New Roman";
+	-webkit-transition: all ease 0.1s;
+	-moz-transition: all ease 0.1s;
+	-ms-transition: all ease 0.1s;
+	transition: all ease 0.1s;
+}
+
+#page {
+	max-width: 380px;
+	border-radius: 5px;
+	padding: 25px 10px;
+	margin: 50px auto 0 auto;
+	background: -webkit-linear-gradient(rgba(255,255,255,0.0), rgba(255,255,255,0.4),rgba(255,255,255,0.6),rgba(255,255,255,0.8));
+	background: -moz-linear-gradient(rgba(255,255,255,0.0), rgba(255,255,255,0.4),rgba(255,255,255,0.6),rgba(255,255,255,0.8));
+	background: -ms-linear-gradient(rgba(255,255,255,0.0), rgba(255,255,255,0.4),rgba(255,255,255,0.6),rgba(255,255,255,0.8));
+	background: linear-gradient(rgba(255,255,255,0.0), rgba(255,255,255,0.4),rgba(255,255,255,0.6),rgba(255,255,255,0.8));
+	height: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+.hide {
+	display: none;
+}
+
+#hitokoto a:hover ,h1:hover, h2:hover, p:hover, a:hover {
+	-webkit-transition: all ease 0.2s;
+	-moz-transition: all ease 0.2s;
+	-ms-transition: all ease 0.2s;
+	transition: all ease 0.2s;
+	color: #000;
+}
+
+img:hover {
+	-webkit-transition: all ease 0.1s;
+	-moz-transition: all ease 0.1s;
+	-ms-transition: all ease 0.1s;
+	transition: all ease 0.1s;
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+
+img:active , a:active {
+	-webkit-transition: all ease 0.2s;
+	-moz-transition: all ease 0.2s;
+	-ms-transition: all ease 0.2s;
+	transition: all ease 0.2s;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	border-bottom: dotted 1px;
+}
+
+h1 {
+	font-size: 32px;
+	line-height: 32px;
+	margin: 20px 0 0 0;
+}
+
+h2 {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	margin: 10px 0 20px 0;
+}
+
+ul {
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+#head {
+	width: 128px;
+	margin-top: 0;
+	border-radius: 0 0 500px 500px;
+}
+
+#tag p {
+	font-size: 16px;
+	margin: 0;
+}
+
+.l_a {
+	display: inline-block;
+	font-weight: bold;
+	margin: 20px 0 0 0;
+}
+
+.btn {
+	padding: 20px 5px 10px 5px;
+	width: 46px;
+	-webkit-filter: brightness(-1);
+	-moz-filter: brightness(-1);
+	-ms-filter: brightness(-1);
+	filter: brightness(-1);
+}
+
+#hidetext {
+	border-top: 1px dotted;
+	margin-top: 20px;
+	padding-top: 0px;
+}
+
+#textdiv img , #hidetext img {
+	width: 32px;
+}
+
+#textdiv p {
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+#imgh {
+	height: 10px;
+}
+
+#hitokoto {
+	margin: 5px 0 0 0;
+}
+
+#hitokoto a {
+	border: none;
+	color: #555;
+}
+
+@media screen and (min-width: 600px){
+
+	#hidetext {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 599px){
+
+	#btndiv {
+		display: none;
+	}
+
+	body {
+		background: #121314;
+		color: #FEFEFE;
+	}
+
+	#hitokoto a:hover {
+		color: #FFF;
+	}
+
+	#page {
+		background: none;
+		height: 100%;
+		width: 100%;
+		top: 0;
+	}
+
+	p, h1, h2, a, p:hover, h1:hover, h2:hover, a:hover {
+		color: #FEFEFE;
+	}
+
+}
