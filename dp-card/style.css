@@ -1,13 +1,14 @@
 body {
-	background-image: url(./halloween.jpg);
+	background-image: url(./background.jpg);
 	background-color: #F6F6E6;
 	background-position: right bottom;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: auto 100%;
+	background-size: cover;
 	color: #454647;
 	text-align: center;
-	font-family: "YaHei Consolas Hybrid","微软雅黑","Segoe UI", "Consolas",Arial, "Times New Roman";
+	font-family: "YaHei Consolas Hybrid", "Consolas", "微软雅黑", "Segoe UI", Arial, "Times New Roman";
 	-webkit-transition: all ease 0.1s;
 	-moz-transition: all ease 0.1s;
 	-ms-transition: all ease 0.1s;
@@ -93,7 +94,7 @@ ul li {
 #head {
 	width: 128px;
 	margin-top: 0;
-	border-radius: 0 0 500px 500px;
+	border-radius: 500px;
 }
 
 #tag p {
