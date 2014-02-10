@@ -15,18 +15,22 @@ var addEvent = (function(){
 	})(),
 	mousewheel = "mousewheel";
 
+$(window).resize(function() {
+
 ifvar = 1;
+width = document.body.clientWidth;
 
 $("#article")
 	.mouseenter( function() { ifvar = 0 } )
-	.mouseout( function() { ifvar = 1 } );
+	.mouseleave( function() { ifvar = 1 } );
 
-document.body.mousewheel( function(event){
-		event = window.event || event;
-		if ( ifvar != 0 ) {
-			$(document).scrollLeft( $(document).scrollLeft() - event.wheelDelta );
-		};
-	}, false
-);
+addEvent(document.body, mousewheel, function(event){
+	event = window.event || event;
+	if ( ifvar != 0 && width > 1020 ) {
+		$(document).scrollLeft( $(document).scrollLeft() - event.wheelDelta );
+	};
+}, false);
+
+});
 
 });
