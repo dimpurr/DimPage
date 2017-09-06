@@ -16,15 +16,18 @@ var data = {
 		id: "anime",
 		title: "ANIME",
 		bgStyle: { backgroundImage: 'url("img/anime.jpg")' },
-		slides: [{
-			mode: "cover",
-			bgStyle: { backgroundImage: 'url("img/anime-slide-1.jpg")' },
-			desc: "《百合熊岚》。几原晶彦一部并不完美，但是观看体验较好的百合动画。"
-		}, {
-			mode: "capture",
-			bgStyle: { backgroundImage: 'url("img/anime-slide-2.png")' },
-			desc: "GarageBand。这是一个截图小图展示的示例。"
-		}],
+		slides: [
+			// {
+			// 	mode: "cover",
+			// 	bgStyle: { backgroundImage: 'url("img/anime-slide-1.jpg")' },
+			// 	desc: "《百合熊岚》。几原晶彦一部并不完美，但是观看体验较好的百合动画。"
+			// },
+			{
+				mode: "capture",
+				bgStyle: { backgroundImage: 'url("img/anime-slide-2.png")' },
+				desc: "GarageBand。这是一个截图小图展示的示例。"
+			}
+		],
 		termDesc: {
 			default: "这是默认的提示语。\n尝试多行。",
 			q: [{
@@ -35,6 +38,10 @@ var data = {
 				desc: "这是问题回答的正文。"
 			}]
 		}
+	}, {
+		id: "ddd",
+		title: "DDD",
+		bgStyle: { backgroundImage: 'url("img/anime.jpg")' }
 	}],
 	view: {
 		currentCate: "anime",

@@ -5,9 +5,45 @@ body {
 	color: #EEE;
 }
 
+.loading {
+	pointer-events: none;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 35% 20px 0 20px;
+	padding: 35vh 20px 0 20px;
+	height: 100%;
+	background: #121314;
+	transition: all ease 3s;
+}
+
+.loading p {
+	opacity: 0;
+	position: relative;
+	top: 0;
+	transition: all ease 1s;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+[v-cloak] + .loading, [v-cloak] + .loading p {
+	opacity: 1;
+}
+
+[v-cloak] + .loading p {
+	top: -30px;
+}
+
+
 .ctn {
-	max-width: 400px;
+	max-width: 1200px;
 	margin: 0 auto;
+	padding: 0 80px;
 }
 
 .head, .dimsh {
@@ -38,6 +74,130 @@ body {
 	margin: 0;
 	font-size: 16px;
 	opacity: 0.7;
+}
+
+.centre {
+	display: flex;
+	flex-flow: row;
+}
+
+.catenav {
+	width: 200px;
+}
+
+.catenav ol {
+	list-style: none;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.catenav li input {
+	display: none;
+}
+
+.catenav li {
+	display: block;
+	width: 100%;
+	background-size: cover;
+	text-align: right;
+}
+
+.catenav li label {
+	transition: all ease 1s;
+	cursor: pointer;
+	display: block;
+	background: rgba(0,0,0,0.8);
+}
+
+.catenav li label:hover {
+	background: rgba(0,0,0,0.5);
+	transition: all ease 0.1s;
+}
+
+.catenav li label .catename {
+	display: block;
+	opacity: 0.5;
+	padding: 60px 20px 10px 10px;
+	border-right: 0 solid rgba(255,255,255,0.7);
+	font-family: Dense;
+	font-size: 36px;
+	line-height: 42px;
+	text-shadow: 0 0 4px #000;
+	transition: all ease 0.1s;
+}
+
+.catenav li input:checked + label {
+	background: none;
+}
+
+.catenav li input:checked + label .catename {
+	opacity: 1;
+	border-width: 5px;
+}
+
+.slides {
+	position: relative;
+	flex: 1;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.slides li.cover, .slides .capture {
+	position: relative;
+	height: 100%;
+}
+
+.slide-photo-bg {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+.capture .slide-photo-bg {
+	filter: blur(20px);
+	width: 120%;
+	height: 120%;
+	margin: -100% -10% -10% -10%;
+}
+
+.slide-photo-min {
+	position: relative;
+	margin: 30px 50px 180px 50px;
+	height: 80%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 20;
+	border-radius: 3px;
+	box-shadow: 0 0 60px #000;
+}
+
+.slide-desc {
+	z-index: 10;
+	position: absolute;
+	bottom: 10px;
+	padding: 10px 40px;
+	line-height: 1.2em;
+	text-align: left;
+	text-shadow: 0 0 8px #000;
+}
+
+.capture .slide-desc {
+	bottom: 30px;
+}
+
+.slide-desc-prevbtn {
+
+}
+
+.slide-desc-nextbtn {
+
 }
 
 .dimsh {

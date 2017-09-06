@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">	
 </head>
-<body><div id="dimlens17">
+<body><div id="dimlens17" v-cloak>
 <!--[if lt IE 7]>
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -19,27 +19,29 @@
 </div></header>
 
 <div class="centre">
-<nav><ol>
-	<li v-for="item in c">
+<nav class="catenav"><ol>
+	<li v-for="item in c" v-bind:style="item.bgStyle">
 		<input type="radio"
 			:id="item.id"
 			:value="item.id"
 			name="item.id"
-			v-model="view.currentCate"
-			v-bind:style="item.bgStyle">
-		<label :for="item.id">{{ item.title }}</label>
+			v-model="view.currentCate">
+		<label :for="item.id"><span class="catename">{{ item.title }}<span></label>
 	</li>
 </ol></nav>
 
-<ul>
+<ul class="slides">
 	<li v-for="item in c[currentCateI].slides" 
-		v-bind:style="item.bgStyle"
 		v-bind:class="item.mode">
-		<div v-if="item.mode == 'capture'" 
-			v-bind:style="item.bgStyle">
-			To make div big
+		<div class="slide-photo-min" v-if="item.mode == 'capture'" 
+		v-bind:style="item.bgStyle">
 		</div>
-		<p>{{ item.desc }}</p>
+		<div class="slide-photo-bg" v-bind:style="item.bgStyle"></div>
+		<p class="slide-desc">
+			<a class="slide-desc-prevbtn">上一张</a>
+			<a class="slide-desc-nextbtn">下一张</a>
+			{{ item.desc }}
+		</p>
 	</li>
 </ul>
 </div>
@@ -48,6 +50,10 @@
 	{{ c[currentCateI].termDesc }}
 </div></article>
 
+</div>
+<div class="loading">
+	<p>... Loading ...</p>
+	<p>DIM_LENS &lt;2017&gt;<br>~ 仰望天空的钉子瞳孔中所映照的世界 ~</p>
 </div>
 <script src="vue.js"></script>
 <!-- <script src="//unpkg.com/vue"></script> -->
