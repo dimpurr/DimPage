@@ -1,36 +1,69 @@
-$(document).ready(function(){
+var widthThreshold = 1020;
+var speed = 2.0;
 
-var addEvent = (function(){
-		if (window.addEventListener) {
-			return function(el, sType, fn, capture) {
-				el.addEventListener(sType, fn, (capture));
-			};
-		} else if (window.attachEvent) {
-			return function(el, sType, fn, capture) {
-				el.attachEvent("on" + sType, fn);
-			};
-		} else {
-			return function(){};
-		}
-	})(),
-	mousewheel = "mousewheel";
+$(document).ready(function () {
 
-$(window).resize(function() {
+    // a # smooth scroll
+    (function () {
+        var allATag = document.querySelectorAll('a[href]');
+        for (var i = 0; i < allATag.length; ++i) {
+            var currentNode = allATag[i];
+            if (currentNode.hash.indexOf('#') === 0) {
+                currentNode.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.getElementById(this.hash.substring(1)).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }, false);
+            }
+        }
+    })();
 
-ifvar = 1;
-width = document.body.clientWidth;
+    // disable horizon scroll inside articles
+    (function () {
+        var articles = document.querySelectorAll('article');
+        for (var i = 0; i < articles.length; ++i) {
+            articles[i].addEventListener('mousewheel', function (e) {
+                if (!((e.wheelDelta < 0 && this.offsetHeight + this.scrollTop === this.scrollHeight) || (e.wheelDelta > 0 && this.scrollTop === 0))) {
+                    e.stopPropagation();
+                }
+            })
+        }
+    })();
 
-$("#article")
-	.mouseenter( function() { ifvar = 0 } )
-	.mouseleave( function() { ifvar = 1 } );
+    // wheel scroll
+    document.addEventListener('mousewheel', function (e) {
+        e.preventDefault();
+        if (document.body.clientWidth > widthThreshold) {
+            window.scrollBy({
+                top: 0,
+                left: -e.wheelDelta * speed,
+                behavior: 'smooth'
+            });
+        } else {
+            window.scrollBy({
+                top: -e.wheelDelta * speed,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    });
 
-addEvent(document.body, mousewheel, function(event){
-	event = window.event || event;
-	if ( ifvar != 0 && width > 1020 ) {
-		$(document).scrollLeft( $(document).scrollLeft() - event.wheelDelta );
-	};
-}, false);
-
-});
+    // document resize
+    window.onresize = function () {
+        if (window.document.body.clientWidth > 1020) {
+            window.scrollTo({
+                top: 0,
+                left: document.body.scrollLeft,
+                behavior: 'smooth'
+            });
+        } else {
+            window.scrollTo({
+                top: document.body.scrollTop,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    };
 
 });
