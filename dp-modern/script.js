@@ -1,7 +1,7 @@
 var widthThreshold = 1020;
 var speed = 2.0;
 
-$(document).ready(function () {
+window.onload = function () {
 
     // a # smooth scroll
     (function () {
@@ -66,4 +66,4 @@ $(document).ready(function () {
         }
     };
 
-});
+};
