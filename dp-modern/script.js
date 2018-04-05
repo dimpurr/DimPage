@@ -1,5 +1,12 @@
 var widthThreshold = 1020;
-var speed = 2.0;
+var speed = 3.0;
+
+var readProgress = 0.0;
+
+const WIDTH = 1;
+const HEIGHT = 0;
+
+var displayStyle = 0;
 
 window.onload = function () {
 
@@ -49,21 +56,30 @@ window.onload = function () {
         }
     });
 
+    document.addEventListener('scroll', function (e) {
+        if (displayStyle === (window.document.body.clientWidth > 1020)) {
+            if (document.body.clientWidth > widthThreshold) {
+                readProgress = document.documentElement.scrollLeft / document.documentElement.scrollWidth;
+            } else {
+                readProgress = document.documentElement.scrollTop / document.documentElement.scrollHeight;
+            }
+        }
+    });
+
     // document resize
-    window.onresize = function () {
-        if (window.document.body.clientWidth > 1020) {
+    window.onresize = function (e) {
+        if ((window.document.body.clientWidth > 1020) ^ displayStyle) {
+            displayStyle = document.body.clientWidth > 1020;
             window.scrollTo({
-                top: 0,
-                left: document.body.scrollLeft,
-                behavior: 'smooth'
-            });
-        } else {
-            window.scrollTo({
-                top: document.body.scrollTop,
-                left: 0,
+                top: displayStyle ? 0 : readProgress * document.documentElement.scrollHeight,
+                left: displayStyle ? readProgress * document.documentElement.scrollWidth : 0,
                 behavior: 'smooth'
             });
         }
     };
+
+    if (window.document.body.clientWidth > 1020) {
+        displayStyle = WIDTH;
+    }
 
 };
