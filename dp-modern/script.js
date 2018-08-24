@@ -1,5 +1,5 @@
 var widthThreshold = 1020;
-var speed = 3.0;
+var speed = 1.0;
 
 var readProgress = 0.0;
 
@@ -45,13 +45,13 @@ window.onload = function () {
             window.scrollBy({
                 top: 0,
                 left: -e.wheelDelta * speed,
-                behavior: 'smooth'
+                behavior: 'auto'
             });
         } else {
             window.scrollBy({
                 top: -e.wheelDelta * speed,
                 left: 0,
-                behavior: 'smooth'
+                behavior: 'auto'
             });
         }
     });
