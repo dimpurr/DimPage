@@ -1,0 +1,107 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: default;
+}
+
+header img.avatar {
+  width: 64px;
+  border-radius: 100%;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+header h4 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 12px;
+  color: #aaa;
+}
+
+header h3 {
+  margin: 1em 0;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+header h3 #slogandate {
+  color: #aaa;
+}
+
+section {
+  margin: 3em 0;
+}
+
+section h3 {
+  margin: 0.5em 0;
+  color: #777;
+  font-size: 12.5px;
+  font-weight: normal;
+}
+
+section h3::before,
+section h3::after {
+  content: "-";
+  margin: 0 0.5em;
+}
+
+section ul {
+  margin: 0;
+  padding: 0;
+}
+
+section ul li {
+  margin: 0 0em;
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+
+/* section ul li { */
+section.link ul li:hover {
+  background: #f7f7f7;
+}
+
+section ul li span {
+  color: #444;
+}
+
+section.history {
+    opacity: 0.5;
+}
+
+section.history a {
+  font-size: 11px;
+  color: #777;
+}
+
+section.history a span {
+  color: #aaa;
+}
+
+section.tips {
+  margin: 0;
+}
+
+section.tips p {
+  font-size: 11px;
+  color: #777;
+}
