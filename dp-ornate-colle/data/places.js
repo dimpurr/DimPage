@@ -11,7 +11,7 @@ window.COLLE_PLACES = [
    "zh": "伦敦"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -35,7 +35,7 @@ window.COLLE_PLACES = [
    "zh": "罗马"
   },
   "country": {
-   "en": "意大利",
+   "en": "Italy",
    "zh": "意大利"
   },
   "flag": "🇮🇹",
@@ -59,7 +59,7 @@ window.COLLE_PLACES = [
    "zh": "梵蒂冈"
   },
   "country": {
-   "en": "梵蒂冈",
+   "en": "Vatican City",
    "zh": "梵蒂冈"
   },
   "flag": "🇻🇦",
@@ -83,7 +83,7 @@ window.COLLE_PLACES = [
    "zh": "米兰"
   },
   "country": {
-   "en": "意大利",
+   "en": "Italy",
    "zh": "意大利"
   },
   "flag": "🇮🇹",
@@ -107,7 +107,7 @@ window.COLLE_PLACES = [
    "zh": "北京"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -131,7 +131,7 @@ window.COLLE_PLACES = [
    "zh": "惠州"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -155,7 +155,7 @@ window.COLLE_PLACES = [
    "zh": "茶陵"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -179,7 +179,7 @@ window.COLLE_PLACES = [
    "zh": "奥伦堡"
   },
   "country": {
-   "en": "俄罗斯",
+   "en": "Russia",
    "zh": "俄罗斯"
   },
   "flag": "🇷🇺",
@@ -203,7 +203,7 @@ window.COLLE_PLACES = [
    "zh": "上海"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -227,7 +227,7 @@ window.COLLE_PLACES = [
    "zh": "杭州"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -251,7 +251,7 @@ window.COLLE_PLACES = [
    "zh": "长沙"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -275,7 +275,7 @@ window.COLLE_PLACES = [
    "zh": "株洲"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -299,7 +299,7 @@ window.COLLE_PLACES = [
    "zh": "南特"
   },
   "country": {
-   "en": "法国",
+   "en": "France",
    "zh": "法国"
   },
   "flag": "🇫🇷",
@@ -323,7 +323,7 @@ window.COLLE_PLACES = [
    "zh": "圣迭戈"
   },
   "country": {
-   "en": "美国",
+   "en": "USA",
    "zh": "美国"
   },
   "flag": "🇺🇸",
@@ -347,7 +347,7 @@ window.COLLE_PLACES = [
    "zh": "天津"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -371,11 +371,11 @@ window.COLLE_PLACES = [
    "zh": "惠东 · 双月湾"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
-  "year": 2025,
+  "year": 2012,
   "first": "2025-08",
   "last": "2025-08",
   "lat": 22.5892,
@@ -383,7 +383,7 @@ window.COLLE_PLACES = [
   "days": 1,
   "photos": 979,
   "img": "img/places/huidong-shuangyuewan.webp",
-  "years": "2025",
+  "years": "2012–2025",
   "cc": "CN",
   "endyear": 2025
  },
@@ -395,7 +395,7 @@ window.COLLE_PLACES = [
    "zh": "通州"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -419,7 +419,7 @@ window.COLLE_PLACES = [
    "zh": "圣彼得堡"
   },
   "country": {
-   "en": "俄罗斯",
+   "en": "Russia",
    "zh": "俄罗斯"
   },
   "flag": "🇷🇺",
@@ -443,7 +443,7 @@ window.COLLE_PLACES = [
    "zh": "爱丁堡"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -467,7 +467,7 @@ window.COLLE_PLACES = [
    "zh": "巴黎"
   },
   "country": {
-   "en": "法国",
+   "en": "France",
    "zh": "法国"
   },
   "flag": "🇫🇷",
@@ -491,7 +491,7 @@ window.COLLE_PLACES = [
    "zh": "深圳"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -515,7 +515,7 @@ window.COLLE_PLACES = [
    "zh": "牛津"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -539,11 +539,11 @@ window.COLLE_PLACES = [
    "zh": "香港"
   },
   "country": {
-   "en": "香港",
+   "en": "Hong Kong",
    "zh": "香港"
   },
   "flag": "🇭🇰",
-  "year": 2022,
+  "year": 2005,
   "first": "2022-03",
   "last": "2024-08",
   "lat": 22.3144,
@@ -551,7 +551,7 @@ window.COLLE_PLACES = [
   "days": 4,
   "photos": 398,
   "img": "img/places/hong-kong.webp",
-  "years": "2022–2024",
+  "years": "2005–2024",
   "cc": "HK",
   "endyear": 2024
  },
@@ -563,7 +563,7 @@ window.COLLE_PLACES = [
    "zh": "伊斯坦布尔"
   },
   "country": {
-   "en": "土耳其",
+   "en": "Türkiye",
    "zh": "土耳其"
   },
   "flag": "🇹🇷",
@@ -587,7 +587,7 @@ window.COLLE_PLACES = [
    "zh": "剑桥"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -611,7 +611,7 @@ window.COLLE_PLACES = [
    "zh": "约克"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -635,7 +635,7 @@ window.COLLE_PLACES = [
    "zh": "广州"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -659,7 +659,7 @@ window.COLLE_PLACES = [
    "zh": "纽约"
   },
   "country": {
-   "en": "美国",
+   "en": "USA",
    "zh": "美国"
   },
   "flag": "🇺🇸",
@@ -683,7 +683,7 @@ window.COLLE_PLACES = [
    "zh": "重庆"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -707,7 +707,7 @@ window.COLLE_PLACES = [
    "zh": "亚特兰大"
   },
   "country": {
-   "en": "美国",
+   "en": "USA",
    "zh": "美国"
   },
   "flag": "🇺🇸",
@@ -731,7 +731,7 @@ window.COLLE_PLACES = [
    "zh": "济南"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -755,7 +755,7 @@ window.COLLE_PLACES = [
    "zh": "格拉斯哥"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -779,7 +779,7 @@ window.COLLE_PLACES = [
    "zh": "岳阳"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -803,7 +803,7 @@ window.COLLE_PLACES = [
    "zh": "奥本"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -827,7 +827,7 @@ window.COLLE_PLACES = [
    "zh": "摩洛哥"
   },
   "country": {
-   "en": "摩洛哥",
+   "en": "Morocco",
    "zh": "摩洛哥"
   },
   "flag": "🇲🇦",
@@ -849,7 +849,7 @@ window.COLLE_PLACES = [
    "zh": "大埔"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -873,7 +873,7 @@ window.COLLE_PLACES = [
    "zh": "七姐妹 · 白崖"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -897,7 +897,7 @@ window.COLLE_PLACES = [
    "zh": "巴斯"
   },
   "country": {
-   "en": "英国",
+   "en": "UK",
    "zh": "英国"
   },
   "flag": "🇬🇧",
@@ -921,7 +921,7 @@ window.COLLE_PLACES = [
    "zh": "东莞"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -943,7 +943,7 @@ window.COLLE_PLACES = [
    "zh": "南京"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -965,7 +965,7 @@ window.COLLE_PLACES = [
    "zh": "无锡"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -987,7 +987,7 @@ window.COLLE_PLACES = [
    "zh": "苏州"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -1009,7 +1009,7 @@ window.COLLE_PLACES = [
    "zh": "三清山"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -1031,7 +1031,7 @@ window.COLLE_PLACES = [
    "zh": "丹霞山"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -1053,7 +1053,7 @@ window.COLLE_PLACES = [
    "zh": "华山"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -1068,28 +1068,6 @@ window.COLLE_PLACES = [
   "img": "img/places/huashan.webp"
  },
  {
-  "id": "dujiangyan-qingcheng",
-  "cat": "travel",
-  "name": {
-   "en": "Dujiangyan · Qingcheng",
-   "zh": "都江堰 · 青城山"
-  },
-  "country": {
-   "en": "中国",
-   "zh": "中国"
-  },
-  "flag": "🇨🇳",
-  "cc": "CN",
-  "year": 2007,
-  "years": "2007",
-  "lat": 0,
-  "lon": 0,
-  "days": 0,
-  "photos": 0,
-  "endyear": 2007,
-  "img": "img/places/dujiangyan-qingcheng.webp"
- },
- {
   "id": "zhaoqing-dinghushan",
   "cat": "travel",
   "name": {
@@ -1097,7 +1075,7 @@ window.COLLE_PLACES = [
    "zh": "肇庆 · 鼎湖山"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -1119,7 +1097,7 @@ window.COLLE_PLACES = [
    "zh": "博罗 · 罗浮山"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
@@ -1141,7 +1119,7 @@ window.COLLE_PLACES = [
    "zh": "梅州"
   },
   "country": {
-   "en": "中国",
+   "en": "China",
    "zh": "中国"
   },
   "flag": "🇨🇳",
