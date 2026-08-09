@@ -256,7 +256,12 @@
        中层势力徽章 background-size: cover + opacity 0.1；顶层透明立绘。
        （之前那版渐变是我按立绘主色现算的，不是官方做法，已废弃） */
     .card figure.layered {
-      background: linear-gradient(to bottom, var(--tint, #888) 0, var(--tint2, #222) 100%);
+      background: linear-gradient(to bottom, var(--tint, #888) 0%, var(--tint2, #222) 100%);
+      /* ⚠️ background-origin 必须显式给 border-box：默认是 padding-box，而 figure 有 1px 边框，
+         那 1px 落在渐变定义域之外，被 background-repeat 平铺补上 —— 垂直渐变往上重复一轮，
+         顶边就露出末端色、底边露出起始色，表现为上下各一条细色带。 */
+      background-origin: border-box;
+      background-repeat: no-repeat;
       display: block; position: relative;
     }
     .card figure.layered::after {
