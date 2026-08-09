@@ -212,8 +212,8 @@ window.COLLE_PLACES = [
   "last": "2025-08",
   "lat": 31.2288,
   "lon": 121.4877,
-  "days": 18,
-  "photos": 5989,
+  "days": 23,
+  "photos": 7011,
   "img": "img/places/shanghai.webp",
   "years": "2016–2025",
   "cc": "CN",
@@ -364,11 +364,11 @@ window.COLLE_PLACES = [
   "endyear": 2025
  },
  {
-  "id": "pinghai",
+  "id": "huidong-shuangyuewan",
   "cat": "travel",
   "name": {
-   "en": "Pinghai",
-   "zh": "平海"
+   "en": "Huidong · Shuangyuewan",
+   "zh": "惠东 · 双月湾"
   },
   "country": {
    "en": "中国",
@@ -382,41 +382,17 @@ window.COLLE_PLACES = [
   "lon": 114.8862,
   "days": 1,
   "photos": 979,
-  "img": "img/places/pinghai.webp",
+  "img": "img/places/huidong-shuangyuewan.webp",
   "years": "2025",
   "cc": "CN",
   "endyear": 2025
  },
  {
-  "id": "zhujiajiao",
+  "id": "tongzhou",
   "cat": "travel",
   "name": {
-   "en": "Zhujiajiao",
-   "zh": "朱家角"
-  },
-  "country": {
-   "en": "中国",
-   "zh": "中国"
-  },
-  "flag": "🇨🇳",
-  "year": 2025,
-  "first": "2025-08",
-  "last": "2025-08",
-  "lat": 31.1097,
-  "lon": 121.0495,
-  "days": 1,
-  "photos": 921,
-  "img": "img/places/zhujiajiao.webp",
-  "years": "2025",
-  "cc": "CN",
-  "endyear": 2025
- },
- {
-  "id": "beijing-zhangjiawan",
-  "cat": "travel",
-  "name": {
-   "en": "Beijing (Zhangjiawan)",
-   "zh": "北京·张家湾"
+   "en": "Tongzhou",
+   "zh": "通州"
   },
   "country": {
    "en": "中国",
@@ -430,7 +406,7 @@ window.COLLE_PLACES = [
   "lon": 116.7097,
   "days": 1,
   "photos": 237,
-  "img": "img/places/beijing-zhangjiawan.webp",
+  "img": "img/places/tongzhou.webp",
   "years": "2025",
   "cc": "CN",
   "endyear": 2025
@@ -580,27 +556,27 @@ window.COLLE_PLACES = [
   "endyear": 2024
  },
  {
-  "id": "shanghai-laogang",
+  "id": "istanbul",
   "cat": "travel",
   "name": {
-   "en": "Shanghai (Laogang)",
-   "zh": "上海·老港"
+   "en": "Istanbul",
+   "zh": "伊斯坦布尔"
   },
   "country": {
-   "en": "中国",
-   "zh": "中国"
+   "en": "土耳其",
+   "zh": "土耳其"
   },
-  "flag": "🇨🇳",
-  "year": 2018,
-  "first": "2018-08",
-  "last": "2024-08",
-  "lat": 31.1028,
-  "lon": 121.831,
+  "flag": "🇹🇷",
+  "year": 2022,
+  "first": "2022-03",
+  "last": "2024-07",
+  "lat": 41.2627,
+  "lon": 28.7443,
   "days": 4,
-  "photos": 101,
-  "img": "img/places/shanghai-laogang.webp",
-  "years": "2018–2024",
-  "cc": "CN",
+  "photos": 526,
+  "img": "img/places/istanbul.webp",
+  "years": "2022–2024",
+  "cc": "TR",
   "endyear": 2024
  },
  {
@@ -628,30 +604,6 @@ window.COLLE_PLACES = [
   "endyear": 2024
  },
  {
-  "id": "istanbul",
-  "cat": "travel",
-  "name": {
-   "en": "Istanbul",
-   "zh": "伊斯坦布尔"
-  },
-  "country": {
-   "en": "土耳其",
-   "zh": "土耳其"
-  },
-  "flag": "🇹🇷",
-  "year": 2022,
-  "first": "2022-03",
-  "last": "2024-07",
-  "lat": 41.2627,
-  "lon": 28.7443,
-  "days": 3,
-  "photos": 455,
-  "img": "img/places/istanbul.webp",
-  "years": "2022–2024",
-  "cc": "TR",
-  "endyear": 2024
- },
- {
   "id": "york",
   "cat": "travel",
   "name": {
@@ -673,30 +625,6 @@ window.COLLE_PLACES = [
   "img": "img/places/york.webp",
   "years": "2024",
   "cc": "UK",
-  "endyear": 2024
- },
- {
-  "id": "istanbul-pendik",
-  "cat": "travel",
-  "name": {
-   "en": "Istanbul (Pendik)",
-   "zh": "伊斯坦布尔·彭迪克"
-  },
-  "country": {
-   "en": "土耳其",
-   "zh": "土耳其"
-  },
-  "flag": "🇹🇷",
-  "year": 2024,
-  "first": "2024-01",
-  "last": "2024-01",
-  "lat": 40.9046,
-  "lon": 29.316,
-  "days": 1,
-  "photos": 71,
-  "img": "img/places/istanbul-pendik.webp",
-  "years": "2024",
-  "cc": "TR",
   "endyear": 2024
  },
  {
@@ -941,8 +869,8 @@ window.COLLE_PLACES = [
   "id": "seven-sisters",
   "cat": "travel",
   "name": {
-   "en": "Seven Sisters",
-   "zh": "七姊妹白崖一带"
+   "en": "Seven Sisters · Chalk Cliffs",
+   "zh": "七姐妹 · 白崖"
   },
   "country": {
    "en": "英国",
