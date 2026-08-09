@@ -1,29 +1,5 @@
 // 数据层。⭐ 可信源在 DimLifeS：Life/Gear/dimpage-colle-life/ —— 改这里之前先改那边。
-// name = {en, zh} —— en 是官方正式名（用机构自己的语言），zh 是中文通行译名；md 中文名留空时 zh 回落 = en。
 window.COLLE_CAMPUS = [
- {
-  "id": "central-saint-martins-university-of-the-arts-lon",
-  "cat": "campus",
-  "year": 2026,
-  "name": {
-   "en": "Central Saint Martins, University of the Arts London",
-   "zh": "中央圣马丁艺术与设计学院 · 伦敦艺术大学"
-  },
-  "sub": "🇬🇧 UK · London",
-  "city": "London"
- },
- {
-  "id": "imperial-college-london",
-  "cat": "campus",
-  "year": 2025,
-  "name": {
-   "en": "Imperial College London",
-   "zh": "帝国理工学院"
-  },
-  "sub": "🇬🇧 UK · London",
-  "city": "London",
-  "img": "img/campus/imperial-college-london.webp"
- },
  {
   "id": "university-of-london",
   "cat": "campus",
@@ -37,15 +13,16 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/university-of-london.webp"
  },
  {
-  "id": "x",
+  "id": "edinburgh-futures-institute",
   "cat": "campus",
   "year": 2024,
   "name": {
-   "en": "Репинский институт",
-   "zh": "列宾美术学院"
+   "en": "Edinburgh Futures Institute (EFI)",
+   "zh": "爱丁堡未来研究所"
   },
-  "sub": "🇷🇺 RU · Saint Petersburg",
-  "city": "Saint Petersburg"
+  "sub": "🇬🇧 UK · Edinburgh",
+  "city": "Edinburgh",
+  "img": "img/campus/edinburgh-futures-institute.webp"
  },
  {
   "id": "king-s-college-london",
@@ -60,6 +37,18 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/king-s-college-london.webp"
  },
  {
+  "id": "the-london-school-of-economics-and-political-sci",
+  "cat": "campus",
+  "year": 2024,
+  "name": {
+   "en": "The London School of Economics and Political Science (LSE)",
+   "zh": "伦敦政治经济学院"
+  },
+  "sub": "🇬🇧 UK · London",
+  "city": "London",
+  "img": "img/campus/the-london-school-of-economics-and-political-sci.webp"
+ },
+ {
   "id": "university-of-cambridge",
   "cat": "campus",
   "year": 2024,
@@ -68,7 +57,8 @@ window.COLLE_CAMPUS = [
    "zh": "剑桥大学"
   },
   "sub": "🇬🇧 UK · Cambridge",
-  "city": "Cambridge"
+  "city": "Cambridge",
+  "img": "img/campus/university-of-cambridge.webp"
  },
  {
   "id": "university-of-oxford",
@@ -83,59 +73,16 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/university-of-oxford.webp"
  },
  {
-  "id": "the-london-school-of-economics-and-political-sci",
+  "id": "x",
   "cat": "campus",
   "year": 2024,
   "name": {
-   "en": "The London School of Economics and Political Science (LSE)",
-   "zh": "伦敦政治经济学院"
+   "en": "Репинский институт",
+   "zh": "列宾美术学院"
   },
-  "sub": "🇬🇧 UK · London",
-  "city": "London"
- },
- {
-  "id": "爱丁堡未来研究所-edinburgh-futures-institute",
-  "cat": "campus",
-  "year": 2024,
-  "name": {
-   "en": "Edinburgh Futures Institute (EFI)",
-   "zh": "爱丁堡未来研究所"
-  },
-  "sub": "🇬🇧 UK · Edinburgh",
-  "city": "Edinburgh"
- },
- {
-  "id": "georgia-institute-of-technology",
-  "cat": "campus",
-  "year": 2023,
-  "name": {
-   "en": "Georgia Institute of Technology",
-   "zh": "佐治亚理工学院"
-  },
-  "sub": "🇺🇸 US · Atlanta",
-  "city": "Atlanta"
- },
- {
-  "id": "new-york-university",
-  "cat": "campus",
-  "year": 2023,
-  "name": {
-   "en": "New York University (NYU)",
-   "zh": "纽约大学"
-  },
-  "sub": "🇺🇸 US · New York",
-  "city": "New York"
- },
- {
-  "id": "parsons-school-of-design-the-new-school",
-  "cat": "campus",
-  "year": 2023,
-  "name": {
-   "en": "Parsons School of Design, The New School",
-   "zh": "帕森斯设计学院"
-  },
-  "sub": "🇺🇸 US · New York",
-  "city": "New York"
+  "sub": "Saint Petersburg",
+  "city": "Saint Petersburg",
+  "img": "img/campus/x.webp"
  },
  {
   "id": "columbia-university",
@@ -146,18 +93,92 @@ window.COLLE_CAMPUS = [
    "zh": "哥伦比亚大学"
   },
   "sub": "🇺🇸 US · New York",
-  "city": "New York"
+  "city": "New York",
+  "img": "img/campus/columbia-university.webp"
  },
  {
-  "id": "university-of-edinburgh",
+  "id": "georgia-institute-of-technology",
+  "cat": "campus",
+  "year": 2023,
+  "name": {
+   "en": "Georgia Institute of Technology",
+   "zh": "佐治亚理工学院"
+  },
+  "sub": "🇺🇸 US · Atlanta",
+  "city": "Atlanta",
+  "img": "img/campus/georgia-institute-of-technology.webp"
+ },
+ {
+  "id": "london-college-of-communication-university-of-th",
+  "cat": "campus",
+  "year": 2023,
+  "name": {
+   "en": "London College of Communication, University of the Arts London",
+   "zh": "伦敦传媒学院 · 伦敦艺术大学"
+  },
+  "sub": "🇬🇧 UK · London",
+  "city": "London",
+  "img": "img/campus/london-college-of-communication-university-of-th.webp"
+ },
+ {
+  "id": "new-york-university",
+  "cat": "campus",
+  "year": 2023,
+  "name": {
+   "en": "New York University (NYU)",
+   "zh": "纽约大学"
+  },
+  "sub": "🇺🇸 US · New York",
+  "city": "New York",
+  "img": "img/campus/new-york-university.webp"
+ },
+ {
+  "id": "parsons-school-of-design-the-new-school",
+  "cat": "campus",
+  "year": 2023,
+  "name": {
+   "en": "Parsons School of Design, The New School",
+   "zh": "帕森斯设计学院"
+  },
+  "sub": "🇺🇸 US · New York",
+  "city": "New York",
+  "img": "img/campus/parsons-school-of-design-the-new-school.webp"
+ },
+ {
+  "id": "central-saint-martins-university-of-the-arts-lon",
   "cat": "campus",
   "year": 2022,
   "name": {
-   "en": "University of Edinburgh",
-   "zh": "爱丁堡大学"
+   "en": "Central Saint Martins, University of the Arts London",
+   "zh": "中央圣马丁艺术与设计学院 · 伦敦艺术大学"
   },
-  "sub": "🇬🇧 UK · Edinburgh",
-  "city": "Edinburgh"
+  "sub": "🇬🇧 UK · London",
+  "city": "London",
+  "img": "img/campus/central-saint-martins-university-of-the-arts-lon.webp"
+ },
+ {
+  "id": "goldsmiths-university-of-london",
+  "cat": "campus",
+  "year": 2022,
+  "name": {
+   "en": "Goldsmiths, University of London",
+   "zh": "伦敦大学金史密斯学院"
+  },
+  "sub": "🇬🇧 UK · London",
+  "city": "London",
+  "img": "img/campus/goldsmiths-university-of-london.webp"
+ },
+ {
+  "id": "imperial-college-london",
+  "cat": "campus",
+  "year": 2022,
+  "name": {
+   "en": "Imperial College London",
+   "zh": "帝国理工学院"
+  },
+  "sub": "🇬🇧 UK · London",
+  "city": "London",
+  "img": "img/campus/imperial-college-london.webp"
  },
  {
   "id": "royal-college-of-art",
@@ -180,7 +201,20 @@ window.COLLE_CAMPUS = [
    "zh": "伦敦大学学院"
   },
   "sub": "🇬🇧 UK · London",
-  "city": "London"
+  "city": "London",
+  "img": "img/campus/university-college-london.webp"
+ },
+ {
+  "id": "university-of-edinburgh",
+  "cat": "campus",
+  "year": 2022,
+  "name": {
+   "en": "University of Edinburgh",
+   "zh": "爱丁堡大学"
+  },
+  "sub": "🇬🇧 UK · Edinburgh",
+  "city": "Edinburgh",
+  "img": "img/campus/university-of-edinburgh.webp"
  },
  {
   "id": "清华大学",
@@ -195,7 +229,7 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/清华大学.webp"
  },
  {
-  "id": "微软亚洲研究院-msra",
+  "id": "microsoft-research-asia",
   "cat": "campus",
   "year": 2018,
   "name": {
@@ -203,10 +237,23 @@ window.COLLE_CAMPUS = [
    "zh": "微软亚洲研究院"
   },
   "sub": "🇨🇳 CN · 北京",
-  "city": "北京（海淀丹棱街）"
+  "city": "北京（海淀丹棱街）",
+  "img": "img/campus/microsoft-research-asia.webp"
  },
  {
-  "id": "中国科学院自动化研究所-casia",
+  "id": "中国科学院数学与系统科学研究院",
+  "cat": "campus",
+  "year": 2018,
+  "name": {
+   "en": "中国科学院数学与系统科学研究院 (AMSS)",
+   "zh": "中国科学院数学与系统科学研究院 (AMSS)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京（中关村）",
+  "img": "img/campus/中国科学院数学与系统科学研究院.webp"
+ },
+ {
+  "id": "中国科学院自动化研究所",
   "cat": "campus",
   "year": 2018,
   "name": {
@@ -214,7 +261,20 @@ window.COLLE_CAMPUS = [
    "zh": "中国科学院自动化研究所 (CASIA)"
   },
   "sub": "🇨🇳 CN · 北京",
-  "city": "北京（中关村东路）"
+  "city": "北京（中关村东路）",
+  "img": "img/campus/中国科学院自动化研究所.webp"
+ },
+ {
+  "id": "中央美术学院",
+  "cat": "campus",
+  "year": 2018,
+  "name": {
+   "en": "中央美术学院 (CAFA)",
+   "zh": "中央美术学院 (CAFA)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/中央美术学院.webp"
  },
  {
   "id": "重庆大学",
@@ -229,94 +289,6 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/重庆大学.webp"
  },
  {
-  "id": "中央美术学院-cafa",
-  "cat": "campus",
-  "year": 2018,
-  "name": {
-   "en": "中央美术学院 (CAFA)",
-   "zh": "中央美术学院 (CAFA)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
- },
- {
-  "id": "中国科学院数学与系统科学研究院",
-  "cat": "campus",
-  "year": 2018,
-  "name": {
-   "en": "中国科学院数学与系统科学研究院 (AMSS)",
-   "zh": "中国科学院数学与系统科学研究院 (AMSS)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京（中关村）"
- },
- {
-  "id": "北京邮电大学-bupt",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京邮电大学 (BUPT)",
-   "zh": "北京邮电大学 (BUPT)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
- },
- {
-  "id": "北京航空航天大学-buaa",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京航空航天大学 (BUAA)",
-   "zh": "北京航空航天大学 (BUAA)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
- },
- {
-  "id": "北京师范大学-bnu",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京师范大学 (BNU)",
-   "zh": "北京师范大学 (BNU)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
- },
- {
-  "id": "北京交通大学-bjtu",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京交通大学 (BJTU)",
-   "zh": "北京交通大学 (BJTU)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
- },
- {
-  "id": "中央财经大学-cufe",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "中央财经大学 (CUFE)",
-   "zh": "中央财经大学 (CUFE)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
- },
- {
-  "id": "北京电影学院-bfa",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京电影学院 (BFA)",
-   "zh": "北京电影学院 (BFA)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
- },
- {
   "id": "中央戏剧学院",
   "cat": "campus",
   "year": 2017,
@@ -329,6 +301,78 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/中央戏剧学院.webp"
  },
  {
+  "id": "中央财经大学",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "中央财经大学 (CUFE)",
+   "zh": "中央财经大学 (CUFE)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/中央财经大学.webp"
+ },
+ {
+  "id": "北京交通大学",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "北京交通大学 (BJTU)",
+   "zh": "北京交通大学 (BJTU)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/北京交通大学.webp"
+ },
+ {
+  "id": "北京师范大学",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "北京师范大学 (BNU)",
+   "zh": "北京师范大学 (BNU)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/北京师范大学.webp"
+ },
+ {
+  "id": "北京电影学院",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "北京电影学院 (BFA)",
+   "zh": "北京电影学院 (BFA)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/北京电影学院.webp"
+ },
+ {
+  "id": "北京航空航天大学",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "北京航空航天大学 (BUAA)",
+   "zh": "北京航空航天大学 (BUAA)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/北京航空航天大学.webp"
+ },
+ {
+  "id": "北京邮电大学",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "北京邮电大学 (BUPT)",
+   "zh": "北京邮电大学 (BUPT)"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/北京邮电大学.webp"
+ },
+ {
   "id": "厦门大学",
   "cat": "campus",
   "year": 2017,
@@ -337,10 +381,11 @@ window.COLLE_CAMPUS = [
    "zh": "厦门大学"
   },
   "sub": "🇨🇳 CN · 厦门",
-  "city": "厦门"
+  "city": "厦门",
+  "img": "img/campus/厦门大学.webp"
  },
  {
-  "id": "北京大学-pku",
+  "id": "北京大学",
   "cat": "campus",
   "year": 2014,
   "name": {
@@ -348,6 +393,7 @@ window.COLLE_CAMPUS = [
    "zh": "北京大学 (PKU)"
   },
   "sub": "🇨🇳 CN · 北京",
-  "city": "北京"
+  "city": "北京",
+  "img": "img/campus/北京大学.webp"
  }
 ];
