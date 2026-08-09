@@ -35,7 +35,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "ado",
-  "cat": "live",
+  "cat": "concert",
   "year": 2025,
   "name": "Ado（アド）",
   "sub": "The O2 Arena（North Greenwich）",
@@ -43,7 +43,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "kikuoland",
-  "cat": "live",
+  "cat": "concert",
   "year": 2025,
   "name": "Kikuoland（きくお）",
   "sub": "HERE at Outernet（Charing Cross Rd）",
@@ -52,7 +52,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "melon-band-冬季演出",
-  "cat": "live",
+  "cat": "concert",
   "year": 2025,
   "name": "Melon Band 冬季演出",
   "sub": "Imperial College London",
@@ -61,7 +61,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "porter-robinson",
-  "cat": "live",
+  "cat": "concert",
   "year": 2025,
   "name": "Porter Robinson",
   "sub": "O2 Academy Brixton",
@@ -88,7 +88,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "米津玄師-2025-world-tour-junk",
-  "cat": "live",
+  "cat": "concert",
   "year": 2025,
   "name": "米津玄師 2025 World Tour「JUNK」",
   "sub": "Eventim Apollo（Hammersmith）",
@@ -97,7 +97,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "atomic-cellos",
-  "cat": "live",
+  "cat": "concert",
   "year": 2024,
   "name": "Atomic Cellos",
   "sub": "—",
@@ -106,7 +106,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "interstellar-行星馆秀",
-  "cat": "live",
+  "cat": "concert",
   "year": 2024,
   "name": "Interstellar 行星馆秀",
   "sub": "圣彼得堡行星馆",
@@ -115,7 +115,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "vivaldi-四季",
-  "cat": "live",
+  "cat": "concert",
   "year": 2024,
   "name": "Vivaldi《四季》（现场作画演出）",
   "sub": "—",
@@ -132,7 +132,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "初音-miku-expo-2024-europe",
-  "cat": "live",
+  "cat": "concert",
   "year": 2024,
   "name": "初音ミク MIKU EXPO 2024 EUROPE",
   "sub": "OVO Arena Wembley",
@@ -176,7 +176,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "illion",
-  "cat": "live",
+  "cat": "concert",
   "year": 2022,
   "name": "illion（野田洋次郎 solo 项目）",
   "sub": "O2 Shepherd's Bush Empire",
@@ -194,7 +194,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "bilibili-macro-link-2019",
-  "cat": "live",
+  "cat": "concert",
   "year": 2019,
   "name": "BILIBILI MACRO LINK 2019",
   "sub": "上海梅赛德斯-奔驰文化中心（推定）",
@@ -202,7 +202,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "kanako-live",
-  "cat": "live",
+  "cat": "concert",
   "year": 2019,
   "name": "KANAKO LIVE",
   "sub": "—",
@@ -229,7 +229,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "bilibili-macro-link-2018",
-  "cat": "live",
+  "cat": "concert",
   "year": 2018,
   "name": "BILIBILI MACRO LINK 2018",
   "sub": "上海（场馆待补）",
@@ -272,7 +272,7 @@ window.COLLE_EVENTS = [
  },
  {
   "id": "电喵电音祭-yunomi-live",
-  "cat": "live",
+  "cat": "concert",
   "year": 2018,
   "name": "电喵电音祭 · Yunomi LIVE",
   "sub": "—",
