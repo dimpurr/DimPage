@@ -1,4 +1,4 @@
-// 数据层。⭐ 可信源在 DimLifeS：Life/Gear/dimpage-colle-life/ —— 改这里之前先改那边。
+// 数据层。⭐ 可信源在 DimLifeS：Life/Gear/dimpage-colle-life/
 window.COLLE_CAMPUS = [
  {
   "id": "university-of-london",
@@ -383,6 +383,30 @@ window.COLLE_CAMPUS = [
   "sub": "🇨🇳 CN · 厦门",
   "city": "厦门",
   "img": "img/campus/厦门大学.webp"
+ },
+ {
+  "id": "上海交通大学",
+  "cat": "campus",
+  "year": 2016,
+  "name": {
+   "en": "上海交通大学（Shanghai Jiao Tong University）",
+   "zh": "上海交通大学"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "img": "img/campus/上海交通大学.webp"
+ },
+ {
+  "id": "复旦大学",
+  "cat": "campus",
+  "year": 2016,
+  "name": {
+   "en": "复旦大学（Fudan University）",
+   "zh": "复旦大学"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "img": "img/campus/复旦大学.webp"
  },
  {
   "id": "北京大学",

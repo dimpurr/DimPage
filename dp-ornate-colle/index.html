@@ -617,6 +617,8 @@
         physical: 'Physical Collection', disc: 'Discs', booklondon: 'Books on My Shelf',
         events: 'Shows & Exhibitions', concert: 'Live', stage: 'Stage', exhibition: 'Exhibitions',
         glam: 'Museums & Galleries', campus: 'Campuses & Institutes',
+        museum: 'Museums', gallery: 'Galleries', church: 'Churches & Landmarks',
+        library: 'Libraries', other: 'Others',
         close: 'Close', lbprev: 'Previous', lbnext: 'Next'
       },
       zh: {
@@ -644,6 +646,8 @@
         physical: '我的实体收藏', disc: '唱片', booklondon: '书架上的书',
         events: '看过的演出与展览', concert: '演唱会 / Live', stage: '歌剧演出', exhibition: '艺术展览',
         glam: '打卡过的博物馆美术馆', campus: '大学校园和科研院所',
+        museum: '博物馆', gallery: '美术馆 · 画廊', church: '教堂 · 地标',
+        library: '图书馆 · 档案', other: '其他',
         close: '关闭', lbprev: '上一张', lbnext: '下一张'
       }
     };
@@ -688,7 +692,7 @@
       { key: 'books',      minors: ['all', 'novel', 'manga', 'douban'], posters: true, data: window.COLLE_BOOKS || [] },
       { key: 'physical',   minors: ['all', 'disc', 'booklondon'], posters: true, data: window.COLLE_PHYSICAL || [] },
       { key: 'events',     minors: ['all', 'concert', 'stage', 'exhibition'], data: window.COLLE_EVENTS || [], masonry: true, freeratio: true },
-      { key: 'glam',       minors: ['all'],                       data: window.COLLE_GLAM || [] },
+      { key: 'glam',       minors: ['all', 'museum', 'gallery', 'church', 'library', 'other'], data: window.COLLE_GLAM || [] },
       { key: 'campus',     minors: ['all'],                       data: window.COLLE_CAMPUS || [] },
       // ⭐ tagged: 小 tab 是「标签筛选」不是互斥分类 —— 一个人可以同时是 PV 师和音乐家，
       //    所以按 item.tags 数组匹配，而不是按 item.cat 相等
