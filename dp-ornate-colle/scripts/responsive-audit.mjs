@@ -34,9 +34,12 @@ const MEASURE = `(() => {
     const r = e.getBoundingClientRect();
     if (r.width === 0 && r.height === 0) return;
     if (r.right > cw + 0.5 || r.left < -0.5) {
-      // 跳过被 overflow 容器合法裁掉的元素（如横滑 chips 内部）
+      // 跳过被 overflow 容器合法裁掉的元素（如横滑 chips 内部）。
+      // SVG 子元素的 UA 默认 overflow:hidden 不代表页面级裁剪（它裁的是 svg 视口），
+      // 直接跳过 SVG 祖先继续向上找真正的滚动容器
       let p = e.parentElement, clipped = false;
       while (p) {
+        if (p.namespaceURI === 'http://www.w3.org/2000/svg') { p = p.parentElement; continue; }
         const o = getComputedStyle(p).overflowX;
         if (o === 'auto' || o === 'scroll' || o === 'hidden' || o === 'clip') {
           const pr = p.getBoundingClientRect();
@@ -82,7 +85,7 @@ for (const w of widths) {
   await sleep(400);
   await evalJs('localStorage.clear()');
 
-  // 10 组合：5 个大 tab × 明暗 2 主题
+  // 16 组合：5 个旧大 tab × 明暗 + places × 3 视图 × 明暗
   // 初始主题跟随系统（未知），显式设定后再测
   const combos = [
     ['devices', 'light'], ['devices', 'dark'],
@@ -90,18 +93,27 @@ for (const w of widths) {
     ['movies', 'light'], ['movies', 'dark'],
     ['anime', 'light'], ['anime', 'dark'],
     ['games', 'light'], ['games', 'dark'],
+    ['places/cards', 'light'], ['places/cards', 'dark'],
+    ['places/map', 'light'], ['places/map', 'dark'],
+    ['places/time', 'light'], ['places/time', 'dark'],
   ];
   for (const [tab, theme] of combos) {
+    const [major, view] = tab.split('/');
     await evalJs(`(() => {
-      const want = { tab: '${tab}', theme: '${theme}' };
+      const want = { tab: '${major}', theme: '${theme}', view: '${view || ''}' };
       // 主题：直接写 localStorage 再触发主脚本逻辑不可行（脚本只初始化一次），
       // 改为点到目标状态
       let guard = 0;
       while (document.documentElement.dataset.theme !== want.theme && guard++ < 3)
         document.getElementById('themeBtn').click();
       // tab：点对应大 tab
-      const idx = { devices: 0, characters: 1, movies: 2, anime: 3, games: 4 }[want.tab];
+      const idx = { devices: 0, characters: 1, movies: 2, anime: 3, games: 4, places: 5 }[want.tab];
       document.querySelectorAll('#tabsMajor button')[idx].click();
+      // places 的视图切换：cards/map/time 对应分段控件三个按钮
+      if (want.view) {
+        const vidx = { cards: 0, map: 1, time: 2 }[want.view];
+        document.querySelectorAll('#tabsView button')[vidx].click();
+      }
       return true;
     })()`);
     await sleep(150);
