@@ -76,15 +76,6 @@ window.COLLE_GAMES = [
   "img": "img/games/switch-集合啦-動物森友會.webp"
  },
  {
-  "id": "steam-muse-dash",
-  "cat": "steam",
-  "name": "Muse Dash",
-  "year": 2019,
-  "score": 82,
-  "url": "https://store.steampowered.com/app/774171",
-  "img": "img/games/steam-muse-dash.webp"
- },
- {
   "id": "switch-genesis-noir",
   "cat": "switch",
   "name": "Genesis Noir",
