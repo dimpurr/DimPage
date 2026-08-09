@@ -863,7 +863,7 @@ window.COLLE_PLACES = [
  },
  {
   "id": "dabu",
-  "cat": "travel",
+  "cat": "live",
   "name": {
    "en": "Dabu",
    "zh": "大埔"

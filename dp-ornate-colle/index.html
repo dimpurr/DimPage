@@ -253,11 +253,22 @@
     .card.char img { width: 100%; height: auto; display: block; }
     /* 电影/动画海报：统一 2:3 竖版，满幅裁切 */
     .card.poster figure { aspect-ratio: 2 / 3; }
+    /* 各类封面的本征比例（量了实际封面的中位数定的，尽量不裁）：
+       书 = 1:√2（A5/B5 开本纸张比，149 张封面高/宽中位 1.429）
+       画册/图录 = 4:5（比小说方，20 张中位 1.274）
+       CD = 1:1（塑料盒正面就是正方形） */
+    .card.poster.ar-book figure  { aspect-ratio: 500 / 707; }
+    .card.poster.ar-album figure { aspect-ratio: 4 / 5; }
+    .card.poster.ar-disc figure  { aspect-ratio: 1 / 1; }
     .card.poster img { width: 100%; height: 100%; object-fit: cover; }
     /* 游戏封面：Steam 2:3 竖版、Switch 1:1 方形，混排走瀑布流 */
     .card.game figure { aspect-ratio: 2 / 3; }
     .card.game.square figure { aspect-ratio: 1 / 1; }
     .card.game img { width: 100%; height: 100%; object-fit: cover; }
+    /* 场馆/机构/校园的实景照：保持方形，但满幅裁切、不留内边距
+       —— 它们是照片不是透明产品图，缩在框里会显得很小 */
+    .card.photo figure { aspect-ratio: 1 / 1; padding: 0; }
+    .card.photo img { width: 100%; height: 100%; object-fit: cover; }
     /* 城市照片：横构图 3:2，满幅裁切 */
     .card.place figure { aspect-ratio: 3 / 2; }
     .card.place img { width: 100%; height: 100%; object-fit: cover; }
@@ -607,15 +618,24 @@
       });
     }
 
+    // 封面比例归类：没列进来的（电影/动画）走默认 2:3 海报比
+    // 这几个 tab 的图是实景照片，走 photo 样式（方形满幅），不走 device 的透明产品图样式
+    var PHOTO_TABS = { events: 1, glam: 1, campus: 1 };
+
+    var AR = { novel: 'book', manga: 'book', douban: 'book',
+               booklondon: 'album', disc: 'disc' };
+
     function card(item, g, i) {
       var isChar = g.key === 'characters';
       var isPlace = g.key === 'places';
       // 有 url 的条目整张卡就是链接；url 为 null（如 Switch 游戏）则不可点、无徽章
       var el = document.createElement(item.url ? 'a' : 'div');
-      var type = isChar ? 'char' : isPlace ? 'place' : g.posters ? 'poster' : g.key === 'games' ? 'game' : 'device';
+      var type = isChar ? 'char' : isPlace ? 'place' : g.posters ? 'poster'
+        : g.key === 'games' ? 'game' : PHOTO_TABS[g.key] ? 'photo' : 'device';
       el.className = 'card ' + type +
         (isChar && item.cat === 'zzz' ? ' tall' : '') +
-        (type === 'game' && item.cat === 'switch' ? ' square' : '');
+        (type === 'game' && item.cat === 'switch' ? ' square' : '') +
+        (type === 'poster' ? (AR[item.cat] ? ' ar-' + AR[item.cat] : '') : '');
       if (item.url) { el.href = item.url; el.target = '_blank'; el.rel = 'noopener'; }
       // stagger 延迟封顶，长列表尾部不拖沓
       el.style.setProperty('--d', Math.min(i, 10) * 40 + 'ms');
