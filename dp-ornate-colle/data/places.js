@@ -159,7 +159,7 @@ window.COLLE_PLACES = [
    "zh": "中国"
   },
   "flag": "🇨🇳",
-  "year": 2018,
+  "year": 2002,
   "first": "2018-02",
   "last": "2025-07",
   "lat": 26.7926,
@@ -167,7 +167,7 @@ window.COLLE_PLACES = [
   "days": 35,
   "photos": 1067,
   "img": "img/places/chaling.webp",
-  "years": "2018–2025",
+  "years": "2002–2025",
   "cc": "CN",
   "endyear": 2025
  },
@@ -279,7 +279,7 @@ window.COLLE_PLACES = [
    "zh": "中国"
   },
   "flag": "🇨🇳",
-  "year": 2019,
+  "year": 2008,
   "first": "2019-07",
   "last": "2025-07",
   "lat": 27.8222,
@@ -287,7 +287,7 @@ window.COLLE_PLACES = [
   "days": 10,
   "photos": 269,
   "img": "img/places/zhuzhou.webp",
-  "years": "2019–2025",
+  "years": "2008–2025",
   "cc": "CN",
   "endyear": 2025
  },
@@ -853,7 +853,7 @@ window.COLLE_PLACES = [
    "zh": "中国"
   },
   "flag": "🇨🇳",
-  "year": 2020,
+  "year": 2000,
   "first": "2020-01",
   "last": "2022-07",
   "lat": 24.3502,
@@ -861,7 +861,7 @@ window.COLLE_PLACES = [
   "days": 2,
   "photos": 86,
   "img": "img/places/dabu.webp",
-  "years": "2020–2022",
+  "years": "2000–2022",
   "cc": "CN",
   "endyear": 2022
  },
@@ -912,6 +912,28 @@ window.COLLE_PLACES = [
   "years": "2022",
   "cc": "UK",
   "endyear": 2022
+ },
+ {
+  "id": "dongguan",
+  "cat": "travel",
+  "name": {
+   "en": "Dongguan",
+   "zh": "东莞"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2013,
+  "years": "2013",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2013,
+  "img": "img/places/dongguan.webp"
  },
  {
   "id": "nanjing",
@@ -978,28 +1000,6 @@ window.COLLE_PLACES = [
   "photos": 0,
   "endyear": 2009,
   "img": "img/places/suzhou.webp"
- },
- {
-  "id": "zhuzhou-shaoshan",
-  "cat": "travel",
-  "name": {
-   "en": "Zhuzhou · Shaoshan",
-   "zh": "株洲 · 韶山"
-  },
-  "country": {
-   "en": "中国",
-   "zh": "中国"
-  },
-  "flag": "🇨🇳",
-  "cc": "CN",
-  "year": 2008,
-  "years": "2008",
-  "lat": 0,
-  "lon": 0,
-  "days": 0,
-  "photos": 0,
-  "endyear": 2008,
-  "img": "img/places/zhuzhou-shaoshan.webp"
  },
  {
   "id": "sanqingshan",
@@ -1134,11 +1134,11 @@ window.COLLE_PLACES = [
   "img": "img/places/luofushan.webp"
  },
  {
-  "id": "dongguan",
+  "id": "meizhou",
   "cat": "travel",
   "name": {
-   "en": "Dongguan",
-   "zh": "东莞"
+   "en": "Meizhou",
+   "zh": "梅州"
   },
   "country": {
    "en": "中国",
@@ -1146,13 +1146,13 @@ window.COLLE_PLACES = [
   },
   "flag": "🇨🇳",
   "cc": "CN",
-  "year": 2005,
-  "years": "2005",
+  "year": 2004,
+  "years": "2004",
   "lat": 0,
   "lon": 0,
   "days": 0,
   "photos": 0,
-  "endyear": 2005,
-  "img": "img/places/dongguan.webp"
+  "endyear": 2004,
+  "img": "img/places/meizhou.webp"
  }
 ];
