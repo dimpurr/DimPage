@@ -11,7 +11,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 8.6,
   "url": "https://bgm.tv/subject/518519",
-  "img": "img/anime/航海王-粉丝来信.webp"
+  "img": "img/anime/航海王-粉丝来信.webp",
+  "year": 2024
  },
  {
   "id": "anime-flcl",
@@ -23,7 +24,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 8.3,
   "url": "https://bgm.tv/subject/822",
-  "img": "img/anime/flcl.webp"
+  "img": "img/anime/flcl.webp",
+  "year": 2000
  },
  {
   "id": "anime-比宇宙更远的地方",
@@ -35,7 +37,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 8.2,
   "url": "https://bgm.tv/subject/218708",
-  "img": "img/anime/比宇宙更远的地方.webp"
+  "img": "img/anime/比宇宙更远的地方.webp",
+  "year": 2018
  },
  {
   "id": "anime-冰菓",
@@ -47,7 +50,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 8.2,
   "url": "https://bgm.tv/subject/27364",
-  "img": "img/anime/冰菓.webp"
+  "img": "img/anime/冰菓.webp",
+  "year": 2012
  },
  {
   "id": "anime-悠久之翼",
@@ -59,7 +63,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 7.9,
   "url": "https://bgm.tv/subject/799",
-  "img": "img/anime/悠久之翼.webp"
+  "img": "img/anime/悠久之翼.webp",
+  "year": 2007
  },
  {
   "id": "anime-魔法少女奈叶-the-movie-2nd-a-s",
@@ -71,7 +76,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 7.8,
   "url": "https://bgm.tv/subject/35679",
-  "img": "img/anime/魔法少女奈叶-the-movie-2nd-a-s.webp"
+  "img": "img/anime/魔法少女奈叶-the-movie-2nd-a-s.webp",
+  "year": 2012
  },
  {
   "id": "anime-天使的心跳",
@@ -83,7 +89,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 7.6,
   "url": "https://bgm.tv/subject/1851",
-  "img": "img/anime/天使的心跳.webp"
+  "img": "img/anime/天使的心跳.webp",
+  "year": 2010
  },
  {
   "id": "anime-结城友奈是勇者-鹫尾须美之章-勇者之章",
@@ -95,7 +102,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 7.3,
   "url": "https://bgm.tv/subject/195937",
-  "img": "img/anime/结城友奈是勇者-鹫尾须美之章-勇者之章.webp"
+  "img": "img/anime/结城友奈是勇者-鹫尾须美之章-勇者之章.webp",
+  "year": 2017
  },
  {
   "id": "anime-今天的五年二班",
@@ -107,7 +115,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 7.2,
   "url": "https://bgm.tv/subject/3413",
-  "img": "img/anime/今天的五年二班.webp"
+  "img": "img/anime/今天的五年二班.webp",
+  "year": 2008
  },
  {
   "id": "anime-结城友奈是勇者",
@@ -119,7 +128,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 7.1,
   "url": "https://bgm.tv/subject/109328",
-  "img": "img/anime/结城友奈是勇者.webp"
+  "img": "img/anime/结城友奈是勇者.webp",
+  "year": 2014
  },
  {
   "id": "anime-红-kurenai",
@@ -131,7 +141,8 @@ window.COLLE_ANIME = [
   "score": 10,
   "score2": 6.6,
   "url": "https://bgm.tv/subject/494",
-  "img": "img/anime/红-kurenai.webp"
+  "img": "img/anime/红-kurenai.webp",
+  "year": 2008
  },
  {
   "id": "anime-clannad-after-story",
@@ -143,7 +154,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 9.2,
   "url": "https://bgm.tv/subject/876",
-  "img": "img/anime/clannad-after-story.webp"
+  "img": "img/anime/clannad-after-story.webp",
+  "year": 2008
  },
  {
   "id": "anime-星际牛仔",
@@ -155,7 +167,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 9.1,
   "url": "https://bgm.tv/subject/253",
-  "img": "img/anime/星际牛仔.webp"
+  "img": "img/anime/星际牛仔.webp",
+  "year": 1998
  },
  {
   "id": "anime-新世纪福音战士剧场版-air-真心为你",
@@ -167,7 +180,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.9,
   "url": "https://bgm.tv/subject/6049",
-  "img": "img/anime/新世纪福音战士剧场版-air-真心为你.webp"
+  "img": "img/anime/新世纪福音战士剧场版-air-真心为你.webp",
+  "year": 1997
  },
  {
   "id": "anime-命运石之门",
@@ -179,7 +193,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.8,
   "url": "https://bgm.tv/subject/10380",
-  "img": "img/anime/命运石之门.webp"
+  "img": "img/anime/命运石之门.webp",
+  "year": 2011
  },
  {
   "id": "anime-凉宫春日的消失",
@@ -191,7 +206,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.7,
   "url": "https://bgm.tv/subject/3375",
-  "img": "img/anime/凉宫春日的消失.webp"
+  "img": "img/anime/凉宫春日的消失.webp",
+  "year": 2010
  },
  {
   "id": "anime-四叠半神话大系",
@@ -203,7 +219,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.6,
   "url": "https://bgm.tv/subject/4019",
-  "img": "img/anime/四叠半神话大系.webp"
+  "img": "img/anime/四叠半神话大系.webp",
+  "year": 2010
  },
  {
   "id": "anime-莉兹与青鸟",
@@ -215,7 +232,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.6,
   "url": "https://bgm.tv/subject/216371",
-  "img": "img/anime/莉兹与青鸟.webp"
+  "img": "img/anime/莉兹与青鸟.webp",
+  "year": 2018
  },
  {
   "id": "anime-魔法少女小圆",
@@ -227,7 +245,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.6,
   "url": "https://bgm.tv/subject/9717",
-  "img": "img/anime/魔法少女小圆.webp"
+  "img": "img/anime/魔法少女小圆.webp",
+  "year": 2011
  },
  {
   "id": "anime-日常",
@@ -239,7 +258,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.5,
   "url": "https://bgm.tv/subject/9912",
-  "img": "img/anime/日常.webp"
+  "img": "img/anime/日常.webp",
+  "year": 2011
  },
  {
   "id": "anime-蜂蜜与四叶草",
@@ -251,7 +271,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.4,
   "url": "https://bgm.tv/subject/847",
-  "img": "img/anime/蜂蜜与四叶草.webp"
+  "img": "img/anime/蜂蜜与四叶草.webp",
+  "year": 2005
  },
  {
   "id": "anime-clannad",
@@ -263,7 +284,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.4,
   "url": "https://bgm.tv/subject/51",
-  "img": "img/anime/clannad.webp"
+  "img": "img/anime/clannad.webp",
+  "year": 2007
  },
  {
   "id": "anime-瑞克和莫蒂-第一季",
@@ -275,7 +297,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.4,
   "url": "https://bgm.tv/subject/93377",
-  "img": "img/anime/瑞克和莫蒂-第一季.webp"
+  "img": "img/anime/瑞克和莫蒂-第一季.webp",
+  "year": 2013
  },
  {
   "id": "anime-3月的狮子",
@@ -287,7 +310,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.3,
   "url": "https://bgm.tv/subject/147068",
-  "img": "img/anime/3月的狮子.webp"
+  "img": "img/anime/3月的狮子.webp",
+  "year": 2016
  },
  {
   "id": "anime-吹响吧-上低音号",
@@ -299,7 +323,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.3,
   "url": "https://bgm.tv/subject/115908",
-  "img": "img/anime/吹响吧-上低音号.webp"
+  "img": "img/anime/吹响吧-上低音号.webp",
+  "year": 2015
  },
  {
   "id": "anime-少女终末旅行",
@@ -311,7 +336,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.1,
   "url": "https://bgm.tv/subject/218707",
-  "img": "img/anime/少女终末旅行.webp"
+  "img": "img/anime/少女终末旅行.webp",
+  "year": 2017
  },
  {
   "id": "anime-悠久之翼2",
@@ -323,7 +349,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.1,
   "url": "https://bgm.tv/subject/1029",
-  "img": "img/anime/悠久之翼2.webp"
+  "img": "img/anime/悠久之翼2.webp",
+  "year": 2008
  },
  {
   "id": "anime-你的名字",
@@ -335,7 +362,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.1,
   "url": "https://bgm.tv/subject/160209",
-  "img": "img/anime/你的名字.webp"
+  "img": "img/anime/你的名字.webp",
+  "year": 2016
  },
  {
   "id": "anime-斩服少女",
@@ -347,7 +375,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.1,
   "url": "https://bgm.tv/subject/72941",
-  "img": "img/anime/斩服少女.webp"
+  "img": "img/anime/斩服少女.webp",
+  "year": 2013
  },
  {
   "id": "anime-春宵苦短-少女前进吧",
@@ -359,7 +388,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.1,
   "url": "https://bgm.tv/subject/202240",
-  "img": "img/anime/春宵苦短-少女前进吧.webp"
+  "img": "img/anime/春宵苦短-少女前进吧.webp",
+  "year": 2017
  },
  {
   "id": "anime-超时空辉夜姬",
@@ -371,7 +401,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.1,
   "url": "https://bgm.tv/subject/604826",
-  "img": "img/anime/超时空辉夜姬.webp"
+  "img": "img/anime/超时空辉夜姬.webp",
+  "year": 2026
  },
  {
   "id": "anime-四月是你的谎言",
@@ -383,7 +414,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.0,
   "url": "https://bgm.tv/subject/100444",
-  "img": "img/anime/四月是你的谎言.webp"
+  "img": "img/anime/四月是你的谎言.webp",
+  "year": 2014
  },
  {
   "id": "anime-金牌得主",
@@ -395,7 +427,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.0,
   "url": "https://bgm.tv/subject/430699",
-  "img": "img/anime/金牌得主.webp"
+  "img": "img/anime/金牌得主.webp",
+  "year": 2025
  },
  {
   "id": "anime-龙与虎",
@@ -407,7 +440,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 8.0,
   "url": "https://bgm.tv/subject/909",
-  "img": "img/anime/龙与虎.webp"
+  "img": "img/anime/龙与虎.webp",
+  "year": 2008
  },
  {
   "id": "anime-秒速5厘米",
@@ -419,7 +453,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.9,
   "url": "https://bgm.tv/subject/927",
-  "img": "img/anime/秒速5厘米.webp"
+  "img": "img/anime/秒速5厘米.webp",
+  "year": 2007
  },
  {
   "id": "anime-玲音",
@@ -431,7 +466,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.8,
   "url": "https://bgm.tv/subject/2582",
-  "img": "img/anime/玲音.webp"
+  "img": "img/anime/玲音.webp",
+  "year": 1998
  },
  {
   "id": "anime-东方活动写真馆",
@@ -443,7 +479,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.7,
   "url": "https://bgm.tv/subject/49315",
-  "img": "img/anime/东方活动写真馆.webp"
+  "img": "img/anime/东方活动写真馆.webp",
+  "year": 2009
  },
  {
   "id": "anime-少女乐队的呐喊",
@@ -455,7 +492,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.6,
   "url": "https://bgm.tv/subject/431767",
-  "img": "img/anime/少女乐队的呐喊.webp"
+  "img": "img/anime/少女乐队的呐喊.webp",
+  "year": 2024
  },
  {
   "id": "anime-避难所",
@@ -467,7 +505,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.5,
   "url": "https://bgm.tv/subject/195249",
-  "img": "img/anime/避难所.webp"
+  "img": "img/anime/避难所.webp",
+  "year": 2016
  },
  {
   "id": "anime-三颗星彩色冒险",
@@ -479,7 +518,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.4,
   "url": "https://bgm.tv/subject/211066",
-  "img": "img/anime/三颗星彩色冒险.webp"
+  "img": "img/anime/三颗星彩色冒险.webp",
+  "year": 2018
  },
  {
   "id": "anime-酷爱电影的庞波小姐",
@@ -491,7 +531,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.4,
   "url": "https://bgm.tv/subject/223563",
-  "img": "img/anime/酷爱电影的庞波小姐.webp"
+  "img": "img/anime/酷爱电影的庞波小姐.webp",
+  "year": 2021
  },
  {
   "id": "anime-恋爱随意链接",
@@ -503,7 +544,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.4,
   "url": "https://bgm.tv/subject/37154",
-  "img": "img/anime/恋爱随意链接.webp"
+  "img": "img/anime/恋爱随意链接.webp",
+  "year": 2012
  },
  {
   "id": "anime-刺客伍六七",
@@ -515,7 +557,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.3,
   "url": "https://bgm.tv/subject/244008",
-  "img": "img/anime/刺客伍六七.webp"
+  "img": "img/anime/刺客伍六七.webp",
+  "year": 2018
  },
  {
   "id": "anime-星之声",
@@ -527,7 +570,8 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 7.2,
   "url": "https://bgm.tv/subject/1936",
-  "img": "img/anime/星之声.webp"
+  "img": "img/anime/星之声.webp",
+  "year": 2002
  },
  {
   "id": "anime-烟花",
@@ -539,6 +583,7 @@ window.COLLE_ANIME = [
   "score": 9,
   "score2": 6.0,
   "url": "https://bgm.tv/subject/200704",
-  "img": "img/anime/烟花.webp"
+  "img": "img/anime/烟花.webp",
+  "year": 2017
  }
 ];

@@ -332,6 +332,14 @@ window.COLLE_DEVICES = [
   "img": "img/devices/ibasso-dx90.webp"
  },
  {
+  "id": "wacom-ctl671",
+  "cat": "peripheral",
+  "year": 2015,
+  "name": "Wacom Intuos CTL-671",
+  "sub": "drawing tablet",
+  "img": "img/devices/wacom-ctl671.webp"
+ },
+ {
   "id": "ath-im70",
   "cat": "headphone",
   "year": 2014,
@@ -362,13 +370,5 @@ window.COLLE_DEVICES = [
   "name": "Lenovo A789",
   "sub": "the first one",
   "img": "img/devices/lenovo-a789.webp"
- },
- {
-  "id": "wacom-ctl671",
-  "cat": "peripheral",
-  "year": null,
-  "name": "Wacom Intuos CTL-671",
-  "sub": "drawing tablet",
-  "img": "img/devices/wacom-ctl671.webp"
  }
 ];
