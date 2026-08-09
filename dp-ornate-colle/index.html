@@ -269,6 +269,10 @@
        —— 它们是照片不是透明产品图，缩在框里会显得很小 */
     .card.photo figure { aspect-ratio: 1 / 1; padding: 0; }
     .card.photo img { width: 100%; height: 100%; object-fit: cover; }
+    /* 演出/展览的图是海报、剧照、场馆照混在一起，比例天差地别 ——
+       跟角色卡一样锁宽度、高度随图走，不裁切；瀑布流消化高度差 */
+    .card.free figure { aspect-ratio: auto; padding: 0; }
+    .card.free img { width: 100%; height: auto; display: block; }
     /* 城市照片：横构图 3:2，满幅裁切 */
     .card.place figure { aspect-ratio: 3 / 2; }
     .card.place img { width: 100%; height: 100%; object-fit: cover; }
@@ -569,7 +573,7 @@
       { key: 'places',     minors: ['all', 'live', 'travel'],     data: window.COLLE_PLACES || [] },
       { key: 'books',      minors: ['all', 'novel', 'manga', 'douban'], posters: true, data: window.COLLE_BOOKS || [] },
       { key: 'physical',   minors: ['all', 'disc', 'booklondon'], posters: true, data: window.COLLE_PHYSICAL || [] },
-      { key: 'events',     minors: ['all', 'concert', 'stage', 'exhibition'], data: window.COLLE_EVENTS || [] },
+      { key: 'events',     minors: ['all', 'concert', 'stage', 'exhibition'], data: window.COLLE_EVENTS || [], masonry: true, freeratio: true },
       { key: 'glam',       minors: ['all'],                       data: window.COLLE_GLAM || [] },
       { key: 'campus',     minors: ['all'],                       data: window.COLLE_CAMPUS || [] },
       // ⭐ tagged: 小 tab 是「标签筛选」不是互斥分类 —— 一个人可以同时是 PV 师和音乐家，
@@ -592,6 +596,52 @@
     var lang = store.get('dp-lang') ||
       ((navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
     var major = 0, minor = 'all';
+
+    // ── URL 路由（hash）──────────────────────────────────────────────
+    // 形如 #places/travel?view=map&sort=time —— 一级 tab / 二级 tab / 额外视图属性
+    // 为什么用 hash 而不是 path 或 query：这是**纯静态站**，path 路由要在 nginx 配
+    // fallback，query 在 file:// 直开时不稳；hash 三种场景（线上 / 本地 / 离线）都通，
+    // 且改 hash 不触发刷新。属性省略即默认值，所以 #places 和 #places/all 等价。
+    function readHash() {
+      var h = (location.hash || '').replace(/^#\/?/, '');
+      if (!h) return null;
+      var qi = h.indexOf('?');
+      var path = (qi < 0 ? h : h.slice(0, qi)).split('/').filter(Boolean).map(decodeURIComponent);
+      var q = {};
+      if (qi >= 0) h.slice(qi + 1).split('&').forEach(function (kv) {
+        var i = kv.indexOf('='); if (i > 0) q[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1));
+      });
+      return { major: path[0], minor: path[1], view: q.view, sort: q.sort };
+    }
+    function applyHash() {
+      var r = readHash(); if (!r) return false;
+      var i = -1;
+      for (var k = 0; k < MAJOR.length; k++) if (MAJOR[k].key === r.major) i = k;
+      if (i < 0) return false;
+      major = i;
+      minor = (r.minor && MAJOR[i].minors.indexOf(r.minor) >= 0) ? r.minor : 'all';
+      if (r.view && VIEWS.indexOf(r.view) >= 0) view = r.view;
+      if (r.sort === 'time' || r.sort === 'score') sort = r.sort;
+      return true;
+    }
+    var writingHash = false;
+    function writeHash() {
+      var g = MAJOR[major], h = '#' + g.key;
+      if (minor !== 'all') h += '/' + minor;
+      var q = [];
+      if (g.key === 'places' && view !== 'cards') q.push('view=' + view);
+      if (SORT_KEY[g.key] && sort !== 'score') q.push('sort=' + sort);
+      if (q.length) h += '?' + q.join('&');
+      if (h === (location.hash || '')) return;
+      writingHash = true;
+      try { history.replaceState(null, '', h); } catch (e) { location.hash = h; }
+      writingHash = false;
+    }
+    window.addEventListener('hashchange', function () {
+      if (writingHash) return;
+      applyHash();   // 认不出就保持当前状态，render 会把 hash 回写成合法值
+      render();
+    });
 
     var $grid = document.getElementById('grid');
     var $maj = document.getElementById('tabsMajor');
@@ -645,6 +695,9 @@
     var AR = { novel: 'book', manga: 'book', douban: 'book',
                booklondon: 'album', disc: 'disc' };
 
+    // 有些字段是普通字符串，有些是 {en, zh}（机构名梳理后统一成对象）——一处收口
+    function L(v) { return v == null ? '' : (typeof v === 'string' ? v : (v[lang] || v.en || '')); }
+
     function card(item, g, i) {
       var isChar = g.key === 'characters';
       var isPlace = g.key === 'places';
@@ -652,6 +705,7 @@
       var el = document.createElement(item.url ? 'a' : 'div');
       var type = isChar ? 'char' : isPlace ? 'place' : g.posters ? 'poster'
         : g.key === 'games' ? 'game' : PHOTO_TABS[g.key] ? 'photo' : 'device';
+      if (g.freeratio) type = 'photo free';
       el.className = 'card ' + type +
         (isChar && item.cat === 'zzz' ? ' tall' : '') +
         (type === 'game' && item.cat === 'switch' ? ' square' : '') +
@@ -663,7 +717,7 @@
       var fig = document.createElement('figure');
       var img = new Image();
       img.loading = 'lazy';
-      img.alt = typeof item.name === 'object' ? item.name[lang] : item.name;
+      img.alt = L(item.name);
       img.src = item.img;
       img.onerror = function () {
         fig.innerHTML = '<span class="missing">' + t('noimg') + '</span>';
@@ -678,23 +732,24 @@
 
       var tt = document.createElement('div');
       tt.className = 't';
-      tt.textContent = typeof item.name === 'object' ? item.name[lang] : item.name;
+      tt.textContent = L(item.name);
       el.appendChild(tt);
 
       if (item.sub) {
-        var s = document.createElement('div'); s.className = 's'; s.textContent = item.sub;
+        var s = document.createElement('div'); s.className = 's'; s.textContent = L(item.sub);
         el.appendChild(s);
       }
       if (isPlace) {
-        // 城市卡：segs 是已排版的时间段串（两行截断），国旗/国家/首访年份做三级行；
+        // 城市卡：只显示年份区间（首访–最近），不显示 segs 那种超长时间段串；
         // days / photos 是隐性排序键，与 xp 同规——永远不展示
-        if (item.segs) {
+        if (false) {
           var ps = document.createElement('div'); ps.className = 's clamp'; ps.textContent = item.segs;
           el.appendChild(ps);
         }
         var py = document.createElement('div'); py.className = 'y';
         py.textContent = (item.flag ? item.flag + ' ' : '') +
-          (item.country ? item.country[lang] : '') + ' · ' + (item.year == null ? t('na') : item.year);
+          (item.cc ? item.cc + ' ' : '') + L(item.country) +
+          (item.years ? ' · ' + item.years : '');
         el.appendChild(py);
       } else if (item.year !== undefined) {
         var y = document.createElement('div'); y.className = 'y';
@@ -789,6 +844,8 @@
       $tlWrap.hidden = !(isPlace && view === 'time');
       if (!isPlace || view !== 'map') { mapSel = null; $mapPop.hidden = true; }
 
+      writeHash();   // 要在 places 的提前 return 之前，否则 map/time 视图写不进 URL
+
       if (isPlace) {
         placeRows = rows;
         if (view === 'map') { renderMap(rows); return; }
@@ -843,7 +900,7 @@
         mk.setAttribute('data-id', p.id);
         mk.innerHTML = '<circle class="halo" r="9"></circle><circle class="c" r="4"></circle>';
         var ti = document.createElementNS(SVGNS, 'title');
-        ti.textContent = p.name[lang] + (p.segs ? ' · ' + p.segs : '');
+        ti.textContent = L(p.name) + (p.years ? ' · ' + p.years : '');
         mk.appendChild(ti);
         mk.addEventListener('click', function (ev) {
           ev.stopPropagation();
@@ -869,10 +926,10 @@
       return (withImg
           ? '<img src="' + p.img + '" alt="" loading="lazy" onerror="this.remove()">' : '') +
         '<div class="mp-t">' +
-          '<div class="mp-name">' + (p.flag ? p.flag + ' ' : '') + p.name[lang] + '</div>' +
-          '<div class="mp-sub">' + (p.country ? p.country[lang] : '') + ' · ' +
+          '<div class="mp-name">' + (p.flag ? p.flag + ' ' : '') + L(p.name) + '</div>' +
+          '<div class="mp-sub">' + (p.cc ? p.cc + ' ' : '') + L(p.country) + ' · ' +
             (p.year == null ? t('na') : p.year) + '</div>' +
-          (p.segs ? '<div class="mp-segs">' + p.segs + '</div>' : '') +
+
         '</div>';
     }
     function placePop($pop, x, y, W, above) {
@@ -939,10 +996,10 @@
         var p = it.p, isLive = p.cat === 'live';
         var x = sx(it.v), dotY = dotYOf(it);
         s += '<g class="tl-it" data-i="' + i + '">' +
-          '<title>' + p.name[lang] + (p.segs ? ' · ' + p.segs : '') + '</title>' +
+          '<title>' + L(p.name) + (p.years ? ' · ' + p.years : '') + '</title>' +
           '<circle class="tl-hit" cx="' + x + '" cy="' + dotY + '" r="9"></circle>' +
           '<circle class="tl-dot' + (isLive ? '' : ' travel') + '" cx="' + x + '" cy="' + dotY + '" r="3.6"></circle>';
-        var label = (p.flag ? p.flag + ' ' : '') + p.name[lang];
+        var label = (p.flag ? p.flag + ' ' : '') + L(p.name);
         var w = estW(label);
         var lane = isLive ? last.live : last.travel;
         for (var k = 0; k < 2; k++) {
@@ -1002,7 +1059,8 @@
     };
 
     applyTheme();
-    applyLang();
+    applyHash();   // 初次进入先认 URL（分享链接直达指定 tab/视图），认不出就用默认值
+    applyLang();   // applyLang 内部会调 render()
   })();
   </script>
 

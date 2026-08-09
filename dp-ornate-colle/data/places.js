@@ -20,10 +20,11 @@ window.COLLE_PLACES = [
   "last": "2026-07",
   "lat": 51.5166,
   "lon": -0.0848,
-  "segs": "2022-01–2022-03 · 2022-05 · 2022-09–2026-07",
   "days": 696,
   "photos": 54081,
-  "img": "img/places/london.webp"
+  "img": "img/places/london.webp",
+  "years": "2022–2026",
+  "cc": "UK"
  },
  {
   "id": "beijing",
@@ -42,10 +43,11 @@ window.COLLE_PLACES = [
   "last": "2025-08",
   "lat": 39.9821,
   "lon": 116.3192,
-  "segs": "2014-07–2014-10 · 2014-12 · 2017-11 … （共 10 段）… 2025-03 · 2025-06–2025-08",
   "days": 543,
   "photos": 17497,
-  "img": "img/places/beijing.webp"
+  "img": "img/places/beijing.webp",
+  "years": "2014–2025",
+  "cc": "CN"
  },
  {
   "id": "huizhou",
@@ -59,15 +61,16 @@ window.COLLE_PLACES = [
    "zh": "中国"
   },
   "flag": "🇨🇳",
-  "year": null,
+  "year": 2013,
   "first": "2001-01",
   "last": "2025-09",
   "lat": 23.0816,
   "lon": 114.4324,
-  "segs": "2001-01 · 2013-06 · 2014-08–2014-10 … （共 18 段）… 2024-07–2024-08 · 2025-08–2025-09",
   "days": 212,
   "photos": 5639,
-  "img": "img/places/huizhou.webp"
+  "img": "img/places/huizhou.webp",
+  "years": "2013–2025",
+  "cc": "CN"
  },
  {
   "id": "chaling",
@@ -86,10 +89,11 @@ window.COLLE_PLACES = [
   "last": "2025-07",
   "lat": 26.7926,
   "lon": 113.537,
-  "segs": "2018-02 · 2019-07–2019-08 · 2022-07–2022-08 · 2023-08 · 2024-08 · 2025-07",
   "days": 35,
   "photos": 1067,
-  "img": "img/places/chaling.webp"
+  "img": "img/places/chaling.webp",
+  "years": "2018–2025",
+  "cc": "CN"
  },
  {
   "id": "orenburg",
@@ -108,10 +112,11 @@ window.COLLE_PLACES = [
   "last": "2025-05",
   "lat": 51.7953,
   "lon": 55.1374,
-  "segs": "2024-01–2024-03 · 2024-10–2024-11 · 2025-04–2025-05",
   "days": 33,
   "photos": 2859,
-  "img": "img/places/orenburg.webp"
+  "img": "img/places/orenburg.webp",
+  "years": "2024–2025",
+  "cc": "RU"
  },
  {
   "id": "saint-petersburg",
@@ -130,10 +135,11 @@ window.COLLE_PLACES = [
   "last": "2024-09",
   "lat": 59.9272,
   "lon": 30.3152,
-  "segs": "2024-01–2024-02 · 2024-07–2024-09",
   "days": 21,
   "photos": 17126,
-  "img": "img/places/saint-petersburg.webp"
+  "img": "img/places/saint-petersburg.webp",
+  "years": "2024",
+  "cc": "RU"
  },
  {
   "id": "shanghai",
@@ -152,10 +158,11 @@ window.COLLE_PLACES = [
   "last": "2025-08",
   "lat": 31.2288,
   "lon": 121.4877,
-  "segs": "2016-07 · 2017-07 · 2018-08 · 2019-07 · 2024-05 · 2025-08",
   "days": 18,
   "photos": 5989,
-  "img": "img/places/shanghai.webp"
+  "img": "img/places/shanghai.webp",
+  "years": "2016–2025",
+  "cc": "CN"
  },
  {
   "id": "hangzhou",
@@ -174,10 +181,11 @@ window.COLLE_PLACES = [
   "last": "2025-08",
   "lat": 30.2416,
   "lon": 120.1427,
-  "segs": "2018-10 · 2018-12 · 2019-03–2019-04 … （共 9 段）… 2024-07 · 2025-08",
   "days": 18,
   "photos": 1853,
-  "img": "img/places/hangzhou.webp"
+  "img": "img/places/hangzhou.webp",
+  "years": "2018–2025",
+  "cc": "CN"
  },
  {
   "id": "edinburgh",
@@ -196,10 +204,11 @@ window.COLLE_PLACES = [
   "last": "2024-12",
   "lat": 55.9492,
   "lon": -3.2027,
-  "segs": "2022-03 · 2022-12–2023-01 · 2023-04 · 2024-07 · 2024-12",
   "days": 17,
   "photos": 4536,
-  "img": "img/places/edinburgh.webp"
+  "img": "img/places/edinburgh.webp",
+  "years": "2022–2024",
+  "cc": "UK"
  },
  {
   "id": "paris",
@@ -218,10 +227,11 @@ window.COLLE_PLACES = [
   "last": "2024-05",
   "lat": 48.8602,
   "lon": 2.3513,
-  "segs": "2023-03–2023-04 · 2023-07 · 2024-05",
   "days": 11,
   "photos": 5210,
-  "img": "img/places/paris.webp"
+  "img": "img/places/paris.webp",
+  "years": "2023–2024",
+  "cc": "FR"
  },
  {
   "id": "changsha",
@@ -240,10 +250,11 @@ window.COLLE_PLACES = [
   "last": "2025-12",
   "lat": 28.2003,
   "lon": 112.9736,
-  "segs": "2023-08 · 2025-07–2025-08 · 2025-12",
   "days": 10,
   "photos": 2642,
-  "img": "img/places/changsha.webp"
+  "img": "img/places/changsha.webp",
+  "years": "2023–2025",
+  "cc": "CN"
  },
  {
   "id": "guangzhou",
@@ -262,10 +273,11 @@ window.COLLE_PLACES = [
   "last": "2023-07",
   "lat": 23.1471,
   "lon": 113.3179,
-  "segs": "2017-07 · 2019-02 · 2022-07–2022-08 · 2022-10 · 2023-07",
   "days": 10,
   "photos": 1135,
-  "img": "img/places/guangzhou.webp"
+  "img": "img/places/guangzhou.webp",
+  "years": "2017–2023",
+  "cc": "CN"
  },
  {
   "id": "shenzhen",
@@ -284,10 +296,11 @@ window.COLLE_PLACES = [
   "last": "2024-08",
   "lat": 22.5512,
   "lon": 114.1102,
-  "segs": "2014-07 · 2014-10 · 2014-12 … （共 8 段）… 2023-08 · 2024-08",
   "days": 10,
   "photos": 943,
-  "img": "img/places/shenzhen.webp"
+  "img": "img/places/shenzhen.webp",
+  "years": "2014–2024",
+  "cc": "CN"
  },
  {
   "id": "zhuzhou",
@@ -306,10 +319,11 @@ window.COLLE_PLACES = [
   "last": "2025-07",
   "lat": 27.8222,
   "lon": 113.106,
-  "segs": "2019-07 · 2023-08 · 2024-07–2024-08 · 2025-07",
   "days": 10,
   "photos": 269,
-  "img": "img/places/zhuzhou.webp"
+  "img": "img/places/zhuzhou.webp",
+  "years": "2019–2025",
+  "cc": "CN"
  },
  {
   "id": "new-york",
@@ -328,10 +342,11 @@ window.COLLE_PLACES = [
   "last": "2023-04",
   "lat": 40.7876,
   "lon": -73.9656,
-  "segs": "2023-04",
   "days": 8,
   "photos": 3678,
-  "img": "img/places/new-york.webp"
+  "img": "img/places/new-york.webp",
+  "years": "2023",
+  "cc": "US"
  },
  {
   "id": "nantes",
@@ -350,10 +365,11 @@ window.COLLE_PLACES = [
   "last": "2025-08",
   "lat": 47.2158,
   "lon": -1.5522,
-  "segs": "2025-06 · 2025-08",
   "days": 8,
   "photos": 2966,
-  "img": "img/places/nantes.webp"
+  "img": "img/places/nantes.webp",
+  "years": "2025",
+  "cc": "FR"
  },
  {
   "id": "oxford",
@@ -372,10 +388,11 @@ window.COLLE_PLACES = [
   "last": "2024-08",
   "lat": 51.7546,
   "lon": -1.27,
-  "segs": "2022-11 · 2024-08",
   "days": 8,
   "photos": 2191,
-  "img": "img/places/oxford.webp"
+  "img": "img/places/oxford.webp",
+  "years": "2022–2024",
+  "cc": "UK"
  },
  {
   "id": "san-diego",
@@ -394,10 +411,11 @@ window.COLLE_PLACES = [
   "last": "2025-12",
   "lat": 32.7206,
   "lon": -117.1767,
-  "segs": "2025-12",
   "days": 8,
   "photos": 1623,
-  "img": "img/places/san-diego.webp"
+  "img": "img/places/san-diego.webp",
+  "years": "2025",
+  "cc": "US"
  },
  {
   "id": "rome",
@@ -416,10 +434,11 @@ window.COLLE_PLACES = [
   "last": "2026-05",
   "lat": 41.8969,
   "lon": 12.4986,
-  "segs": "2026-05",
   "days": 7,
   "photos": 2461,
-  "img": "img/places/rome.webp"
+  "img": "img/places/rome.webp",
+  "years": "2026",
+  "cc": "IT"
  },
  {
   "id": "chongqing",
@@ -438,10 +457,11 @@ window.COLLE_PLACES = [
   "last": "2023-08",
   "lat": 29.5694,
   "lon": 106.5382,
-  "segs": "2018-06 · 2023-08",
   "days": 7,
   "photos": 1046,
-  "img": "img/places/chongqing.webp"
+  "img": "img/places/chongqing.webp",
+  "years": "2018–2023",
+  "cc": "CN"
  },
  {
   "id": "atlanta",
@@ -460,10 +480,11 @@ window.COLLE_PLACES = [
   "last": "2023-07",
   "lat": 33.7758,
   "lon": -84.3947,
-  "segs": "2023-04 · 2023-07",
   "days": 6,
   "photos": 1817,
-  "img": "img/places/atlanta.webp"
+  "img": "img/places/atlanta.webp",
+  "years": "2023",
+  "cc": "US"
  },
  {
   "id": "jinan",
@@ -482,10 +503,11 @@ window.COLLE_PLACES = [
   "last": "2023-06",
   "lat": 36.6556,
   "lon": 117.0345,
-  "segs": "2020-09 · 2023-06",
   "days": 6,
   "photos": 60,
-  "img": "img/places/jinan.webp"
+  "img": "img/places/jinan.webp",
+  "years": "2020–2023",
+  "cc": "CN"
  },
  {
   "id": "glasgow",
@@ -504,10 +526,11 @@ window.COLLE_PLACES = [
   "last": "2023-11",
   "lat": 55.8632,
   "lon": -4.2507,
-  "segs": "2023-04 · 2023-11",
   "days": 5,
   "photos": 2246,
-  "img": "img/places/glasgow.webp"
+  "img": "img/places/glasgow.webp",
+  "years": "2023",
+  "cc": "UK"
  },
  {
   "id": "casablanca",
@@ -526,10 +549,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 33.5917,
   "lon": -7.6388,
-  "segs": "2022-05 · 2022-10",
   "days": 4,
   "photos": 549,
-  "img": "img/places/casablanca.webp"
+  "img": "img/places/casablanca.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "hong-kong",
@@ -548,10 +572,11 @@ window.COLLE_PLACES = [
   "last": "2024-08",
   "lat": 22.3144,
   "lon": 113.9333,
-  "segs": "2022-03 · 2022-09 · 2024-08",
   "days": 4,
   "photos": 398,
-  "img": "img/places/hong-kong.webp"
+  "img": "img/places/hong-kong.webp",
+  "years": "2022–2024",
+  "cc": "HK"
  },
  {
   "id": "shanghai-laogang",
@@ -570,10 +595,11 @@ window.COLLE_PLACES = [
   "last": "2024-08",
   "lat": 31.1028,
   "lon": 121.831,
-  "segs": "2018-08 · 2024-07–2024-08",
   "days": 4,
   "photos": 101,
-  "img": "img/places/shanghai-laogang.webp"
+  "img": "img/places/shanghai-laogang.webp",
+  "years": "2018–2024",
+  "cc": "CN"
  },
  {
   "id": "vatican-city",
@@ -592,10 +618,11 @@ window.COLLE_PLACES = [
   "last": "2026-05",
   "lat": 41.8964,
   "lon": 12.4776,
-  "segs": "2026-05",
   "days": 3,
   "photos": 1587,
-  "img": "img/places/vatican-city.webp"
+  "img": "img/places/vatican-city.webp",
+  "years": "2026",
+  "cc": "VA"
  },
  {
   "id": "cambridge",
@@ -614,10 +641,11 @@ window.COLLE_PLACES = [
   "last": "2024-10",
   "lat": 52.2078,
   "lon": 0.1179,
-  "segs": "2024-08 · 2024-10",
   "days": 3,
   "photos": 1506,
-  "img": "img/places/cambridge.webp"
+  "img": "img/places/cambridge.webp",
+  "years": "2024",
+  "cc": "UK"
  },
  {
   "id": "marrakesh",
@@ -636,10 +664,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 31.6266,
   "lon": -7.9902,
-  "segs": "2022-03 · 2022-10",
   "days": 3,
   "photos": 750,
-  "img": "img/places/marrakesh.webp"
+  "img": "img/places/marrakesh.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "rissani",
@@ -658,10 +687,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 31.0863,
   "lon": -4.0117,
-  "segs": "2022-03 · 2022-10",
   "days": 3,
   "photos": 732,
-  "img": "img/places/rissani.webp"
+  "img": "img/places/rissani.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "tinghir",
@@ -680,10 +710,11 @@ window.COLLE_PLACES = [
   "last": "2022-12",
   "lat": 31.5845,
   "lon": -5.5915,
-  "segs": "2022-03 · 2022-10–2022-12",
   "days": 3,
   "photos": 509,
-  "img": "img/places/tinghir.webp"
+  "img": "img/places/tinghir.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "amerzgane",
@@ -702,10 +733,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 31.0992,
   "lon": -7.2835,
-  "segs": "2022-03 · 2022-10",
   "days": 3,
   "photos": 458,
-  "img": "img/places/amerzgane.webp"
+  "img": "img/places/amerzgane.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "istanbul",
@@ -724,10 +756,11 @@ window.COLLE_PLACES = [
   "last": "2024-07",
   "lat": 41.2627,
   "lon": 28.7443,
-  "segs": "2022-03 · 2022-09 · 2024-07",
   "days": 3,
   "photos": 455,
-  "img": "img/places/istanbul.webp"
+  "img": "img/places/istanbul.webp",
+  "years": "2022–2024",
+  "cc": "TR"
  },
  {
   "id": "tabount",
@@ -746,10 +779,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 30.9412,
   "lon": -6.9663,
-  "segs": "2022-03 · 2022-10",
   "days": 3,
   "photos": 426,
-  "img": "img/places/tabount.webp"
+  "img": "img/places/tabount.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "york",
@@ -768,10 +802,11 @@ window.COLLE_PLACES = [
   "last": "2024-11",
   "lat": 53.9612,
   "lon": -1.0809,
-  "segs": "2024-11",
   "days": 2,
   "photos": 750,
-  "img": "img/places/york.webp"
+  "img": "img/places/york.webp",
+  "years": "2024",
+  "cc": "UK"
  },
  {
   "id": "milan",
@@ -790,10 +825,11 @@ window.COLLE_PLACES = [
   "last": "2026-05",
   "lat": 45.4651,
   "lon": 9.189,
-  "segs": "2026-05",
   "days": 2,
   "photos": 655,
-  "img": "img/places/milan.webp"
+  "img": "img/places/milan.webp",
+  "years": "2026",
+  "cc": "IT"
  },
  {
   "id": "fes",
@@ -812,10 +848,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 34.0576,
   "lon": -4.9729,
-  "segs": "2022-10",
   "days": 2,
   "photos": 322,
-  "img": "img/places/fes.webp"
+  "img": "img/places/fes.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "tianjin",
@@ -834,10 +871,11 @@ window.COLLE_PLACES = [
   "last": "2025-07",
   "lat": 39.1535,
   "lon": 117.1808,
-  "segs": "2025-07",
   "days": 2,
   "photos": 255,
-  "img": "img/places/tianjin.webp"
+  "img": "img/places/tianjin.webp",
+  "years": "2025",
+  "cc": "CN"
  },
  {
   "id": "chefchaouen",
@@ -856,10 +894,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 35.1687,
   "lon": -5.258,
-  "segs": "2022-10",
   "days": 2,
   "photos": 173,
-  "img": "img/places/chefchaouen.webp"
+  "img": "img/places/chefchaouen.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "dabu",
@@ -878,10 +917,11 @@ window.COLLE_PLACES = [
   "last": "2022-07",
   "lat": 24.3502,
   "lon": 116.6761,
-  "segs": "2020-01 · 2022-07",
   "days": 2,
   "photos": 86,
-  "img": "img/places/dabu.webp"
+  "img": "img/places/dabu.webp",
+  "years": "2020–2022",
+  "cc": "CN"
  },
  {
   "id": "ifrane",
@@ -900,10 +940,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 33.5285,
   "lon": -5.1071,
-  "segs": "2022-03 · 2022-10",
   "days": 2,
   "photos": 57,
-  "img": "img/places/ifrane.webp"
+  "img": "img/places/ifrane.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "yueyang",
@@ -922,10 +963,11 @@ window.COLLE_PLACES = [
   "last": "2023-08",
   "lat": 29.3826,
   "lon": 113.0884,
-  "segs": "2023-08",
   "days": 1,
   "photos": 1025,
-  "img": "img/places/yueyang.webp"
+  "img": "img/places/yueyang.webp",
+  "years": "2023",
+  "cc": "CN"
  },
  {
   "id": "pinghai",
@@ -944,10 +986,11 @@ window.COLLE_PLACES = [
   "last": "2025-08",
   "lat": 22.5892,
   "lon": 114.8862,
-  "segs": "2025-08",
   "days": 1,
   "photos": 979,
-  "img": "img/places/pinghai.webp"
+  "img": "img/places/pinghai.webp",
+  "years": "2025",
+  "cc": "CN"
  },
  {
   "id": "zhujiajiao",
@@ -966,10 +1009,11 @@ window.COLLE_PLACES = [
   "last": "2025-08",
   "lat": 31.1097,
   "lon": 121.0495,
-  "segs": "2025-08",
   "days": 1,
   "photos": 921,
-  "img": "img/places/zhujiajiao.webp"
+  "img": "img/places/zhujiajiao.webp",
+  "years": "2025",
+  "cc": "CN"
  },
  {
   "id": "seven-sisters",
@@ -988,10 +1032,11 @@ window.COLLE_PLACES = [
   "last": "2022-09",
   "lat": 50.7428,
   "lon": 0.204,
-  "segs": "2022-09",
   "days": 1,
   "photos": 716,
-  "img": "img/places/seven-sisters.webp"
+  "img": "img/places/seven-sisters.webp",
+  "years": "2022",
+  "cc": "UK"
  },
  {
   "id": "oban",
@@ -1010,10 +1055,11 @@ window.COLLE_PLACES = [
   "last": "2023-04",
   "lat": 56.4168,
   "lon": -5.477,
-  "segs": "2023-04",
   "days": 1,
   "photos": 694,
-  "img": "img/places/oban.webp"
+  "img": "img/places/oban.webp",
+  "years": "2023",
+  "cc": "UK"
  },
  {
   "id": "bath",
@@ -1032,10 +1078,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 51.3833,
   "lon": -2.3653,
-  "segs": "2022-10",
   "days": 1,
   "photos": 602,
-  "img": "img/places/bath.webp"
+  "img": "img/places/bath.webp",
+  "years": "2022",
+  "cc": "UK"
  },
  {
   "id": "moulay-idriss",
@@ -1054,10 +1101,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 34.0728,
   "lon": -5.5541,
-  "segs": "2022-10",
   "days": 1,
   "photos": 248,
-  "img": "img/places/moulay-idriss.webp"
+  "img": "img/places/moulay-idriss.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "beijing-zhangjiawan",
@@ -1076,10 +1124,11 @@ window.COLLE_PLACES = [
   "last": "2025-07",
   "lat": 39.8819,
   "lon": 116.7097,
-  "segs": "2025-07",
   "days": 1,
   "photos": 237,
-  "img": "img/places/beijing-zhangjiawan.webp"
+  "img": "img/places/beijing-zhangjiawan.webp",
+  "years": "2025",
+  "cc": "CN"
  },
  {
   "id": "rabat",
@@ -1098,10 +1147,11 @@ window.COLLE_PLACES = [
   "last": "2022-10",
   "lat": 34.0232,
   "lon": -6.8224,
-  "segs": "2022-10",
   "days": 1,
   "photos": 187,
-  "img": "img/places/rabat.webp"
+  "img": "img/places/rabat.webp",
+  "years": "2022",
+  "cc": "MA"
  },
  {
   "id": "istanbul-pendik",
@@ -1120,9 +1170,10 @@ window.COLLE_PLACES = [
   "last": "2024-01",
   "lat": 40.9046,
   "lon": 29.316,
-  "segs": "2024-01",
   "days": 1,
   "photos": 71,
-  "img": "img/places/istanbul-pendik.webp"
+  "img": "img/places/istanbul-pendik.webp",
+  "years": "2024",
+  "cc": "TR"
  }
 ];

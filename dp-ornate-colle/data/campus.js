@@ -195,7 +195,7 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/清华大学.webp"
  },
  {
-  "id": "microsoft-research-asia",
+  "id": "微软亚洲研究院-msra",
   "cat": "campus",
   "year": 2018,
   "name": {
@@ -248,8 +248,7 @@ window.COLLE_CAMPUS = [
    "zh": "中国科学院数学与系统科学研究院 (AMSS)"
   },
   "sub": "访问",
-  "city": "北京（中关村）",
-  "img": "img/campus/中国科学院数学与系统科学研究院.webp"
+  "city": "北京（中关村）"
  },
  {
   "id": "北京邮电大学-bupt",

@@ -60,7 +60,7 @@ window.COLLE_EVENTS = [
   "city": "London"
  },
  {
-  "id": "ado",
+  "id": "stranger-things-the-first-shadow",
   "cat": "stage",
   "year": 2025,
   "name": {
@@ -71,7 +71,8 @@ window.COLLE_EVENTS = [
    "en": "Phoenix Theatre",
    "zh": "Phoenix Theatre"
   },
-  "city": "London"
+  "city": "London",
+  "img": "img/events/stranger-things-the-first-shadow.webp"
  },
  {
   "id": "electric-dreams-art-and-technology-before-the-in",
@@ -118,7 +119,7 @@ window.COLLE_EVENTS = [
   "img": "img/events/melon-band-冬季演出.webp"
  },
  {
-  "id": "stranger-things-the-first-shadow",
+  "id": "ado",
   "cat": "concert",
   "year": 2025,
   "name": {
@@ -129,8 +130,7 @@ window.COLLE_EVENTS = [
    "en": "The O2 Arena",
    "zh": "The O2 Arena"
   },
-  "city": "London",
-  "img": "img/events/stranger-things-the-first-shadow.webp"
+  "city": "London"
  },
  {
   "id": "babymetal",

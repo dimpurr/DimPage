@@ -3,7 +3,7 @@
 // name = {en, zh} —— en 是官方正式名（用机构自己的语言），zh 是中文通行译名；md 中文名留空时 zh 回落 = en。
 window.COLLE_GLAM = [
  {
-  "id": "museo-delle-culture",
+  "id": "mudec-museo-delle-culture",
   "cat": "glam",
   "year": 2026,
   "name": {
@@ -12,6 +12,7 @@ window.COLLE_GLAM = [
   },
   "sub": "博物馆",
   "city": "Milano",
+  "img": "img/glam/mudec-museo-delle-culture.webp",
   "rank": null
  },
  {
@@ -52,7 +53,7 @@ window.COLLE_GLAM = [
   "rank": null
  },
  {
-  "id": "victoria-and-albert-museum",
+  "id": "v-a-victoria-and-albert-museum",
   "cat": "glam",
   "year": 2025,
   "name": {
@@ -61,6 +62,7 @@ window.COLLE_GLAM = [
   },
   "sub": "博物馆",
   "city": "London（South Kensington）",
+  "img": "img/glam/v-a-victoria-and-albert-museum.webp",
   "rank": null
  },
  {
@@ -295,7 +297,7 @@ window.COLLE_GLAM = [
   "rank": null
  },
  {
-  "id": "x",
+  "id": "ekaterininskiy-dvorets",
   "cat": "glam",
   "year": 2024,
   "name": {
@@ -320,7 +322,7 @@ window.COLLE_GLAM = [
   "rank": null
  },
  {
-  "id": "x",
+  "id": "俄罗斯博物馆-微缩博物馆",
   "cat": "glam",
   "year": 2024,
   "name": {
@@ -329,10 +331,11 @@ window.COLLE_GLAM = [
   },
   "sub": "美术馆 / 博物馆",
   "city": "Санкт-Петербург",
+  "img": "img/glam/俄罗斯博物馆-微缩博物馆.webp",
   "rank": null
  },
  {
-  "id": "俄罗斯博物馆-微缩博物馆",
+  "id": "微缩博物馆",
   "cat": "glam",
   "year": 2024,
   "name": {
@@ -341,7 +344,6 @@ window.COLLE_GLAM = [
   },
   "sub": "美术馆 / 博物馆",
   "city": "Санкт-Петербург",
-  "img": "img/glam/俄罗斯博物馆-微缩博物馆.webp",
   "rank": null
  },
  {
