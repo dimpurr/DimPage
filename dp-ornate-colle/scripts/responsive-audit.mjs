@@ -1,7 +1,7 @@
 // 响应式零横向溢出自查：CDP 驱动 headless Chrome
 // 用法：先启动 chrome --headless=new --remote-debugging-port=9222，再 node dp-cdp-test.mjs <page-url>
 const pageUrl = process.argv[2];
-const widths = [390, 430, 768, 834, 1024, 1280, 1440, 2560];
+const widths = [390, 430, 768, 834, 1024, 1280, 1440, 2560, 3440];
 
 const list = await (await fetch('http://127.0.0.1:9222/json')).json();
 const page = list.find(t => t.type === 'page');
@@ -82,13 +82,14 @@ for (const w of widths) {
   await sleep(400);
   await evalJs('localStorage.clear()');
 
-  // 8 组合：4 个大 tab × 明暗 2 主题
+  // 10 组合：5 个大 tab × 明暗 2 主题
   // 初始主题跟随系统（未知），显式设定后再测
   const combos = [
     ['devices', 'light'], ['devices', 'dark'],
     ['characters', 'light'], ['characters', 'dark'],
     ['movies', 'light'], ['movies', 'dark'],
     ['anime', 'light'], ['anime', 'dark'],
+    ['games', 'light'], ['games', 'dark'],
   ];
   for (const [tab, theme] of combos) {
     await evalJs(`(() => {
@@ -99,7 +100,7 @@ for (const w of widths) {
       while (document.documentElement.dataset.theme !== want.theme && guard++ < 3)
         document.getElementById('themeBtn').click();
       // tab：点对应大 tab
-      const idx = { devices: 0, characters: 1, movies: 2, anime: 3 }[want.tab];
+      const idx = { devices: 0, characters: 1, movies: 2, anime: 3, games: 4 }[want.tab];
       document.querySelectorAll('#tabsMajor button')[idx].click();
       return true;
     })()`);
