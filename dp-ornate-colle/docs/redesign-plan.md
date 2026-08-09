@@ -130,10 +130,13 @@ intro/footer 维持 `max-width: 640px` 阅读宽；收藏区容器 `max-width: 1
 
 暗色版不是「把白色反相」，而是同一气质的夜景：柔和的蓝灰深处（`#161d26` 打底、`#1c2530` 分区），不纯黑、不高对比，点缀淡蓝提亮到 `#7ba7cd` 保证暗底上的辨识度。
 
-关键决策：**暗色下图槽（`--figure-bg`）保持浅色 `#f2f7fb`**。原因：
-- 设备图是深色物体的透明去背图，放在深底上会直接「消失」；
-- 原神卡池图本身烘焙了白色画幅，深底下若图槽也变深，白画幅会变成刺眼的亮块；
-- 图槽保持浅色后，每张图就像「贴在夜色纸面上的照片」，与日间的「白底手账」是同一个隐喻，两套主题气质统一，且图片资源零处理。
+关键决策：**暗色下图槽（`--figure-bg`）用与 surface 同族、再亮一档的冷中性灰蓝 `#27313d`**。整条明度层级是 bg `#161d26` < surface `#1c2530` < figure `#27313d` < control `#242f3c`，同族单色、每档亮度差很小——暗色要柔和，靠的就是「层级靠明度微差表达，而不是靠色相对比」。
+
+曾被否掉的两个方案：
+- **白/浅色图槽**（最初实现）：确实让深色去背图和白底卡池图「零处理即好看」，但实际效果是整页暗底上戳着几十块刺眼的亮白方块，暗色整体观感被破坏，一票否决。
+- **去掉图槽、图片直接放卡片底**：去背图和卡池图的画幅差异会直接暴露（一个有底一个没底），网格失去统一的「瓷砖」节奏，收藏墙感觉散了。
+
+取舍说明：当前图片素材是临时占位、以后会重新处理，因此图槽配色**以暗色整体观感为准，图片将就**——深色去背图在 `#27313d` 上对比度偏低是已知代价，等新素材（预计会按深色底重抠或加浅色描边）落地后自然解决，不为此退回白底。
 
 ### 6.2 跟随系统 + 手动优先
 
@@ -157,3 +160,62 @@ intro/footer 维持 `max-width: 640px` 阅读宽；收藏区容器 `max-width: 1
 **结论：localStorage。** 它是「纯静态站记住用户偏好」的标准答案：零成本、零服务端、持久期合理、降级优雅。
 
 附带决策：手动选择**永久生效**，不提供「恢复跟随系统」的 UI。理由：两个开关（日/夜、中/英）本身语义已经够直白，再加第三种隐形态（「自动」）会让一个个人主页的 UI 变复杂，违背 KISS；想恢复自动的用户清一下站点数据即可，这个成本可以接受。
+
+---
+
+## 7. 响应式零横向溢出自查（第三次迭代）
+
+### 7.1 修复：intro 装饰块越界
+
+**现象**：iPad（834px）出现横向滚动条，`.intro::before` 装饰色块（`position:absolute; left:-88px`）左边缘算出 x≈-55px，戳出视口左侧。iOS Safari 对 `body { overflow-x: clip }` 向 viewport 的传播与 Chrome 不一致，「先溢出再裁掉」不可靠。
+
+**修复（根因，非裁剪）**：装饰块左偏移按断点收缩，永远不超过 `.intro-wrap` 的左内边距（`clamp(1.25rem, 4vw, 3rem)` + 居中边距），从几何上不可能越界：
+
+```css
+.intro::before { left: -20px; }                       /* ≤ min 内边距 1.25rem */
+@media (min-width: 768px)  { .intro::before { left: -30px; } } /* ≤ 4vw@768=30.7px */
+@media (min-width: 1400px) { .intro::before { left: -88px; } } /* 居中边距+48px ≥ 88px */
+```
+
+`body` 的 `overflow-x: clip` 保留为第二道防线，但不再依赖它。视觉效果：大屏完整出血、小屏贴边而不越界，手账感保留。
+
+### 7.2 自查方法
+
+headless Chrome 直接开窗最小宽度是 500px，无法测 390/430，因此用 **CDP（Chrome DevTools Protocol）** 驱动：`Emulation.setDeviceMetricsOverride` 模拟任意视口宽度，`Runtime.evaluate` 在页面内测量。脚本对每个宽度依次切换 2 个大 tab × 明暗 2 主题，共 8×4=32 组断言。脚本已收入仓库 `scripts/responsive-audit.mjs`（纯 dev 工具，与站点运行时无关），用法：
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless=new --remote-debugging-port=9222 --user-data-dir=/tmp/dp-cdp-profile about:blank &
+node scripts/responsive-audit.mjs "file://$PWD/index.html"   # 全 PASS 退出码 0
+kill %1
+```
+
+两个关键的测量认知：
+
+1. **右溢出**：断言 `document.documentElement.scrollWidth <= clientWidth`。
+2. **左溢出**：Chrome（LTR）**不把左侧溢出计入 scrollWidth**——已用 bug 版实测验证（`left:-88px` 时 scrollWidth 仍等于 clientWidth）。所以左溢出必须逐元素扫 `getBoundingClientRect().left < -0.5`；其中被合法 `overflow` 滚动容器（如小 tab 横滑 chips）裁掉的元素跳过。伪元素不在 DOM 树，`.intro::before` 单独用 `getComputedStyle(el, '::before')` 算左边缘断言。
+
+**harness 灵敏度验证**：把 bug（`left:-88px` 全断点生效）喂给脚本，32 组全部 FAIL 且准确定位 `.intro::before L-68`（390px）/ `L-57`（834px），证明断言有效；修复版再跑全 PASS，结论可信。
+
+### 7.3 自查结果（修复后）
+
+| 宽度 | devices/light | devices/dark | characters/light | characters/dark |
+|---|---|---|---|---|
+| 390 (iPhone) | PASS | PASS | PASS | PASS |
+| 430 (iPhone Max) | PASS | PASS | PASS | PASS |
+| 768 | PASS | PASS | PASS | PASS |
+| 834 (iPad 竖) | PASS | PASS | PASS | PASS |
+| 1024 (iPad 横) | PASS | PASS | PASS | PASS |
+| 1280 | PASS | PASS | PASS | PASS |
+| 1440 | PASS | PASS | PASS | PASS |
+| 2560 | PASS | PASS | PASS | PASS |
+
+全部 32 组 `scrollWidth == clientWidth` 且无任何未裁剪的越界元素。
+
+### 7.4 小 tab 横滑容器专项检查
+
+`.tabs-minor`（`overflow-x: auto`）是块级容器，宽度由父级决定，内部 chips（`flex: none`）超出时只在自身滚动区内滚动，**不会撑宽父级**——32 组断言中无任何 tabs-minor 相关越界，且其内部按钮的 rect 超出视口时被脚本正确识别为「被合法裁剪」而跳过，行为符合预期。
+
+### 7.5 暗色图槽改色（同次迭代）
+
+暗色 `--figure-bg` 从浅色 `#f2f7fb` 改为与 surface 同族、再亮一档的冷中性灰蓝 `#27313d`，并加 1px 同族描边 `--figure-line: #33404e` 补出瓷砖边界（暗底上明度差小，纯阴影不够）。理由与取舍见 §6.1。

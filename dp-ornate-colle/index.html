@@ -27,6 +27,7 @@
       --bg:         #ffffff;
       --surface:    #f6f9fc;
       --figure-bg:  #ffffff;   /* 图槽：图片的「相纸」 */
+      --figure-line: transparent;
       --control-bg: #ffffff;   /* 按钮、chips */
       --ink:        #232d36;
       --muted:      #7d8b97;
@@ -48,7 +49,8 @@
       color-scheme: dark;
       --bg:         #161d26;
       --surface:    #1c2530;
-      --figure-bg:  #f2f7fb;   /* 图槽保持浅色：去背图和白底卡池图无需任何处理 */
+      --figure-bg:  #27313d;   /* 图槽：与 surface 同族、再亮一档的冷中性灰蓝，柔和不刺眼 */
+      --figure-line: #33404e;  /* 暗底上图槽与 surface 明度差小，用 1px 描边补出「瓷砖」边界 */
       --control-bg: #242f3c;
       --ink:        #e3eaf1;
       --muted:      #96a5b2;
@@ -85,10 +87,14 @@
     /* 手账感的淡蓝色块：非对称圆角，只做装饰 */
     .intro::before {
       content: ''; position: absolute; z-index: -1;
-      top: -64px; left: -88px; width: 215px; height: 215px;
+      top: -64px; left: -20px; width: 215px; height: 215px;
       background: var(--accent-bg);
       border-radius: 58% 42% 55% 45% / 48% 56% 44% 52%;
     }
+    /* 左偏移永远不超过 .intro-wrap 左内边距（min 1.25rem / 4vw / 居中边距），
+       从根上不越界；body 的 overflow-x: clip 只作兜底，不再依赖它 */
+    @media (min-width: 768px) { .intro::before { left: -30px; } }
+    @media (min-width: 1400px) { .intro::before { left: -88px; } }
 
     .subtitle {
       font-size: 0.82rem; color: var(--muted); letter-spacing: 0.14em;
@@ -176,7 +182,8 @@
     .card { display: flex; flex-direction: column; }
 
     .card figure {
-      background: var(--figure-bg); border-radius: var(--r-lg);
+      background: var(--figure-bg); border: 1px solid var(--figure-line);
+      border-radius: var(--r-lg);
       box-shadow: var(--shadow-card);
       display: flex; align-items: center; justify-content: center;
       overflow: hidden; margin-bottom: 0.65rem;
