@@ -14,8 +14,8 @@ window.COLLE_CHARACTERS = [
    "name": "Angels of Delusion",
    "img": "img/factions/angels-of-delusion.webp"
   },
-  "tint": "#a1999d",
-  "tint2": "#2e2a2c"
+  "tint": "#FF6BAE",
+  "tint2": "#58E4D2"
  },
  {
   "id": "genshin-nahida",
@@ -40,8 +40,8 @@ window.COLLE_CHARACTERS = [
    "name": "Angels of Delusion",
    "img": "img/factions/angels-of-delusion.webp"
   },
-  "tint": "#868184",
-  "tint2": "#201e1f"
+  "tint": "#FF6BAE",
+  "tint2": "#58E4D2"
  },
  {
   "id": "zzz-seed",
@@ -56,8 +56,8 @@ window.COLLE_CHARACTERS = [
    "name": "Obol Squad",
    "img": "img/factions/obol-squad.webp"
   },
-  "tint": "#a19e9b",
-  "tint2": "#2e2d2b"
+  "tint": "#E7D77B",
+  "tint2": "#423039"
  },
  {
   "id": "genshin-nilou",
@@ -102,8 +102,8 @@ window.COLLE_CHARACTERS = [
    "name": "Yunkui Summit",
    "img": "img/factions/yunkui-summit.webp"
   },
-  "tint": "#968d83",
-  "tint2": "#28241f"
+  "tint": "#CF9B54",
+  "tint2": "#4E3D2B"
  },
  {
   "id": "genshin-klee",
@@ -198,8 +198,8 @@ window.COLLE_CHARACTERS = [
    "name": "Krampus Compliance Authority",
    "img": "img/factions/krampus-compliance-authority.webp"
   },
-  "tint": "#a0938f",
-  "tint2": "#2e2725"
+  "tint": "#D2E0EC",
+  "tint2": "#1E20AF"
  },
  {
   "id": "zzz-ellen-joe",
@@ -214,8 +214,8 @@ window.COLLE_CHARACTERS = [
    "name": "Victoria Housekeeping Co.",
    "img": "img/factions/victoria-housekeeping-co.webp"
   },
-  "tint": "#7b757b",
-  "tint2": "#1b181b"
+  "tint": "#E7DFA5",
+  "tint2": "#231E2E"
  },
  {
   "id": "genshin-prune",
@@ -340,8 +340,8 @@ window.COLLE_CHARACTERS = [
    "name": "Hollow Special Operations Section 6",
    "img": "img/factions/hollow-special-operations-section-6.webp"
   },
-  "tint": "#717677",
-  "tint2": "#161819"
+  "tint": "#F7D79C",
+  "tint2": "#103C4A"
  },
  {
   "id": "zzz-nekomiya-mana",
@@ -356,8 +356,8 @@ window.COLLE_CHARACTERS = [
    "name": "Cunning Hares",
    "img": "img/factions/cunning-hares.webp"
   },
-  "tint": "#807273",
-  "tint2": "#1d1616"
+  "tint": "#FF80A2",
+  "tint2": "#9430FF"
  },
  {
   "id": "general-宮村",
