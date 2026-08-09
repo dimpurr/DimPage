@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dimpurr Cheny</title>
+  <meta name="author" content="dimpurr" />
+  <meta name="description" content="Dimpurr Cheny — artist, designer, developer" />
+  <link rel="shortcut icon" href="res/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --border: #2a2a2a;
+      --text: #e8e2d9;
+      --muted: #6b6560;
+      --accent: #c9b99a;
+      --card: #131313;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'EB Garamond', Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    main { width: 100%; max-width: 900px; padding: 14vh 0 4rem; flex: 1; }
+    .intro { max-width: 560px; }
+
+    .name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      font-weight: 400; letter-spacing: 0.01em; line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .name em { font-style: italic; color: var(--accent); }
+
+    .subtitle {
+      font-size: 0.85rem; color: var(--muted); letter-spacing: 0.15em;
+      text-transform: uppercase; margin-bottom: 0.9rem;
+    }
+    .bio { font-size: 1rem; color: var(--muted); margin-bottom: 3.5rem; font-style: italic; line-height: 1.6; }
+
+    .blog-label {
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.55rem;
+    }
+    .blog-link {
+      display: inline-block; font-family: 'Playfair Display', serif; font-size: 1.15rem;
+      color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);
+      padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;
+    }
+    .blog-link:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── language toggle ── */
+    .lang-toggle {
+      position: fixed; top: 1.6rem; right: 1.8rem;
+      background: none; border: 1px solid var(--border); color: var(--muted);
+      font-family: inherit; font-size: 0.75rem; letter-spacing: 0.12em;
+      padding: 0.35rem 0.8rem; cursor: pointer; transition: color 0.2s, border-color 0.2s;
+    }
+    .lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── collection ── */
+    .collection { margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2.2rem; }
+
+    .tabs-major { display: flex; gap: 2rem; margin-bottom: 1.4rem; flex-wrap: wrap; }
+    .tabs-major button {
+      background: none; border: none; padding: 0 0 4px; cursor: pointer;
+      font-family: 'Playfair Display', serif; font-size: 1.05rem;
+      color: var(--muted); border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s;
+    }
+    .tabs-major button:hover { color: var(--text); }
+    .tabs-major button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tabs-minor { display: flex; gap: 1.2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .tabs-minor button {
+      background: none; border: none; padding: 0; cursor: pointer;
+      font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--muted); opacity: 0.7; transition: color 0.2s, opacity 0.2s;
+    }
+    .tabs-minor button:hover { opacity: 1; }
+    .tabs-minor button[aria-selected="true"] { color: var(--text); opacity: 1; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.6rem; grid-auto-flow: dense; }
+    .card { display: flex; flex-direction: column; }
+    .card.wide { grid-column: span 2; }
+    @media (max-width: 520px) { .card.wide { grid-column: span 1; } }
+
+    .card figure {
+      background: var(--card); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; margin-bottom: 0.6rem;
+    }
+    .card.device figure { aspect-ratio: 1 / 1; padding: 1.1rem; }
+    .card.device img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .card.char figure { aspect-ratio: 2 / 1; }
+    .card.char.tall figure { aspect-ratio: 3 / 4; }
+    .card.char img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .card.char.tall img { object-fit: contain; }
+
+    .card .t { font-size: 0.95rem; line-height: 1.35; }
+    .card .s { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+    .card .y { font-size: 0.72rem; color: var(--muted); opacity: 0.6; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+    .missing { font-size: 0.7rem; color: var(--muted); opacity: 0.45; padding: 0.5rem; text-align: center; }
+
+    footer { width: 100%; max-width: 900px; padding: 2rem 0 4rem; border-top: 1px solid var(--border); }
+    .archive-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .archive-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.8rem; }
+    .archive-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+    .archive-list a:hover { color: var(--text); }
+    .archive-list a span { font-size: 0.72rem; opacity: 0.5; margin-left: 0.3em; }
+  </style>
+</head>
+<body>
+
+  <button class="lang-toggle" id="langBtn" type="button">中文</button>
+
+  <main>
+    <div class="intro">
+      <p class="subtitle">Dimpurr Cheny &nbsp;·&nbsp; 钉子</p>
+      <h1 class="name">Artist, Designer<br><em>&amp; Developer</em></h1>
+      <p class="bio" data-i18n="bio">KCL Digital Humanities PhD Candidate</p>
+
+      <p class="blog-label" data-i18n="writing">Writing</p>
+      <a class="blog-link" href="https://www.wribb.com/c/dimpurr" target="_blank" rel="noopener">Wribb — @dimpurr &nbsp;↗</a>
+      <br><br>
+      <p class="blog-label" data-i18n="connect">Connect</p>
+      <a class="blog-link" href="https://www.linkedin.com/in/dimchen/" target="_blank" rel="noopener">LinkedIn &nbsp;↗</a>
+      <br><br>
+      <a class="blog-link" href="https://x.com/myccyycy" target="_blank" rel="noopener">X &nbsp;↗</a>
+    </div>
+
+    <section class="collection">
+      <div class="tabs-major" id="tabsMajor" role="tablist"></div>
+      <div class="tabs-minor" id="tabsMinor" role="tablist"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="archive-label" data-i18n="archive">Archive</p>
+    <ul class="archive-list">
+      <li><a href="dp-flat">Homepage <span>2013–2014</span></a></li>
+      <li><a href="dp-card">Homepage <span>2014–2015</span></a></li>
+      <li><a href="dp-modern-final">Homepage <span>2015–2019</span></a></li>
+      <li><a href="dp-dimchen">Homepage <span>2019–2025</span></a></li>
+    </ul>
+  </footer>
+
+  <script src="data/devices.js"></script>
+  <script src="data/characters.js"></script>
+  <script>
+  (function () {
+    var I18N = {
+      en: {
+        bio: 'KCL Digital Humanities PhD Candidate',
+        writing: 'Writing', connect: 'Connect', archive: 'Archive',
+        devices: 'Things I Owned', characters: 'Characters I Like',
+        all: 'All', headphone: 'Audio', phone: 'Phones',
+        genshin: 'Genshin Impact', zzz: 'Zenless Zone Zero',
+        na: 'N/A', noimg: 'no image yet',
+        toggle: '中文'
+      },
+      zh: {
+        bio: '伦敦国王学院 数字人文 博士在读',
+        writing: '写作', connect: '联络', archive: '历代主页',
+        devices: '用过的东西', characters: '喜欢的角色',
+        all: '全部', headphone: '音频', phone: '手机',
+        genshin: '原神', zzz: '绝区零',
+        na: '不详', noimg: '暂无图',
+        toggle: 'EN'
+      }
+    };
+
+    var MAJOR = [
+      { key: 'devices',    minors: ['all', 'headphone', 'phone'], data: window.COLLE_DEVICES || [] },
+      { key: 'characters', minors: ['all', 'genshin', 'zzz'],     data: window.COLLE_CHARACTERS || [] }
+    ];
+
+    var lang = (navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+    var major = 0, minor = 'all';
+
+    var $grid = document.getElementById('grid');
+    var $maj = document.getElementById('tabsMajor');
+    var $min = document.getElementById('tabsMinor');
+    var $lang = document.getElementById('langBtn');
+
+    function t(k) { return (I18N[lang] && I18N[lang][k]) || k; }
+
+    function card(item, isChar) {
+      var el = document.createElement('div');
+      el.className = 'card ' + (isChar ? 'char' : 'device') + (isChar && item.cat === 'zzz' ? ' tall' : '') + (isChar && item.cat === 'genshin' ? ' wide' : '');
+      var fig = document.createElement('figure');
+      var img = new Image();
+      img.loading = 'lazy';
+      img.alt = isChar ? item.name[lang] : item.name;
+      img.src = item.img;
+      img.onerror = function () {
+        fig.innerHTML = '<span class="missing">' + t('noimg') + '</span>';
+      };
+      fig.appendChild(img);
+      el.appendChild(fig);
+
+      var tt = document.createElement('div');
+      tt.className = 't';
+      tt.textContent = isChar ? item.name[lang] : item.name;
+      el.appendChild(tt);
+
+      if (!isChar) {
+        if (item.sub) { var s = document.createElement('div'); s.className = 's'; s.textContent = item.sub; el.appendChild(s); }
+        var y = document.createElement('div'); y.className = 'y';
+        y.textContent = item.year == null ? t('na') : item.year;
+        el.appendChild(y);
+      }
+      return el;
+    }
+
+    function render() {
+      var g = MAJOR[major];
+      var isChar = g.key === 'characters';
+
+      $maj.innerHTML = '';
+      MAJOR.forEach(function (m, i) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.textContent = t(m.key);
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', i === major ? 'true' : 'false');
+        b.onclick = function () { major = i; minor = 'all'; render(); };
+        $maj.appendChild(b);
+      });
+
+      $min.innerHTML = '';
+      g.minors.forEach(function (k) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.textContent = t(k);
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', k === minor ? 'true' : 'false');
+        b.onclick = function () { minor = k; render(); };
+        $min.appendChild(b);
+      });
+
+      var rows = g.data.filter(function (x) { return minor === 'all' || x.cat === minor; });
+      if (isChar) {
+        // XP 只用来排序，不展示
+        rows = rows.slice().sort(function (a, b) { return (b.xp || 0) - (a.xp || 0); });
+      } else {
+        rows = rows.slice().sort(function (a, b) {
+          if (a.year == null) return 1;
+          if (b.year == null) return -1;
+          return a.year - b.year;
+        });
+      }
+
+      $grid.innerHTML = '';
+      rows.forEach(function (x) { $grid.appendChild(card(x, isChar)); });
+    }
+
+    function applyLang() {
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      $lang.textContent = t('toggle');
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        el.textContent = t(el.getAttribute('data-i18n'));
+      });
+      render();
+    }
+
+    $lang.onclick = function () { lang = lang === 'en' ? 'zh' : 'en'; applyLang(); };
+    applyLang();
+  })();
+  </script>
+
+</body>
+</html>
