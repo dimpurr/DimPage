@@ -1,5 +1,3 @@
-// 数据层：与展示完全解耦。改这里即可，不用碰 index.html。
-// 用 .js 而非 .json 是因为 fetch() 在 file:// 下被 CORS 拦，而本仓库的主要用法就是从磁盘直接打开。
 window.COLLE_CHARACTERS = [
  {
   "id": "zzz-sunna",
@@ -863,7 +861,8 @@ window.COLLE_CHARACTERS = [
   "sub": "第九日 -The 9th Day-",
   "xp": null,
   "tier": 1,
-  "tierlabel": "第三档 ④"
+  "tierlabel": "第三档 ④",
+  "img": "img/characters/char-miyazawa-maki.webp"
  },
  {
   "id": "general-由比-浜結衣",
