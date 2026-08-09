@@ -892,196 +892,26 @@ window.COLLE_PLACES = [
   "endyear": 2023
  },
  {
-  "id": "casablanca",
+  "id": "morocco",
   "cat": "travel",
   "name": {
-   "en": "Casablanca",
-   "zh": "卡萨布兰卡"
+   "en": "Morocco",
+   "zh": "摩洛哥"
   },
   "country": {
    "en": "摩洛哥",
    "zh": "摩洛哥"
   },
   "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-05",
-  "last": "2022-10",
-  "lat": 33.5917,
-  "lon": -7.6388,
-  "days": 4,
-  "photos": 549,
-  "img": "img/places/casablanca.webp",
-  "years": "2022",
   "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "marrakesh",
-  "cat": "travel",
-  "name": {
-   "en": "Marrakesh",
-   "zh": "马拉喀什"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
   "year": 2022,
-  "first": "2022-03",
-  "last": "2022-10",
-  "lat": 31.6266,
-  "lon": -7.9902,
-  "days": 3,
-  "photos": 750,
-  "img": "img/places/marrakesh.webp",
   "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "rissani",
-  "cat": "travel",
-  "name": {
-   "en": "Rissani",
-   "zh": "里萨尼"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-03",
-  "last": "2022-10",
-  "lat": 31.0863,
-  "lon": -4.0117,
-  "days": 3,
-  "photos": 732,
-  "img": "img/places/rissani.webp",
-  "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "tinghir",
-  "cat": "travel",
-  "name": {
-   "en": "Tinghir",
-   "zh": "廷吉尔"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-03",
-  "last": "2022-12",
-  "lat": 31.5845,
-  "lon": -5.5915,
-  "days": 3,
-  "photos": 509,
-  "img": "img/places/tinghir.webp",
-  "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "amerzgane",
-  "cat": "travel",
-  "name": {
-   "en": "Amerzgane",
-   "zh": "阿梅兹加内"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-03",
-  "last": "2022-10",
-  "lat": 31.0992,
-  "lon": -7.2835,
-  "days": 3,
-  "photos": 458,
-  "img": "img/places/amerzgane.webp",
-  "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "tabount",
-  "cat": "travel",
-  "name": {
-   "en": "Tabount",
-   "zh": "塔布恩特"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-03",
-  "last": "2022-10",
-  "lat": 30.9412,
-  "lon": -6.9663,
-  "days": 3,
-  "photos": 426,
-  "img": "img/places/tabount.webp",
-  "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "fes",
-  "cat": "travel",
-  "name": {
-   "en": "Fes",
-   "zh": "非斯"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-10",
-  "last": "2022-10",
-  "lat": 34.0576,
-  "lon": -4.9729,
-  "days": 2,
-  "photos": 322,
-  "img": "img/places/fes.webp",
-  "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "chefchaouen",
-  "cat": "travel",
-  "name": {
-   "en": "Chefchaouen",
-   "zh": "舍夫沙万"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-10",
-  "last": "2022-10",
-  "lat": 35.1687,
-  "lon": -5.258,
-  "days": 2,
-  "photos": 173,
-  "img": "img/places/chefchaouen.webp",
-  "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
+  "lat": 32.6,
+  "lon": -6.2,
+  "days": 27,
+  "photos": 4411,
+  "endyear": 2022,
+  "img": "img/places/morocco.webp"
  },
  {
   "id": "dabu",
@@ -1105,30 +935,6 @@ window.COLLE_PLACES = [
   "img": "img/places/dabu.webp",
   "years": "2020–2022",
   "cc": "CN",
-  "endyear": 2022
- },
- {
-  "id": "ifrane",
-  "cat": "travel",
-  "name": {
-   "en": "Ifrane",
-   "zh": "伊夫兰"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-03",
-  "last": "2022-10",
-  "lat": 33.5285,
-  "lon": -5.1071,
-  "days": 2,
-  "photos": 57,
-  "img": "img/places/ifrane.webp",
-  "years": "2022",
-  "cc": "MA",
   "endyear": 2022
  },
  {
@@ -1177,54 +983,6 @@ window.COLLE_PLACES = [
   "img": "img/places/bath.webp",
   "years": "2022",
   "cc": "UK",
-  "endyear": 2022
- },
- {
-  "id": "moulay-idriss",
-  "cat": "travel",
-  "name": {
-   "en": "Moulay Idriss",
-   "zh": "穆莱伊德里斯"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-10",
-  "last": "2022-10",
-  "lat": 34.0728,
-  "lon": -5.5541,
-  "days": 1,
-  "photos": 248,
-  "img": "img/places/moulay-idriss.webp",
-  "years": "2022",
-  "cc": "MA",
-  "endyear": 2022
- },
- {
-  "id": "rabat",
-  "cat": "travel",
-  "name": {
-   "en": "Rabat",
-   "zh": "拉巴特"
-  },
-  "country": {
-   "en": "摩洛哥",
-   "zh": "摩洛哥"
-  },
-  "flag": "🇲🇦",
-  "year": 2022,
-  "first": "2022-10",
-  "last": "2022-10",
-  "lat": 34.0232,
-  "lon": -6.8224,
-  "days": 1,
-  "photos": 187,
-  "img": "img/places/rabat.webp",
-  "years": "2022",
-  "cc": "MA",
   "endyear": 2022
  }
 ];
