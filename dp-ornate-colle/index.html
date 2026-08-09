@@ -345,6 +345,12 @@
       display: grid; gap: 1.4rem;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       grid-auto-rows: 8px;
+      /* ⚠️ align-items: start 是必须的，不是样式偏好：
+         grid 项默认 align-self: stretch，会被拉伸到所在网格区域的高度。
+         配合 grid-auto-rows: 8px，任何还没分配 grid-row 的卡片都会被压成 8px，
+         于是 JS 测到的"自然高度"永远是 8px → 全部卡片塌成一条。
+         start 让卡片高度 = 内容高度，测量才有意义。 */
+      align-items: start;
     }
     /* 城市卡片流：横构图照片，列宽下限略大于竖版卡片 */
     .pgrid {
@@ -1024,7 +1030,15 @@
       var unit = 8 + gap;   // 8px 与 CSS grid-auto-rows 一致；每行实际占位 = 行高 + 行距
       var colH = [];
       for (var i = 0; i < n; i++) colH.push(0);
-      $grid.querySelectorAll('.card').forEach(function (c) {
+      var cards = $grid.querySelectorAll('.card');
+      // ⚠️ 必须先清掉上一轮写的 grid 定位再测量：
+      //    grid-row: … / span N 会**反过来约束**卡片高度，
+      //    于是第二次测到的是「被约束后的高度」而不是自然高度。
+      //    首屏图片未加载时高度≈0 → span 1（8px）→ 图片加载后重排又测到 8px
+      //    → 卡片永远塌着（iPad 冷启动必现；桌面因图走缓存、img.complete 已 true 而不复现）
+      cards.forEach(function (c) { c.style.gridColumn = ''; c.style.gridRow = ''; });
+      void $grid.offsetHeight;   // 强制回流，让上面的清除生效后再测
+      cards.forEach(function (c) {
         var h = c.getBoundingClientRect().height;
         var span = Math.max(1, Math.ceil((h + gap) / unit));
         var s = 0;
