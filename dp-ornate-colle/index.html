@@ -341,17 +341,14 @@
        grid 只提供列轨道与 8px 行高单位，JS 按「当前最短列」给每张卡显式分配
        grid-column / grid-row。视觉顺序严格从左到右、从上到下，与数据的分数
        降序一致（左上角就是最高分），列底自然错落。决策见 redesign-plan.md §12 */
-    .masonry {
-      display: grid; gap: 1.4rem;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      grid-auto-rows: 8px;
-      /* ⚠️ align-items: start 是必须的，不是样式偏好：
-         grid 项默认 align-self: stretch，会被拉伸到所在网格区域的高度。
-         配合 grid-auto-rows: 8px，任何还没分配 grid-row 的卡片都会被压成 8px，
-         于是 JS 测到的"自然高度"永远是 8px → 全部卡片塌成一条。
-         start 让卡片高度 = 内容高度，测量才有意义。 */
-      align-items: start;
-    }
+    /* 比例混排的卡片流（角色/游戏/演出）：**绝对定位**瀑布流。
+       ⚠️ 为什么不用 grid + grid-row span（前一版的做法）：那是「格子高度」和
+       「卡片高度」两套独立系统，靠 ceil 算术对齐；只要测量早一帧（图片没加载完、
+       字体没就位），卡片就会溢出自己的格子压住下一张，align-items:start 又不裁剪。
+       实测 390px 窄屏能出 300+ 对重叠。绝对定位下 top 由测量值直接决定，
+       重叠在数学上不可能发生。决策见 redesign-plan.md §12 */
+    .masonry { position: relative; }
+    .masonry > .card { position: absolute; top: 0; left: 0; }
     /* 城市卡片流：横构图照片，列宽下限略大于竖版卡片 */
     .pgrid {
       display: grid; gap: 1.4rem;
@@ -1024,38 +1021,59 @@
     // 从左到右、从上到下，左上角永远是最高分；列内零缝隙、列底自然错落。
     // 未选 vendored 库（Macy 等）的原因：这套算法 30 行、零依赖，
     // 且 DOM 顺序 = 视觉顺序（灯箱方向键、Tab 焦点序直接受益）。
+    var laying = false;
     function layoutMasonry() {
       if ($grid.className !== 'masonry') return;
+      if (laying) return;
+      laying = true;
+      try { layoutMasonryInner(); } finally { laying = false; }
+    }
+    function layoutMasonryInner() {
+      var W = $grid.clientWidth;
+      if (!W) return;
       var cs = getComputedStyle($grid);
-      var cols = cs.gridTemplateColumns.split(' ').filter(Boolean);
-      var n = cols.length;
-      if (!n || cols[0] === 'none') return;
-      var gap = parseFloat(cs.rowGap) || 0;
-      var unit = 8 + gap;   // 8px 与 CSS grid-auto-rows 一致；每行实际占位 = 行高 + 行距
+      var gap = parseFloat(cs.columnGap) || parseFloat(cs.gap) || 22;
+      // 列宽下限跟随断点（与原 CSS minmax 一致）
+      var min = W >= 1600 ? 215 : W >= 900 ? 180 : 150;
+      var n = Math.max(1, Math.floor((W + gap) / (min + gap)));
+      var colW = (W - gap * (n - 1)) / n;
       var colH = [];
       for (var i = 0; i < n; i++) colH.push(0);
       var cards = $grid.querySelectorAll('.card');
-      // ⚠️ 必须先清掉上一轮写的 grid 定位再测量：
-      //    grid-row: … / span N 会**反过来约束**卡片高度，
-      //    于是第二次测到的是「被约束后的高度」而不是自然高度。
-      //    首屏图片未加载时高度≈0 → span 1（8px）→ 图片加载后重排又测到 8px
-      //    → 卡片永远塌着（iPad 冷启动必现；桌面因图走缓存、img.complete 已 true 而不复现）
-      cards.forEach(function (c) { c.style.gridColumn = ''; c.style.gridRow = ''; });
-      void $grid.offsetHeight;   // 强制回流，让上面的清除生效后再测
+      // 第一遍只定宽，让浏览器按这个宽度重排出真实高度
+      cards.forEach(function (c) { c.style.width = colW + 'px'; });
+      void $grid.offsetWidth;
+      // 第二遍读高度并落位
       cards.forEach(function (c) {
         var h = c.getBoundingClientRect().height;
-        var span = Math.max(1, Math.ceil((h + gap) / unit));
         var s = 0;
-        for (var i = 1; i < n; i++) if (colH[i] < colH[s]) s = i;
-        c.style.gridColumn = String(s + 1);
-        c.style.gridRow = (colH[s] / unit + 1) + ' / span ' + span;
-        colH[s] += span * unit;
+        for (var i = 1; i < n; i++) if (colH[i] < colH[s] - 0.5) s = i;
+        c.style.left = (s * (colW + gap)) + 'px';
+        c.style.top = colH[s] + 'px';
+        colH[s] += h + gap;
       });
+      $grid.style.height = (Math.max.apply(null, colH) - gap) + 'px';
     }
     // 入场时图片未加载、高度未定型：每张图加载/失败都全量重排一次
     //（n ≤ 82、纯算术，开销可忽略），本地图收敛极快
+    // ⚠️ 光靠 img.load 重排不够：卡片最终高度还受字体加载、CJK 文本换行、
+    //    以及「图已 complete 但布局高度晚一帧才定」影响。任何一次漏排，
+    //    卡片就会溢出自己的 span 区域压住下一张（align-items:start 不裁剪）——
+    //    390px 窄屏最严重，实测能出 106 对重叠。
+    //    所以改成 ResizeObserver 盯每张卡的真实盒子，任何尺寸变化都重排。
+    var cardRO = window.ResizeObserver ? new ResizeObserver(function () {
+      if (laying) return;              // 忽略重排过程中自己造成的抖动
+      if (roRaf) cancelAnimationFrame(roRaf);
+      roRaf = requestAnimationFrame(layoutMasonry);
+    }) : null;
+    var roRaf = 0;
+
     function initMasonry() {
+      if (cardRO) cardRO.disconnect();
       layoutMasonry();
+      $grid.querySelectorAll('.card').forEach(function (c) {
+        if (cardRO) cardRO.observe(c);
+      });
       $grid.querySelectorAll('.card img').forEach(function (im) {
         if (im.complete) return;
         im.addEventListener('load', layoutMasonry);

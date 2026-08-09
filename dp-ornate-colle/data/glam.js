@@ -1,5 +1,17 @@
-// 数据层。⭐ 可信源 DimLifeS Life/Gear/dimpage-colle-life/
+// 数据层。⭐ 可信源 DimLifeS Life/Gear/dimpage-colle-life/glam.md
 window.COLLE_GLAM = [
+ {
+  "id": "colosseum",
+  "cat": "church",
+  "name": {
+   "en": "Colosseum",
+   "zh": "斗兽场"
+  },
+  "sub": "🇮🇹 IT · Roma",
+  "city": "Roma",
+  "year": 2026,
+  "rank": null
+ },
  {
   "id": "museo-delle-culture",
   "cat": "museum",
@@ -27,6 +39,30 @@ window.COLLE_GLAM = [
   "img": "img/glam/national-portrait-gallery.webp"
  },
  {
+  "id": "pantheon",
+  "cat": "church",
+  "name": {
+   "en": "Pantheon",
+   "zh": "万神殿"
+  },
+  "sub": "🇮🇹 IT · Roma",
+  "city": "Roma",
+  "year": 2026,
+  "rank": null
+ },
+ {
+  "id": "roman-forum",
+  "cat": "church",
+  "name": {
+   "en": "Roman Forum",
+   "zh": "古罗马广场"
+  },
+  "sub": "🇮🇹 IT · Roma",
+  "city": "Roma",
+  "year": 2026,
+  "rank": null
+ },
+ {
   "id": "rome-paleontology-museum",
   "cat": "museum",
   "name": {
@@ -38,6 +74,42 @@ window.COLLE_GLAM = [
   "year": 2026,
   "rank": null,
   "img": "img/glam/rome-paleontology-museum.webp"
+ },
+ {
+  "id": "spanish-steps",
+  "cat": "church",
+  "name": {
+   "en": "Spanish Steps",
+   "zh": "西班牙阶梯"
+  },
+  "sub": "🇮🇹 IT · Roma",
+  "city": "Roma",
+  "year": 2026,
+  "rank": null
+ },
+ {
+  "id": "st-peter-s-square",
+  "cat": "church",
+  "name": {
+   "en": "St. Peter's Square",
+   "zh": "圣彼得广场"
+  },
+  "sub": "🇻🇦 VA · Vaticano",
+  "city": "Vaticano",
+  "year": 2026,
+  "rank": null
+ },
+ {
+  "id": "trevi-fountain",
+  "cat": "church",
+  "name": {
+   "en": "Trevi Fountain",
+   "zh": "特雷维喷泉"
+  },
+  "sub": "🇮🇹 IT · Roma",
+  "city": "Roma",
+  "year": 2026,
+  "rank": null
  },
  {
   "id": "beijing-library",
@@ -235,6 +307,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/beijing-planetarium.webp"
  },
  {
+  "id": "church-of-the-saviour-on-spilled-blood",
+  "cat": "church",
+  "name": {
+   "en": "Church of the Saviour on Spilled Blood",
+   "zh": "救世主滴血大教堂"
+  },
+  "sub": "🇷🇺 RU · Санкт-Петербург",
+  "city": "Санкт-Петербург",
+  "year": 2024,
+  "rank": null
+ },
+ {
   "id": "domobaal",
   "cat": "gallery",
   "name": {
@@ -287,6 +371,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/grand-maket-rossiya.webp"
  },
  {
+  "id": "kazan-cathedral",
+  "cat": "church",
+  "name": {
+   "en": "Kazan Cathedral",
+   "zh": "喀山大教堂"
+  },
+  "sub": "🇷🇺 RU · Санкт-Петербург",
+  "city": "Санкт-Петербург",
+  "year": 2024,
+  "rank": null
+ },
+ {
   "id": "maughan-library",
   "cat": "library",
   "name": {
@@ -337,6 +433,18 @@ window.COLLE_GLAM = [
   "year": 2024,
   "rank": null,
   "img": "img/glam/sotheby-s.webp"
+ },
+ {
+  "id": "st-isaac-s-cathedral",
+  "cat": "church",
+  "name": {
+   "en": "St. Isaac's Cathedral",
+   "zh": "圣以撒大教堂"
+  },
+  "sub": "🇷🇺 RU · Санкт-Петербург",
+  "city": "Санкт-Петербург",
+  "year": 2024,
+  "rank": null
  },
  {
   "id": "tianjin-teda-aircraft-carrier-theme-park",
@@ -443,6 +551,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/x-5.webp"
  },
  {
+  "id": "9-11-memorial",
+  "cat": "church",
+  "name": {
+   "en": "9/11 Memorial",
+   "zh": "9·11 国家纪念馆"
+  },
+  "sub": "🇺🇸 US · New York",
+  "city": "New York",
+  "year": 2023,
+  "rank": null
+ },
+ {
   "id": "american-museum-of-natural-history",
   "cat": "museum",
   "name": {
@@ -454,6 +574,18 @@ window.COLLE_GLAM = [
   "year": 2023,
   "rank": null,
   "img": "img/glam/american-museum-of-natural-history.webp"
+ },
+ {
+  "id": "arc-de-triomphe",
+  "cat": "church",
+  "name": {
+   "en": "Arc de Triomphe",
+   "zh": "凯旋门"
+  },
+  "sub": "🇫🇷 FR · Paris",
+  "city": "Paris",
+  "year": 2023,
+  "rank": null
  },
  {
   "id": "british-library",
@@ -495,6 +627,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/centre-for-british-photography.webp"
  },
  {
+  "id": "changsha-ifs",
+  "cat": "church",
+  "name": {
+   "en": "Changsha IFS",
+   "zh": "长沙国金中心"
+  },
+  "sub": "🇨🇳 CN · 长沙",
+  "city": "长沙",
+  "year": 2023,
+  "rank": null
+ },
+ {
   "id": "ch-teau-de-versailles",
   "cat": "museum",
   "name": {
@@ -506,6 +650,30 @@ window.COLLE_GLAM = [
   "year": 2023,
   "rank": null,
   "img": "img/glam/ch-teau-de-versailles.webp"
+ },
+ {
+  "id": "eiffel-tower",
+  "cat": "church",
+  "name": {
+   "en": "Eiffel Tower",
+   "zh": "埃菲尔铁塔"
+  },
+  "sub": "🇫🇷 FR · Paris",
+  "city": "Paris",
+  "year": 2023,
+  "rank": null
+ },
+ {
+  "id": "empire-state-building",
+  "cat": "church",
+  "name": {
+   "en": "Empire State Building",
+   "zh": "帝国大厦"
+  },
+  "sub": "🇺🇸 US · New York",
+  "city": "New York",
+  "year": 2023,
+  "rank": null
  },
  {
   "id": "georgia-aquarium",
@@ -610,6 +778,30 @@ window.COLLE_GLAM = [
   "year": 2023,
   "rank": null,
   "img": "img/glam/mus-e-du-louvre.webp"
+ },
+ {
+  "id": "one-world-trade-center",
+  "cat": "church",
+  "name": {
+   "en": "One World Trade Center",
+   "zh": "世贸中心一号楼"
+  },
+  "sub": "🇺🇸 US · New York",
+  "city": "New York",
+  "year": 2023,
+  "rank": null
+ },
+ {
+  "id": "orange-isle",
+  "cat": "church",
+  "name": {
+   "en": "Orange Isle",
+   "zh": "橘子洲头"
+  },
+  "sub": "🇨🇳 CN · 长沙",
+  "city": "长沙",
+  "year": 2023,
+  "rank": null
  },
  {
   "id": "riverside-museum",
@@ -755,6 +947,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/barbican-centre.webp"
  },
  {
+  "id": "bath-abbey",
+  "cat": "church",
+  "name": {
+   "en": "Bath Abbey",
+   "zh": "巴斯修道院"
+  },
+  "sub": "🇬🇧 UK · Bath",
+  "city": "Bath",
+  "year": 2022,
+  "rank": null
+ },
+ {
   "id": "beijing-exhibition-center",
   "cat": "museum",
   "name": {
@@ -779,6 +983,18 @@ window.COLLE_GLAM = [
   "year": 2022,
   "rank": null,
   "img": "img/glam/british-museum.webp"
+ },
+ {
+  "id": "calton-hill",
+  "cat": "church",
+  "name": {
+   "en": "Calton Hill",
+   "zh": "卡尔顿山"
+  },
+  "sub": "🇬🇧 UK · Edinburgh",
+  "city": "Edinburgh",
+  "year": 2022,
+  "rank": null
  },
  {
   "id": "design-museum",
@@ -950,6 +1166,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/southbank-centre.webp"
  },
  {
+  "id": "st-paul-s-cathedral",
+  "cat": "church",
+  "name": {
+   "en": "St Paul's Cathedral",
+   "zh": "圣保罗大教堂"
+  },
+  "sub": "🇬🇧 UK · London",
+  "city": "London",
+  "year": 2022,
+  "rank": null
+ },
+ {
   "id": "tate",
   "cat": "gallery",
   "name": {
@@ -1041,6 +1269,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/798-art-zone.webp"
  },
  {
+  "id": "canton-tower",
+  "cat": "church",
+  "name": {
+   "en": "Canton Tower",
+   "zh": "广州塔"
+  },
+  "sub": "🇨🇳 CN · 广州",
+  "city": "广州",
+  "year": 2019,
+  "rank": null
+ },
+ {
   "id": "national-natural-history-museum-of-china",
   "cat": "museum",
   "name": {
@@ -1104,6 +1344,30 @@ window.COLLE_GLAM = [
   "year": 2018,
   "rank": null,
   "img": "img/glam/chongqing-china-three-gorges-museum.webp"
+ },
+ {
+  "id": "hongya-cave",
+  "cat": "church",
+  "name": {
+   "en": "Hongya Cave",
+   "zh": "洪崖洞"
+  },
+  "sub": "🇨🇳 CN · 重庆",
+  "city": "重庆",
+  "year": 2018,
+  "rank": null
+ },
+ {
+  "id": "jiefangbei-monument",
+  "cat": "church",
+  "name": {
+   "en": "Jiefangbei Monument",
+   "zh": "解放碑"
+  },
+  "sub": "🇨🇳 CN · 重庆",
+  "city": "重庆",
+  "year": 2018,
+  "rank": null
  },
  {
   "id": "national-art-museum-of-china",
@@ -1184,6 +1448,18 @@ window.COLLE_GLAM = [
   "img": "img/glam/sun-yat-sen-memorial-hall.webp"
  },
  {
+  "id": "ping-an-finance-centre",
+  "cat": "church",
+  "name": {
+   "en": "Ping An Finance Centre",
+   "zh": "平安金融中心"
+  },
+  "sub": "🇨🇳 CN · 深圳",
+  "city": "深圳",
+  "year": 2014,
+  "rank": null
+ },
+ {
   "id": "dabu-county-museum",
   "cat": "museum",
   "name": {
@@ -1208,5 +1484,65 @@ window.COLLE_GLAM = [
   "year": 2012,
   "rank": null,
   "img": "img/glam/nanchang-august-1st-uprising-memorial-hall.webp"
+ },
+ {
+  "id": "jin-mao-tower",
+  "cat": "church",
+  "name": {
+   "en": "Jin Mao Tower",
+   "zh": "金茂大厦"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2009,
+  "rank": null
+ },
+ {
+  "id": "lingyin-temple",
+  "cat": "church",
+  "name": {
+   "en": "Lingyin Temple",
+   "zh": "灵隐寺"
+  },
+  "sub": "🇨🇳 CN · 杭州",
+  "city": "杭州",
+  "year": 2009,
+  "rank": null
+ },
+ {
+  "id": "oriental-pearl-tower",
+  "cat": "church",
+  "name": {
+   "en": "Oriental Pearl Tower",
+   "zh": "东方明珠"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2009,
+  "rank": null
+ },
+ {
+  "id": "shanghai-tower",
+  "cat": "church",
+  "name": {
+   "en": "Shanghai Tower",
+   "zh": "上海中心大厦"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2009,
+  "rank": null
+ },
+ {
+  "id": "shanghai-world-financial-center",
+  "cat": "church",
+  "name": {
+   "en": "Shanghai World Financial Center",
+   "zh": "上海环球金融中心"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2009,
+  "rank": null
  }
 ];
