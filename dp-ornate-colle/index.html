@@ -359,7 +359,8 @@
         writing: 'Writing', connect: 'Connect', archive: 'Archive',
         devices: 'Things I Owned', characters: 'Characters I Like',
         movies: 'Movies I Like', anime: 'Anime I Like', games: 'Games I Like',
-        all: 'All', headphone: 'Audio', phone: 'Phones',
+        all: 'All', headphone: 'Audio', phone: 'Phones & Tablets',
+        computer: 'Computers', console: 'Consoles', peripheral: 'Peripherals',
         genshin: 'Genshin Impact', zzz: 'Zenless Zone Zero',
         steam: 'Steam', switch: 'Switch',
         na: 'N/A', noimg: 'no image yet',
@@ -371,7 +372,8 @@
         writing: '写作', connect: '联络', archive: '历代主页',
         devices: '用过的东西', characters: '喜欢的角色',
         movies: '喜欢的电影', anime: '喜欢的动画', games: '喜欢的游戏',
-        all: '全部', headphone: '音频', phone: '手机',
+        all: '全部', headphone: '音频', phone: '手机平板',
+        computer: '电脑', console: '主机', peripheral: '外设',
         genshin: '原神', zzz: '绝区零',
         steam: 'Steam', switch: 'Switch',
         na: '不详', noimg: '暂无图',
@@ -394,7 +396,7 @@
     // posters: 统一 2:3 竖版海报墙（等宽 grid）；masonry: 比例混排走瀑布流；
     // list: 「完整清单」外链；score/score2/xp 只排序不展示
     var MAJOR = [
-      { key: 'devices',    minors: ['all', 'headphone', 'phone'], data: window.COLLE_DEVICES || [] },
+      { key: 'devices',    minors: ['all', 'headphone', 'phone', 'computer', 'console', 'peripheral'], data: window.COLLE_DEVICES || [] },
       { key: 'characters', minors: ['all', 'genshin', 'zzz'],     data: window.COLLE_CHARACTERS || [], masonry: true },
       { key: 'movies',     minors: ['all'], posters: true,        data: window.COLLE_MOVIES || [],
         list: 'https://movie.douban.com/people/dimpurr/collect' },
@@ -539,7 +541,7 @@
         rows = rows.slice().sort(function (a, b) {
           if (a.year == null) return 1;
           if (b.year == null) return -1;
-          return a.year - b.year;
+          return b.year - a.year;
         });
       }
       // 电影/动画/游戏：数据已按分数（游玩时长）降序排好，保持原顺序；分数不展示
