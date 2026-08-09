@@ -9,7 +9,7 @@ window.COLLE_CAMPUS = [
    "en": "Central Saint Martins, University of the Arts London",
    "zh": "中央圣马丁艺术与设计学院 · 伦敦艺术大学"
   },
-  "sub": "参加活动（ACM C&C 2026 口头报告）",
+  "sub": "🇬🇧 UK · London",
   "city": "London"
  },
  {
@@ -20,7 +20,7 @@ window.COLLE_CAMPUS = [
    "en": "Imperial College London",
    "zh": "帝国理工学院"
   },
-  "sub": "参加活动（看 Melon Band 冬季演出）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/campus/imperial-college-london.webp"
  },
@@ -32,7 +32,7 @@ window.COLLE_CAMPUS = [
    "en": "University of London",
    "zh": "伦敦大学"
   },
-  "sub": "参加活动（BDCAM 2025 线下参会）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/campus/university-of-london.webp"
  },
@@ -44,7 +44,7 @@ window.COLLE_CAMPUS = [
    "en": "Репинский институт",
    "zh": "列宾美术学院"
   },
-  "sub": "访问（看展）",
+  "sub": "🇷🇺 RU · Saint Petersburg",
   "city": "Saint Petersburg"
  },
  {
@@ -55,7 +55,7 @@ window.COLLE_CAMPUS = [
    "en": "King's College London (KCL)",
    "zh": "伦敦国王学院"
   },
-  "sub": "就读（MA Digital Humanities 2024 → MPhil/PhD 2025）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/campus/king-s-college-london.webp"
  },
@@ -67,7 +67,7 @@ window.COLLE_CAMPUS = [
    "en": "University of Cambridge",
    "zh": "剑桥大学"
   },
-  "sub": "访问（两次剑桥行，走遍核心学院区 + 撑篙河段）",
+  "sub": "🇬🇧 UK · Cambridge",
   "city": "Cambridge"
  },
  {
@@ -78,7 +78,7 @@ window.COLLE_CAMPUS = [
    "en": "University of Oxford",
    "zh": "牛津大学"
   },
-  "sub": "参加活动（DHOxSS 数字人文暑校）",
+  "sub": "🇬🇧 UK · Oxford",
   "city": "Oxford",
   "img": "img/campus/university-of-oxford.webp"
  },
@@ -90,7 +90,7 @@ window.COLLE_CAMPUS = [
    "en": "The London School of Economics and Political Science (LSE)",
    "zh": "伦敦政治经济学院"
   },
-  "sub": "路过 / 闲逛",
+  "sub": "🇬🇧 UK · London",
   "city": "London"
  },
  {
@@ -101,7 +101,7 @@ window.COLLE_CAMPUS = [
    "en": "Edinburgh Futures Institute (EFI)",
    "zh": "爱丁堡未来研究所"
   },
-  "sub": "参加活动（暑校）",
+  "sub": "🇬🇧 UK · Edinburgh",
   "city": "Edinburgh"
  },
  {
@@ -112,7 +112,7 @@ window.COLLE_CAMPUS = [
    "en": "Georgia Institute of Technology",
    "zh": "佐治亚理工学院"
   },
-  "sub": "访问（2023-04 北美行，在校园里连着待了好几天）",
+  "sub": "🇺🇸 US · Atlanta",
   "city": "Atlanta"
  },
  {
@@ -123,7 +123,7 @@ window.COLLE_CAMPUS = [
    "en": "New York University (NYU)",
    "zh": "纽约大学"
   },
-  "sub": "访问（Washington Square 一带）",
+  "sub": "🇺🇸 US · New York",
   "city": "New York"
  },
  {
@@ -134,7 +134,7 @@ window.COLLE_CAMPUS = [
    "en": "Parsons School of Design, The New School",
    "zh": "帕森斯设计学院"
   },
-  "sub": "访问",
+  "sub": "🇺🇸 US · New York",
   "city": "New York"
  },
  {
@@ -145,7 +145,7 @@ window.COLLE_CAMPUS = [
    "en": "Columbia University",
    "zh": "哥伦比亚大学"
   },
-  "sub": "访问",
+  "sub": "🇺🇸 US · New York",
   "city": "New York"
  },
  {
@@ -156,7 +156,7 @@ window.COLLE_CAMPUS = [
    "en": "University of Edinburgh",
    "zh": "爱丁堡大学"
   },
-  "sub": "访问（首访）→ 后来又去参加暑校",
+  "sub": "🇬🇧 UK · Edinburgh",
   "city": "Edinburgh"
  },
  {
@@ -167,7 +167,7 @@ window.COLLE_CAMPUS = [
    "en": "Royal College of Art (RCA)",
    "zh": "皇家艺术学院"
   },
-  "sub": "就读（MA Digital Direction）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/campus/royal-college-of-art.webp"
  },
@@ -179,7 +179,7 @@ window.COLLE_CAMPUS = [
    "en": "University College London (UCL)",
    "zh": "伦敦大学学院"
   },
-  "sub": "访问（看展 / 逛）",
+  "sub": "🇬🇧 UK · London",
   "city": "London"
  },
  {
@@ -190,7 +190,7 @@ window.COLLE_CAMPUS = [
    "en": "清华大学",
    "zh": "清华大学"
   },
-  "sub": "访问？（买过一张 ¥50「门票」）",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/campus/清华大学.webp"
  },
@@ -202,7 +202,7 @@ window.COLLE_CAMPUS = [
    "en": "Microsoft Research Asia (MSRA)",
    "zh": "微软亚洲研究院"
   },
-  "sub": "实习 / 在岗（2018 暑期）",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京（海淀丹棱街）"
  },
  {
@@ -213,7 +213,7 @@ window.COLLE_CAMPUS = [
    "en": "中国科学院自动化研究所 (CASIA)",
    "zh": "中国科学院自动化研究所 (CASIA)"
   },
-  "sub": "实习 / 在岗（本科科研，模式识别国家重点实验室方向）",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京（中关村东路）"
  },
  {
@@ -224,7 +224,7 @@ window.COLLE_CAMPUS = [
    "en": "重庆大学",
    "zh": "重庆大学"
   },
-  "sub": "访问（SOSCON 学生开源年会行程顺访）",
+  "sub": "🇨🇳 CN · 重庆",
   "city": "重庆",
   "img": "img/campus/重庆大学.webp"
  },
@@ -236,7 +236,7 @@ window.COLLE_CAMPUS = [
    "en": "中央美术学院 (CAFA)",
    "zh": "中央美术学院 (CAFA)"
   },
-  "sub": "参加活动（本科毕设展 → 研究生毕设展）",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  },
  {
@@ -247,7 +247,7 @@ window.COLLE_CAMPUS = [
    "en": "中国科学院数学与系统科学研究院 (AMSS)",
    "zh": "中国科学院数学与系统科学研究院 (AMSS)"
   },
-  "sub": "访问",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京（中关村）"
  },
  {
@@ -258,7 +258,7 @@ window.COLLE_CAMPUS = [
    "en": "北京邮电大学 (BUPT)",
    "zh": "北京邮电大学 (BUPT)"
   },
-  "sub": "就读（BSc Software Engineering）",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  },
  {
@@ -269,7 +269,7 @@ window.COLLE_CAMPUS = [
    "en": "北京航空航天大学 (BUAA)",
    "zh": "北京航空航天大学 (BUAA)"
   },
-  "sub": "路过 → 后进校找人",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  },
  {
@@ -280,7 +280,7 @@ window.COLLE_CAMPUS = [
    "en": "北京师范大学 (BNU)",
    "zh": "北京师范大学 (BNU)"
   },
-  "sub": "路过（后 2018-06-10 凌晨再逛）",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  },
  {
@@ -291,7 +291,7 @@ window.COLLE_CAMPUS = [
    "en": "北京交通大学 (BJTU)",
    "zh": "北京交通大学 (BJTU)"
   },
-  "sub": "路过",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  },
  {
@@ -302,7 +302,7 @@ window.COLLE_CAMPUS = [
    "en": "中央财经大学 (CUFE)",
    "zh": "中央财经大学 (CUFE)"
   },
-  "sub": "路过",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  },
  {
@@ -313,7 +313,7 @@ window.COLLE_CAMPUS = [
    "en": "北京电影学院 (BFA)",
    "zh": "北京电影学院 (BFA)"
   },
-  "sub": "路过",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  },
  {
@@ -324,7 +324,7 @@ window.COLLE_CAMPUS = [
    "en": "中央戏剧学院",
    "zh": "中央戏剧学院"
   },
-  "sub": "路过",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/campus/中央戏剧学院.webp"
  },
@@ -336,7 +336,7 @@ window.COLLE_CAMPUS = [
    "en": "厦门大学",
    "zh": "厦门大学"
   },
-  "sub": "访问（高三暑假厦门行，进了校园走芙蓉隧道）",
+  "sub": "🇨🇳 CN · 厦门",
   "city": "厦门"
  },
  {
@@ -347,7 +347,7 @@ window.COLLE_CAMPUS = [
    "en": "北京大学 (PKU)",
    "zh": "北京大学 (PKU)"
   },
-  "sub": "参加活动（ADC / EVENT 14 青少年开发者大会顺访）→ 2025 面试 → 实验室在岗",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京"
  }
 ];

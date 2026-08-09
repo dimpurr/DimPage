@@ -9,7 +9,13 @@ window.COLLE_CHARACTERS = [
    "en": "Sunna"
   },
   "xp": 99,
-  "img": "img/characters/zzz-sunna.webp"
+  "img": "img/characters/zzz-sunna.webp",
+  "faction": {
+   "name": "Angels of Delusion",
+   "img": "img/factions/angels-of-delusion.webp"
+  },
+  "tint": "#a1999d",
+  "tint2": "#2e2a2c"
  },
  {
   "id": "genshin-nahida",
@@ -29,7 +35,13 @@ window.COLLE_CHARACTERS = [
    "en": "Nangong Yu"
   },
   "xp": 98,
-  "img": "img/characters/zzz-nangong-yu.webp"
+  "img": "img/characters/zzz-nangong-yu.webp",
+  "faction": {
+   "name": "Angels of Delusion",
+   "img": "img/factions/angels-of-delusion.webp"
+  },
+  "tint": "#868184",
+  "tint2": "#201e1f"
  },
  {
   "id": "zzz-seed",
@@ -39,7 +51,13 @@ window.COLLE_CHARACTERS = [
    "en": "Seed"
   },
   "xp": 96,
-  "img": "img/characters/zzz-seed.webp"
+  "img": "img/characters/zzz-seed.webp",
+  "faction": {
+   "name": "Obol Squad",
+   "img": "img/factions/obol-squad.webp"
+  },
+  "tint": "#a19e9b",
+  "tint2": "#2e2d2b"
  },
  {
   "id": "genshin-nilou",
@@ -79,7 +97,13 @@ window.COLLE_CHARACTERS = [
    "en": "Ju Fufu"
   },
   "xp": 95,
-  "img": "img/characters/zzz-ju-fufu.webp"
+  "img": "img/characters/zzz-ju-fufu.webp",
+  "faction": {
+   "name": "Yunkui Summit",
+   "img": "img/factions/yunkui-summit.webp"
+  },
+  "tint": "#968d83",
+  "tint2": "#28241f"
  },
  {
   "id": "genshin-klee",
@@ -169,7 +193,13 @@ window.COLLE_CHARACTERS = [
    "en": "Zhao"
   },
   "xp": 91,
-  "img": "img/characters/zzz-zhao.webp"
+  "img": "img/characters/zzz-zhao.webp",
+  "faction": {
+   "name": "Krampus Compliance Authority",
+   "img": "img/factions/krampus-compliance-authority.webp"
+  },
+  "tint": "#a0938f",
+  "tint2": "#2e2725"
  },
  {
   "id": "zzz-ellen-joe",
@@ -179,7 +209,13 @@ window.COLLE_CHARACTERS = [
    "en": "Ellen Joe"
   },
   "xp": 91,
-  "img": "img/characters/zzz-ellen-joe.webp"
+  "img": "img/characters/zzz-ellen-joe.webp",
+  "faction": {
+   "name": "Victoria Housekeeping Co.",
+   "img": "img/factions/victoria-housekeeping-co.webp"
+  },
+  "tint": "#7b757b",
+  "tint2": "#1b181b"
  },
  {
   "id": "genshin-prune",
@@ -299,7 +335,13 @@ window.COLLE_CHARACTERS = [
    "en": "Hoshimi Miyabi"
   },
   "xp": 90,
-  "img": "img/characters/zzz-hoshimi-miyabi.webp"
+  "img": "img/characters/zzz-hoshimi-miyabi.webp",
+  "faction": {
+   "name": "Hollow Special Operations Section 6",
+   "img": "img/factions/hollow-special-operations-section-6.webp"
+  },
+  "tint": "#717677",
+  "tint2": "#161819"
  },
  {
   "id": "zzz-nekomiya-mana",
@@ -309,7 +351,13 @@ window.COLLE_CHARACTERS = [
    "en": "Nekomiya Mana"
   },
   "xp": 90,
-  "img": "img/characters/zzz-nekomiya-mana.webp"
+  "img": "img/characters/zzz-nekomiya-mana.webp",
+  "faction": {
+   "name": "Cunning Hares",
+   "img": "img/factions/cunning-hares.webp"
+  },
+  "tint": "#807273",
+  "tint2": "#1d1616"
  },
  {
   "id": "general-宮村",

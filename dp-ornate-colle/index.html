@@ -251,6 +251,17 @@
     /* 角色卡池图比例差异大（2:1 横版 / 1:1.6 竖版混排），锁宽度、高度随图自适应，
        不锁高度也就不裁切画面；瀑布流天然消化高度差 */
     .card.char img { width: 100%; height: auto; display: block; }
+    /* 绝区零：三层前端合成 —— 渐变底（取立绘主色）/ 势力徽章水印 / 透明立绘 */
+    .card figure.layered {
+      background: linear-gradient(to bottom, var(--tint, #888), var(--tint2, #222));
+      display: block; position: relative;
+    }
+    .card figure.layered .emblem {
+      position: absolute; left: 50%; top: 8%;
+      width: 95%; height: auto; transform: translateX(-50%);
+      opacity: 0.20; filter: blur(0.4px); pointer-events: none;
+    }
+    .card figure.layered img:not(.emblem) { position: relative; z-index: 1; }
     /* 电影/动画海报：统一 2:3 竖版，满幅裁切 */
     .card.poster figure { aspect-ratio: 2 / 3; }
     /* 各类封面的本征比例（量了实际封面的中位数定的，尽量不裁）：
@@ -722,6 +733,18 @@
       img.onerror = function () {
         fig.innerHTML = '<span class="missing">' + t('noimg') + '</span>';
       };
+      // 绝区零立绘是透明 PNG，直接放在浅底上很不显眼 ——
+      // 仿 wiki 的叠法在**前端实时合成**三层：主色调渐变底 → 势力徽章水印 → 立绘。
+      // 分层而非烘焙成单张图，是为了以后换任一层都不用重新合成整套。
+      if (item.faction) {
+        fig.classList.add('layered');
+        if (item.tint) fig.style.setProperty('--tint', item.tint);
+        if (item.tint2) fig.style.setProperty('--tint2', item.tint2);
+        var emb = new Image();
+        emb.loading = 'lazy'; emb.alt = ''; emb.setAttribute('aria-hidden', 'true');
+        emb.className = 'emblem'; emb.src = item.faction.img;
+        fig.appendChild(emb);
+      }
       fig.appendChild(img);
       if (item.url) {
         var go = document.createElement('span');

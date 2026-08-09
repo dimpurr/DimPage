@@ -10,7 +10,7 @@ window.COLLE_GLAM = [
    "en": "Museo delle Culture (MUDEC)",
    "zh": "Museo delle Culture (MUDEC)"
   },
-  "sub": "博物馆",
+  "sub": "🇮🇹 IT · Milano",
   "city": "Milano",
   "img": "img/glam/mudec-museo-delle-culture.webp",
   "rank": null
@@ -23,7 +23,7 @@ window.COLLE_GLAM = [
    "en": "罗马古生物博物馆",
    "zh": "罗马古生物博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇮🇹 IT · Roma",
   "city": "Roma",
   "rank": null
  },
@@ -35,7 +35,7 @@ window.COLLE_GLAM = [
    "en": "180 Studios",
    "zh": "180 Studios"
   },
-  "sub": "展览空间 / 画廊",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/180-studios.webp",
   "rank": null
@@ -48,7 +48,7 @@ window.COLLE_GLAM = [
    "en": "National Portrait Gallery",
    "zh": "英国国家肖像馆"
   },
-  "sub": "美术馆（肖像）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "rank": null
  },
@@ -60,7 +60,7 @@ window.COLLE_GLAM = [
    "en": "Victoria and Albert Museum (V&A)",
    "zh": "维多利亚与阿尔伯特博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London（South Kensington）",
   "img": "img/glam/v-a-victoria-and-albert-museum.webp",
   "rank": null
@@ -73,7 +73,7 @@ window.COLLE_GLAM = [
    "en": "USS Midway Museum",
    "zh": "中途岛号博物馆"
   },
-  "sub": "博物馆（航母）",
+  "sub": "🇺🇸 US · San Diego",
   "city": "San Diego",
   "img": "img/glam/uss-midway-museum.webp",
   "rank": null
@@ -86,7 +86,7 @@ window.COLLE_GLAM = [
    "en": "San Diego Air & Space Museum",
    "zh": "San Diego Air & Space Museum"
   },
-  "sub": "博物馆",
+  "sub": "🇺🇸 US · San Diego",
   "city": "San Diego",
   "img": "img/glam/san-diego-air-space-museum.webp",
   "rank": null
@@ -99,7 +99,7 @@ window.COLLE_GLAM = [
    "en": "Museum of Contemporary Art San Diego (MCASD)",
    "zh": "Museum of Contemporary Art San Diego (MCASD)"
   },
-  "sub": "美术馆",
+  "sub": "🇺🇸 US · San Diego",
   "city": "San Diego",
   "rank": null
  },
@@ -111,7 +111,7 @@ window.COLLE_GLAM = [
    "en": "Design Museum",
    "zh": "设计博物馆"
   },
-  "sub": "博物馆（设计）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/design-museum.webp",
   "rank": null
@@ -124,7 +124,7 @@ window.COLLE_GLAM = [
    "en": "浙江省博物馆之江馆",
    "zh": "浙江省博物馆之江馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 杭州",
   "city": "杭州",
   "img": "img/glam/浙江省博物馆之江馆.webp",
   "rank": null
@@ -137,7 +137,7 @@ window.COLLE_GLAM = [
    "en": "五大道历史博物馆",
    "zh": "五大道历史博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 天津",
   "city": "天津",
   "img": "img/glam/五大道历史博物馆.webp",
   "rank": null
@@ -150,7 +150,7 @@ window.COLLE_GLAM = [
    "en": "首都博物馆",
    "zh": "首都博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/glam/首都博物馆.webp",
   "rank": null
@@ -163,7 +163,7 @@ window.COLLE_GLAM = [
    "en": "北京城市图书馆",
    "zh": "北京城市图书馆"
   },
-  "sub": "图书馆",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/glam/北京城市图书馆.webp",
   "rank": null
@@ -176,7 +176,7 @@ window.COLLE_GLAM = [
    "en": "UCCA 尤伦斯当代艺术中心",
    "zh": "UCCA 尤伦斯当代艺术中心"
   },
-  "sub": "美术馆",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京（798）",
   "img": "img/glam/ucca-尤伦斯当代艺术中心.webp",
   "rank": null
@@ -189,7 +189,7 @@ window.COLLE_GLAM = [
    "en": "Musée d'Arts de Nantes",
    "zh": "南特美术馆"
   },
-  "sub": "美术馆",
+  "sub": "🇫🇷 FR · Nantes",
   "city": "Nantes",
   "img": "img/glam/mus-e-d-arts-de-nantes.webp",
   "rank": null
@@ -202,7 +202,7 @@ window.COLLE_GLAM = [
    "en": "Château des Ducs de Bretagne",
    "zh": "布列塔尼公爵城堡"
   },
-  "sub": "博物馆（城堡历史馆）",
+  "sub": "🇫🇷 FR · Nantes",
   "city": "Nantes",
   "img": "img/glam/ch-teau-des-ducs-de-bretagne.webp",
   "rank": null
@@ -215,7 +215,7 @@ window.COLLE_GLAM = [
    "en": "Musée Jules Verne",
    "zh": "儒勒·凡尔纳博物馆"
   },
-  "sub": "博物馆（作家纪念）",
+  "sub": "🇫🇷 FR · Nantes",
   "city": "Nantes",
   "rank": null
  },
@@ -227,7 +227,7 @@ window.COLLE_GLAM = [
    "en": "Barbican Centre",
    "zh": "巴比肯艺术中心"
   },
-  "sub": "艺术中心 / 画廊",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/barbican-centre.webp",
   "rank": null
@@ -240,7 +240,7 @@ window.COLLE_GLAM = [
    "en": "北京独角兽星空艺术馆",
    "zh": "北京独角兽星空艺术馆"
   },
-  "sub": "沉浸式艺术馆",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/glam/北京独角兽星空艺术馆.webp",
   "rank": null
@@ -253,7 +253,7 @@ window.COLLE_GLAM = [
    "en": "中国人民革命军事博物馆",
    "zh": "中国人民革命军事博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/glam/中国人民革命军事博物馆.webp",
   "rank": null
@@ -266,7 +266,7 @@ window.COLLE_GLAM = [
    "en": "国家自然博物馆",
    "zh": "国家自然博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/glam/国家自然博物馆.webp",
   "rank": null
@@ -279,7 +279,7 @@ window.COLLE_GLAM = [
    "en": "北京天文馆",
    "zh": "北京天文馆"
   },
-  "sub": "科技馆",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "rank": null
  },
@@ -291,7 +291,7 @@ window.COLLE_GLAM = [
    "en": "Петергоф",
    "zh": "彼得霍夫"
   },
-  "sub": "宫殿博物馆",
+  "sub": "🇷🇺 RU · Санкт-Петербург 近郊",
   "city": "Санкт-Петербург 近郊",
   "img": "img/glam/彼得霍夫-叶卡捷琳娜宫.webp",
   "rank": null
@@ -304,7 +304,7 @@ window.COLLE_GLAM = [
    "en": "Екатерининский дворец",
    "zh": "叶卡捷琳娜宫"
   },
-  "sub": "宫殿博物馆",
+  "sub": "🇷🇺 RU · Санкт-Петербург 近郊",
   "city": "Санкт-Петербург 近郊",
   "rank": null
  },
@@ -316,7 +316,7 @@ window.COLLE_GLAM = [
    "en": "Государственный Эрмитаж",
    "zh": "冬宫"
   },
-  "sub": "博物馆",
+  "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "img": "img/glam/冬宫.webp",
   "rank": null
@@ -329,7 +329,7 @@ window.COLLE_GLAM = [
    "en": "Государственный Русский музей",
    "zh": "俄罗斯博物馆"
   },
-  "sub": "美术馆 / 博物馆",
+  "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "img": "img/glam/俄罗斯博物馆-微缩博物馆.webp",
   "rank": null
@@ -342,7 +342,7 @@ window.COLLE_GLAM = [
    "en": "微缩博物馆",
    "zh": "微缩博物馆"
   },
-  "sub": "美术馆 / 博物馆",
+  "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "rank": null
  },
@@ -354,7 +354,7 @@ window.COLLE_GLAM = [
    "en": "Российский этнографический музей",
    "zh": "俄罗斯民族志博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "rank": null
  },
@@ -366,7 +366,7 @@ window.COLLE_GLAM = [
    "en": "Erarta",
    "zh": "埃拉尔塔当代艺术博物馆"
   },
-  "sub": "美术馆",
+  "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "rank": null
  },
@@ -378,7 +378,7 @@ window.COLLE_GLAM = [
    "en": "Southbank Centre",
    "zh": "Southbank Centre"
   },
-  "sub": "艺术中心 / 画廊",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/southbank-centre.webp",
   "rank": null
@@ -391,7 +391,7 @@ window.COLLE_GLAM = [
    "en": "British Library",
    "zh": "大英图书馆"
   },
-  "sub": "图书馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/british-library.webp",
   "rank": null
@@ -404,7 +404,7 @@ window.COLLE_GLAM = [
    "en": "UCL Library",
    "zh": "UCL Library"
   },
-  "sub": "图书馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/ucl-library.webp",
   "rank": null
@@ -417,7 +417,7 @@ window.COLLE_GLAM = [
    "en": "谢子龙影像艺术馆",
    "zh": "谢子龙影像艺术馆"
   },
-  "sub": "美术馆（摄影）",
+  "sub": "🇨🇳 CN · 长沙",
   "city": "长沙",
   "img": "img/glam/谢子龙影像艺术馆.webp",
   "rank": null
@@ -430,7 +430,7 @@ window.COLLE_GLAM = [
    "en": "Hunterian Museum",
    "zh": "Hunterian Museum"
   },
-  "sub": "博物馆（大学馆）",
+  "sub": "🇬🇧 UK · Glasgow",
   "city": "Glasgow",
   "img": "img/glam/hunterian-museum.webp",
   "rank": null
@@ -443,7 +443,7 @@ window.COLLE_GLAM = [
    "en": "Riverside Museum",
    "zh": "Riverside Museum"
   },
-  "sub": "博物馆（交通）",
+  "sub": "🇬🇧 UK · Glasgow",
   "city": "Glasgow",
   "img": "img/glam/riverside-museum.webp",
   "rank": null
@@ -456,7 +456,7 @@ window.COLLE_GLAM = [
    "en": "High Museum of Art",
    "zh": "High Museum of Art"
   },
-  "sub": "美术馆",
+  "sub": "🇺🇸 US · Atlanta",
   "city": "Atlanta",
   "img": "img/glam/high-museum-of-art.webp",
   "rank": null
@@ -469,7 +469,7 @@ window.COLLE_GLAM = [
    "en": "Somerset House",
    "zh": "萨默塞特府"
   },
-  "sub": "艺术中心",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/somerset-house.webp",
   "rank": null
@@ -482,7 +482,7 @@ window.COLLE_GLAM = [
    "en": "Château de Versailles",
    "zh": "凡尔赛宫"
   },
-  "sub": "宫殿博物馆",
+  "sub": "🇫🇷 FR · Versailles",
   "city": "Versailles",
   "img": "img/glam/ch-teau-de-versailles-凡尔赛宫.webp",
   "rank": null
@@ -495,7 +495,7 @@ window.COLLE_GLAM = [
    "en": "Musée de l'Armée",
    "zh": "荣军院军事博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "img": "img/glam/mus-e-de-l-arm-e-invalides.webp",
   "rank": null
@@ -508,7 +508,7 @@ window.COLLE_GLAM = [
    "en": "Centre Pompidou",
    "zh": "蓬皮杜中心"
   },
-  "sub": "美术馆",
+  "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "img": "img/glam/centre-pompidou.webp",
   "rank": null
@@ -521,7 +521,7 @@ window.COLLE_GLAM = [
    "en": "Musée du Louvre",
    "zh": "卢浮宫"
   },
-  "sub": "博物馆",
+  "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "rank": null
  },
@@ -533,7 +533,7 @@ window.COLLE_GLAM = [
    "en": "Musée de l'Orangerie",
    "zh": "橘园美术馆"
   },
-  "sub": "美术馆",
+  "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "rank": null
  },
@@ -545,7 +545,7 @@ window.COLLE_GLAM = [
    "en": "Musée d'Orsay",
    "zh": "奥赛博物馆"
   },
-  "sub": "美术馆",
+  "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "rank": null
  },
@@ -557,7 +557,7 @@ window.COLLE_GLAM = [
    "en": "Musée Picasso",
    "zh": "毕加索博物馆"
   },
-  "sub": "美术馆",
+  "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "rank": null
  },
@@ -569,7 +569,7 @@ window.COLLE_GLAM = [
    "en": "Saatchi Gallery",
    "zh": "Saatchi Gallery"
   },
-  "sub": "画廊",
+  "sub": "🇬🇧 UK · London",
   "city": "London（King's Rd）",
   "rank": null
  },
@@ -581,7 +581,7 @@ window.COLLE_GLAM = [
    "en": "The Museum of Modern Art (MoMA)",
    "zh": "纽约现代艺术博物馆"
   },
-  "sub": "美术馆",
+  "sub": "🇺🇸 US · New York",
   "city": "New York",
   "rank": null
  },
@@ -593,7 +593,7 @@ window.COLLE_GLAM = [
    "en": "Solomon R. Guggenheim Museum",
    "zh": "所罗门·R·古根海姆美术馆"
   },
-  "sub": "美术馆",
+  "sub": "🇺🇸 US · New York",
   "city": "New York",
   "rank": null
  },
@@ -605,7 +605,7 @@ window.COLLE_GLAM = [
    "en": "SCAD FASH Museum of Fashion + Film",
    "zh": "SCAD FASH Museum of Fashion + Film"
   },
-  "sub": "博物馆（时装 / 影像）",
+  "sub": "🇺🇸 US · Atlanta",
   "city": "Atlanta",
   "rank": null
  },
@@ -617,7 +617,7 @@ window.COLLE_GLAM = [
    "en": "Trap Music Museum",
    "zh": "Trap Music Museum"
   },
-  "sub": "博物馆（音乐）",
+  "sub": "🇺🇸 US · Atlanta",
   "city": "Atlanta",
   "rank": null
  },
@@ -629,7 +629,7 @@ window.COLLE_GLAM = [
    "en": "Centre for British Photography",
    "zh": "Centre for British Photography"
   },
-  "sub": "画廊（摄影）",
+  "sub": "🇬🇧 UK · London",
   "city": "London（49 Jermyn St）",
   "rank": null
  },
@@ -641,7 +641,7 @@ window.COLLE_GLAM = [
    "en": "Royal Air Force Museum London",
    "zh": "英国皇家空军博物馆"
   },
-  "sub": "博物馆（航空）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "rank": null
  },
@@ -653,7 +653,7 @@ window.COLLE_GLAM = [
    "en": "American Museum of Natural History (AMNH)",
    "zh": "美国自然历史博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇺🇸 US · New York",
   "city": "New York",
   "rank": null
  },
@@ -665,7 +665,7 @@ window.COLLE_GLAM = [
    "en": "Science Museum",
    "zh": "科学博物馆"
   },
-  "sub": "科技馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/science-museum.webp",
   "rank": null
@@ -678,7 +678,7 @@ window.COLLE_GLAM = [
    "en": "Natural History Museum",
    "zh": "自然历史博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/natural-history-museum.webp",
   "rank": null
@@ -691,7 +691,7 @@ window.COLLE_GLAM = [
    "en": "Roman Baths",
    "zh": "罗马浴场"
   },
-  "sub": "博物馆（遗址）",
+  "sub": "🇬🇧 UK · Bath",
   "city": "Bath",
   "img": "img/glam/roman-baths-bath.webp",
   "rank": null
@@ -704,7 +704,7 @@ window.COLLE_GLAM = [
    "en": "British Museum",
    "zh": "大英博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/british-museum.webp",
   "rank": null
@@ -717,7 +717,7 @@ window.COLLE_GLAM = [
    "en": "The National Gallery",
    "zh": "英国国家美术馆"
   },
-  "sub": "美术馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/the-national-gallery.webp",
   "rank": null
@@ -730,7 +730,7 @@ window.COLLE_GLAM = [
    "en": "Tate",
    "zh": "泰特美术馆"
   },
-  "sub": "美术馆",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "img": "img/glam/tate.webp",
   "rank": null
@@ -743,7 +743,7 @@ window.COLLE_GLAM = [
    "en": "广东省博物馆",
    "zh": "广东省博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "img": "img/glam/广东省博物馆.webp",
   "rank": null
@@ -756,7 +756,7 @@ window.COLLE_GLAM = [
    "en": "广州鲁迅纪念馆",
    "zh": "广州鲁迅纪念馆"
   },
-  "sub": "博物馆（纪念馆）",
+  "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "rank": null
  },
@@ -768,7 +768,7 @@ window.COLLE_GLAM = [
    "en": "广州科技馆",
    "zh": "广州科技馆"
   },
-  "sub": "科技馆",
+  "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "img": "img/glam/广州科技馆-广东科学中心.webp",
   "rank": null
@@ -781,7 +781,7 @@ window.COLLE_GLAM = [
    "en": "广州铁道博物馆",
    "zh": "广州铁道博物馆"
   },
-  "sub": "博物馆（交通）",
+  "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "rank": null
  },
@@ -793,7 +793,7 @@ window.COLLE_GLAM = [
    "en": "Quentin Blake Centre for Illustration",
    "zh": "Quentin Blake Centre for Illustration"
   },
-  "sub": "美术馆（插画）",
+  "sub": "🇬🇧 UK · London",
   "city": "London",
   "rank": null
  },
@@ -805,7 +805,7 @@ window.COLLE_GLAM = [
    "en": "798 艺术区",
    "zh": "798 艺术区"
   },
-  "sub": "画廊聚集区",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/glam/798-艺术区.webp",
   "rank": null
@@ -818,7 +818,7 @@ window.COLLE_GLAM = [
    "en": "中央美术学院美术馆",
    "zh": "中央美术学院美术馆"
   },
-  "sub": "美术馆（大学馆）",
+  "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "img": "img/glam/中央美术学院美术馆.webp",
   "rank": null
@@ -831,7 +831,7 @@ window.COLLE_GLAM = [
    "en": "重庆中国三峡博物馆",
    "zh": "重庆中国三峡博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 重庆",
   "city": "重庆",
   "img": "img/glam/重庆中国三峡博物馆.webp",
   "rank": null
@@ -844,7 +844,7 @@ window.COLLE_GLAM = [
    "en": "南越王博物馆",
    "zh": "南越王博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "img": "img/glam/南越王博物馆.webp",
   "rank": null
@@ -857,21 +857,21 @@ window.COLLE_GLAM = [
    "en": "中山纪念堂",
    "zh": "中山纪念堂"
   },
-  "sub": "纪念馆 / 历史建筑",
+  "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "rank": null
  },
  {
-  "id": "深圳图书馆-深圳-现代艺术馆",
+  "id": "shenzhen-library",
   "cat": "glam",
   "year": 2017,
   "name": {
    "en": "深圳图书馆",
    "zh": "深圳图书馆"
   },
-  "sub": "图书馆 / 美术馆",
+  "sub": "🇨🇳 CN · 深圳",
   "city": "深圳",
-  "img": "img/glam/深圳图书馆-深圳-现代艺术馆.webp",
+  "img": "img/glam/shenzhen-library.webp",
   "rank": null
  },
  {
@@ -882,7 +882,7 @@ window.COLLE_GLAM = [
    "en": "深圳现代艺术馆",
    "zh": "深圳现代艺术馆"
   },
-  "sub": "图书馆 / 美术馆",
+  "sub": "🇨🇳 CN · 深圳",
   "city": "深圳",
   "rank": null
  },
@@ -894,7 +894,7 @@ window.COLLE_GLAM = [
    "en": "大埔县博物馆",
    "zh": "大埔县博物馆"
   },
-  "sub": "博物馆",
+  "sub": "🇨🇳 CN · 梅州大埔",
   "city": "梅州大埔",
   "rank": null
  },
@@ -906,7 +906,7 @@ window.COLLE_GLAM = [
    "en": "八一起义纪念馆",
    "zh": "八一起义纪念馆"
   },
-  "sub": "博物馆（纪念馆）",
+  "sub": "🇨🇳 CN · 南昌",
   "city": "南昌",
   "rank": null
  }
