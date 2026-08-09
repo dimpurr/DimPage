@@ -1,4 +1,4 @@
-// 数据层。⭐ 可信源在 DimLifeS：Life/Gear/dimpage-colle-life/
+// 数据层。⭐ 可信源 DimLifeS Life/Gear/dimpage-colle-life/
 window.COLLE_CAMPUS = [
  {
   "id": "university-of-london",
@@ -217,16 +217,64 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/university-of-edinburgh.webp"
  },
  {
-  "id": "清华大学",
+  "id": "tsinghua-university",
   "cat": "campus",
   "year": 2021,
   "name": {
-   "en": "清华大学",
+   "en": "Tsinghua University",
    "zh": "清华大学"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
-  "img": "img/campus/清华大学.webp"
+  "img": "img/campus/tsinghua-university.webp"
+ },
+ {
+  "id": "academy-of-mathematics-and-systems-science-chine",
+  "cat": "campus",
+  "year": 2018,
+  "name": {
+   "en": "Academy of Mathematics and Systems Science, Chinese Academy of Sciences",
+   "zh": "中国科学院数学与系统科学研究院"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京（中关村）",
+  "img": "img/campus/academy-of-mathematics-and-systems-science-chine.webp"
+ },
+ {
+  "id": "central-academy-of-fine-arts",
+  "cat": "campus",
+  "year": 2018,
+  "name": {
+   "en": "Central Academy of Fine Arts",
+   "zh": "中央美术学院"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/central-academy-of-fine-arts.webp"
+ },
+ {
+  "id": "chongqing-university",
+  "cat": "campus",
+  "year": 2018,
+  "name": {
+   "en": "Chongqing University",
+   "zh": "重庆大学"
+  },
+  "sub": "🇨🇳 CN · 重庆",
+  "city": "重庆",
+  "img": "img/campus/chongqing-university.webp"
+ },
+ {
+  "id": "institute-of-automation-chinese-academy-of-scien",
+  "cat": "campus",
+  "year": 2018,
+  "name": {
+   "en": "Institute of Automation, Chinese Academy of Sciences",
+   "zh": "中国科学院自动化研究所"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京（中关村东路）",
+  "img": "img/campus/institute-of-automation-chinese-academy-of-scien.webp"
  },
  {
   "id": "microsoft-research-asia",
@@ -241,183 +289,135 @@ window.COLLE_CAMPUS = [
   "img": "img/campus/microsoft-research-asia.webp"
  },
  {
-  "id": "中国科学院数学与系统科学研究院",
-  "cat": "campus",
-  "year": 2018,
-  "name": {
-   "en": "中国科学院数学与系统科学研究院 (AMSS)",
-   "zh": "中国科学院数学与系统科学研究院 (AMSS)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京（中关村）",
-  "img": "img/campus/中国科学院数学与系统科学研究院.webp"
- },
- {
-  "id": "中国科学院自动化研究所",
-  "cat": "campus",
-  "year": 2018,
-  "name": {
-   "en": "中国科学院自动化研究所 (CASIA)",
-   "zh": "中国科学院自动化研究所 (CASIA)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京（中关村东路）",
-  "img": "img/campus/中国科学院自动化研究所.webp"
- },
- {
-  "id": "中央美术学院",
-  "cat": "campus",
-  "year": 2018,
-  "name": {
-   "en": "中央美术学院 (CAFA)",
-   "zh": "中央美术学院 (CAFA)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "img": "img/campus/中央美术学院.webp"
- },
- {
-  "id": "重庆大学",
-  "cat": "campus",
-  "year": 2018,
-  "name": {
-   "en": "重庆大学",
-   "zh": "重庆大学"
-  },
-  "sub": "🇨🇳 CN · 重庆",
-  "city": "重庆",
-  "img": "img/campus/重庆大学.webp"
- },
- {
-  "id": "中央戏剧学院",
+  "id": "beihang-university",
   "cat": "campus",
   "year": 2017,
   "name": {
-   "en": "中央戏剧学院",
+   "en": "Beihang University",
+   "zh": "北京航空航天大学"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/beihang-university.webp"
+ },
+ {
+  "id": "beijing-film-academy",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "Beijing Film Academy",
+   "zh": "北京电影学院"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/beijing-film-academy.webp"
+ },
+ {
+  "id": "beijing-jiaotong-university",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "Beijing Jiaotong University",
+   "zh": "北京交通大学"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/beijing-jiaotong-university.webp"
+ },
+ {
+  "id": "beijing-normal-university",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "Beijing Normal University",
+   "zh": "北京师范大学"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/beijing-normal-university.webp"
+ },
+ {
+  "id": "beijing-university-of-posts-and-telecommunicatio",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "Beijing University of Posts and Telecommunications",
+   "zh": "北京邮电大学"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/beijing-university-of-posts-and-telecommunicatio.webp"
+ },
+ {
+  "id": "central-university-of-finance-and-economics",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "Central University of Finance and Economics",
+   "zh": "中央财经大学"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "img": "img/campus/central-university-of-finance-and-economics.webp"
+ },
+ {
+  "id": "the-central-academy-of-drama",
+  "cat": "campus",
+  "year": 2017,
+  "name": {
+   "en": "The Central Academy of Drama",
    "zh": "中央戏剧学院"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
-  "img": "img/campus/中央戏剧学院.webp"
+  "img": "img/campus/the-central-academy-of-drama.webp"
  },
  {
-  "id": "中央财经大学",
+  "id": "xiamen-university",
   "cat": "campus",
   "year": 2017,
   "name": {
-   "en": "中央财经大学 (CUFE)",
-   "zh": "中央财经大学 (CUFE)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "img": "img/campus/中央财经大学.webp"
- },
- {
-  "id": "北京交通大学",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京交通大学 (BJTU)",
-   "zh": "北京交通大学 (BJTU)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "img": "img/campus/北京交通大学.webp"
- },
- {
-  "id": "北京师范大学",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京师范大学 (BNU)",
-   "zh": "北京师范大学 (BNU)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "img": "img/campus/北京师范大学.webp"
- },
- {
-  "id": "北京电影学院",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京电影学院 (BFA)",
-   "zh": "北京电影学院 (BFA)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "img": "img/campus/北京电影学院.webp"
- },
- {
-  "id": "北京航空航天大学",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京航空航天大学 (BUAA)",
-   "zh": "北京航空航天大学 (BUAA)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "img": "img/campus/北京航空航天大学.webp"
- },
- {
-  "id": "北京邮电大学",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "北京邮电大学 (BUPT)",
-   "zh": "北京邮电大学 (BUPT)"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "img": "img/campus/北京邮电大学.webp"
- },
- {
-  "id": "厦门大学",
-  "cat": "campus",
-  "year": 2017,
-  "name": {
-   "en": "厦门大学",
+   "en": "Xiamen University",
    "zh": "厦门大学"
   },
   "sub": "🇨🇳 CN · 厦门",
   "city": "厦门",
-  "img": "img/campus/厦门大学.webp"
+  "img": "img/campus/xiamen-university.webp"
  },
  {
-  "id": "上海交通大学",
+  "id": "fudan-university",
   "cat": "campus",
   "year": 2016,
   "name": {
-   "en": "上海交通大学（Shanghai Jiao Tong University）",
-   "zh": "上海交通大学"
-  },
-  "sub": "🇨🇳 CN · 上海",
-  "city": "上海",
-  "img": "img/campus/上海交通大学.webp"
- },
- {
-  "id": "复旦大学",
-  "cat": "campus",
-  "year": 2016,
-  "name": {
-   "en": "复旦大学（Fudan University）",
+   "en": "Fudan University",
    "zh": "复旦大学"
   },
   "sub": "🇨🇳 CN · 上海",
   "city": "上海",
-  "img": "img/campus/复旦大学.webp"
+  "img": "img/campus/fudan-university.webp"
  },
  {
-  "id": "北京大学",
+  "id": "shanghai-jiao-tong-university",
+  "cat": "campus",
+  "year": 2016,
+  "name": {
+   "en": "Shanghai Jiao Tong University",
+   "zh": "上海交通大学"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "img": "img/campus/shanghai-jiao-tong-university.webp"
+ },
+ {
+  "id": "peking-university",
   "cat": "campus",
   "year": 2014,
   "name": {
-   "en": "北京大学 (PKU)",
-   "zh": "北京大学 (PKU)"
+   "en": "Peking University",
+   "zh": "北京大学"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
-  "img": "img/campus/北京大学.webp"
+  "img": "img/campus/peking-university.webp"
  }
 ];

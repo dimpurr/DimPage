@@ -1,4 +1,4 @@
-// 数据层。⭐ 可信源在 DimLifeS：Life/Gear/dimpage-colle-life/
+// 数据层。⭐ 可信源 DimLifeS Life/Gear/dimpage-colle-life/
 window.COLLE_GLAM = [
  {
   "id": "museo-delle-culture",
@@ -27,17 +27,43 @@ window.COLLE_GLAM = [
   "img": "img/glam/national-portrait-gallery.webp"
  },
  {
-  "id": "罗马古生物博物馆",
+  "id": "rome-paleontology-museum",
   "cat": "museum",
   "name": {
-   "en": "罗马古生物博物馆",
+   "en": "Rome Paleontology Museum",
    "zh": "罗马古生物博物馆"
   },
   "sub": "🇮🇹 IT · Roma",
   "city": "Roma",
   "year": 2026,
   "rank": null,
-  "img": "img/glam/罗马古生物博物馆.webp"
+  "img": "img/glam/rome-paleontology-museum.webp"
+ },
+ {
+  "id": "beijing-library",
+  "cat": "library",
+  "name": {
+   "en": "Beijing Library",
+   "zh": "北京城市图书馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2025,
+  "rank": null,
+  "img": "img/glam/beijing-library.webp"
+ },
+ {
+  "id": "capital-museum",
+  "cat": "museum",
+  "name": {
+   "en": "Capital Museum",
+   "zh": "首都博物馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2025,
+  "rank": null,
+  "img": "img/glam/capital-museum.webp"
  },
  {
   "id": "ch-teau-des-ducs-de-bretagne",
@@ -51,6 +77,19 @@ window.COLLE_GLAM = [
   "year": 2025,
   "rank": null,
   "img": "img/glam/ch-teau-des-ducs-de-bretagne.webp"
+ },
+ {
+  "id": "grand-canal-museum-of-beijing",
+  "cat": "museum",
+  "name": {
+   "en": "Grand Canal Museum of Beijing",
+   "zh": "首都博物馆东馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2025,
+  "rank": null,
+  "img": "img/glam/grand-canal-museum-of-beijing.webp"
  },
  {
   "id": "museum-of-contemporary-art-san-diego",
@@ -105,6 +144,19 @@ window.COLLE_GLAM = [
   "img": "img/glam/san-diego-air-space-museum.webp"
  },
  {
+  "id": "shanghai-ocean-aquarium",
+  "cat": "museum",
+  "name": {
+   "en": "Shanghai Ocean Aquarium",
+   "zh": "上海海洋水族馆"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2025,
+  "rank": null,
+  "img": "img/glam/shanghai-ocean-aquarium.webp"
+ },
+ {
   "id": "uss-midway-museum",
   "cat": "museum",
   "name": {
@@ -131,82 +183,30 @@ window.COLLE_GLAM = [
   "img": "img/glam/v-a-east-storehouse.webp"
  },
  {
-  "id": "上海海洋水族馆",
+  "id": "wudadao-history-museum",
   "cat": "museum",
   "name": {
-   "en": "上海海洋水族馆",
-   "zh": "上海海洋水族馆"
-  },
-  "sub": "🇨🇳 CN · 上海",
-  "city": "上海",
-  "year": 2025,
-  "rank": null,
-  "img": "img/glam/上海海洋水族馆.webp"
- },
- {
-  "id": "五大道历史博物馆",
-  "cat": "museum",
-  "name": {
-   "en": "五大道历史博物馆",
+   "en": "Wudadao History Museum",
    "zh": "五大道历史博物馆"
   },
   "sub": "🇨🇳 CN · 天津",
   "city": "天津",
   "year": 2025,
   "rank": null,
-  "img": "img/glam/五大道历史博物馆.webp"
+  "img": "img/glam/wudadao-history-museum.webp"
  },
  {
-  "id": "北京城市图书馆",
-  "cat": "library",
-  "name": {
-   "en": "北京城市图书馆",
-   "zh": "北京城市图书馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2025,
-  "rank": null,
-  "img": "img/glam/北京城市图书馆.webp"
- },
- {
-  "id": "北京大运河博物馆",
+  "id": "zhejiang-provincial-museum",
   "cat": "museum",
   "name": {
-   "en": "北京大运河博物馆",
-   "zh": "首都博物馆东馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2025,
-  "rank": null,
-  "img": "img/glam/北京大运河博物馆.webp"
- },
- {
-  "id": "浙江省博物馆之江馆",
-  "cat": "museum",
-  "name": {
-   "en": "浙江省博物馆之江馆",
+   "en": "Zhejiang Provincial Museum",
    "zh": "浙江省博物馆之江馆"
   },
   "sub": "🇨🇳 CN · 杭州",
   "city": "杭州",
   "year": 2025,
   "rank": null,
-  "img": "img/glam/浙江省博物馆之江馆.webp"
- },
- {
-  "id": "首都博物馆",
-  "cat": "museum",
-  "name": {
-   "en": "首都博物馆",
-   "zh": "首都博物馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2025,
-  "rank": null,
-  "img": "img/glam/首都博物馆.webp"
+  "img": "img/glam/zhejiang-provincial-museum.webp"
  },
  {
   "id": "180-studios",
@@ -220,6 +220,19 @@ window.COLLE_GLAM = [
   "year": 2024,
   "rank": null,
   "img": "img/glam/180-studios.webp"
+ },
+ {
+  "id": "beijing-planetarium",
+  "cat": "museum",
+  "name": {
+   "en": "Beijing Planetarium",
+   "zh": "北京天文馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2024,
+  "rank": null,
+  "img": "img/glam/beijing-planetarium.webp"
  },
  {
   "id": "domobaal",
@@ -261,6 +274,19 @@ window.COLLE_GLAM = [
   "img": "img/glam/erarta.webp"
  },
  {
+  "id": "grand-maket-rossiya",
+  "cat": "gallery",
+  "name": {
+   "en": "Grand Maket Rossiya",
+   "zh": "微缩博物馆"
+  },
+  "sub": "🇷🇺 RU · Санкт-Петербург",
+  "city": "Санкт-Петербург",
+  "year": 2024,
+  "rank": null,
+  "img": "img/glam/grand-maket-rossiya.webp"
+ },
+ {
   "id": "maughan-library",
   "cat": "library",
   "name": {
@@ -272,6 +298,19 @@ window.COLLE_GLAM = [
   "year": 2024,
   "rank": null,
   "img": "img/glam/maughan-library.webp"
+ },
+ {
+  "id": "military-museum-of-the-chinese-people-s-revoluti",
+  "cat": "museum",
+  "name": {
+   "en": "Military Museum of the Chinese People's Revolution",
+   "zh": "中国人民革命军事博物馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2024,
+  "rank": null,
+  "img": "img/glam/military-museum-of-the-chinese-people-s-revoluti.webp"
  },
  {
   "id": "serpentine",
@@ -298,6 +337,32 @@ window.COLLE_GLAM = [
   "year": 2024,
   "rank": null,
   "img": "img/glam/sotheby-s.webp"
+ },
+ {
+  "id": "tianjin-teda-aircraft-carrier-theme-park",
+  "cat": "other",
+  "name": {
+   "en": "Tianjin TEDA Aircraft Carrier Theme Park",
+   "zh": "天津泰达航母主题公园"
+  },
+  "sub": "🇨🇳 CN · 天津",
+  "city": "天津",
+  "year": 2024,
+  "rank": null,
+  "img": "img/glam/tianjin-teda-aircraft-carrier-theme-park.webp"
+ },
+ {
+  "id": "unicorn-starry-sky-art-museum",
+  "cat": "gallery",
+  "name": {
+   "en": "Unicorn Starry Sky Art Museum",
+   "zh": "北京独角兽星空艺术馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2024,
+  "rank": null,
+  "img": "img/glam/unicorn-starry-sky-art-museum.webp"
  },
  {
   "id": "york-minster",
@@ -376,71 +441,6 @@ window.COLLE_GLAM = [
   "year": 2024,
   "rank": null,
   "img": "img/glam/x-5.webp"
- },
- {
-  "id": "中国人民革命军事博物馆",
-  "cat": "museum",
-  "name": {
-   "en": "中国人民革命军事博物馆",
-   "zh": "中国人民革命军事博物馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2024,
-  "rank": null,
-  "img": "img/glam/中国人民革命军事博物馆.webp"
- },
- {
-  "id": "北京天文馆",
-  "cat": "museum",
-  "name": {
-   "en": "北京天文馆",
-   "zh": "北京天文馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2024,
-  "rank": null,
-  "img": "img/glam/北京天文馆.webp"
- },
- {
-  "id": "北京独角兽星空艺术馆",
-  "cat": "gallery",
-  "name": {
-   "en": "北京独角兽星空艺术馆",
-   "zh": "北京独角兽星空艺术馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2024,
-  "rank": null,
-  "img": "img/glam/北京独角兽星空艺术馆.webp"
- },
- {
-  "id": "天津泰达航母主题公园",
-  "cat": "other",
-  "name": {
-   "en": "天津泰达航母主题公园",
-   "zh": "天津泰达航母主题公园"
-  },
-  "sub": "🇨🇳 CN · 天津",
-  "city": "天津",
-  "year": 2024,
-  "rank": null,
-  "img": "img/glam/天津泰达航母主题公园.webp"
- },
- {
-  "id": "微缩博物馆",
-  "cat": "gallery",
-  "name": {
-   "en": "微缩博物馆",
-   "zh": "微缩博物馆"
-  },
-  "sub": "🇷🇺 RU · Санкт-Петербург",
-  "city": "Санкт-Петербург",
-  "year": 2024,
-  "rank": null,
-  "img": "img/glam/微缩博物馆.webp"
  },
  {
   "id": "american-museum-of-natural-history",
@@ -729,17 +729,17 @@ window.COLLE_GLAM = [
   "img": "img/glam/ucl-library.webp"
  },
  {
-  "id": "谢子龙影像艺术馆",
+  "id": "xie-zilong-photography-museum",
   "cat": "gallery",
   "name": {
-   "en": "谢子龙影像艺术馆",
+   "en": "Xie Zilong Photography Museum",
    "zh": "谢子龙影像艺术馆"
   },
   "sub": "🇨🇳 CN · 长沙",
   "city": "长沙",
   "year": 2023,
   "rank": null,
-  "img": "img/glam/谢子龙影像艺术馆.webp"
+  "img": "img/glam/xie-zilong-photography-museum.webp"
  },
  {
   "id": "barbican-centre",
@@ -753,6 +753,19 @@ window.COLLE_GLAM = [
   "year": 2022,
   "rank": null,
   "img": "img/glam/barbican-centre.webp"
+ },
+ {
+  "id": "beijing-exhibition-center",
+  "cat": "museum",
+  "name": {
+   "en": "Beijing Exhibition Center",
+   "zh": "北京展览馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2022,
+  "rank": null,
+  "img": "img/glam/beijing-exhibition-center.webp"
  },
  {
   "id": "british-museum",
@@ -779,6 +792,71 @@ window.COLLE_GLAM = [
   "year": 2022,
   "rank": null,
   "img": "img/glam/design-museum.webp"
+ },
+ {
+  "id": "guangdong-museum",
+  "cat": "museum",
+  "name": {
+   "en": "Guangdong Museum",
+   "zh": "广东省博物馆"
+  },
+  "sub": "🇨🇳 CN · 广州",
+  "city": "广州",
+  "year": 2022,
+  "rank": null,
+  "img": "img/glam/guangdong-museum.webp"
+ },
+ {
+  "id": "guangzhou-lu-xun-memorial-hall",
+  "cat": "museum",
+  "name": {
+   "en": "Guangzhou Lu Xun Memorial Hall",
+   "zh": "广州鲁迅纪念馆"
+  },
+  "sub": "🇨🇳 CN · 广州",
+  "city": "广州",
+  "year": 2022,
+  "rank": null,
+  "img": "img/glam/guangzhou-lu-xun-memorial-hall.webp"
+ },
+ {
+  "id": "guangzhou-ocean-world",
+  "cat": "museum",
+  "name": {
+   "en": "Guangzhou Ocean World",
+   "zh": "广州海洋馆"
+  },
+  "sub": "🇨🇳 CN · 广州",
+  "city": "广州",
+  "year": 2022,
+  "rank": null,
+  "img": "img/glam/guangzhou-ocean-world.webp"
+ },
+ {
+  "id": "guangzhou-railway-museum",
+  "cat": "museum",
+  "name": {
+   "en": "Guangzhou Railway Museum",
+   "zh": "广州铁道博物馆"
+  },
+  "sub": "🇨🇳 CN · 广州",
+  "city": "广州",
+  "year": 2022,
+  "rank": null,
+  "img": "img/glam/guangzhou-railway-museum.webp"
+ },
+ {
+  "id": "guangzhou-science-and-technology-museum",
+  "cat": "museum",
+  "name": {
+   "en": "Guangzhou Science and Technology Museum",
+   "zh": "广州科技馆"
+  },
+  "sub": "🇨🇳 CN · 广州",
+  "city": "广州",
+  "year": 2022,
+  "rank": null,
+  "img": "img/glam/guangzhou-science-and-technology-museum.webp"
  },
  {
   "id": "natural-history-museum",
@@ -937,276 +1015,198 @@ window.COLLE_GLAM = [
   "img": "img/glam/zabludowicz-collection.webp"
  },
  {
-  "id": "北京展览馆",
+  "id": "china-railway-museum",
   "cat": "museum",
   "name": {
-   "en": "北京展览馆",
-   "zh": "北京展览馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2022,
-  "rank": null,
-  "img": "img/glam/北京展览馆.webp"
- },
- {
-  "id": "广东省博物馆",
-  "cat": "museum",
-  "name": {
-   "en": "广东省博物馆",
-   "zh": "广东省博物馆"
-  },
-  "sub": "🇨🇳 CN · 广州",
-  "city": "广州",
-  "year": 2022,
-  "rank": null,
-  "img": "img/glam/广东省博物馆.webp"
- },
- {
-  "id": "广州海洋馆",
-  "cat": "museum",
-  "name": {
-   "en": "广州海洋馆",
-   "zh": "广州海洋馆"
-  },
-  "sub": "🇨🇳 CN · 广州",
-  "city": "广州",
-  "year": 2022,
-  "rank": null,
-  "img": "img/glam/广州海洋馆.webp"
- },
- {
-  "id": "广州科技馆",
-  "cat": "museum",
-  "name": {
-   "en": "广州科技馆",
-   "zh": "广州科技馆"
-  },
-  "sub": "🇨🇳 CN · 广州",
-  "city": "广州",
-  "year": 2022,
-  "rank": null,
-  "img": "img/glam/广州科技馆.webp"
- },
- {
-  "id": "广州铁道博物馆",
-  "cat": "museum",
-  "name": {
-   "en": "广州铁道博物馆",
-   "zh": "广州铁道博物馆"
-  },
-  "sub": "🇨🇳 CN · 广州",
-  "city": "广州",
-  "year": 2022,
-  "rank": null,
-  "img": "img/glam/广州铁道博物馆.webp"
- },
- {
-  "id": "广州鲁迅纪念馆",
-  "cat": "museum",
-  "name": {
-   "en": "广州鲁迅纪念馆",
-   "zh": "广州鲁迅纪念馆"
-  },
-  "sub": "🇨🇳 CN · 广州",
-  "city": "广州",
-  "year": 2022,
-  "rank": null,
-  "img": "img/glam/广州鲁迅纪念馆.webp"
- },
- {
-  "id": "中国铁道博物馆",
-  "cat": "museum",
-  "name": {
-   "en": "中国铁道博物馆（东郊展馆）",
+   "en": "China Railway Museum",
    "zh": "中国铁道博物馆（东郊展馆）"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "year": 2021,
   "rank": null,
-  "img": "img/glam/中国铁道博物馆.webp"
+  "img": "img/glam/china-railway-museum.webp"
  },
  {
-  "id": "798-艺术区",
+  "id": "798-art-zone",
   "cat": "gallery",
   "name": {
-   "en": "798 艺术区",
+   "en": "798 Art Zone",
    "zh": "798 艺术区"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "year": 2019,
   "rank": null,
-  "img": "img/glam/798-艺术区.webp"
+  "img": "img/glam/798-art-zone.webp"
  },
  {
-  "id": "ucca-尤伦斯当代艺术中心",
-  "cat": "gallery",
-  "name": {
-   "en": "UCCA 尤伦斯当代艺术中心",
-   "zh": "UCCA 尤伦斯当代艺术中心"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京（798）",
-  "year": 2019,
-  "rank": null,
-  "img": "img/glam/ucca-尤伦斯当代艺术中心.webp"
- },
- {
-  "id": "国家自然博物馆",
+  "id": "national-natural-history-museum-of-china",
   "cat": "museum",
   "name": {
-   "en": "国家自然博物馆",
+   "en": "National Natural History Museum of China",
    "zh": "国家自然博物馆"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "year": 2019,
   "rank": null,
-  "img": "img/glam/国家自然博物馆.webp"
+  "img": "img/glam/national-natural-history-museum-of-china.webp"
  },
  {
-  "id": "中国科学技术馆",
-  "cat": "museum",
-  "name": {
-   "en": "中国科学技术馆",
-   "zh": "中国科学技术馆"
-  },
-  "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2018,
-  "rank": null,
-  "img": "img/glam/中国科学技术馆.webp"
- },
- {
-  "id": "中国美术馆",
+  "id": "ucca-center-for-contemporary-art",
   "cat": "gallery",
   "name": {
-   "en": "中国美术馆",
-   "zh": "中国美术馆"
+   "en": "UCCA Center for Contemporary Art",
+   "zh": "UCCA 尤伦斯当代艺术中心"
   },
   "sub": "🇨🇳 CN · 北京",
-  "city": "北京",
-  "year": 2018,
+  "city": "北京（798）",
+  "year": 2019,
   "rank": null,
-  "img": "img/glam/中国美术馆.webp"
+  "img": "img/glam/ucca-center-for-contemporary-art.webp"
  },
  {
-  "id": "中央美术学院美术馆",
+  "id": "cafa-art-museum",
   "cat": "gallery",
   "name": {
-   "en": "中央美术学院美术馆",
+   "en": "CAFA Art Museum",
    "zh": "中央美术学院美术馆"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "year": 2018,
   "rank": null,
-  "img": "img/glam/中央美术学院美术馆.webp"
+  "img": "img/glam/cafa-art-museum.webp"
  },
  {
-  "id": "清华大学艺术博物馆",
-  "cat": "other",
+  "id": "china-science-and-technology-museum",
+  "cat": "museum",
   "name": {
-   "en": "清华大学艺术博物馆",
-   "zh": "清华大学艺术博物馆"
+   "en": "China Science and Technology Museum",
+   "zh": "中国科学技术馆"
   },
   "sub": "🇨🇳 CN · 北京",
   "city": "北京",
   "year": 2018,
   "rank": null,
-  "img": "img/glam/清华大学艺术博物馆.webp"
+  "img": "img/glam/china-science-and-technology-museum.webp"
  },
  {
-  "id": "重庆中国三峡博物馆",
+  "id": "chongqing-china-three-gorges-museum",
   "cat": "museum",
   "name": {
-   "en": "重庆中国三峡博物馆",
+   "en": "Chongqing China Three Gorges Museum",
    "zh": "重庆中国三峡博物馆"
   },
   "sub": "🇨🇳 CN · 重庆",
   "city": "重庆",
   "year": 2018,
   "rank": null,
-  "img": "img/glam/重庆中国三峡博物馆.webp"
+  "img": "img/glam/chongqing-china-three-gorges-museum.webp"
  },
  {
-  "id": "中山纪念堂",
-  "cat": "church",
+  "id": "national-art-museum-of-china",
+  "cat": "gallery",
   "name": {
-   "en": "中山纪念堂",
-   "zh": "中山纪念堂"
+   "en": "National Art Museum of China",
+   "zh": "中国美术馆"
   },
-  "sub": "🇨🇳 CN · 广州",
-  "city": "广州",
-  "year": 2017,
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2018,
   "rank": null,
-  "img": "img/glam/中山纪念堂.webp"
+  "img": "img/glam/national-art-museum-of-china.webp"
  },
  {
-  "id": "南越王博物馆",
+  "id": "tsinghua-university-art-museum",
+  "cat": "other",
+  "name": {
+   "en": "Tsinghua University Art Museum",
+   "zh": "清华大学艺术博物馆"
+  },
+  "sub": "🇨🇳 CN · 北京",
+  "city": "北京",
+  "year": 2018,
+  "rank": null,
+  "img": "img/glam/tsinghua-university-art-museum.webp"
+ },
+ {
+  "id": "nanyue-king-museum",
   "cat": "museum",
   "name": {
-   "en": "南越王博物馆",
+   "en": "Nanyue King Museum",
    "zh": "南越王博物馆"
   },
   "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "year": 2017,
   "rank": null,
-  "img": "img/glam/南越王博物馆.webp"
+  "img": "img/glam/nanyue-king-museum.webp"
  },
  {
-  "id": "深圳图书馆",
+  "id": "shenzhen-library",
   "cat": "gallery",
   "name": {
-   "en": "深圳图书馆",
+   "en": "Shenzhen Library",
    "zh": "深圳图书馆"
   },
   "sub": "🇨🇳 CN · 深圳",
   "city": "深圳",
   "year": 2017,
   "rank": null,
-  "img": "img/glam/深圳图书馆.webp"
+  "img": "img/glam/shenzhen-library.webp"
  },
  {
-  "id": "深圳现代艺术馆",
+  "id": "shenzhen-museum-of-contemporary-art-and-urban-pl",
   "cat": "gallery",
   "name": {
-   "en": "深圳现代艺术馆",
-   "zh": "深圳现代艺术馆"
+   "en": "Shenzhen Museum of Contemporary Art and Urban Planning",
+   "zh": "深圳当代艺术与城市规划馆"
   },
   "sub": "🇨🇳 CN · 深圳",
   "city": "深圳",
   "year": 2017,
   "rank": null,
-  "img": "img/glam/深圳现代艺术馆.webp"
+  "img": "img/glam/shenzhen-museum-of-contemporary-art-and-urban-pl.webp"
  },
  {
-  "id": "八一起义纪念馆",
-  "cat": "museum",
+  "id": "sun-yat-sen-memorial-hall",
+  "cat": "church",
   "name": {
-   "en": "八一起义纪念馆",
-   "zh": "八一起义纪念馆"
+   "en": "Sun Yat-sen Memorial Hall",
+   "zh": "中山纪念堂"
   },
-  "sub": "🇨🇳 CN · 南昌",
-  "city": "南昌",
-  "year": 2012,
+  "sub": "🇨🇳 CN · 广州",
+  "city": "广州",
+  "year": 2017,
   "rank": null,
-  "img": "img/glam/八一起义纪念馆.webp"
+  "img": "img/glam/sun-yat-sen-memorial-hall.webp"
  },
  {
-  "id": "大埔县博物馆",
+  "id": "dabu-county-museum",
   "cat": "museum",
   "name": {
-   "en": "大埔县博物馆",
+   "en": "Dabu County Museum",
    "zh": "大埔县博物馆"
   },
   "sub": "🇨🇳 CN · 梅州大埔",
   "city": "梅州大埔",
   "year": 2012,
   "rank": null,
-  "img": "img/glam/大埔县博物馆.webp"
+  "img": "img/glam/dabu-county-museum.webp"
+ },
+ {
+  "id": "nanchang-august-1st-uprising-memorial-hall",
+  "cat": "museum",
+  "name": {
+   "en": "Nanchang August 1st Uprising Memorial Hall",
+   "zh": "八一起义纪念馆"
+  },
+  "sub": "🇨🇳 CN · 南昌",
+  "city": "南昌",
+  "year": 2012,
+  "rank": null,
+  "img": "img/glam/nanchang-august-1st-uprising-memorial-hall.webp"
  }
 ];
