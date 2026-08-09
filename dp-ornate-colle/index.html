@@ -208,6 +208,19 @@
     .tabs-view button svg { width: 14px; height: 14px; }
     .tabs-view button:hover { color: var(--ink); }
     .tabs-view button[aria-selected="true"] { background: var(--accent-bg); color: var(--accent-ink); }
+
+    /* 排序切换：单个幽灵胶囊按钮（图标+当前模式文字），点击在两模式间切换。
+       与视图切换的分段容器（多按钮一个整体）形态上明确区分 */
+    .sort-toggle {
+      flex: none; margin-left: auto; display: inline-flex; align-items: center; gap: 0.4rem;
+      background: none; border: 1px dashed var(--line); border-radius: var(--r-pill);
+      padding: 0.38rem 0.9rem; cursor: pointer;
+      font-family: inherit; font-size: 0.78rem; letter-spacing: 0.03em; color: var(--muted);
+      transition: color 150ms ease-out, border-color 150ms ease-out;
+    }
+    .sort-toggle[hidden] { display: none; }
+    .sort-toggle svg { width: 13px; height: 13px; }
+    .sort-toggle:hover { color: var(--accent-ink); border-color: var(--accent); }
     .tabs-minor::-webkit-scrollbar { display: none; }
     .tabs-minor button {
       flex: none; background: var(--control-bg); border: 1px solid var(--line);
@@ -235,10 +248,9 @@
     }
     .card.device figure { aspect-ratio: 1 / 1; padding: 1.15rem; }
     .card.device img { max-width: 100%; max-height: 100%; object-fit: contain; }
-    .card.char figure { aspect-ratio: 2 / 1; }
-    .card.char.tall figure { aspect-ratio: 5 / 8; padding: 0.8rem; }
-    .card.char img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-    .card.char.tall img { object-fit: contain; }
+    /* 角色卡池图比例差异大（2:1 横版 / 1:1.6 竖版混排），锁宽度、高度随图自适应，
+       不锁高度也就不裁切画面；瀑布流天然消化高度差 */
+    .card.char img { width: 100%; height: auto; display: block; }
     /* 电影/动画海报：统一 2:3 竖版，满幅裁切 */
     .card.poster figure { aspect-ratio: 2 / 3; }
     .card.poster img { width: 100%; height: 100%; object-fit: cover; }
@@ -415,6 +427,7 @@
       </div>
       <div class="minor-row">
         <div class="tabs-minor" id="tabsMinor" role="tablist"></div>
+        <button class="sort-toggle" id="sortBtn" type="button" hidden></button>
         <div class="tabs-view" id="tabsView" role="group" aria-label="View" hidden></div>
       </div>
       <div class="grid" id="grid"></div>
@@ -463,7 +476,8 @@
         toggle: '中文', fullist: 'Full list',
         toDark: 'Dark mode', toLight: 'Light mode',
         places: "Places I've Been", live: 'Lived in', travel: 'Travel & Events',
-        vcards: 'Cards', vmap: 'Map', vtime: 'Timeline'
+        vcards: 'Cards', vmap: 'Map', vtime: 'Timeline',
+        sortScore: 'By rating', sortTime: 'By year'
       },
       zh: {
         bio: '伦敦国王学院 数字人文 博士在读',
@@ -478,7 +492,8 @@
         toggle: 'EN', fullist: '完整清单',
         toDark: '夜间模式', toLight: '日间模式',
         places: '去过的地方', live: '居住', travel: '旅游与活动',
-        vcards: '卡片', vmap: '地图', vtime: '时间轴'
+        vcards: '卡片', vmap: '地图', vtime: '时间轴',
+        sortScore: '按评分', sortTime: '按时间'
       }
     };
 
@@ -492,6 +507,7 @@
       view_cards: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6.8" height="6.8" rx="1.6"/><rect x="13.2" y="4" width="6.8" height="6.8" rx="1.6"/><rect x="4" y="13.2" width="6.8" height="6.8" rx="1.6"/><rect x="13.2" y="13.2" width="6.8" height="6.8" rx="1.6"/></svg>',
       view_map: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.8 4 6.5v13l5-1.7 6 1.7 5-1.7v-13l-5 1.7-6-1.7z"/><path d="M9 4.8v13M15 6.5v13"/></svg>',
       view_time: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12h17"/><path d="M7 9.5v5M12 9.5v5M17 9.5v5"/></svg>',
+      sort: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5v15M9 4.5L6 7.5M9 4.5l3 3"/><path d="M15 19.5v-15M15 19.5l3-3M15 19.5l-3-3"/></svg>',
       sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v2M12 19.2v2M4.5 4.5l1.4 1.4M18.1 18.1l1.4 1.4M2.8 12h2M19.2 12h2M4.5 19.5l1.4-1.4M18.1 5.9l1.4-1.4"/></svg>',
       moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4z"/></svg>',
       arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9.5 7H17v7.5"/></svg>'
@@ -539,6 +555,10 @@
     var view = 'cards';   // places 大 tab 的视图：cards / map / time
     var placeRows = [];   // places 当前筛选结果，resize 重绘矢量视图用
     var mapSel = null;    // 地图弹窗当前条目 id
+    // 排序切换：只有 Dim 点名的三个 tab 支持，评分键各异；分数永远不展示给读者
+    var SORT_KEY = { anime: 'score', movies: 'score', glam: 'rank' };
+    var sort = 'score';   // 'score' 按评分（默认）/ 'time' 按时间
+    var $sort = document.getElementById('sortBtn');
 
     function t(k) { return (I18N[lang] && I18N[lang][k]) || k; }
 
@@ -677,6 +697,26 @@
       $view.hidden = !isPlace;
       if (isPlace) renderViewTabs();
 
+      // 排序切换：仅 glam/anime/movies 三个 tab；单按钮两模式，与视图分段控件形态区分
+      var sortKey = SORT_KEY[g.key];
+      $sort.hidden = !sortKey;
+      if (sortKey) {
+        $sort.innerHTML = ICONS.sort + '<span>' + t(sort === 'time' ? 'sortTime' : 'sortScore') + '</span>';
+        rows = rows.slice().sort(function (a, b) {
+          if (sort === 'time') {
+            if (a.year == null) return 1;
+            if (b.year == null) return -1;
+            return b.year - a.year;
+          }
+          // 按评分：隐性分数键降序，缺键排最后；稳定排序，同分保持数据原顺序
+          var av = a[sortKey], bv = b[sortKey];
+          if (av == null && bv == null) return 0;
+          if (av == null) return 1;
+          if (bv == null) return -1;
+          return bv - av;
+        });
+      }
+
       var showCards = !isPlace || view === 'cards';
       $grid.style.display = showCards ? '' : 'none';
       $mapWrap.hidden = !(isPlace && view === 'map');
@@ -707,6 +747,8 @@
         $view.appendChild(b);
       });
     }
+
+    $sort.onclick = function () { sort = sort === 'time' ? 'score' : 'time'; render(); };
 
     // ── 地图视图：d3-geo Natural Earth 投影 + topojson 110m 国界，
     //    全部本地矢量、零网络；颜色走 CSS 变量，日夜切换无需重绘 ──
