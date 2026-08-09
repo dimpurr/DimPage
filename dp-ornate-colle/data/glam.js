@@ -1,4 +1,3 @@
-// 数据层。⭐ 可信源 DimLifeS Life/Gear/dimpage-colle-life/glam.md
 window.COLLE_GLAM = [
  {
   "id": "colosseum",
@@ -10,7 +9,8 @@ window.COLLE_GLAM = [
   "sub": "🇮🇹 IT · Roma",
   "city": "Roma",
   "year": 2026,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/colosseum.webp"
  },
  {
   "id": "museo-delle-culture",
@@ -48,7 +48,8 @@ window.COLLE_GLAM = [
   "sub": "🇮🇹 IT · Roma",
   "city": "Roma",
   "year": 2026,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/pantheon.webp"
  },
  {
   "id": "roman-forum",
@@ -60,7 +61,8 @@ window.COLLE_GLAM = [
   "sub": "🇮🇹 IT · Roma",
   "city": "Roma",
   "year": 2026,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/roman-forum.webp"
  },
  {
   "id": "rome-paleontology-museum",
@@ -85,7 +87,8 @@ window.COLLE_GLAM = [
   "sub": "🇮🇹 IT · Roma",
   "city": "Roma",
   "year": 2026,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/spanish-steps.webp"
  },
  {
   "id": "st-peter-s-square",
@@ -97,7 +100,8 @@ window.COLLE_GLAM = [
   "sub": "🇻🇦 VA · Vaticano",
   "city": "Vaticano",
   "year": 2026,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/st-peter-s-square.webp"
  },
  {
   "id": "trevi-fountain",
@@ -109,7 +113,8 @@ window.COLLE_GLAM = [
   "sub": "🇮🇹 IT · Roma",
   "city": "Roma",
   "year": 2026,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/trevi-fountain.webp"
  },
  {
   "id": "beijing-library",
@@ -316,7 +321,8 @@ window.COLLE_GLAM = [
   "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "year": 2024,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/church-of-the-saviour-on-spilled-blood.webp"
  },
  {
   "id": "domobaal",
@@ -380,7 +386,8 @@ window.COLLE_GLAM = [
   "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "year": 2024,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/kazan-cathedral.webp"
  },
  {
   "id": "maughan-library",
@@ -444,7 +451,8 @@ window.COLLE_GLAM = [
   "sub": "🇷🇺 RU · Санкт-Петербург",
   "city": "Санкт-Петербург",
   "year": 2024,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/st-isaac-s-cathedral.webp"
  },
  {
   "id": "tianjin-teda-aircraft-carrier-theme-park",
@@ -560,7 +568,8 @@ window.COLLE_GLAM = [
   "sub": "🇺🇸 US · New York",
   "city": "New York",
   "year": 2023,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/9-11-memorial.webp"
  },
  {
   "id": "american-museum-of-natural-history",
@@ -585,7 +594,8 @@ window.COLLE_GLAM = [
   "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "year": 2023,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/arc-de-triomphe.webp"
  },
  {
   "id": "british-library",
@@ -636,7 +646,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 长沙",
   "city": "长沙",
   "year": 2023,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/changsha-ifs.webp"
  },
  {
   "id": "ch-teau-de-versailles",
@@ -661,7 +672,8 @@ window.COLLE_GLAM = [
   "sub": "🇫🇷 FR · Paris",
   "city": "Paris",
   "year": 2023,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/eiffel-tower.webp"
  },
  {
   "id": "empire-state-building",
@@ -673,7 +685,8 @@ window.COLLE_GLAM = [
   "sub": "🇺🇸 US · New York",
   "city": "New York",
   "year": 2023,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/empire-state-building.webp"
  },
  {
   "id": "georgia-aquarium",
@@ -789,7 +802,8 @@ window.COLLE_GLAM = [
   "sub": "🇺🇸 US · New York",
   "city": "New York",
   "year": 2023,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/one-world-trade-center.webp"
  },
  {
   "id": "orange-isle",
@@ -801,7 +815,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 长沙",
   "city": "长沙",
   "year": 2023,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/orange-isle.webp"
  },
  {
   "id": "riverside-museum",
@@ -956,7 +971,8 @@ window.COLLE_GLAM = [
   "sub": "🇬🇧 UK · Bath",
   "city": "Bath",
   "year": 2022,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/bath-abbey.webp"
  },
  {
   "id": "beijing-exhibition-center",
@@ -994,7 +1010,8 @@ window.COLLE_GLAM = [
   "sub": "🇬🇧 UK · Edinburgh",
   "city": "Edinburgh",
   "year": 2022,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/calton-hill.webp"
  },
  {
   "id": "design-museum",
@@ -1175,7 +1192,8 @@ window.COLLE_GLAM = [
   "sub": "🇬🇧 UK · London",
   "city": "London",
   "year": 2022,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/st-paul-s-cathedral.webp"
  },
  {
   "id": "tate",
@@ -1278,7 +1296,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 广州",
   "city": "广州",
   "year": 2019,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/canton-tower.webp"
  },
  {
   "id": "national-natural-history-museum-of-china",
@@ -1355,7 +1374,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 重庆",
   "city": "重庆",
   "year": 2018,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/hongya-cave.webp"
  },
  {
   "id": "jiefangbei-monument",
@@ -1367,7 +1387,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 重庆",
   "city": "重庆",
   "year": 2018,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/jiefangbei-monument.webp"
  },
  {
   "id": "national-art-museum-of-china",
@@ -1457,7 +1478,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 深圳",
   "city": "深圳",
   "year": 2014,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/ping-an-finance-centre.webp"
  },
  {
   "id": "dabu-county-museum",
@@ -1495,7 +1517,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 上海",
   "city": "上海",
   "year": 2009,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/jin-mao-tower.webp"
  },
  {
   "id": "lingyin-temple",
@@ -1507,7 +1530,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 杭州",
   "city": "杭州",
   "year": 2009,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/lingyin-temple.webp"
  },
  {
   "id": "oriental-pearl-tower",
@@ -1519,7 +1543,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 上海",
   "city": "上海",
   "year": 2009,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/oriental-pearl-tower.webp"
  },
  {
   "id": "shanghai-tower",
@@ -1531,7 +1556,8 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 上海",
   "city": "上海",
   "year": 2009,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/shanghai-tower.webp"
  },
  {
   "id": "shanghai-world-financial-center",
@@ -1543,6 +1569,7 @@ window.COLLE_GLAM = [
   "sub": "🇨🇳 CN · 上海",
   "city": "上海",
   "year": 2009,
-  "rank": null
+  "rank": null,
+  "img": "img/glam/shanghai-world-financial-center.webp"
  }
 ];

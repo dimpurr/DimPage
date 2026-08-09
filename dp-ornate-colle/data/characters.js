@@ -1015,5 +1015,45 @@ window.COLLE_CHARACTERS = [
   "xp": null,
   "year": 2016,
   "img": "img/characters/vsinger-stardust.webp"
+ },
+ {
+  "id": "petitplanet-medowlyn",
+  "cat": "petitplanet",
+  "name": {
+   "zh": "Medowlyn",
+   "en": "Medowlyn"
+  },
+  "xp": 92,
+  "img": "img/characters/petitplanet-medowlyn.webp"
+ },
+ {
+  "id": "petitplanet-yunguo",
+  "cat": "petitplanet",
+  "name": {
+   "zh": "Yunguo",
+   "en": "Yunguo"
+  },
+  "xp": 90,
+  "img": "img/characters/petitplanet-yunguo.webp"
+ },
+ {
+  "id": "petitplanet-frostia",
+  "cat": "petitplanet",
+  "name": {
+   "zh": "Frostia",
+   "en": "Frostia"
+  },
+  "xp": 89,
+  "img": "img/characters/petitplanet-frostia.webp"
+ },
+ {
+  "id": "petitplanet-elsasani",
+  "cat": "petitplanet",
+  "name": {
+   "zh": "Elsasani",
+   "en": "Elsasani"
+  },
+  "xp": 88,
+  "img": "img/characters/petitplanet-elsasani.webp"
  }
 ];
