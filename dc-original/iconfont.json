@@ -1,0 +1,37 @@
+{
+  "id": "3642942",
+  "name": "dimhome",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6151370",
+      "name": "arrow-left",
+      "font_class": "arrow-left",
+      "unicode": "e841",
+      "unicode_decimal": 59457
+    },
+    {
+      "icon_id": "6151368",
+      "name": "arrow-right",
+      "font_class": "arrow-right",
+      "unicode": "e840",
+      "unicode_decimal": 59456
+    },
+    {
+      "icon_id": "4936972",
+      "name": "instagram",
+      "font_class": "instagram",
+      "unicode": "e87f",
+      "unicode_decimal": 59519
+    },
+    {
+      "icon_id": "4936985",
+      "name": "twitter",
+      "font_class": "twitter",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    }
+  ]
+}

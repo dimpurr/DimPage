@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dimpurr Cheny</title>
+  <meta name="author" content="dimpurr" />
+  <meta name="description" content="Dimpurr Cheny — artist, designer, developer" />
+  <link rel="shortcut icon" href="res/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --border: #2a2a2a;
+      --text: #e8e2d9;
+      --muted: #6b6560;
+      --accent: #c9b99a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'EB Garamond', Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 560px;
+      padding: 14vh 0 6rem;
+      flex: 1;
+    }
+
+    .name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .name em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .bio {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 3.5rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .blog-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .blog-link {
+      display: inline-block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .blog-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    footer {
+      width: 100%;
+      max-width: 560px;
+      padding: 2rem 0 4rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .archive-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .archive-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.8rem;
+    }
+
+    .archive-list a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .archive-list a:hover { color: var(--text); }
+
+    .archive-list a span {
+      font-size: 0.72rem;
+      opacity: 0.5;
+      margin-left: 0.3em;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <p class="subtitle">Dimpurr Cheny &nbsp;·&nbsp; 钉子</p>
+    <h1 class="name">Artist, Designer<br><em>&amp; Developer</em></h1>
+    <p class="bio">KCL Digital Humanities PhD Candidate</p>
+    <p class="blog-label">Writing</p>
+    <a class="blog-link" href="https://www.wribb.com/c/dimpurr" target="_blank" rel="noopener">
+      Wribb — @dimpurr &nbsp;↗
+    </a>
+    <br><br>
+    <p class="blog-label">Connect</p>
+    <a class="blog-link" href="https://www.linkedin.com/in/dimchen/" target="_blank" rel="noopener">
+      LinkedIn &nbsp;↗
+    </a>
+    <br><br>
+    <a class="blog-link" href="https://x.com/myccyycy" target="_blank" rel="noopener">
+      X &nbsp;↗
+    </a>
+  </main>
+
+  <footer>
+    <p class="archive-label">Archive</p>
+    <ul class="archive-list">
+      <li><a href="dp-flat">Homepage <span>2013–2014</span></a></li>
+      <li><a href="dp-card">Homepage <span>2014–2015</span></a></li>
+      <li><a href="dp-modern-final">Homepage <span>2015–2019</span></a></li>
+      <li><a href="dp-dimchen">Homepage <span>2019–2025</span></a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

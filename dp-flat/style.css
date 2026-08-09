@@ -1,0 +1,75 @@
+body {
+	text-align: center;
+	background: #F9F9F9;
+	font-family: "YaHei Consolas Hybrid","微软雅黑","Segoe UI", "Consolas",Arial, "Times New Roman";
+}
+
+.clear {
+	clear: both;
+}
+
+.hide {
+	display: none;
+}
+
+#white {
+	height: 100px;
+}
+
+#card {
+	width: 480px;
+}
+
+#left {
+	float: left;
+	width: 80px;
+}
+
+#right {
+	float: right;
+	width: 400px;
+}
+
+#name {
+	float: left;
+	margin-left: 10px;
+}
+
+#div-btn-qm {
+	float: right;
+}
+
+#text-qm {
+	margin-left: 10px;
+	font-size: 16px;
+}
+
+.title-btn {
+	float: left;
+	width: 50px;
+	margin-left: 10px;
+}
+
+#div-btn-link {
+	float: right;
+	width: 340px;
+}
+
+#div-btn-link a {
+	font-size: 18px;
+}
+
+#div-btn-sns {
+	line-height: 36px;
+}
+
+#div-btn-sns img {
+	width: 32px;
+}
+
+#div-btn-sns img:hover {
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+}

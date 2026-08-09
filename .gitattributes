@@ -1,5 +1,6 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# 存档仓库：一律不做行尾转换，保留原始字节
+# （原为 `* text=auto`，会把服务器上那批 CRLF 文件在 checkout 时改成 LF）
+* -text
 
 # Custom for Visual Studio
 *.cs     diff=csharp
