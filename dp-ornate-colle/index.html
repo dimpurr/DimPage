@@ -471,6 +471,7 @@
   <script src="data/events.js"></script>
   <script src="data/glam.js"></script>
   <script src="data/campus.js"></script>
+  <script src="data/artists.js"></script>
   <!-- 地图视图用，全部 vendor 到本地：file:// 直开、离线可用 -->
   <script src="vendor/d3.v7.min.js"></script>
   <script src="vendor/topojson-client.v3.min.js"></script>
@@ -493,6 +494,12 @@
         vcards: 'Cards', vmap: 'Map', vtime: 'Timeline',
         sortScore: 'By rating', sortTime: 'By year',
         animetv: 'TV & OVA', animefilm: 'Anime Films',
+        general: 'Anime & Games', vsinger: 'Virtual Singers',
+        artists: 'Artists', musician: 'Musicians', vocaloidp: 'Vocaloid Producers',
+        vtuber: 'VTuber / VSinger', animedir: 'Anime Directors', filmdir: 'Film Directors',
+        pvmaker: 'MV Makers', illustrator: 'Illustrators', soundart: 'Sound Art',
+        avinstall: 'AV Installation', gamedev: 'Game Makers', writer: 'Writers',
+        educator: 'Educators', allrounder: 'All-rounders',
         books: 'Books I Like', novel: 'Light Novels', manga: 'Manga', douban: 'Books (Douban)',
         physical: 'Physical Collection', disc: 'Discs', booklondon: 'Books on My Shelf',
         events: 'Shows & Exhibitions', concert: 'Live', stage: 'Stage', exhibition: 'Exhibitions',
@@ -513,6 +520,12 @@
         vcards: '卡片', vmap: '地图', vtime: '时间轴',
         sortScore: '按评分', sortTime: '按时间',
         animetv: 'TV 动画', animefilm: '动画电影',
+        general: '一般动漫', vsinger: '虚拟歌手',
+        artists: '喜欢的艺术家', musician: '音乐家', vocaloidp: 'Vocaloid 制作人',
+        vtuber: 'VTuber / VSinger', animedir: '动画导演', filmdir: '电影导演',
+        pvmaker: 'PV 师', illustrator: '插画师', soundart: '声音艺术',
+        avinstall: '视听装置', gamedev: '游戏制作人', writer: '编剧',
+        educator: '教育者', allrounder: '多面手',
         books: '喜欢的书', novel: '轻小说', manga: '漫画', douban: '豆瓣书籍',
         physical: '我的实体收藏', disc: '唱片', booklondon: '书架上的书',
         events: '看过的演出与展览', concert: '演唱会 / Live', stage: '歌剧演出', exhibition: '艺术展览',
@@ -536,6 +549,7 @@
       events: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.2V7.4a1.2 1.2 0 0 1 1.2-1.2h14.6a1.2 1.2 0 0 1 1.2 1.2v1.8a2.8 2.8 0 0 0 0 5.6v1.8a1.2 1.2 0 0 1-1.2 1.2H4.7a1.2 1.2 0 0 1-1.2-1.2v-1.8a2.8 2.8 0 0 0 0-5.6z"/><path d="M14 6.6v1.8M14 11.1v1.8M14 15.6v1.8"/></svg>',
       glam: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 9.6 12 4.6l8.4 5"/><path d="M4.8 9.6v8.2M9.6 9.6v8.2M14.4 9.6v8.2M19.2 9.6v8.2"/><path d="M3 19.4h18"/></svg>',
       campus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.6 21.5 9 12 13.4 2.5 9z"/><path d="M6.6 11v4.6c0 1.5 2.4 2.7 5.4 2.7s5.4-1.2 5.4-2.7V11"/><path d="M21.5 9v4.6"/></svg>',
+      artists: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.4a8.6 8.6 0 1 0 0 17.2c1.3 0 1.9-.9 1.9-1.8 0-1-.9-1.6-.9-2.5 0-.8.6-1.4 1.5-1.4h1.7A4.4 4.4 0 0 0 20.6 10c0-3.7-3.8-6.6-8.6-6.6z"/><circle cx="7.9" cy="11.4" r="1.1" fill="currentColor" stroke="none"/><circle cx="10.6" cy="7.6" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="8" r="1.1" fill="currentColor" stroke="none"/></svg>',
       sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v2M12 19.2v2M4.5 4.5l1.4 1.4M18.1 18.1l1.4 1.4M2.8 12h2M19.2 12h2M4.5 19.5l1.4-1.4M18.1 5.9l1.4-1.4"/></svg>',
       moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4z"/></svg>',
       arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9.5 7H17v7.5"/></svg>'
@@ -545,7 +559,7 @@
     // list: 「完整清单」外链；score/score2/xp 只排序不展示
     var MAJOR = [
       { key: 'devices',    minors: ['all', 'headphone', 'phone', 'computer', 'console', 'peripheral'], data: window.COLLE_DEVICES || [] },
-      { key: 'characters', minors: ['all', 'genshin', 'zzz'],     data: window.COLLE_CHARACTERS || [], masonry: true },
+      { key: 'characters', minors: ['all', 'genshin', 'zzz', 'general', 'vsinger'], data: window.COLLE_CHARACTERS || [], masonry: true },
       { key: 'movies',     minors: ['all'], posters: true,        data: window.COLLE_MOVIES || [],
         list: 'https://movie.douban.com/people/dimpurr/collect' },
       { key: 'anime',      minors: ['all', 'animetv', 'animefilm'], posters: true, data: window.COLLE_ANIME || [],
@@ -557,7 +571,13 @@
       { key: 'physical',   minors: ['all', 'disc', 'booklondon'], posters: true, data: window.COLLE_PHYSICAL || [] },
       { key: 'events',     minors: ['all', 'concert', 'stage', 'exhibition'], data: window.COLLE_EVENTS || [] },
       { key: 'glam',       minors: ['all'],                       data: window.COLLE_GLAM || [] },
-      { key: 'campus',     minors: ['all'],                       data: window.COLLE_CAMPUS || [] }
+      { key: 'campus',     minors: ['all'],                       data: window.COLLE_CAMPUS || [] },
+      // ⭐ tagged: 小 tab 是「标签筛选」不是互斥分类 —— 一个人可以同时是 PV 师和音乐家，
+      //    所以按 item.tags 数组匹配，而不是按 item.cat 相等
+      { key: 'artists',    minors: ['all', 'musician', 'vocaloidp', 'vtuber', 'animedir', 'filmdir',
+                                    'pvmaker', 'illustrator', 'soundart', 'avinstall', 'gamedev',
+                                    'writer', 'educator', 'allrounder'],
+        tagged: true, data: window.COLLE_ARTISTS || [] }
     ];
 
     // localStorage 不可用（隐私模式等）时静默降级为「只跟随系统、不记忆」
@@ -620,7 +640,7 @@
 
     // 封面比例归类：没列进来的（电影/动画）走默认 2:3 海报比
     // 这几个 tab 的图是实景照片，走 photo 样式（方形满幅），不走 device 的透明产品图样式
-    var PHOTO_TABS = { events: 1, glam: 1, campus: 1 };
+    var PHOTO_TABS = { events: 1, glam: 1, campus: 1, artists: 1 };
 
     var AR = { novel: 'book', manga: 'book', douban: 'book',
                booklondon: 'album', disc: 'disc' };
@@ -721,7 +741,11 @@
         $min.appendChild(b);
       });
 
-      var rows = g.data.filter(function (x) { return minor === 'all' || x.cat === minor; });
+      var rows = g.data.filter(function (x) {
+        if (minor === 'all') return true;
+        // 标签 tab：命中数组里任一标签即可（非互斥）；其余 tab：cat 精确相等
+        return g.tagged ? (x.tags || []).indexOf(minor) >= 0 : x.cat === minor;
+      });
       if (isChar) {
         // XP 只用来排序，不展示
         rows = rows.slice().sort(function (a, b) { return (b.xp || 0) - (a.xp || 0); });

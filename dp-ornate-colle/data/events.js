@@ -1,11 +1,19 @@
 // 数据层。⭐ 可信源在 DimLifeS：Life/Gear/dimpage-colle-life/ —— 改这里之前先改那边。
+// events 的 sub = 场馆，同样是 {en, zh}；name = 演出/展览名（无中英分列，zh = en）。
+// name = {en, zh} —— en 是官方正式名（用机构自己的语言），zh 是中文通行译名；md 中文名留空时 zh 回落 = en。
 window.COLLE_EVENTS = [
  {
   "id": "hadestown",
   "cat": "stage",
   "year": 2026,
-  "name": "Hadestown（冥界）",
-  "sub": "Lyric Theatre（29 Shaftesbury Ave）",
+  "name": {
+   "en": "Hadestown（冥界）",
+   "zh": "Hadestown（冥界）"
+  },
+  "sub": {
+   "en": "Lyric Theatre",
+   "zh": "Lyric Theatre"
+  },
   "city": "London",
   "img": "img/events/hadestown.webp"
  },
@@ -13,120 +21,188 @@ window.COLLE_EVENTS = [
   "id": "blitz-the-club-that-shaped-the-80s",
   "cat": "exhibition",
   "year": 2026,
-  "name": "《Blitz: the club that shaped the 80s》",
-  "sub": "The Design Museum（Kensington High St）",
+  "name": {
+   "en": "《Blitz: the club that shaped the 80s》",
+   "zh": "《Blitz: the club that shaped the 80s》"
+  },
+  "sub": {
+   "en": "Design Museum",
+   "zh": "设计博物馆"
+  },
   "city": "London"
  },
  {
   "id": "盐田千春-the-moment-the-snow-melts-群展-the-sense-of-s",
   "cat": "exhibition",
   "year": 2026,
-  "name": "盐田千春《The Moment the Snow Melts》＋群展《The Sense of Snow》",
-  "sub": "MUDEC · Museo delle Culture（Via Tortona 56）",
+  "name": {
+   "en": "盐田千春《The Moment the Snow Melts》＋群展《The Sense of Snow》",
+   "zh": "盐田千春《The Moment the Snow Melts》＋群展《The Sense of Snow》"
+  },
+  "sub": {
+   "en": "Museo delle Culture (MUDEC)",
+   "zh": "Museo delle Culture (MUDEC)"
+  },
   "city": "米兰"
  },
  {
   "id": "盐田千春-threads-of-life",
   "cat": "exhibition",
   "year": 2026,
-  "name": "盐田千春《Threads of Life》",
-  "sub": "Hayward Gallery · Southbank Centre",
+  "name": {
+   "en": "盐田千春《Threads of Life》",
+   "zh": "盐田千春《Threads of Life》"
+  },
+  "sub": {
+   "en": "Hayward Gallery",
+   "zh": "Hayward Gallery"
+  },
   "city": "London"
  },
  {
   "id": "ado",
-  "cat": "concert",
+  "cat": "stage",
   "year": 2025,
-  "name": "Ado（アド）",
-  "sub": "The O2 Arena（North Greenwich）",
+  "name": {
+   "en": "Stranger Things: The First Shadow",
+   "zh": "Stranger Things: The First Shadow"
+  },
+  "sub": {
+   "en": "Phoenix Theatre",
+   "zh": "Phoenix Theatre"
+  },
   "city": "London"
  },
  {
-  "id": "kikuoland",
-  "cat": "concert",
+  "id": "electric-dreams-art-and-technology-before-the-in",
+  "cat": "exhibition",
   "year": 2025,
-  "name": "Kikuoland（きくお）",
-  "sub": "HERE at Outernet（Charing Cross Rd）",
-  "city": "London",
-  "img": "img/events/kikuoland.webp"
- },
- {
-  "id": "melon-band-冬季演出",
-  "cat": "concert",
-  "year": 2025,
-  "name": "Melon Band 冬季演出",
-  "sub": "Imperial College London",
-  "city": "London",
-  "img": "img/events/melon-band-冬季演出.webp"
- },
- {
-  "id": "porter-robinson",
-  "cat": "concert",
-  "year": 2025,
-  "name": "Porter Robinson",
-  "sub": "O2 Academy Brixton",
-  "city": "London",
-  "img": "img/events/porter-robinson.webp"
+  "name": {
+   "en": "《Electric Dreams: Art and Technology Before the Internet》",
+   "zh": "《Electric Dreams: Art and Technology Before the Internet》"
+  },
+  "sub": {
+   "en": "Tate Modern",
+   "zh": "泰特现代美术馆"
+  },
+  "city": "London"
  },
  {
   "id": "rca-research-biennale-2025",
   "cat": "exhibition",
   "year": 2025,
-  "name": "RCA Research Biennale 2025",
-  "sub": "RCA Battersea（1 Hester Rd）",
+  "name": {
+   "en": "RCA Research Biennale 2025",
+   "zh": "RCA Research Biennale 2025"
+  },
+  "sub": {
+   "en": "RCA Battersea",
+   "zh": "RCA Battersea"
+  },
   "city": "London",
   "img": "img/events/rca-research-biennale-2025.webp"
  },
  {
-  "id": "stranger-things-the-first-shadow",
-  "cat": "stage",
+  "id": "melon-band-冬季演出",
+  "cat": "concert",
   "year": 2025,
-  "name": "Stranger Things: The First Shadow",
-  "sub": "Phoenix Theatre（Charing Cross Rd）",
+  "name": {
+   "en": "Melon Band 冬季演出",
+   "zh": "Melon Band 冬季演出"
+  },
+  "sub": {
+   "en": "Imperial College London",
+   "zh": "帝国理工学院"
+  },
+  "city": "London",
+  "img": "img/events/melon-band-冬季演出.webp"
+ },
+ {
+  "id": "stranger-things-the-first-shadow",
+  "cat": "concert",
+  "year": 2025,
+  "name": {
+   "en": "Ado（アド）",
+   "zh": "Ado（アド）"
+  },
+  "sub": {
+   "en": "The O2 Arena",
+   "zh": "The O2 Arena"
+  },
   "city": "London",
   "img": "img/events/stranger-things-the-first-shadow.webp"
+ },
+ {
+  "id": "babymetal",
+  "cat": "concert",
+  "year": 2025,
+  "name": {
+   "en": "BABYMETAL",
+   "zh": "BABYMETAL"
+  },
+  "sub": {
+   "en": "The O2 Arena",
+   "zh": "The O2 Arena"
+  },
+  "city": "London"
  },
  {
   "id": "米津玄師-2025-world-tour-junk",
   "cat": "concert",
   "year": 2025,
-  "name": "米津玄師 2025 World Tour「JUNK」",
-  "sub": "Eventim Apollo（Hammersmith）",
+  "name": {
+   "en": "米津玄師 2025 World Tour「JUNK」",
+   "zh": "米津玄師 2025 World Tour「JUNK」"
+  },
+  "sub": {
+   "en": "Eventim Apollo",
+   "zh": "Eventim Apollo"
+  },
   "city": "London",
   "img": "img/events/米津玄師-2025-world-tour-junk.webp"
  },
  {
-  "id": "atomic-cellos",
+  "id": "porter-robinson",
   "cat": "concert",
-  "year": 2024,
-  "name": "Atomic Cellos",
-  "sub": "—",
-  "city": "圣彼得堡",
-  "img": "img/events/atomic-cellos.webp"
+  "year": 2025,
+  "name": {
+   "en": "Porter Robinson",
+   "zh": "Porter Robinson"
+  },
+  "sub": {
+   "en": "O2 Academy Brixton",
+   "zh": "O2 Academy Brixton"
+  },
+  "city": "London",
+  "img": "img/events/porter-robinson.webp"
  },
  {
-  "id": "interstellar-行星馆秀",
+  "id": "kikuoland",
   "cat": "concert",
-  "year": 2024,
-  "name": "Interstellar 行星馆秀",
-  "sub": "圣彼得堡行星馆",
-  "city": "圣彼得堡",
-  "img": "img/events/interstellar-行星馆秀.webp"
- },
- {
-  "id": "vivaldi-四季",
-  "cat": "concert",
-  "year": 2024,
-  "name": "Vivaldi《四季》（现场作画演出）",
-  "sub": "—",
-  "city": "圣彼得堡"
+  "year": 2025,
+  "name": {
+   "en": "Kikuoland（きくお）",
+   "zh": "Kikuoland（きくお）"
+  },
+  "sub": {
+   "en": "HERE at Outernet",
+   "zh": "HERE at Outernet"
+  },
+  "city": "London",
+  "img": "img/events/kikuoland.webp"
  },
  {
   "id": "la-bayad-re",
   "cat": "stage",
   "year": 2024,
-  "name": "Баядерка / La Bayadère（芭蕾）",
-  "sub": "Мариинский театр（Mariinsky）",
+  "name": {
+   "en": "Баядерка / La Bayadère（芭蕾）",
+   "zh": "Баядерка / La Bayadère（芭蕾）"
+  },
+  "sub": {
+   "en": "Мариинский театр",
+   "zh": "马林斯基剧院"
+  },
   "city": "圣彼得堡",
   "img": "img/events/la-bayad-re.webp"
  },
@@ -134,34 +210,102 @@ window.COLLE_EVENTS = [
   "id": "初音-miku-expo-2024-europe",
   "cat": "concert",
   "year": 2024,
-  "name": "初音ミク MIKU EXPO 2024 EUROPE",
-  "sub": "OVO Arena Wembley",
+  "name": {
+   "en": "初音ミク MIKU EXPO 2024 EUROPE",
+   "zh": "初音ミク MIKU EXPO 2024 EUROPE"
+  },
+  "sub": {
+   "en": "OVO Arena Wembley",
+   "zh": "OVO Arena Wembley"
+  },
   "city": "London",
   "img": "img/events/初音-miku-expo-2024-europe.webp"
  },
  {
-  "id": "jacques-bertin-laboratoire-de-graphique-实验室档案展",
-  "cat": "exhibition",
-  "year": 2023,
-  "name": "Jacques Bertin《Laboratoire de Graphique》实验室档案展",
-  "sub": "—",
-  "city": "未考出（疑巴黎）"
+  "id": "vivaldi-四季",
+  "cat": "concert",
+  "year": 2024,
+  "name": {
+   "en": "Vivaldi《四季》（现场作画演出）",
+   "zh": "Vivaldi《四季》（现场作画演出）"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "圣彼得堡"
+ },
+ {
+  "id": "atomic-cellos",
+  "cat": "concert",
+  "year": 2024,
+  "name": {
+   "en": "Atomic Cellos",
+   "zh": "Atomic Cellos"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "圣彼得堡",
+  "img": "img/events/atomic-cellos.webp"
+ },
+ {
+  "id": "interstellar-行星馆秀",
+  "cat": "concert",
+  "year": 2024,
+  "name": {
+   "en": "Interstellar 行星馆秀",
+   "zh": "Interstellar 行星馆秀"
+  },
+  "sub": {
+   "en": "圣彼得堡行星馆",
+   "zh": "圣彼得堡行星馆"
+  },
+  "city": "圣彼得堡",
+  "img": "img/events/interstellar-行星馆秀.webp"
  },
  {
   "id": "les-mis-rables",
   "cat": "stage",
   "year": 2023,
-  "name": "Les Misérables",
-  "sub": "—",
+  "name": {
+   "en": "Les Misérables",
+   "zh": "Les Misérables"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
   "city": "London",
   "img": "img/events/les-mis-rables.webp"
+ },
+ {
+  "id": "jacques-bertin-laboratoire-de-graphique-实验室档案展",
+  "cat": "exhibition",
+  "year": 2023,
+  "name": {
+   "en": "Jacques Bertin《Laboratoire de Graphique》实验室档案展",
+   "zh": "Jacques Bertin《Laboratoire de Graphique》实验室档案展"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "未考出（疑巴黎）"
  },
  {
   "id": "hamilton",
   "cat": "stage",
   "year": 2022,
-  "name": "Hamilton",
-  "sub": "Victoria Palace Theatre",
+  "name": {
+   "en": "Hamilton",
+   "zh": "Hamilton"
+  },
+  "sub": {
+   "en": "Victoria Palace Theatre",
+   "zh": "Victoria Palace Theatre"
+  },
   "city": "London",
   "img": "img/events/hamilton.webp"
  },
@@ -169,8 +313,14 @@ window.COLLE_EVENTS = [
   "id": "lumen-prize-颁奖典礼",
   "cat": "exhibition",
   "year": 2022,
-  "name": "Lumen Prize 颁奖典礼",
-  "sub": "—",
+  "name": {
+   "en": "Lumen Prize 颁奖典礼",
+   "zh": "Lumen Prize 颁奖典礼"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
   "city": "Bath",
   "img": "img/events/lumen-prize-颁奖典礼.webp"
  },
@@ -178,8 +328,14 @@ window.COLLE_EVENTS = [
   "id": "illion",
   "cat": "concert",
   "year": 2022,
-  "name": "illion（野田洋次郎 solo 项目）",
-  "sub": "O2 Shepherd's Bush Empire",
+  "name": {
+   "en": "illion（野田洋次郎 solo 项目）",
+   "zh": "illion（野田洋次郎 solo 项目）"
+  },
+  "sub": {
+   "en": "O2 Shepherd's Bush Empire",
+   "zh": "O2 Shepherd's Bush Empire"
+  },
   "city": "London",
   "img": "img/events/illion.webp"
  },
@@ -187,105 +343,177 @@ window.COLLE_EVENTS = [
   "id": "明和电机展览",
   "cat": "exhibition",
   "year": 2021,
-  "name": "明和电机展览",
-  "sub": "—",
+  "name": {
+   "en": "明和电机展览",
+   "zh": "明和电机展览"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
   "city": "未考出（疑北京）",
   "img": "img/events/明和电机展览.webp"
+ },
+ {
+  "id": "设计北京-2019-艺术联展",
+  "cat": "exhibition",
+  "year": 2019,
+  "name": {
+   "en": "设计北京 2019 艺术联展",
+   "zh": "设计北京 2019 艺术联展"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "北京",
+  "img": "img/events/设计北京-2019-艺术联展.webp"
+ },
+ {
+  "id": "广州设计双年展-深圳中国设计大展",
+  "cat": "exhibition",
+  "year": 2019,
+  "name": {
+   "en": "广州设计双年展 + 深圳中国设计大展",
+   "zh": "广州设计双年展 + 深圳中国设计大展"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "广州 / 深圳",
+  "img": "img/events/广州设计双年展-深圳中国设计大展.webp"
  },
  {
   "id": "bilibili-macro-link-2019",
   "cat": "concert",
   "year": 2019,
-  "name": "BILIBILI MACRO LINK 2019",
-  "sub": "上海梅赛德斯-奔驰文化中心（推定）",
+  "name": {
+   "en": "BILIBILI MACRO LINK 2019",
+   "zh": "BILIBILI MACRO LINK 2019"
+  },
+  "sub": {
+   "en": "上海梅赛德斯-奔驰文化中心",
+   "zh": "上海梅赛德斯-奔驰文化中心"
+  },
   "city": "上海"
  },
  {
   "id": "kanako-live",
   "cat": "concert",
   "year": 2019,
-  "name": "KANAKO LIVE",
-  "sub": "—",
+  "name": {
+   "en": "KANAKO LIVE",
+   "zh": "KANAKO LIVE"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
   "city": "未记",
   "img": "img/events/kanako-live.webp"
- },
- {
-  "id": "广州设计双年展-深圳中国设计大展",
-  "cat": "exhibition",
-  "year": 2019,
-  "name": "广州设计双年展 + 深圳中国设计大展",
-  "sub": "—",
-  "city": "广州 / 深圳",
-  "img": "img/events/广州设计双年展-深圳中国设计大展.webp"
- },
- {
-  "id": "设计北京-2019-艺术联展",
-  "cat": "exhibition",
-  "year": 2019,
-  "name": "设计北京 2019 艺术联展",
-  "sub": "—",
-  "city": "北京",
-  "img": "img/events/设计北京-2019-艺术联展.webp"
- },
- {
-  "id": "bilibili-macro-link-2018",
-  "cat": "concert",
-  "year": 2018,
-  "name": "BILIBILI MACRO LINK 2018",
-  "sub": "上海（场馆待补）",
-  "city": "上海"
- },
- {
-  "id": "中央美术学院毕业设计展",
-  "cat": "exhibition",
-  "year": 2018,
-  "name": "中央美术学院毕业设计展",
-  "sub": "中央美术学院",
-  "city": "北京",
-  "img": "img/events/中央美术学院毕业设计展.webp"
- },
- {
-  "id": "中央美术学院研究生毕业设计展",
-  "cat": "exhibition",
-  "year": 2018,
-  "name": "中央美术学院研究生毕业设计展",
-  "sub": "中央美术学院",
-  "city": "北京",
-  "img": "img/events/中央美术学院研究生毕业设计展.webp"
  },
  {
   "id": "山东艺术学院建校-60-周年美术作品展",
   "cat": "exhibition",
   "year": 2018,
-  "name": "山东艺术学院建校 60 周年美术作品展",
-  "sub": "山东艺术学院",
+  "name": {
+   "en": "山东艺术学院建校 60 周年美术作品展",
+   "zh": "山东艺术学院建校 60 周年美术作品展"
+  },
+  "sub": {
+   "en": "山东艺术学院",
+   "zh": "山东艺术学院"
+  },
   "city": "济南"
- },
- {
-  "id": "新海诚展",
-  "cat": "exhibition",
-  "year": 2018,
-  "name": "新海诚展",
-  "sub": "—",
-  "city": "上海",
-  "img": "img/events/新海诚展.webp"
- },
- {
-  "id": "电喵电音祭-yunomi-live",
-  "cat": "concert",
-  "year": 2018,
-  "name": "电喵电音祭 · Yunomi LIVE",
-  "sub": "—",
-  "city": "上海",
-  "img": "img/events/电喵电音祭-yunomi-live.webp"
  },
  {
   "id": "首都博物馆-北京-东京-特展",
   "cat": "exhibition",
   "year": 2018,
-  "name": "首都博物馆「北京·东京」特展",
-  "sub": "首都博物馆",
+  "name": {
+   "en": "首都博物馆「北京·东京」特展",
+   "zh": "首都博物馆「北京·东京」特展"
+  },
+  "sub": {
+   "en": "首都博物馆",
+   "zh": "首都博物馆"
+  },
   "city": "北京",
   "img": "img/events/首都博物馆-北京-东京-特展.webp"
+ },
+ {
+  "id": "新海诚展",
+  "cat": "exhibition",
+  "year": 2018,
+  "name": {
+   "en": "新海诚展",
+   "zh": "新海诚展"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "上海",
+  "img": "img/events/新海诚展.webp"
+ },
+ {
+  "id": "中央美术学院研究生毕业设计展",
+  "cat": "exhibition",
+  "year": 2018,
+  "name": {
+   "en": "中央美术学院研究生毕业设计展",
+   "zh": "中央美术学院研究生毕业设计展"
+  },
+  "sub": {
+   "en": "中央美术学院",
+   "zh": "中央美术学院"
+  },
+  "city": "北京",
+  "img": "img/events/中央美术学院研究生毕业设计展.webp"
+ },
+ {
+  "id": "中央美术学院毕业设计展",
+  "cat": "exhibition",
+  "year": 2018,
+  "name": {
+   "en": "中央美术学院毕业设计展",
+   "zh": "中央美术学院毕业设计展"
+  },
+  "sub": {
+   "en": "中央美术学院",
+   "zh": "中央美术学院"
+  },
+  "city": "北京",
+  "img": "img/events/中央美术学院毕业设计展.webp"
+ },
+ {
+  "id": "bilibili-macro-link-2018",
+  "cat": "concert",
+  "year": 2018,
+  "name": {
+   "en": "BILIBILI MACRO LINK 2018",
+   "zh": "BILIBILI MACRO LINK 2018"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "上海"
+ },
+ {
+  "id": "电喵电音祭-yunomi-live",
+  "cat": "concert",
+  "year": 2018,
+  "name": {
+   "en": "电喵电音祭 · Yunomi LIVE",
+   "zh": "电喵电音祭 · Yunomi LIVE"
+  },
+  "sub": {
+   "en": "—",
+   "zh": "—"
+  },
+  "city": "上海",
+  "img": "img/events/电喵电音祭-yunomi-live.webp"
  }
 ];
