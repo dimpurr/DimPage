@@ -82,11 +82,13 @@ for (const w of widths) {
   await sleep(400);
   await evalJs('localStorage.clear()');
 
-  // 4 组合：devices/light, devices/dark, characters/light, characters/dark
+  // 8 组合：4 个大 tab × 明暗 2 主题
   // 初始主题跟随系统（未知），显式设定后再测
   const combos = [
     ['devices', 'light'], ['devices', 'dark'],
     ['characters', 'light'], ['characters', 'dark'],
+    ['movies', 'light'], ['movies', 'dark'],
+    ['anime', 'light'], ['anime', 'dark'],
   ];
   for (const [tab, theme] of combos) {
     await evalJs(`(() => {
@@ -97,7 +99,7 @@ for (const w of widths) {
       while (document.documentElement.dataset.theme !== want.theme && guard++ < 3)
         document.getElementById('themeBtn').click();
       // tab：点对应大 tab
-      const idx = want.tab === 'characters' ? 1 : 0;
+      const idx = { devices: 0, characters: 1, movies: 2, anime: 3 }[want.tab];
       document.querySelectorAll('#tabsMajor button')[idx].click();
       return true;
     })()`);
