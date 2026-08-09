@@ -207,7 +207,7 @@ window.COLLE_PLACES = [
    "zh": "中国"
   },
   "flag": "🇨🇳",
-  "year": 2016,
+  "year": 2009,
   "first": "2016-07",
   "last": "2025-08",
   "lat": 31.2288,
@@ -215,7 +215,7 @@ window.COLLE_PLACES = [
   "days": 23,
   "photos": 7011,
   "img": "img/places/shanghai.webp",
-  "years": "2016–2025",
+  "years": "2009–2025",
   "cc": "CN",
   "endyear": 2025
  },
@@ -231,7 +231,7 @@ window.COLLE_PLACES = [
    "zh": "中国"
   },
   "flag": "🇨🇳",
-  "year": 2018,
+  "year": 2009,
   "first": "2018-10",
   "last": "2025-08",
   "lat": 30.2416,
@@ -239,7 +239,7 @@ window.COLLE_PLACES = [
   "days": 18,
   "photos": 1853,
   "img": "img/places/hangzhou.webp",
-  "years": "2018–2025",
+  "years": "2009–2025",
   "cc": "CN",
   "endyear": 2025
  },
@@ -912,5 +912,247 @@ window.COLLE_PLACES = [
   "years": "2022",
   "cc": "UK",
   "endyear": 2022
+ },
+ {
+  "id": "nanjing",
+  "cat": "travel",
+  "name": {
+   "en": "Nanjing",
+   "zh": "南京"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2009,
+  "years": "2009",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2009,
+  "img": "img/places/nanjing.webp"
+ },
+ {
+  "id": "wuxi",
+  "cat": "travel",
+  "name": {
+   "en": "Wuxi",
+   "zh": "无锡"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2009,
+  "years": "2009",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2009,
+  "img": "img/places/wuxi.webp"
+ },
+ {
+  "id": "suzhou",
+  "cat": "travel",
+  "name": {
+   "en": "Suzhou",
+   "zh": "苏州"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2009,
+  "years": "2009",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2009,
+  "img": "img/places/suzhou.webp"
+ },
+ {
+  "id": "zhuzhou-shaoshan",
+  "cat": "travel",
+  "name": {
+   "en": "Zhuzhou · Shaoshan",
+   "zh": "株洲 · 韶山"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2008,
+  "years": "2008",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2008,
+  "img": "img/places/zhuzhou-shaoshan.webp"
+ },
+ {
+  "id": "sanqingshan",
+  "cat": "travel",
+  "name": {
+   "en": "Sanqingshan",
+   "zh": "三清山"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2008,
+  "years": "2008",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2008,
+  "img": "img/places/sanqingshan.webp"
+ },
+ {
+  "id": "danxiashan",
+  "cat": "travel",
+  "name": {
+   "en": "Danxiashan",
+   "zh": "丹霞山"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2008,
+  "years": "2008",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2008,
+  "img": "img/places/danxiashan.webp"
+ },
+ {
+  "id": "huashan",
+  "cat": "travel",
+  "name": {
+   "en": "Huashan",
+   "zh": "华山"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2008,
+  "years": "2008",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2008,
+  "img": "img/places/huashan.webp"
+ },
+ {
+  "id": "dujiangyan-qingcheng",
+  "cat": "travel",
+  "name": {
+   "en": "Dujiangyan · Qingcheng",
+   "zh": "都江堰 · 青城山"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2007,
+  "years": "2007",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2007,
+  "img": "img/places/dujiangyan-qingcheng.webp"
+ },
+ {
+  "id": "zhaoqing-dinghushan",
+  "cat": "travel",
+  "name": {
+   "en": "Zhaoqing · Dinghushan",
+   "zh": "肇庆 · 鼎湖山"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2007,
+  "years": "2007",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2007,
+  "img": "img/places/zhaoqing-dinghushan.webp"
+ },
+ {
+  "id": "luofushan",
+  "cat": "travel",
+  "name": {
+   "en": "Luofushan",
+   "zh": "博罗 · 罗浮山"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2007,
+  "years": "2007",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2007,
+  "img": "img/places/luofushan.webp"
+ },
+ {
+  "id": "dongguan",
+  "cat": "travel",
+  "name": {
+   "en": "Dongguan",
+   "zh": "东莞"
+  },
+  "country": {
+   "en": "中国",
+   "zh": "中国"
+  },
+  "flag": "🇨🇳",
+  "cc": "CN",
+  "year": 2005,
+  "years": "2005",
+  "lat": 0,
+  "lon": 0,
+  "days": 0,
+  "photos": 0,
+  "endyear": 2005,
+  "img": "img/places/dongguan.webp"
  }
 ];

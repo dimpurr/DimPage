@@ -85,7 +85,8 @@ for (const w of widths) {
   await sleep(400);
   await evalJs('localStorage.clear()');
 
-  // 16 组合：5 个旧大 tab × 明暗 + places × 3 视图 × 明暗
+  // 20 组合：7 个代表性大 tab × 明暗 + places × 3 视图 × 明暗
+  // （events/artists 是第三轮改动重点：JS 瀑布流与 14 个标签 chips）
   // 初始主题跟随系统（未知），显式设定后再测
   const combos = [
     ['devices', 'light'], ['devices', 'dark'],
@@ -93,6 +94,8 @@ for (const w of widths) {
     ['movies', 'light'], ['movies', 'dark'],
     ['anime', 'light'], ['anime', 'dark'],
     ['games', 'light'], ['games', 'dark'],
+    ['events', 'light'], ['events', 'dark'],
+    ['artists', 'light'], ['artists', 'dark'],
     ['places/cards', 'light'], ['places/cards', 'dark'],
     ['places/map', 'light'], ['places/map', 'dark'],
     ['places/time', 'light'], ['places/time', 'dark'],
@@ -107,7 +110,8 @@ for (const w of widths) {
       while (document.documentElement.dataset.theme !== want.theme && guard++ < 3)
         document.getElementById('themeBtn').click();
       // tab：点对应大 tab
-      const idx = { devices: 0, characters: 1, movies: 2, anime: 3, games: 4, places: 5 }[want.tab];
+      const idx = { devices: 0, characters: 1, movies: 2, anime: 3, games: 4, places: 5,
+                    books: 6, physical: 7, events: 8, glam: 9, campus: 10, artists: 11 }[want.tab];
       document.querySelectorAll('#tabsMajor button')[idx].click();
       // places 的视图切换：cards/map/time 对应分段控件三个按钮
       if (want.view) {

@@ -1,4 +1,4 @@
-// 数据层。⭐ 可信源在 DimCreateS：colle/dimpage-colles/ —— Rank 分只排序不展示。
+// 数据层。⭐ 可信源在 DimCreateS：colle/dimpage-colles/
 window.COLLE_PHYSICAL = [
  {
   "id": "chiharu-shiota-booklondon",
@@ -41,14 +41,6 @@ window.COLLE_PHYSICAL = [
   "img": "img/physical/book-tuxiang.webp"
  },
  {
-  "id": "ann-es-80-mode-design-et-graphisme-en-france-booklondon",
-  "cat": "booklondon",
-  "name": "Années 80. Mode, design et graphisme en France",
-  "year": 2022,
-  "sub": "Amélie Gastaut、Karine Lacquemant、Sébastien Quéquet",
-  "img": "img/physical/book-annees-80.webp"
- },
- {
   "id": "never-alone-video-games-as-interactive-design-booklondon",
   "cat": "booklondon",
   "name": "Never Alone: Video Games as Interactive Design",
@@ -63,6 +55,14 @@ window.COLLE_PHYSICAL = [
   "year": 2022,
   "sub": "编 Glyn Morgan（Science Museum 策展人）",
   "img": "img/physical/book-sci-fi-voyage.webp"
+ },
+ {
+  "id": "ann-es-80-mode-design-et-graphisme-en-france-booklondon",
+  "cat": "booklondon",
+  "name": "Années 80. Mode, design et graphisme en France",
+  "year": 2022,
+  "sub": "Amélie Gastaut、Karine Lacquemant、Sébastien Quéquet",
+  "img": "img/physical/book-annees-80.webp"
  },
  {
   "id": "x-booklondon",
@@ -89,20 +89,20 @@ window.COLLE_PHYSICAL = [
   "img": "img/physical/book-unfinished-business.webp"
  },
  {
-  "id": "london-s-architectural-walks-booklondon",
-  "cat": "booklondon",
-  "name": "London's Architectural Walks",
-  "year": 2018,
-  "sub": "Jim Watson（自写自画）",
-  "img": "img/physical/book-londons-architectural-walks.webp"
- },
- {
   "id": "robot-a-visual-atlas-from-ancient-greece-to-arti-booklondon",
   "cat": "booklondon",
   "name": "Robot: A Visual Atlas from Ancient Greece to Artificial Intelligence",
   "year": 2018,
   "sub": "Luca Beatrice",
   "img": "img/physical/book-robot.webp"
+ },
+ {
+  "id": "london-s-architectural-walks-booklondon",
+  "cat": "booklondon",
+  "name": "London's Architectural Walks",
+  "year": 2018,
+  "sub": "Jim Watson（自写自画）",
+  "img": "img/physical/book-londons-architectural-walks.webp"
  },
  {
   "id": "otomo-a-global-tribute-to-the-mind-behind-akira-booklondon",
@@ -113,12 +113,12 @@ window.COLLE_PHYSICAL = [
   "img": "img/physical/book-otomo.webp"
  },
  {
-  "id": "pop-painting-inspiration-and-techniques-from-the-booklondon",
-  "cat": "booklondon",
-  "name": "Pop Painting: Inspiration and Techniques from the Pop Surrealism Art Phenomenon",
+  "id": "秘封活動記録-月-original-soundtrack-disc",
+  "cat": "disc",
+  "name": "秘封活動記録 —月— ORIGINAL SOUNDTRACK",
   "year": 2016,
-  "sub": "Camilla d'Errico",
-  "img": "img/physical/book-pop-painting.webp"
+  "sub": "Yonder Voice × 京都幻想劇団",
+  "img": "img/physical/disc-hifuu-tsuki-ost.webp"
  },
  {
   "id": "the-complete-zaha-hadid-expanded-and-updated-booklondon",
@@ -129,12 +129,28 @@ window.COLLE_PHYSICAL = [
   "img": "img/physical/book-complete-zaha-hadid.webp"
  },
  {
-  "id": "barbican-life-history-architecture-booklondon",
+  "id": "pop-painting-inspiration-and-techniques-from-the-booklondon",
   "cat": "booklondon",
-  "name": "Barbican: Life, History, Architecture",
-  "year": 2014,
-  "sub": "文 Anna Ferrari；编 Jane Alison、Anna Ferrari",
-  "img": "img/physical/book-barbican.webp"
+  "name": "Pop Painting: Inspiration and Techniques from the Pop Surrealism Art Phenomenon",
+  "year": 2016,
+  "sub": "Camilla d'Errico",
+  "img": "img/physical/book-pop-painting.webp"
+ },
+ {
+  "id": "far-on-the-water-disc",
+  "cat": "disc",
+  "name": "far on the water",
+  "year": 2015,
+  "sub": "Kalafina",
+  "img": "img/physical/disc-kalafina-far-on-the-water.webp"
+ },
+ {
+  "id": "fate-kaleid-liner-2wei-herz-disc",
+  "cat": "disc",
+  "name": "Fate/kaleid liner プリズマ☆イリヤ 2wei herz! ①",
+  "year": 2015,
+  "sub": "—",
+  "img": "img/physical/disc-prisma-illya-2wei-herz.webp"
  },
  {
   "id": "the-21st-century-art-book-booklondon",
@@ -145,12 +161,68 @@ window.COLLE_PHYSICAL = [
   "img": "img/physical/book-21st-century-art-book.webp"
  },
  {
+  "id": "barbican-life-history-architecture-booklondon",
+  "cat": "booklondon",
+  "name": "Barbican: Life, History, Architecture",
+  "year": 2014,
+  "sub": "文 Anna Ferrari；编 Jane Alison、Anna Ferrari",
+  "img": "img/physical/book-barbican.webp"
+ },
+ {
   "id": "re-dial-disc",
   "cat": "disc",
   "name": "Re:Dial",
   "year": 2013,
   "sub": "livetune feat. 初音ミク",
   "img": "img/physical/disc-redial.webp"
+ },
+ {
+  "id": "extra-terrestrial-biological-entities-行星生物-disc",
+  "cat": "disc",
+  "name": "Extra terrestrial Biological Entities /《行星生物》",
+  "year": 2012,
+  "sub": "EGOIST",
+  "img": "img/physical/disc-egoist-ete.webp"
+ },
+ {
+  "id": "odds-ends-disc",
+  "cat": "disc",
+  "name": "ODDS&ENDS",
+  "year": 2012,
+  "sub": "ryo(supercell) feat. 初音ミク",
+  "img": "img/physical/disc-odds-and-ends.webp"
+ },
+ {
+  "id": "花楽里漫葉集-feat-初音-disc",
+  "cat": "disc",
+  "name": "花楽里漫葉集 feat.初音ミク",
+  "year": 2012,
+  "sub": "V.A.",
+  "img": "img/physical/disc-kagarite-manyoshu.webp"
+ },
+ {
+  "id": "電子恋愛-electric-love-disc",
+  "cat": "disc",
+  "name": "電子恋愛 -electric love-",
+  "year": 2012,
+  "sub": "八王子P",
+  "img": "img/physical/disc-denshi-renai.webp"
+ },
+ {
+  "id": "rewrite-original-soundtrack-disc",
+  "cat": "disc",
+  "name": "Rewrite Original Soundtrack",
+  "year": 2011,
+  "sub": "Key / VisualArt's",
+  "img": "img/physical/disc-rewrite-ost.webp"
+ },
+ {
+  "id": "泣-disc",
+  "cat": "disc",
+  "name": "泣けるアニソン",
+  "year": 2011,
+  "sub": "米倉千尋",
+  "img": "img/physical/disc-nakeru-anison.webp"
  },
  {
   "id": "exit-tunes-presents-vocaloanthems-feat-初音-disc",
@@ -161,12 +233,36 @@ window.COLLE_PHYSICAL = [
   "img": "img/physical/disc-vocaloanthems.webp"
  },
  {
+  "id": "vocal-album-disc",
+  "cat": "disc",
+  "name": "ナルキッソス Vocal Album",
+  "year": 2010,
+  "sub": "Stage-nana",
+  "img": "img/physical/disc-narcissu-vocal-album.webp"
+ },
+ {
   "id": "exit-tunes-presents-vocalostar-feat-初音-disc",
   "cat": "disc",
   "name": "EXIT TUNES PRESENTS Vocalostar feat. 初音ミク",
   "year": 2009,
   "sub": "V.A.（EXIT TUNES 编）feat. 初音ミク",
   "img": "img/physical/disc-vocalostar.webp"
+ },
+ {
+  "id": "pure-aquaplus-legend-of-acoustics-disc",
+  "cat": "disc",
+  "name": "Pure — AQUAPLUS LEGEND OF ACOUSTICS",
+  "year": 2007,
+  "sub": "Aquaplus",
+  "img": "img/physical/disc-aquaplus-pure.webp"
+ },
+ {
+  "id": "narcissu-side-2nd-disc",
+  "cat": "disc",
+  "name": "narcissu SIDE 2nd",
+  "year": 2007,
+  "sub": "Stage-nana",
+  "img": "img/physical/disc-narcissu-side-2nd.webp"
  },
  {
   "id": "the-complete-book-of-oscar-fashion-booklondon",
