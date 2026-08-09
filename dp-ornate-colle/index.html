@@ -9,117 +9,213 @@
   <link rel="shortcut icon" href="res/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0d0d0d;
-      --border: #2a2a2a;
-      --text: #e8e2d9;
-      --muted: #6b6560;
-      --accent: #c9b99a;
-      --card: #131313;
+      --bg:         #ffffff;
+      --surface:    #f6f9fc;
+      --card-bg:    #ffffff;
+      --ink:        #232d36;
+      --muted:      #7d8b97;
+      --faint:      #a8b4be;
+      --line:       #e4ecf2;
+      --accent:     #a9cbe8;
+      --accent-ink: #5b8ab5;
+      --accent-bg:  #e9f2fa;
+      --shadow-card: 0 1px 2px rgba(35,60,90,.05), 0 6px 20px -8px rgba(35,60,90,.10);
+      --shadow-lift: 0 2px 4px rgba(35,60,90,.06), 0 12px 28px -8px rgba(35,60,90,.16);
+      --r-lg: 18px;
+      --r-md: 14px;
+      --r-pill: 999px;
+      --ease-out: cubic-bezier(.22, 1, .36, 1);
     }
 
     body {
       background: var(--bg);
-      color: var(--text);
-      font-family: 'EB Garamond', Georgia, serif;
+      color: var(--ink);
+      overflow-x: clip;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+                   'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 0 2rem;
+      -webkit-font-smoothing: antialiased;
     }
 
-    main { width: 100%; max-width: 900px; padding: 14vh 0 4rem; flex: 1; }
-    .intro { max-width: 560px; }
+    /* ── intro ── */
+    main { width: 100%; flex: 1; }
 
-    .name {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2.2rem, 6vw, 3.2rem);
-      font-weight: 400; letter-spacing: 0.01em; line-height: 1.1;
-      margin-bottom: 0.5rem;
+    .intro-wrap {
+      max-width: 1320px; margin: 0 auto;
+      padding: 13vh clamp(1.25rem, 4vw, 3rem) 4.5rem;
     }
-    .name em { font-style: italic; color: var(--accent); }
+    .intro { max-width: 560px; position: relative; }
+    /* 手账感的淡蓝色块：非对称圆角，只做装饰 */
+    .intro::before {
+      content: ''; position: absolute; z-index: -1;
+      top: -64px; left: -88px; width: 215px; height: 215px;
+      background: var(--accent-bg);
+      border-radius: 58% 42% 55% 45% / 48% 56% 44% 52%;
+    }
 
     .subtitle {
-      font-size: 0.85rem; color: var(--muted); letter-spacing: 0.15em;
-      text-transform: uppercase; margin-bottom: 0.9rem;
+      font-size: 0.82rem; color: var(--muted); letter-spacing: 0.14em;
+      margin-bottom: 0.9rem;
     }
-    .bio { font-size: 1rem; color: var(--muted); margin-bottom: 3.5rem; font-style: italic; line-height: 1.6; }
+    .name {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(2.4rem, 6vw, 3.4rem);
+      font-weight: 400; letter-spacing: 0.005em; line-height: 1.08;
+      margin-bottom: 0.7rem;
+    }
+    .name em { font-style: italic; color: var(--accent-ink); }
+    .bio { font-size: 0.98rem; color: var(--muted); line-height: 1.65; margin-bottom: 3rem; }
 
     .blog-label {
-      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 0.55rem;
+      font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--faint); margin: 1.6rem 0 0.5rem;
     }
     .blog-link {
-      display: inline-block; font-family: 'Playfair Display', serif; font-size: 1.15rem;
-      color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);
-      padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;
+      display: inline-block; font-size: 0.95rem; color: var(--ink);
+      text-decoration: none; border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      transition: color 160ms ease-out, border-color 160ms ease-out;
     }
-    .blog-link:hover { color: var(--accent); border-color: var(--accent); }
+    .blog-link:hover { color: var(--accent-ink); border-color: var(--accent); }
 
     /* ── language toggle ── */
     .lang-toggle {
-      position: fixed; top: 1.6rem; right: 1.8rem;
-      background: none; border: 1px solid var(--border); color: var(--muted);
-      font-family: inherit; font-size: 0.75rem; letter-spacing: 0.12em;
-      padding: 0.35rem 0.8rem; cursor: pointer; transition: color 0.2s, border-color 0.2s;
+      position: fixed; top: 1.4rem; right: 1.5rem; z-index: 10;
+      background: var(--card-bg); border: 1px solid var(--line); border-radius: var(--r-pill);
+      color: var(--muted); font-family: inherit; font-size: 0.75rem; letter-spacing: 0.1em;
+      padding: 0.42rem 0.95rem; cursor: pointer; box-shadow: var(--shadow-card);
+      transition: color 160ms ease-out, border-color 160ms ease-out;
     }
-    .lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
+    .lang-toggle:hover { color: var(--accent-ink); border-color: var(--accent); }
 
     /* ── collection ── */
-    .collection { margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2.2rem; }
+    .collection {
+      background: var(--surface);
+      border-radius: 36px 36px 0 0;
+      padding: 3rem clamp(1.25rem, 4vw, 3rem) 4.5rem;
+    }
+    .collection-inner { max-width: 1320px; margin: 0 auto; }
 
-    .tabs-major { display: flex; gap: 2rem; margin-bottom: 1.4rem; flex-wrap: wrap; }
+    .tabs-major {
+      display: flex; gap: 2.2rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
     .tabs-major button {
-      background: none; border: none; padding: 0 0 4px; cursor: pointer;
-      font-family: 'Playfair Display', serif; font-size: 1.05rem;
-      color: var(--muted); border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s;
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      background: none; border: none; padding: 0 0 6px; cursor: pointer;
+      font-family: 'Fraunces', Georgia, serif; font-size: 1.25rem;
+      color: var(--faint); border-bottom: 2px solid transparent;
+      transition: color 160ms ease-out, border-color 160ms ease-out;
     }
-    .tabs-major button:hover { color: var(--text); }
-    .tabs-major button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+    .tabs-major button svg { width: 22px; height: 22px; flex: none; }
+    .tabs-major button:hover { color: var(--ink); }
+    .tabs-major button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
 
-    .tabs-minor { display: flex; gap: 1.2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .tabs-minor {
+      display: flex; gap: 0.55rem; margin-bottom: 2.2rem;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; padding-bottom: 2px;
+    }
+    .tabs-minor::-webkit-scrollbar { display: none; }
     .tabs-minor button {
-      background: none; border: none; padding: 0; cursor: pointer;
-      font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--muted); opacity: 0.7; transition: color 0.2s, opacity 0.2s;
+      flex: none; background: var(--card-bg); border: 1px solid var(--line);
+      border-radius: var(--r-pill); padding: 0.38rem 0.95rem; cursor: pointer;
+      font-family: inherit; font-size: 0.8rem; letter-spacing: 0.03em;
+      color: var(--muted);
+      transition: color 150ms ease-out, background-color 150ms ease-out, border-color 150ms ease-out;
     }
-    .tabs-minor button:hover { opacity: 1; }
-    .tabs-minor button[aria-selected="true"] { color: var(--text); opacity: 1; }
+    .tabs-minor button:hover { color: var(--ink); border-color: var(--accent); }
+    .tabs-minor button[aria-selected="true"] {
+      background: var(--accent-bg); border-color: var(--accent); color: var(--accent-ink);
+    }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.6rem; grid-auto-flow: dense; }
+    /* ── cards ── */
     .card { display: flex; flex-direction: column; }
-    .card.wide { grid-column: span 2; }
-    @media (max-width: 520px) { .card.wide { grid-column: span 1; } }
 
     .card figure {
-      background: var(--card); border: 1px solid var(--border);
+      background: var(--card-bg); border-radius: var(--r-lg);
+      box-shadow: var(--shadow-card);
       display: flex; align-items: center; justify-content: center;
-      overflow: hidden; margin-bottom: 0.6rem;
+      overflow: hidden; margin-bottom: 0.65rem;
     }
-    .card.device figure { aspect-ratio: 1 / 1; padding: 1.1rem; }
+    .card.device figure { aspect-ratio: 1 / 1; padding: 1.15rem; }
     .card.device img { max-width: 100%; max-height: 100%; object-fit: contain; }
     .card.char figure { aspect-ratio: 2 / 1; }
-    .card.char.tall figure { aspect-ratio: 3 / 4; }
+    .card.char.tall figure { aspect-ratio: 5 / 8; padding: 0.8rem; }
     .card.char img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .card.char.tall img { object-fit: contain; }
 
-    .card .t { font-size: 0.95rem; line-height: 1.35; }
+    .card .t { font-size: 0.92rem; font-weight: 500; line-height: 1.35; }
     .card .s { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
-    .card .y { font-size: 0.72rem; color: var(--muted); opacity: 0.6; letter-spacing: 0.06em; margin-top: 0.25rem; }
+    .card .y { font-size: 0.72rem; color: var(--faint); letter-spacing: 0.06em; margin-top: 0.25rem; }
 
-    .missing { font-size: 0.7rem; color: var(--muted); opacity: 0.45; padding: 0.5rem; text-align: center; }
+    .missing { font-size: 0.7rem; color: var(--faint); padding: 0.5rem; text-align: center; }
 
-    footer { width: 100%; max-width: 900px; padding: 2rem 0 4rem; border-top: 1px solid var(--border); }
-    .archive-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
-    .archive-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.8rem; }
-    .archive-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
-    .archive-list a:hover { color: var(--text); }
-    .archive-list a span { font-size: 0.72rem; opacity: 0.5; margin-left: 0.3em; }
+    /* 设备：全部 1:1，等宽 grid 即可 */
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+
+    /* 角色：2:1 横版与 5:8 竖版混排，用 CSS 多列瀑布流保持各自原始比例 */
+    .masonry { columns: 2; column-gap: 1.4rem; }
+    .masonry .card { break-inside: avoid; margin-bottom: 1.4rem; }
+
+    @media (min-width: 560px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .masonry { columns: 3; }
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: repeat(4, 1fr); gap: 1.6rem; }
+      .masonry { columns: 4; column-gap: 1.6rem; }
+      .masonry .card { margin-bottom: 1.6rem; }
+    }
+    @media (min-width: 1280px) {
+      .grid { grid-template-columns: repeat(5, 1fr); }
+      .masonry { columns: 5; }
+    }
+
+    /* ── motion：只动 transform/opacity，ease-out，stagger 40ms ── */
+    .card {
+      opacity: 0; transform: translateY(8px);
+      animation: card-in 260ms var(--ease-out) forwards;
+      animation-delay: var(--d, 0ms);
+    }
+    @keyframes card-in { to { opacity: 1; transform: none; } }
+
+    @media (hover: hover) and (pointer: fine) {
+      .card figure { transition: transform 180ms ease-out, box-shadow 180ms ease-out; }
+      .card img { transition: transform 180ms ease-out; }
+      .card:hover figure { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+      .card:hover figure img { transform: scale(1.02); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card { animation: card-fade 200ms ease-out forwards; transform: none; }
+      @keyframes card-fade { to { opacity: 1; } }
+    }
+
+    :focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; border-radius: 4px; }
+
+    /* ── footer ── */
+    footer {
+      width: 100%; max-width: 1320px; margin: 0 auto;
+      padding: 2.5rem clamp(1.25rem, 4vw, 3rem) 4rem;
+    }
+    .archive-label {
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 1rem;
+    }
+    .archive-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.9rem; }
+    .archive-list a {
+      font-size: 0.85rem; color: var(--muted); text-decoration: none; letter-spacing: 0.03em;
+      transition: color 150ms ease-out;
+    }
+    .archive-list a:hover { color: var(--accent-ink); }
+    .archive-list a span { font-size: 0.72rem; color: var(--faint); margin-left: 0.35em; }
   </style>
 </head>
 <body>
@@ -127,24 +223,27 @@
   <button class="lang-toggle" id="langBtn" type="button">中文</button>
 
   <main>
-    <div class="intro">
-      <p class="subtitle">Dimpurr Cheny &nbsp;·&nbsp; 钉子</p>
-      <h1 class="name">Artist, Designer<br><em>&amp; Developer</em></h1>
-      <p class="bio" data-i18n="bio">KCL Digital Humanities PhD Candidate</p>
+    <div class="intro-wrap">
+      <div class="intro">
+        <p class="subtitle">Dimpurr Cheny &nbsp;·&nbsp; 钉子</p>
+        <h1 class="name">Artist, Designer<br><em>&amp; Developer</em></h1>
+        <p class="bio" data-i18n="bio">KCL Digital Humanities PhD Candidate</p>
 
-      <p class="blog-label" data-i18n="writing">Writing</p>
-      <a class="blog-link" href="https://www.wribb.com/c/dimpurr" target="_blank" rel="noopener">Wribb — @dimpurr &nbsp;↗</a>
-      <br><br>
-      <p class="blog-label" data-i18n="connect">Connect</p>
-      <a class="blog-link" href="https://www.linkedin.com/in/dimchen/" target="_blank" rel="noopener">LinkedIn &nbsp;↗</a>
-      <br><br>
-      <a class="blog-link" href="https://x.com/myccyycy" target="_blank" rel="noopener">X &nbsp;↗</a>
+        <p class="blog-label" data-i18n="writing">Writing</p>
+        <a class="blog-link" href="https://www.wribb.com/c/dimpurr" target="_blank" rel="noopener">Wribb — @dimpurr &nbsp;↗</a>
+        <p class="blog-label" data-i18n="connect">Connect</p>
+        <a class="blog-link" href="https://www.linkedin.com/in/dimchen/" target="_blank" rel="noopener">LinkedIn &nbsp;↗</a>
+        <br>
+        <a class="blog-link" href="https://x.com/myccyycy" target="_blank" rel="noopener">X &nbsp;↗</a>
+      </div>
     </div>
 
     <section class="collection">
-      <div class="tabs-major" id="tabsMajor" role="tablist"></div>
-      <div class="tabs-minor" id="tabsMinor" role="tablist"></div>
-      <div class="grid" id="grid"></div>
+      <div class="collection-inner">
+        <div class="tabs-major" id="tabsMajor" role="tablist"></div>
+        <div class="tabs-minor" id="tabsMinor" role="tablist"></div>
+        <div class="grid" id="grid"></div>
+      </div>
     </section>
   </main>
 
@@ -183,6 +282,11 @@
       }
     };
 
+    var ICONS = {
+      devices: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14.5h2.2a.8.8 0 0 1 .8.8v3.4a.8.8 0 0 1-.8.8H5a1 1 0 0 1-1-1v-4z"/><path d="M20 14.5h-2.2a.8.8 0 0 0-.8.8v3.4a.8.8 0 0 0 .8.8H19a1 1 0 0 0 1-1v-4z"/></svg>',
+      characters: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5.4 19.5a6.6 6.6 0 0 1 13.2 0"/></svg>'
+    };
+
     var MAJOR = [
       { key: 'devices',    minors: ['all', 'headphone', 'phone'], data: window.COLLE_DEVICES || [] },
       { key: 'characters', minors: ['all', 'genshin', 'zzz'],     data: window.COLLE_CHARACTERS || [] }
@@ -198,9 +302,12 @@
 
     function t(k) { return (I18N[lang] && I18N[lang][k]) || k; }
 
-    function card(item, isChar) {
+    function card(item, isChar, i) {
       var el = document.createElement('div');
-      el.className = 'card ' + (isChar ? 'char' : 'device') + (isChar && item.cat === 'zzz' ? ' tall' : '') + (isChar && item.cat === 'genshin' ? ' wide' : '');
+      el.className = 'card ' + (isChar ? 'char' : 'device') + (isChar && item.cat === 'zzz' ? ' tall' : '');
+      // stagger 延迟封顶，长列表尾部不拖沓
+      el.style.setProperty('--d', Math.min(i, 10) * 40 + 'ms');
+
       var fig = document.createElement('figure');
       var img = new Image();
       img.loading = 'lazy';
@@ -233,7 +340,8 @@
       $maj.innerHTML = '';
       MAJOR.forEach(function (m, i) {
         var b = document.createElement('button');
-        b.type = 'button'; b.textContent = t(m.key);
+        b.type = 'button';
+        b.innerHTML = ICONS[m.key] + '<span>' + t(m.key) + '</span>';
         b.setAttribute('role', 'tab');
         b.setAttribute('aria-selected', i === major ? 'true' : 'false');
         b.onclick = function () { major = i; minor = 'all'; render(); };
@@ -262,8 +370,9 @@
         });
       }
 
+      $grid.className = isChar ? 'masonry' : 'grid';
       $grid.innerHTML = '';
-      rows.forEach(function (x) { $grid.appendChild(card(x, isChar)); });
+      rows.forEach(function (x, i) { $grid.appendChild(card(x, isChar, i)); });
     }
 
     function applyLang() {
