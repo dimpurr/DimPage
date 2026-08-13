@@ -1469,6 +1469,45 @@ window.COLLE_GLAM = [
   "img": "img/glam/sun-yat-sen-memorial-hall.webp"
  },
  {
+  "id": "oriental-pearl-tower",
+  "cat": "church",
+  "name": {
+   "en": "Oriental Pearl Tower",
+   "zh": "东方明珠"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2017,
+  "rank": null,
+  "img": "img/glam/oriental-pearl-tower.webp"
+ },
+ {
+  "id": "shanghai-tower",
+  "cat": "church",
+  "name": {
+   "en": "Shanghai Tower",
+   "zh": "上海中心大厦"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2016,
+  "rank": null,
+  "img": "img/glam/shanghai-tower.webp"
+ },
+ {
+  "id": "shanghai-world-financial-center",
+  "cat": "church",
+  "name": {
+   "en": "Shanghai World Financial Center",
+   "zh": "上海环球金融中心"
+  },
+  "sub": "🇨🇳 CN · 上海",
+  "city": "上海",
+  "year": 2016,
+  "rank": null,
+  "img": "img/glam/shanghai-world-financial-center.webp"
+ },
+ {
   "id": "ping-an-finance-centre",
   "cat": "church",
   "name": {
@@ -1532,44 +1571,5 @@ window.COLLE_GLAM = [
   "year": 2009,
   "rank": null,
   "img": "img/glam/lingyin-temple.webp"
- },
- {
-  "id": "oriental-pearl-tower",
-  "cat": "church",
-  "name": {
-   "en": "Oriental Pearl Tower",
-   "zh": "东方明珠"
-  },
-  "sub": "🇨🇳 CN · 上海",
-  "city": "上海",
-  "year": 2009,
-  "rank": null,
-  "img": "img/glam/oriental-pearl-tower.webp"
- },
- {
-  "id": "shanghai-tower",
-  "cat": "church",
-  "name": {
-   "en": "Shanghai Tower",
-   "zh": "上海中心大厦"
-  },
-  "sub": "🇨🇳 CN · 上海",
-  "city": "上海",
-  "year": 2009,
-  "rank": null,
-  "img": "img/glam/shanghai-tower.webp"
- },
- {
-  "id": "shanghai-world-financial-center",
-  "cat": "church",
-  "name": {
-   "en": "Shanghai World Financial Center",
-   "zh": "上海环球金融中心"
-  },
-  "sub": "🇨🇳 CN · 上海",
-  "city": "上海",
-  "year": 2009,
-  "rank": null,
-  "img": "img/glam/shanghai-world-financial-center.webp"
  }
 ];

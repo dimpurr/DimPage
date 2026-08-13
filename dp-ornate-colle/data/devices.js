@@ -116,6 +116,14 @@ window.COLLE_DEVICES = [
   "img": "img/devices/smartisan-t2.webp"
  },
  {
+  "id": "launchkey-mini-mk3",
+  "cat": "peripheral",
+  "year": 2022,
+  "name": "Novation Launchkey Mini [MK3]",
+  "sub": "MIDI keyboard · 25 keys",
+  "img": "img/devices/launchkey-mini-mk3.webp"
+ },
+ {
   "id": "mbp-16-m1max",
   "cat": "computer",
   "year": 2021,

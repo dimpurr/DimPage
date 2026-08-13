@@ -676,27 +676,34 @@
 
     // posters: 统一 2:3 竖版海报墙（等宽 grid）；masonry: 比例混排走瀑布流；
     // list: 「完整清单」外链；score/score2/xp 只排序不展示
+    // ⭐ tab 顺序 = 一条单调链：作品 → 人 → 物 → 现场 → 机构 → 世界（2026-08-13 重排）
+    //    每一对相邻都咬着一个铰链，中途不回头：
+    //    书→角色（作品→作品里的人）· 角色→艺术家（虚构的人→真实的人，虚实分界就在这一步）
+    //    艺术家→实体收藏（创作者→其作品的实体）· 实体收藏→用过的东西（介质→播放它们的机器）
+    //    用过的东西→演出（私人器材→公共现场）· 演出→博物馆→校园（一次性→常设文化→学术）
+    //    校园→去过的地方（机构→城市，地图视图压轴）
+    //    devices 从原来的第 1 位挪到第 8 位：它开场时读起来是消费主义，放链条里则是「承载这些作品的东西」。
     var MAJOR = [
-      { key: 'devices',    minors: ['all', 'headphone', 'phone', 'computer', 'console', 'peripheral'], data: window.COLLE_DEVICES || [] },
-      { key: 'characters', minors: ['all', 'genshin', 'zzz', 'petitplanet', 'general', 'vsinger'], data: window.COLLE_CHARACTERS || [], masonry: true },
       { key: 'movies',     minors: ['all'], posters: true,        data: window.COLLE_MOVIES || [],
         list: 'https://movie.douban.com/people/dimpurr/collect' },
       { key: 'anime',      minors: ['all', 'animetv', 'animefilm'], posters: true, data: window.COLLE_ANIME || [],
         list: 'https://bgm.tv/anime/list/myccyycy/collect' },
       { key: 'games',      minors: ['all', 'steam', 'switch'],    data: window.COLLE_GAMES || [], masonry: true,
         list: 'https://steamcommunity.com/id/dimpurr/' },
-      { key: 'places',     minors: ['all', 'live', 'travel'],     data: window.COLLE_PLACES || [] },
       { key: 'books',      minors: ['all', 'novel', 'manga', 'douban'], posters: true, data: window.COLLE_BOOKS || [] },
-      { key: 'physical',   minors: ['all', 'disc', 'booklondon'], posters: true, data: window.COLLE_PHYSICAL || [] },
-      { key: 'events',     minors: ['all', 'concert', 'stage', 'exhibition'], data: window.COLLE_EVENTS || [], masonry: true, freeratio: true },
-      { key: 'glam',       minors: ['all', 'museum', 'gallery', 'church', 'library', 'other'], data: window.COLLE_GLAM || [] },
-      { key: 'campus',     minors: ['all'],                       data: window.COLLE_CAMPUS || [] },
+      { key: 'characters', minors: ['all', 'genshin', 'zzz', 'petitplanet', 'general', 'vsinger'], data: window.COLLE_CHARACTERS || [], masonry: true },
       // ⭐ tagged: 小 tab 是「标签筛选」不是互斥分类 —— 一个人可以同时是 PV 师和音乐家，
       //    所以按 item.tags 数组匹配，而不是按 item.cat 相等
       { key: 'artists',    minors: ['all', 'musician', 'vocaloidp', 'vtuber', 'animedir', 'filmdir',
                                     'pvmaker', 'illustrator', 'soundart', 'avinstall', 'gamedev',
                                     'writer', 'educator', 'allrounder'],
-        tagged: true, data: window.COLLE_ARTISTS || [] }
+        tagged: true, data: window.COLLE_ARTISTS || [] },
+      { key: 'physical',   minors: ['all', 'disc', 'booklondon'], posters: true, data: window.COLLE_PHYSICAL || [] },
+      { key: 'devices',    minors: ['all', 'headphone', 'phone', 'computer', 'console', 'peripheral'], data: window.COLLE_DEVICES || [] },
+      { key: 'events',     minors: ['all', 'concert', 'stage', 'exhibition'], data: window.COLLE_EVENTS || [], masonry: true, freeratio: true },
+      { key: 'glam',       minors: ['all', 'museum', 'gallery', 'church', 'library', 'other'], data: window.COLLE_GLAM || [] },
+      { key: 'campus',     minors: ['all'],                       data: window.COLLE_CAMPUS || [] },
+      { key: 'places',     minors: ['all', 'live', 'travel'],     data: window.COLLE_PLACES || [] }
     ];
 
     // localStorage 不可用（隐私模式等）时静默降级为「只跟随系统、不记忆」
