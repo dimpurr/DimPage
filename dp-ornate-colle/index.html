@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="__SEO_LANG__">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>Dimpurr Cheny</title>
+  <title>__SEO_TITLE__</title>
   <meta name="author" content="dimpurr" />
-  <meta name="description" content="Dimpurr Cheny — artist, designer, developer" />
+  <meta name="description" content="__SEO_DESCRIPTION__" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="__SEO_CANONICAL__" />
+  <link rel="alternate" hreflang="en" href="__SEO_HREFLANG_EN__" />
+  <link rel="alternate" hreflang="zh-CN" href="__SEO_HREFLANG_ZH__" />
+  <link rel="alternate" hreflang="x-default" href="__SEO_HREFLANG_EN__" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dimpurr" />
+  <meta property="og:locale" content="__SEO_LOCALE__" />
+  <meta property="og:title" content="__SEO_TITLE__" />
+  <meta property="og:description" content="__SEO_DESCRIPTION__" />
+  <meta property="og:url" content="__SEO_CANONICAL__" />
+  <meta property="og:image" content="__SEO_OG_IMAGE__" />
+  <meta property="og:image:width" content="160" />
+  <meta property="og:image:height" content="160" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="__SEO_TITLE__" />
+  <meta name="twitter:description" content="__SEO_DESCRIPTION__" />
+  <meta name="twitter:image" content="__SEO_OG_IMAGE__" />
   <link rel="shortcut icon" href="res/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -83,6 +101,13 @@
       max-width: 1320px; margin: 0 auto;
       padding: 13vh clamp(1.25rem, 4vw, 3rem) 4.5rem;
     }
+    .intro-layout {
+      max-width: 1120px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
+      gap: clamp(2.5rem, 7vw, 6.5rem);
+      align-items: start;
+    }
     .intro { max-width: 560px; position: relative; }
     /* 手账感的淡蓝色块：非对称圆角，只做装饰 */
     .intro::before {
@@ -97,8 +122,25 @@
     @media (min-width: 1400px) { .intro::before { left: -88px; } }
 
     .subtitle {
-      font-size: 0.82rem; color: var(--muted); letter-spacing: 0.14em;
-      margin-bottom: 0.9rem;
+      display: block;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+      font-weight: 500; color: var(--ink); letter-spacing: 0.01em;
+      line-height: 1.2; margin-bottom: 1rem;
+    }
+    .identity {
+      display: flex; align-items: center; gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+    .identity .subtitle { margin-bottom: 0; }
+    .avatar {
+      width: 42px; height: 42px; flex: none; display: block;
+      object-fit: contain; border-radius: 50%;
+      border: 1px solid var(--line); background: #fff;
+      box-shadow: 0 2px 8px rgba(35,60,90,.08);
+    }
+    @media (max-width: 480px) {
+      .avatar { width: 36px; height: 36px; }
     }
     .name {
       font-family: 'Fraunces', Georgia, serif;
@@ -109,19 +151,56 @@
     .name em { font-style: italic; color: var(--accent-ink); }
     .bio { font-size: 0.98rem; color: var(--muted); line-height: 1.65; margin-bottom: 3rem; }
 
-    .blog-label {
-      font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--faint); margin: 1.6rem 0 0.5rem;
+    .link-section { margin-top: 2rem; }
+    .link-label {
+      color: var(--faint); font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; margin: 0 0 0.75rem 0.15rem;
     }
-    .blog-link {
-      display: inline-block; font-size: 0.95rem; color: var(--ink);
-      text-decoration: none; border-bottom: 1px solid var(--line);
-      padding-bottom: 2px;
+    .link-bento { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+    .link-card {
+      min-width: 0; min-height: 66px;
+      display: flex; align-items: center; gap: 0.65rem;
+      padding: 0.72rem 0.78rem;
+      color: var(--ink); text-decoration: none;
+      background: var(--control-bg); border: 1px solid var(--line);
+      border-radius: var(--r-md); box-shadow: var(--shadow-card);
+      transition: transform 180ms var(--ease-out), color 160ms ease-out,
+                  border-color 160ms ease-out, box-shadow 180ms ease-out;
+    }
+    .link-card:hover {
+      transform: translateY(-2px); color: var(--accent-ink);
+      border-color: var(--accent); box-shadow: var(--shadow-lift);
+    }
+    .link-icon {
+      width: 32px; height: 32px; flex: none; display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 10px;
+      background: var(--accent-bg); color: var(--accent-ink);
+      font-family: Georgia, serif; font-size: 0.9rem; font-weight: 600;
+    }
+    .link-icon--x { font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.82rem; }
+    .link-copy { min-width: 0; display: grid; gap: 0.18rem; }
+    .link-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: 'Fraunces', Georgia, serif; font-size: 0.94rem; line-height: 1.15; }
+    .link-desc { color: var(--muted); font-size: 0.68rem; line-height: 1.3; }
+    .link-arrow { margin-left: auto; color: var(--faint); font-size: 0.82rem; }
+    .more-links { margin-top: 0.85rem; }
+    .more-toggle {
+      width: fit-content; display: inline-flex; align-items: center; gap: 0.45rem;
+      cursor: pointer; list-style: none; color: var(--muted);
+      font-size: 0.78rem; letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--line); padding: 0.18rem 0.1rem 0.28rem;
       transition: color 160ms ease-out, border-color 160ms ease-out;
     }
-    .blog-link:hover { color: var(--accent-ink); border-color: var(--accent); }
+    .more-toggle::-webkit-details-marker { display: none; }
+    .more-toggle:hover { color: var(--accent-ink); border-color: var(--accent); }
+    .more-chevron { font-size: 0.95rem; line-height: 1; transition: transform 180ms var(--ease-out); }
+    .more-links[open] .more-chevron { transform: rotate(180deg); }
+    .more-content { margin-top: 0.75rem; }
+    .more-writing-bento {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem;
+    }
+    .more-writing-bento .link-card { width: 100%; }
 
-    /* ── top-right controls: theme + language ── */
+    /* ── top-right controls: theme ── */
     .top-controls {
       position: fixed; top: 1.4rem; right: 1.5rem; z-index: 10;
       display: flex; gap: 0.5rem; align-items: center;
@@ -137,6 +216,84 @@
     .top-controls button:hover { color: var(--accent-ink); border-color: var(--accent); }
     .theme-toggle svg { width: 15px; height: 15px; display: block; }
 
+    .intro-tools {
+      display: flex; align-items: center; gap: 0.7rem;
+      margin: 0.45rem 0 1.5rem;
+    }
+    .lang-toggle {
+      appearance: none; border: 1px solid var(--line);
+      border-radius: var(--r-pill); background: var(--control-bg);
+      color: var(--accent-ink); cursor: pointer;
+      font-family: inherit; font-size: 0.74rem; font-weight: 500;
+      letter-spacing: 0.12em; padding: 0.32rem 0.72rem 0.34rem;
+      box-shadow: 0 1px 3px rgba(35,60,90,.06);
+      transition: color 160ms ease-out, border-color 160ms ease-out,
+                  background-color 160ms ease-out, box-shadow 160ms ease-out;
+    }
+    .lang-toggle:hover {
+      color: var(--ink); border-color: var(--accent);
+      background: var(--accent-bg); box-shadow: 0 2px 7px rgba(35,60,90,.1);
+    }
+
+    .project-bento {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem; padding-top: 0.7rem;
+    }
+    .project-label {
+      color: var(--faint); font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; margin: 0 0 0.75rem 0.15rem;
+    }
+    .project-card {
+      position: relative; min-width: 0; min-height: 104px;
+      display: flex; align-items: center; gap: 0.72rem;
+      padding: 0.95rem 0.9rem;
+      color: var(--ink); text-decoration: none;
+      background: var(--control-bg);
+      background: color-mix(in srgb, var(--control-bg) 86%, var(--accent-bg));
+      border: 1px solid var(--line); border-radius: var(--r-md);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: transform 180ms var(--ease-out), border-color 160ms ease-out,
+                  box-shadow 180ms ease-out, background-color 180ms ease-out;
+    }
+    .project-card::after {
+      content: ''; position: absolute; width: 90px; height: 90px;
+      right: -38px; bottom: -42px; border-radius: 50%;
+      background: var(--accent-bg); opacity: 0.72; pointer-events: none;
+    }
+    .project-card--wide { grid-column: 1 / -1; min-height: 82px; }
+    .project-card:hover {
+      transform: translateY(-3px); border-color: var(--accent);
+      box-shadow: var(--shadow-lift); background: var(--control-bg);
+    }
+    .project-icon {
+      position: relative; z-index: 1; width: 42px; height: 42px; flex: none;
+      display: grid; place-items: center; padding: 0.45rem;
+      border-radius: 12px; background: var(--bg); border: 1px solid var(--line);
+    }
+    .project-icon img { width: 100%; height: 100%; display: block; object-fit: contain; border-radius: 8px; }
+    .project-icon--link { color: var(--accent-ink); font-size: 1.35rem; font-family: Georgia, serif; }
+    .project-copy { position: relative; z-index: 1; min-width: 0; display: grid; gap: 0.2rem; }
+    .project-name {
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      font-family: 'Fraunces', Georgia, serif; font-size: 1.02rem; line-height: 1.15;
+    }
+    .project-desc { color: var(--muted); font-size: 0.7rem; line-height: 1.35; }
+    .project-arrow { position: relative; z-index: 1; margin-left: auto; color: var(--faint); font-size: 0.85rem; align-self: flex-start; }
+
+    @media (max-width: 900px) {
+      .intro-layout { grid-template-columns: minmax(0, 560px); gap: 2.5rem; }
+      .project-bento { max-width: 560px; padding-top: 0; }
+    }
+    @media (max-width: 560px) {
+      .intro-layout { gap: 2rem; }
+      .link-bento { grid-template-columns: 1fr; gap: 0.65rem; }
+      .more-writing-bento { grid-template-columns: 1fr; gap: 0.65rem; }
+      .project-bento { grid-template-columns: 1fr; gap: 0.65rem; }
+      .project-card, .project-card--wide { grid-column: auto; min-height: 78px; }
+      .project-icon { width: 38px; height: 38px; }
+    }
+
     /* ── collection ──
        收藏区（tabs + 卡片流）吃满可用宽度，只留左右内边距；
        文本区（intro/footer）才保留 max-width 阅读宽 */
@@ -145,6 +302,22 @@
       border-radius: 36px 36px 0 0;
       padding: 3rem clamp(1.25rem, 4vw, 3rem) 4.5rem;
       transition: background-color 200ms ease-out;
+    }
+
+    .collection-heading {
+      display: flex; align-items: center; gap: 1.25rem;
+      margin: 0 0 2.35rem;
+    }
+    .collection-heading::after {
+      content: ''; height: 1px; flex: 1;
+      background: linear-gradient(90deg, var(--line), transparent 82%);
+    }
+    .collection-title {
+      flex: none; margin: 0;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.85rem, 4vw, 2.55rem);
+      font-weight: 400; letter-spacing: 0.005em; line-height: 1.1;
+      color: var(--ink);
     }
 
     .tabs-bar { margin-bottom: 1.6rem; }
@@ -508,25 +681,103 @@
 
   <div class="top-controls">
     <button class="theme-toggle" id="themeBtn" type="button" aria-label="Dark mode"></button>
-    <button class="lang-toggle" id="langBtn" type="button">中文</button>
   </div>
 
   <main>
     <div class="intro-wrap">
-      <div class="intro">
-        <p class="subtitle">Dimpurr Cheny &nbsp;·&nbsp; 钉子</p>
+      <div class="intro-layout">
+        <div class="intro">
+        <div class="identity">
+          <img class="avatar" src="avatar-cat.webp" alt="" width="42" height="42" decoding="async" fetchpriority="high">
+          <p class="subtitle" data-i18n="signature">Dimpurr</p>
+        </div>
         <h1 class="name">Artist, Designer<br><em>&amp; Developer</em></h1>
+        <div class="intro-tools">
+          <button class="lang-toggle" id="langBtn" type="button" data-i18n="toggle">__SEO_SWITCH_LABEL__</button>
+        </div>
 
-        <p class="blog-label" data-i18n="writing">Writing</p>
-        <a class="blog-link" href="https://www.wribb.com/c/dimpurr" target="_blank" rel="noopener">Wribb — @dimpurr &nbsp;↗</a>
-        <p class="blog-label" data-i18n="connect">Connect</p>
-        <a class="blog-link" href="https://www.linkedin.com/in/dimchen/" target="_blank" rel="noopener">LinkedIn &nbsp;↗</a>
-        <br>
-        <a class="blog-link" href="https://x.com/myccyycy" target="_blank" rel="noopener">X &nbsp;↗</a>
+        <div class="link-section">
+          <p class="link-label" data-i18n="connect">Connect</p>
+          <div class="link-bento">
+            <a class="link-card" href="https://www.linkedin.com/in/dimchen/" target="_blank" rel="noopener">
+              <span class="link-icon" aria-hidden="true">in</span>
+              <span class="link-copy"><strong class="link-name">LinkedIn</strong><span class="link-desc" data-i18n="linkedinDesc">Professional profile</span></span>
+              <span class="link-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="link-card" href="https://x.com/myccyycy" target="_blank" rel="noopener">
+              <span class="link-icon link-icon--x" aria-hidden="true">𝕏</span>
+              <span class="link-copy"><strong class="link-name">X</strong><span class="link-desc" data-i18n="xDesc">Notes &amp; updates</span></span>
+              <span class="link-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <details class="more-links">
+          <summary class="more-toggle"><span data-i18n="more">More</span><span class="more-chevron" aria-hidden="true">↓</span></summary>
+          <div class="more-content">
+            <p class="link-label" data-i18n="writing">Writing</p>
+            <div class="more-writing-bento">
+              <a class="link-card" href="https://www.wribb.com/c/dimpurr" target="_blank" rel="noopener">
+                <span class="link-icon" aria-hidden="true">✎</span>
+                <span class="link-copy"><strong class="link-name">Wribb — @dimpurr</strong><span class="link-desc" data-i18n="wribbDesc">Personal writing</span></span>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="link-card" href="https://blog.dimpurrc.com/" target="_blank" rel="noopener">
+                <span class="link-icon" aria-hidden="true">▤</span>
+                <span class="link-copy"><strong class="link-name">钉子の次元</strong><span class="link-desc" data-i18n="blogDesc">Personal blog</span></span>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </details>
+        </div>
+
+        <aside class="project-panel" aria-label="Projects">
+          <p class="project-label" data-i18n="projects">Maintaining</p>
+          <div class="project-bento">
+            <a class="project-card" href="https://reedle.app/" target="_blank" rel="noopener">
+              <span class="project-icon"><img src="res/reedle-icon.webp" alt="" width="64" height="64" loading="eager"></span>
+              <span class="project-copy"><strong class="project-name">reedle.app</strong><span class="project-desc" data-i18n="reedleDesc">Reading &amp; research workspace</span></span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="project-card" href="https://voltscope.dimp.studio/" target="_blank" rel="noopener">
+              <span class="project-icon"><img src="res/voltscope-icon.webp" alt="" width="64" height="64" loading="eager"></span>
+              <span class="project-copy"><strong class="project-name">voltscope</strong><span class="project-desc" data-i18n="voltscopeDesc">Open-source hardware lab</span></span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="project-card project-card--wide" href="https://github.com/dimpurr/chat-stasher" target="_blank" rel="noopener">
+              <span class="project-icon"><img src="res/github-icon.webp" alt="" width="64" height="64" loading="eager"></span>
+              <span class="project-copy"><strong class="project-name">Chat Stasher</strong><span class="project-desc" data-i18n="chatStasherDesc">Chat archive utility</span></span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="project-card" href="https://freetokens.fyi/" target="_blank" rel="noopener">
+              <span class="project-icon"><img src="res/freetokens-icon.svg" alt="" width="64" height="64" loading="eager"></span>
+              <span class="project-copy"><strong class="project-name">freetokens</strong><span class="project-desc" data-i18n="freetokensDesc">Free LLM tracker</span></span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="project-card" href="https://bilifood.com/" target="_blank" rel="noopener">
+              <span class="project-icon"><img src="res/bilifood-icon.svg" alt="" width="64" height="64" loading="eager"></span>
+              <span class="project-copy"><strong class="project-name">bilifood</strong><span class="project-desc" data-i18n="bilifoodDesc">Recipes from Bilibili videos</span></span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="project-card project-card--wide" href="https://github.com/dimpurr/dimagine" target="_blank" rel="noopener">
+              <span class="project-icon"><img src="res/github-icon.webp" alt="" width="64" height="64" loading="eager"></span>
+              <span class="project-copy"><strong class="project-name">dimagine</strong><span class="project-desc" data-i18n="dimagineDesc">Agent-native image library</span></span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="project-card project-card--wide" href="https://www.iopho.com/" target="_blank" rel="noopener">
+              <span class="project-icon project-icon--link" aria-hidden="true">↗</span>
+              <span class="project-copy"><strong class="project-name">iopho.com</strong><span class="project-desc"><span data-i18n="seeMore">See more in</span> · <span data-i18n="iophoDesc">personal archive &amp; studio</span></span></span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </aside>
       </div>
     </div>
 
     <section class="collection">
+      <div class="collection-heading">
+        <h2 class="collection-title" data-i18n="collections">My Collections</h2>
+      </div>
       <div class="tabs-bar">
         <div class="tabs-major" id="tabsMajor" role="tablist"></div>
       </div>
@@ -590,7 +841,15 @@
   (function () {
     var I18N = {
       en: {
-        writing: 'Writing', connect: 'Connect', archive: 'Archive',
+        pageTitle: 'Dimpurr — Artist, Designer & Developer',
+        pageDescription: 'Dimpurr — an artist, designer and developer maintaining Reedle, Voltscope and Chat Stasher.',
+        writing: 'Writing', connect: 'Connect', archive: 'Archive', more: 'More',
+        linkedinDesc: 'Professional profile', xDesc: 'Notes & updates', wribbDesc: 'Personal writing', blogDesc: 'Personal blog',
+        projects: 'Maintaining', reedleDesc: 'Reading & research workspace',
+        voltscopeDesc: 'Open-source hardware lab', chatStasherDesc: 'Chat archive utility', freetokensDesc: 'Free LLM tracker', bilifoodDesc: 'Recipes from Bilibili videos', dimagineDesc: 'Agent-native image library',
+        iophoDesc: 'personal archive & studio',
+        signature: 'Dimpurr', collections: 'My Collections',
+        maintainer: 'Maintainer of', seeMore: 'See more in',
         devices: 'Things', characters: 'Characters',
         movies: 'Movies', anime: 'Anime', games: 'Games',
         all: 'All', headphone: 'Audio', phone: 'Phones & Tablets',
@@ -598,7 +857,7 @@
         genshin: 'Genshin Impact', zzz: 'Zenless Zone Zero',
         steam: 'Steam', switch: 'Switch',
         na: 'N/A', noimg: 'no image yet',
-        toggle: '中文', fullist: 'Full list',
+        toggle: '切换为中文', fullist: 'Full list',
         toDark: 'Dark mode', toLight: 'Light mode',
         places: 'Places', live: 'Lived in', travel: 'Travel & Events',
         vcards: 'Cards', vmap: 'Map', vtime: 'Timeline',
@@ -619,7 +878,15 @@
         close: 'Close', lbprev: 'Previous', lbnext: 'Next'
       },
       zh: {
-        writing: '写作', connect: '联络', archive: '历代主页',
+        pageTitle: 'Dimpurr · 钉子 — 艺术家、设计师与开发者',
+        pageDescription: 'Dimpurr · 钉子——艺术家、设计师与开发者，维护 Reedle、Voltscope 与 Chat Stasher。',
+        writing: '写作', connect: '联络', archive: '历代主页', more: '更多',
+        linkedinDesc: '职业主页', xDesc: '动态与记录', wribbDesc: '个人写作', blogDesc: '个人博客',
+        projects: '维护项目', reedleDesc: '阅读与研究工作台',
+        voltscopeDesc: '开源硬件实验室', chatStasherDesc: '聊天归档工具', freetokensDesc: '免费大模型追踪', bilifoodDesc: 'B 站视频变菜谱', dimagineDesc: '给 Agent 用的参考图库',
+        iophoDesc: '个人档案与工作室',
+        signature: 'Dimpurr · 钉子', collections: '我的收藏',
+        maintainer: '维护以下项目', seeMore: '更多内容见',
         devices: '用过的东西', characters: '喜欢的角色',
         movies: '喜欢的电影', anime: '喜欢的动画', games: '喜欢的游戏',
         all: '全部', headphone: '音频', phone: '手机平板',
@@ -627,7 +894,7 @@
         genshin: '原神', zzz: '绝区零',
         steam: 'Steam', switch: 'Switch',
         na: '不详', noimg: '暂无图',
-        toggle: 'EN', fullist: '完整清单',
+        toggle: 'Switch to English', fullist: '完整清单',
         toDark: '夜间模式', toLight: '日间模式',
         places: '去过的地方', live: '居住', travel: '旅游与活动',
         vcards: '卡片', vmap: '地图', vtime: '时间轴',
@@ -715,7 +982,9 @@
     // 主题与语言：默认跟随系统，手动切换后以手动为准并记住
     var themeQuery = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
     var theme = store.get('dp-theme') || (themeQuery && themeQuery.matches ? 'dark' : 'light');
-    var lang = store.get('dp-lang') ||
+    var hostDefaultLang = location.hostname === 'im.dimpurrc.com' ? 'zh' :
+      location.hostname === 'im.dimchen.com' ? 'en' : null;
+    var lang = hostDefaultLang || store.get('dp-lang') ||
       ((navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
     var major = 0, minor = 'all';
 
@@ -1349,6 +1618,15 @@
 
     function applyLang() {
       document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      document.title = t('pageTitle');
+      var description = document.querySelector('meta[name="description"]');
+      if (description) description.setAttribute('content', t('pageDescription'));
+      document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(function (el) {
+        el.setAttribute('content', t('pageTitle'));
+      });
+      document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(function (el) {
+        el.setAttribute('content', t('pageDescription'));
+      });
       $lang.textContent = t('toggle');
       document.querySelectorAll('[data-i18n]').forEach(function (el) {
         el.textContent = t(el.getAttribute('data-i18n'));
@@ -1361,6 +1639,11 @@
     }
 
     $lang.onclick = function () {
+      if (location.hostname === 'im.dimchen.com' || location.hostname === 'im.dimpurrc.com') {
+        var targetHost = lang === 'en' ? 'im.dimpurrc.com' : 'im.dimchen.com';
+        location.href = location.protocol + '//' + targetHost + location.pathname + location.search + location.hash;
+        return;
+      }
       lang = lang === 'en' ? 'zh' : 'en';
       store.set('dp-lang', lang);
       applyLang();
