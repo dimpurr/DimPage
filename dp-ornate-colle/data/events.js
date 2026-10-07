@@ -1,6 +1,21 @@
 // 数据层。⭐ 可信源 DimLifeS Life/Gear/dimpage-colle-life/events-*.md
 window.COLLE_EVENTS = [
  {
+  "id": "james-mcneill-whistler",
+  "cat": "exhibition",
+  "year": 2026,
+  "name": {
+   "en": "James McNeill Whistler",
+   "zh": "「James McNeill Whistler」惠斯勒回顾展"
+  },
+  "sub": {
+   "en": "Tate Britain",
+   "zh": "泰特不列颠美术馆"
+  },
+  "city": "London",
+  "img": "img/events/james-mcneill-whistler.webp"
+ },
+ {
   "id": "blitz-the-club-that-shaped-the-80s",
   "cat": "exhibition",
   "year": 2026,
