@@ -26,7 +26,7 @@ def sh(cmd, **kw):
 
 def tracked():
     out = sh(["git", "ls-files", "-z", "."]).decode()
-    return sorted(p for p in out.split("\0") if p)
+    return sorted(p for p in out.split("\0") if p and not p.startswith("scripts/"))  # tooling is not served
 
 
 def local_hashes(files):
