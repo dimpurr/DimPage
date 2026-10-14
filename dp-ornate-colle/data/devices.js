@@ -4,6 +4,14 @@
 // 改设备先改那边的表，再同步到这里。
 window.COLLE_DEVICES = [
  {
+  "id": "dji-mic-mini-2s",
+  "cat": "headphone",
+  "year": 2026,
+  "name": "DJI Mic Mini 2S",
+  "sub": "wireless mic",
+  "img": "img/devices/dji-mic-mini-2s.webp"
+ },
+ {
   "id": "macbook-secondhand",
   "cat": "computer",
   "year": 2026,
