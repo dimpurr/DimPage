@@ -1,5 +1,110 @@
 [
  {
+  "id": "bili-BV1DJ411y7nR",
+  "title": "【足太Penta】Gimme×Gimme 【原创编舞】",
+  "uploader": "足太姬",
+  "duration": 225,
+  "cover": "covers/bili-BV1DJ411y7nR.jpg",
+  "shelf": "舞蹈",
+  "tags": [
+   "宅舞"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1DJ411y7nR",
+    "title": "【足太Penta】Gimme×Gimme 【原创编舞】",
+    "uploader": "足太姬"
+   }
+  },
+  "name": "Gimme×Gimme",
+  "sub": "足太ぺんた · 原创编舞"
+ },
+ {
+  "id": "bili-BV1Lp411R7o8",
+  "title": "【りりり×アナタシア】将手【原创编舞】",
+  "uploader": "RiRiRi",
+  "duration": 210,
+  "cover": "covers/bili-BV1Lp411R7o8.jpg",
+  "shelf": "舞蹈",
+  "tags": [
+   "宅舞"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1Lp411R7o8",
+    "title": "【りりり×アナタシア】将手【原创编舞】",
+    "uploader": "RiRiRi"
+   }
+  },
+  "name": "将手",
+  "sub": "りりり × アナタシア · 原创编舞"
+ },
+ {
+  "id": "bili-BV1sx411P7fC",
+  "title": "【りりり】Happy Halloween",
+  "uploader": "RiRiRi",
+  "duration": 244,
+  "cover": "covers/bili-BV1sx411P7fC.jpg",
+  "shelf": "舞蹈",
+  "tags": [
+   "宅舞"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1sx411P7fC",
+    "title": "【りりり】Happy Halloween",
+    "uploader": "RiRiRi"
+   }
+  },
+  "name": "Happy Halloween",
+  "sub": "りりり · 踊ってみた"
+ },
+ {
+  "id": "bili-BV1R7411a7T6",
+  "title": "「鏡音鈴」「Gimme×Gimme」 Sour式鏡音Rin×Sour式初音Miku[PV]",
+  "uploader": "pizacg",
+  "duration": 238,
+  "cover": "covers/bili-BV1R7411a7T6.jpg",
+  "shelf": "舞蹈",
+  "tags": [
+   "MMD"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1R7411a7T6",
+    "title": "「鏡音鈴」「Gimme×Gimme」 Sour式鏡音Rin×Sour式初音Miku[PV]",
+    "uploader": "pizacg"
+   }
+  },
+  "name": "Gimme×Gimme",
+  "sub": "Sour式 鏡音リン × 初音ミク · MMD"
+ },
+ {
+  "id": "bili-BV13s411Z7sm",
+  "title": "【GUMI·镜音リン】LUVORATORRRRRY!【ギガP·れをる】",
+  "uploader": "牛牛蝎羯",
+  "duration": 0,
+  "cover": "covers/bili-BV13s411Z7sm.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV13s411Z7sm",
+    "title": "【GUMI·镜音リン】LUVORATORRRRRY!【ギガP·れをる】",
+    "uploader": "牛牛蝎羯"
+   }
+  },
+  "name": "LUVORATORRRRRY!",
+  "sub": "ギガP · れをる feat. GUMI・鏡音リン"
+ },
+ {
   "id": "bili-BV1ux411c7RP",
   "title": "【鏡音双子】电子天使【高音质】",
   "uploader": "上甘玲Official",
