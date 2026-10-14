@@ -1,5 +1,43 @@
 [
  {
+  "id": "bili-BV1tUycYNEo5",
+  "title": "《绝区零》柏妮思EP丨Burning Desires 绝望吧台",
+  "uploader": "绝区零",
+  "duration": 3630,
+  "cover": "covers/bili-BV1tUycYNEo5.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "绝区零"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1tUycYNEo5",
+    "title": "《绝区零》柏妮思EP丨Burning Desires 绝望吧台",
+    "uploader": "绝区零"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1Ta4gzxE7i",
+  "title": "《绝区零》卢西娅EP | DAMIDAMI",
+  "uploader": "绝区零",
+  "duration": 199,
+  "cover": "covers/bili-BV1Ta4gzxE7i.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "绝区零"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1Ta4gzxE7i",
+    "title": "《绝区零》卢西娅EP | DAMIDAMI",
+    "uploader": "绝区零"
+   }
+  }
+ },
+ {
   "id": "bili-ep63470",
   "title": "魔法少女小圆",
   "uploader": "哔哩哔哩番剧",
