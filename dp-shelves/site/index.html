@@ -12,7 +12,7 @@
 :root{
   --bg:#fff7f9; --ink:#1d1d1f; --ink2:#86868b; --ink3:#b3a8ad;
   --accent:#ff5c8d; --accent-soft:rgba(255,92,141,.10);
-  --glass:rgba(255,247,249,.72); --pop:rgba(255,255,255,.55); --pop-ink:#1d1d1f;
+  --glass:rgba(255,247,249,.72); --pop:rgba(255,247,250,.82); --pop-ink:#1d1d1f;
   --blob1:#ffd3e0; --blob2:#ffe6ee; --blob3:#fde2f0;
   --shadow:0 18px 40px -18px rgba(214,90,130,.45), 0 4px 12px -6px rgba(214,90,130,.18);
 }
@@ -20,7 +20,7 @@
   :root:not([data-theme="light"]){
     --bg:#140e11; --ink:#f5f0f2; --ink2:#a39a9e; --ink3:#6d6267;
     --accent:#ff7aa3; --accent-soft:rgba(255,122,163,.14);
-    --glass:rgba(20,14,17,.68); --pop:rgba(30,20,25,.55); --pop-ink:#fff;
+    --glass:rgba(20,14,17,.68); --pop:rgba(30,20,25,.82); --pop-ink:#fff;
     --blob1:#4a1f30; --blob2:#2d1520; --blob3:#3a1a2a;
     --shadow:0 18px 40px -18px rgba(0,0,0,.7), 0 4px 12px -6px rgba(0,0,0,.4);
   }
@@ -28,7 +28,7 @@
 :root[data-theme="dark"]{
   --bg:#140e11; --ink:#f5f0f2; --ink2:#a39a9e; --ink3:#6d6267;
   --accent:#ff7aa3; --accent-soft:rgba(255,122,163,.14);
-  --glass:rgba(20,14,17,.68); --pop:rgba(30,20,25,.55); --pop-ink:#fff;
+  --glass:rgba(20,14,17,.68); --pop:rgba(30,20,25,.82); --pop-ink:#fff;
   --blob1:#4a1f30; --blob2:#2d1520; --blob3:#3a1a2a;
   --shadow:0 18px 40px -18px rgba(0,0,0,.7), 0 4px 12px -6px rgba(0,0,0,.4);
 }
@@ -74,20 +74,19 @@ h1 button.on{color:var(--ink)}
 .item:hover .art{transform:translateY(-3px)}
 .item:hover .art img{transform:scale(1.035)}
 .play{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;
-  background:rgba(255,255,255,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.9);
   display:grid;place-items:center;opacity:0;transform:scale(.85);transition:.3s cubic-bezier(.2,.8,.2,1)}
 .play::before{content:"";border-left:11px solid var(--accent);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
 .item:hover .play{opacity:1;transform:none}
 @media (hover:none){.play{opacity:1;transform:none}}
 
 .pick{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;
-  background:var(--pop);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);
+  background:var(--pop);
   opacity:0;pointer-events:none;transition:opacity .28s}
-.item.open .pick{opacity:1;pointer-events:auto}
-.item.open .art img{filter:saturate(1.1)}
+.pick.show{opacity:1;pointer-events:auto}
 .pick a{text-decoration:none;color:var(--pop-ink);font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;
   background:rgba(255,255,255,.55);transform:translateY(6px);transition:transform .35s cubic-bezier(.2,.8,.2,1), background .2s}
-.item.open .pick a{transform:none}
+.pick.show a{transform:none}
 .pick a:hover{background:#fff}
 .pick a span{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:1px}
 .pick a.bili span{background:#fb7299} .pick a.yt span{background:#ff3b30}
@@ -147,13 +146,12 @@ function render(){
   $("#grid").innerHTML = list.map(i => {
     const src = Object.entries(i.sources);
     const one = src.length === 1;
-    const pick = one ? "" : `<div class="pick">${src.map(([p,s]) =>
-      `<a class="${p}" href="${esc(s.url)}" target="_blank" rel="noopener"><span></span>${NAMES[p]||p}</a>`).join("")}</div>`;
+    const inner = `${i.cover ? `<img loading="lazy" src="${esc(i.cover)}" alt="">` : ""}<span class="play"></span>`;
+    const art = one
+      ? `<a class="art" href="${esc(src[0][1].url)}" target="_blank" rel="noopener">${inner}</a>`
+      : `<div class="art" role="button" tabindex="0" data-multi="${esc(i.id)}">${inner}</div>`;
     return `<div class="item">
-      <a class="art" ${one ? `href="${esc(src[0][1].url)}" target="_blank" rel="noopener"` : `role="button" tabindex="0" data-multi`}>
-        ${i.cover ? `<img loading="lazy" src="${esc(i.cover)}" alt="">` : ""}
-        <span class="play"></span>${pick}
-      </a>
+      ${art}
       <div class="t" title="${esc(i.title)}">${esc(i.name || i.title)}</div>
       <div class="s">${esc(i.sub ?? i.uploader)}${i.duration ? ` <em>· ${fmt(i.duration)}</em>` : ""}</div>
     </div>`;
@@ -166,14 +164,27 @@ document.addEventListener("click", e => {
   if (chip){ active = chip.dataset.t || null; renderTags(); render(); return; }
   if (e.target.closest(".pick a")) return;
   const multi = e.target.closest("[data-multi]");
-  const opened = document.querySelector(".item.open");
-  if (opened && (!multi || opened !== multi.parentElement)) opened.classList.remove("open");
-  if (multi){ e.preventDefault(); multi.parentElement.classList.toggle("open"); }
+  const opened = document.querySelector(".pick");
+  const same = opened && multi && opened.parentElement === multi;
+  closePick();
+  if (multi && !same) openPick(multi);
 });
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") document.querySelector(".item.open")?.classList.remove("open");
+  if (e.key === "Escape") closePick();
   if (e.key === "Enter" && e.target.matches("[data-multi]")) e.target.click();
 });
+function closePick(){ document.querySelectorAll(".pick").forEach(p => p.remove()); }
+function openPick(art){
+  // 多来源：点了才生成选择层（不预埋、不用 backdrop-filter——iPad Safari 会把模糊漏到整页并吞点击）
+  const it = items.find(x => x.id === art.dataset.multi);
+  if (!it) return;
+  const pick = document.createElement("div");
+  pick.className = "pick";
+  pick.innerHTML = Object.entries(it.sources).map(([p,s]) =>
+    `<a class="${p}" href="${esc(s.url)}" target="_blank" rel="noopener"><span></span>${NAMES[p]||p}</a>`).join("");
+  art.appendChild(pick);
+  requestAnimationFrame(() => requestAnimationFrame(() => pick.classList.add("show")));
+}
 $("#q").addEventListener("input", render);
 fetch("videos.json", {cache: "no-cache"}).then(r => r.json()).then(d => { items = d; renderShelves(); renderTags(); render(); })
   .catch(() => { $("#empty").hidden = false; });
