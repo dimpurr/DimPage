@@ -1,5 +1,31 @@
 [
  {
+  "id": "bili-BV12E41167Tg",
+  "title": "【IA】キメラ【ATOLS】",
+  "uploader": "ATOLS_official",
+  "duration": 218,
+  "cover": "covers/bili-BV12E41167Tg.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV12E41167Tg",
+    "title": "【IA】キメラ【ATOLS】",
+    "uploader": "ATOLS_official"
+   },
+   "yt": {
+    "url": "https://www.youtube.com/watch?v=OgCj6OpPbAw",
+    "title": "ATOLS - KIMERA feat. IA / キメラ feat. IA",
+    "uploader": "ATOLS"
+   }
+  },
+  "name": "キメラ",
+  "sub": "ATOLS feat. IA"
+ },
+ {
   "id": "bili-BV1qbtLzdEAk",
   "title": "【Porter Robinson & Madeon】Shelter 官方MV",
   "uploader": "Porter_Robinson_",
