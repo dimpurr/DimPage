@@ -1,5 +1,103 @@
 [
  {
+  "id": "bili-BV1yW411j77X",
+  "title": "Melty Land Nightmare(中文字幕) / 春卷饭 feat.初音未来",
+  "uploader": "春卷饭harumakigohan",
+  "duration": 269,
+  "cover": "covers/bili-BV1yW411j77X.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1yW411j77X",
+    "title": "Melty Land Nightmare(中文字幕) / 春卷饭 feat.初音未来",
+    "uploader": "春卷饭harumakigohan"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1E64y1T7HY",
+  "title": "DECO*27 - 乙女解剖 feat. 初音未来 (TeddyLoid Alllies Remix)",
+  "uploader": "DECO27_Official",
+  "duration": 227,
+  "cover": "covers/bili-BV1E64y1T7HY.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1E64y1T7HY",
+    "title": "DECO*27 - 乙女解剖 feat. 初音未来 (TeddyLoid Alllies Remix)",
+    "uploader": "DECO27_Official"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1hx411b7CZ",
+  "title": "【初音ミク】Unknown Mother-Goose【wowaka】",
+  "uploader": "手速超快的初总",
+  "duration": 0,
+  "cover": "covers/bili-BV1hx411b7CZ-v2.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1hx411b7CZ",
+    "title": "【初音ミク】Unknown Mother-Goose【wowaka】",
+    "uploader": "手速超快的初总"
+   },
+   "yt": {
+    "url": "https://www.youtube.com/watch?v=P_CSdxSGfaA",
+    "title": "wowaka 『アンノウン・マザーグース』feat. 初音ミク / wowaka - Unknown Mother-Goose (Official Video) ft. Hatsune Miku",
+    "uploader": "ヒトリエ / wowaka"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1bg4y1j7Mc",
+  "title": "【歌愛ユキ/诗岸】惊蛰正中央/立入禁止",
+  "uploader": "ここから立入禁止",
+  "duration": 258,
+  "cover": "covers/bili-BV1bg4y1j7Mc-v2.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1bg4y1j7Mc",
+    "title": "【歌愛ユキ/诗岸】惊蛰正中央/立入禁止",
+    "uploader": "ここから立入禁止"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1bA4y1X7h4",
+  "title": "「玲音」主题曲 Duvet",
+  "uploader": "Helipteru",
+  "duration": 220,
+  "cover": "covers/bili-BV1bA4y1X7h4.jpg",
+  "shelf": "音乐",
+  "tags": [],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1bA4y1X7h4",
+    "title": "「玲音」主题曲 Duvet",
+    "uploader": "Helipteru"
+   }
+  }
+ },
+ {
   "id": "bili-BV1iZ4y1k7Zm",
   "title": "【花谱】#96.5 组曲 花谱×羽生まゐご「わたしの線香/我的线香」原创歌曲",
   "uploader": "花谱_kaf",
