@@ -1,5 +1,89 @@
 [
  {
+  "id": "bili-BV1px411c7W2",
+  "title": "【初音ミク】From Y to Y",
+  "uploader": "良酱",
+  "duration": 338,
+  "cover": "covers/bili-BV1px411c7W2-v2.jpg",
+  "shelf": "听歌",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1px411c7W2",
+    "title": "【初音ミク】From Y to Y",
+    "uploader": "良酱"
+   }
+  },
+  "name": "from Y to Y",
+  "sub": "ジミーサムP feat. 初音ミク"
+ },
+ {
+  "id": "bili-BV1px411c7FV",
+  "title": "【古川本舗】Alice【初音ミク】",
+  "uploader": "Arpeggio",
+  "duration": 273,
+  "cover": "covers/bili-BV1px411c7FV-v2.jpg",
+  "shelf": "听歌",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1px411c7FV",
+    "title": "【古川本舗】Alice【初音ミク】",
+    "uploader": "Arpeggio"
+   }
+  },
+  "name": "Alice",
+  "sub": "古川本舗 feat. 初音ミク"
+ },
+ {
+  "id": "bili-BV1Bx411c7Wc",
+  "title": "【初音ミク】SPiCa【PV】",
+  "uploader": "Arpeggio",
+  "duration": 217,
+  "cover": "covers/bili-BV1Bx411c7Wc-v2.jpg",
+  "shelf": "听歌",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1Bx411c7Wc",
+    "title": "【初音ミク】SPiCa【PV】",
+    "uploader": "Arpeggio"
+   }
+  },
+  "name": "SPiCa",
+  "sub": "とくP feat. 初音ミク"
+ },
+ {
+  "id": "bili-BV1px411c7z3",
+  "title": "【おどP】1／6【初音ミク】",
+  "uploader": "Arpeggio",
+  "duration": 267,
+  "cover": "covers/bili-BV1px411c7z3-v2.jpg",
+  "shelf": "听歌",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1px411c7z3",
+    "title": "【おどP】1／6【初音ミク】",
+    "uploader": "Arpeggio"
+   }
+  },
+  "name": "1/6 -out of the gravity-",
+  "sub": "ぼーかりおどP feat. 初音ミク"
+ },
+ {
   "id": "bili-BV1Ws41197fJ",
   "title": "初音ミクlivetune feat「Redial」Music Video",
   "uploader": "白衣渡江Official",

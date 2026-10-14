@@ -5,7 +5,7 @@
   shelf.py mv <id> <分类>                                   换分类
   shelf.py name <id> <显示名> [--sub 副标题]                改显示名（如番剧正式译名）；副标题顶替 UP 主那一行
   shelf.py tag <id> 标签 ...  [--rm]                        加 / 去标签
-  shelf.py cover <id> [图片URL]                              换封面（不给 URL 就只去黑边重裁）；文件名换版本号，躲开 30 天缓存
+  shelf.py cover <id> [图片URL] [--square]                              换封面（不给 URL 就只去黑边重裁）；文件名换版本号，躲开 30 天缓存
   shelf.py rm <id>                                          删条目
   shelf.py ls                                               列出
   shelf.py deploy                                           rsync 到服务器
@@ -104,8 +104,8 @@ def probe(url):
     }
 
 
-def tidy_cover(path):
-    """去掉四周纯黑的黑边（letterbox / pillarbox），再居中裁成 16:9、720 宽。"""
+def tidy_cover(path, square=False):
+    """去掉四周纯黑的黑边（letterbox / pillarbox），再居中裁成 16:9（720×405）或正方形（600×600，专辑封面）。"""
     from PIL import Image
     im = Image.open(path).convert("RGB")
     g = im.convert("L")
@@ -120,11 +120,12 @@ def tidy_cover(path):
     while r > w * 2 // 3 and dark_col(r): r -= 1
     im = im.crop((l, t, r + 1, b + 1))
     w, h = im.size
-    if w / h > 16 / 9:
-        nw = round(h * 16 / 9); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+    ratio = 1 if square else 16 / 9
+    if w / h > ratio:
+        nw = round(h * ratio); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
     else:
-        nh = round(w * 9 / 16); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
-    im.resize((720, 405), Image.LANCZOS).save(path, quality=86)
+        nh = round(w / ratio); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+    im.resize((600, 600) if square else (720, 405), Image.LANCZOS).save(path, quality=86)
 
 
 def fetch_cover(src, key):
@@ -217,7 +218,7 @@ def cmd_cover(a):
         new.write_bytes(urllib.request.urlopen(req, timeout=30).read())
     else:
         new.write_bytes(old.read_bytes())
-    tidy_cover(new)
+    tidy_cover(new, square=a.square)
     if old and old.exists() and old != new:
         old.unlink()
     it["cover"] = f"covers/{new.name}"
@@ -250,7 +251,7 @@ s = sub.add_parser("add"); s.add_argument("url"); s.add_argument("-s", default="
 s = sub.add_parser("tag"); s.add_argument("id"); s.add_argument("tags", nargs="+"); s.add_argument("--rm", action="store_true"); s.set_defaults(f=cmd_tag)
 s = sub.add_parser("mv"); s.add_argument("id"); s.add_argument("shelf"); s.set_defaults(f=cmd_mv)
 s = sub.add_parser("name"); s.add_argument("id"); s.add_argument("name"); s.add_argument("--sub"); s.set_defaults(f=cmd_name)
-s = sub.add_parser("cover"); s.add_argument("id"); s.add_argument("url", nargs="?"); s.set_defaults(f=cmd_cover)
+s = sub.add_parser("cover"); s.add_argument("id"); s.add_argument("url", nargs="?"); s.add_argument("--square", action="store_true"); s.set_defaults(f=cmd_cover)
 s = sub.add_parser("rm"); s.add_argument("id"); s.set_defaults(f=cmd_rm)
 s = sub.add_parser("ls"); s.set_defaults(f=cmd_ls)
 s = sub.add_parser("deploy"); s.set_defaults(f=cmd_deploy)
