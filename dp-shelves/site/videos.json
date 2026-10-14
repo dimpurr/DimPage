@@ -1,5 +1,67 @@
 [
  {
+  "id": "bili-BV1Ws41197fJ",
+  "title": "初音ミクlivetune feat「Redial」Music Video",
+  "uploader": "白衣渡江Official",
+  "duration": 311,
+  "cover": "covers/bili-BV1Ws41197fJ.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1Ws41197fJ",
+    "title": "初音ミクlivetune feat「Redial」Music Video",
+    "uploader": "白衣渡江Official"
+   },
+   "yt": {
+    "url": "https://www.youtube.com/watch?v=243vPl8HdVk",
+    "title": "livetune feat. 初音ミク「Redial」Music Video",
+    "uploader": "kz-livetune"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1px411N7Yk",
+  "title": "【ZYL】警察蜀黍!!!就是这个人!!!!",
+  "uploader": "Z.Y.L",
+  "duration": 155,
+  "cover": "covers/bili-BV1px411N7Yk-v2.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1px411N7Yk",
+    "title": "【ZYL】警察蜀黍!!!就是这个人!!!!",
+    "uploader": "Z.Y.L"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1xT4y1B7gg",
+  "title": "《绝区零》首曝PV | 世界全剧终，欢迎来到新艾利都！",
+  "uploader": "绝区零",
+  "duration": 0,
+  "cover": "covers/bili-BV1xT4y1B7gg.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "绝区零"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1xT4y1B7gg",
+    "title": "《绝区零》首曝PV | 世界全剧终，欢迎来到新艾利都！",
+    "uploader": "绝区零"
+   }
+  }
+ },
+ {
   "id": "bili-BV1eaPkzKEHc",
   "title": "【超时空辉夜姬/全日本上映】「Reply 」官方MV【中日双语】",
   "uploader": "糖心蛋字幕组",
