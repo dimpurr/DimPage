@@ -109,7 +109,7 @@
   "title": "【GUMI·镜音リン】LUVORATORRRRRY!【ギガP·れをる】",
   "uploader": "牛牛蝎羯",
   "duration": 0,
-  "cover": "covers/bili-BV13s411Z7sm.jpg",
+  "cover": "covers/bili-BV13s411Z7sm-v2.jpg",
   "shelf": "音乐",
   "tags": [
    "VOCALOID"
@@ -120,6 +120,11 @@
     "url": "https://www.bilibili.com/video/BV13s411Z7sm",
     "title": "【GUMI·镜音リン】LUVORATORRRRRY!【ギガP·れをる】",
     "uploader": "牛牛蝎羯"
+   },
+   "yt": {
+    "url": "https://www.youtube.com/watch?v=LHdlw9F3KP4",
+    "title": "【GUMI&RINオリジナル】LUVORATORRRRRY!【ボカラボ】",
+    "uploader": "Reol Official"
    }
   },
   "name": "LUVORATORRRRRY!",
