@@ -1,5 +1,43 @@
 [
  {
+  "id": "bili-BV1Dx411c7Q9",
+  "title": "【初音ミク】夢と葉桜",
+  "uploader": "舞乱春秋",
+  "duration": 253,
+  "cover": "covers/bili-BV1Dx411c7Q9.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1Dx411c7Q9",
+    "title": "【初音ミク】夢と葉桜",
+    "uploader": "舞乱春秋"
+   }
+  }
+ },
+ {
+  "id": "bili-BV1yE411i7Ch",
+  "title": "【初音未来】39みゅーじっく！ / 39music!【MV】",
+  "uploader": "初音未来_Crypton",
+  "duration": 266,
+  "cover": "covers/bili-BV1yE411i7Ch.jpg",
+  "shelf": "音乐",
+  "tags": [
+   "VOCALOID"
+  ],
+  "added": "2026-10-14",
+  "sources": {
+   "bili": {
+    "url": "https://www.bilibili.com/video/BV1yE411i7Ch",
+    "title": "【初音未来】39みゅーじっく！ / 39music!【MV】",
+    "uploader": "初音未来_Crypton"
+   }
+  }
+ },
+ {
   "id": "bili-BV1tUycYNEo5",
   "title": "《绝区零》柏妮思EP丨Burning Desires 绝望吧台",
   "uploader": "绝区零",
