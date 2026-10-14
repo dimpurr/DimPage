@@ -5,6 +5,7 @@
   shelf.py mv <id> <分类>                                   换分类
   shelf.py name <id> <显示名> [--sub 副标题]                改显示名（如番剧正式译名）；副标题顶替 UP 主那一行
   shelf.py tag <id> 标签 ...  [--rm]                        加 / 去标签
+  shelf.py cover <id> [图片URL]                              换封面（不给 URL 就只去黑边重裁）；文件名换版本号，躲开 30 天缓存
   shelf.py rm <id>                                          删条目
   shelf.py ls                                               列出
   shelf.py deploy                                           rsync 到服务器
@@ -103,6 +104,29 @@ def probe(url):
     }
 
 
+def tidy_cover(path):
+    """去掉四周纯黑的黑边（letterbox / pillarbox），再居中裁成 16:9、720 宽。"""
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    g = im.convert("L")
+    w, h = im.size
+    px = g.load()
+    def dark_row(y): return sum(px[x, y] for x in range(0, w, 4)) / len(range(0, w, 4)) < 14
+    def dark_col(x): return sum(px[x, y] for y in range(0, h, 4)) / len(range(0, h, 4)) < 14
+    t, b, l, r = 0, h - 1, 0, w - 1
+    while t < h // 3 and dark_row(t): t += 1
+    while b > h * 2 // 3 and dark_row(b): b -= 1
+    while l < w // 3 and dark_col(l): l += 1
+    while r > w * 2 // 3 and dark_col(r): r -= 1
+    im = im.crop((l, t, r + 1, b + 1))
+    w, h = im.size
+    if w / h > 16 / 9:
+        nw = round(h * 16 / 9); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+    else:
+        nh = round(w * 9 / 16); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+    im.resize((720, 405), Image.LANCZOS).save(path, quality=86)
+
+
 def fetch_cover(src, key):
     COVERS.mkdir(parents=True, exist_ok=True)
     dst = COVERS / f"{key}.jpg"
@@ -110,6 +134,7 @@ def fetch_cover(src, key):
     dst.write_bytes(urllib.request.urlopen(req, timeout=30).read())
     subprocess.run(["sips", "-s", "format", "jpeg", "-s", "formatOptions", "78", "--resampleWidth", "720",
                     str(dst), "--out", str(dst)], capture_output=True)
+    tidy_cover(dst)
     return f"covers/{dst.name}"
 
 
@@ -180,6 +205,26 @@ def cmd_name(a):
     print(it["id"], "→", a.name, "|", it.get("sub", ""))
 
 
+def cmd_cover(a):
+    items = load()
+    it = next((i for i in items if i["id"] == a.id), None) or sys.exit(f"没有 {a.id}")
+    old = SITE / it["cover"] if it.get("cover") else None
+    m = re.search(r"-v(\d+)$", old.stem) if old else None
+    n = int(m.group(1)) + 1 if m else 2
+    new = COVERS / f"{a.id}-v{n}.jpg"
+    if a.url:
+        req = urllib.request.Request(a.url, headers={"User-Agent": UA, "Referer": "https://www.bilibili.com/"})
+        new.write_bytes(urllib.request.urlopen(req, timeout=30).read())
+    else:
+        new.write_bytes(old.read_bytes())
+    tidy_cover(new)
+    if old and old.exists() and old != new:
+        old.unlink()
+    it["cover"] = f"covers/{new.name}"
+    save(items)
+    print(a.id, "→", it["cover"])
+
+
 def cmd_rm(a):
     items = load()
     keep = [i for i in items if i["id"] != a.id]
@@ -205,6 +250,7 @@ s = sub.add_parser("add"); s.add_argument("url"); s.add_argument("-s", default="
 s = sub.add_parser("tag"); s.add_argument("id"); s.add_argument("tags", nargs="+"); s.add_argument("--rm", action="store_true"); s.set_defaults(f=cmd_tag)
 s = sub.add_parser("mv"); s.add_argument("id"); s.add_argument("shelf"); s.set_defaults(f=cmd_mv)
 s = sub.add_parser("name"); s.add_argument("id"); s.add_argument("name"); s.add_argument("--sub"); s.set_defaults(f=cmd_name)
+s = sub.add_parser("cover"); s.add_argument("id"); s.add_argument("url", nargs="?"); s.set_defaults(f=cmd_cover)
 s = sub.add_parser("rm"); s.add_argument("id"); s.set_defaults(f=cmd_rm)
 s = sub.add_parser("ls"); s.set_defaults(f=cmd_ls)
 s = sub.add_parser("deploy"); s.set_defaults(f=cmd_deploy)
