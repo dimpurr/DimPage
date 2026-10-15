@@ -5,8 +5,10 @@
   "uploader": "机智帅气的一炫君",
   "duration": 0,
   "cover": "covers/bili-BV1wQKr63EXm.jpg",
-  "shelf": "特摄",
-  "tags": [],
+  "shelf": "动画",
+  "tags": [
+   "特摄"
+  ],
   "added": "2026-10-15",
   "sources": {
    "bili": {
