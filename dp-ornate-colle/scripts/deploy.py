@@ -15,7 +15,25 @@ Rules (see DimResearchS create/media/personal-page.md §部署与维护):
 """
 import base64, hashlib, io, os, re, subprocess, sys, tarfile
 
-HOST = "root@149.28.192.21"
+
+
+def env(key):
+    """The deploy host is not kept in this public repo: environment first, then chco .env.project (or $DIMPAGE_ENV)."""
+    if os.environ.get(key):
+        return os.environ[key]
+    home = os.path.expanduser("~")
+    files = [os.environ["DIMPAGE_ENV"]] if os.environ.get("DIMPAGE_ENV") else [
+        os.path.join(home, p, ".env.project") for p in
+        ("WorkflowUser/Code/Project/dimresearchcode", "WorkflowUser/Code/Personal/dimresearchcode", "Workflow/code/project/dimresearchcode")]
+    for f in files:
+        if os.path.exists(f):
+            m = re.search(rf"^{key}=(.*)$", open(f).read(), re.M)
+            if m:
+                return m.group(1).strip().strip('"')
+    sys.exit(f"missing {key}: set it in the environment or in chco .env.project")
+
+
+HOST = env("DIMPAGE_COLLE_HOST")  # user@host
 ROOT = "/var/www/im.dimpurrc.com"
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # dp-ornate-colle/
 

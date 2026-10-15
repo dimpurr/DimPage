@@ -8,10 +8,11 @@
   shelf.py cover <id> [图片URL] [--square]                              换封面（不给 URL 就只去黑边重裁）；文件名换版本号，躲开 30 天缓存
   shelf.py rm <id>                                          删条目
   shelf.py ls                                               列出
-  shelf.py deploy                                           rsync 到服务器
+  shelf.py check                                            自检（缺中文名、封面不对、标题残留分 P 号…）
+  shelf.py deploy                                           先 check，再 rsync 到服务器
 
 元数据靠 yt-dlp（B 站 API 直连会被风控），封面下到 site/covers/ 并用 sips 缩到 720 宽。
-数据真源 = site/videos.json（git 管）。
+数据真源 = site/videos.json（git 管）。流程与规范见 README.md，刻意设计见 BY-DESIGN.md。
 """
 import argparse, json, os, re, subprocess, sys, time, urllib.request
 from pathlib import Path
@@ -20,7 +21,22 @@ ROOT = Path(__file__).resolve().parent
 SITE = ROOT / "site"
 DATA = SITE / "videos.json"
 COVERS = SITE / "covers"
-REMOTE = os.environ.get("SHELF_REMOTE", "root@kafu.dimp.cloud:/var/www/shelves.dimpurrc.com/")
+SQUARE_SHELVES = {"听歌"}  # 和 index.html 的 SQUARE 保持一致
+ENV_FILES = [Path(os.environ["DIMPAGE_ENV"])] if os.environ.get("DIMPAGE_ENV") else [
+    Path.home() / p / ".env.project" for p in
+    ("WorkflowUser/Code/Project/dimresearchcode", "WorkflowUser/Code/Personal/dimresearchcode", "Workflow/code/project/dimresearchcode")]
+
+
+def env(key):
+    """主机入口不写进公开仓：先看环境变量，再看 chco .env.project（或 DIMPAGE_ENV 指的文件）。"""
+    if os.environ.get(key):
+        return os.environ[key]
+    for f in ENV_FILES:
+        if f.exists():
+            m = re.search(rf"^{key}=(.*)$", f.read_text(), re.M)
+            if m:
+                return m.group(1).strip().strip('"')
+    sys.exit(f"缺 {key}：设环境变量，或写进 chco .env.project（见 README「部署」）")
 
 
 def load():
@@ -40,7 +56,6 @@ def platform_of(url):
 
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
-KAHO = os.environ.get("SHELF_CN_HOST", "ubuntu@kaho.dimp.cloud")  # 国内机，B 站锁区的视频从这里查 API
 
 
 def resolve(url):
@@ -59,7 +74,8 @@ def bili_fallback(url):
     bv = re.search(r"BV[0-9A-Za-z]{10}", url)
     if bv:
         cmd = f"curl -s -A 'Mozilla/5.0' 'https://api.bilibili.com/x/web-interface/view?bvid={bv.group(0)}'"
-        out = subprocess.run(["ssh", "-o", "ConnectTimeout=10", KAHO, cmd], capture_output=True, text=True, timeout=60)
+        cn_host = env("DIMPAGE_SHELVES_CN_HOST")  # 国内机，B 站锁区的视频从这里查 API
+        out = subprocess.run(["ssh", "-o", "ConnectTimeout=10", cn_host, cmd], capture_output=True, text=True, timeout=60)
         v = json.loads(out.stdout)["data"]
         return {"id": v["bvid"], "webpage_url": f"https://www.bilibili.com/video/{v['bvid']}", "title": v["title"],
                 "uploader": v["owner"]["name"], "duration": 0 if v.get("videos", 1) > 1 else v["duration"],
@@ -177,6 +193,9 @@ def cmd_add(a):
             "sources": {info["platform"]: src},
         })
         print(f"新增 {vid}「{info['title']}」  平台标签参考：{', '.join(info['tags'][:8])}")
+        print(f"下一步：① 起名  shelf.py name {vid} \"<名>\" --sub \"<副标题>\"（番剧必填，规范见 README）"
+              f"\n        ② 看封面 site/covers/{vid}.jpg，糊 / 裁坏 / 不合适就 shelf.py cover {vid} <图URL>"
+              f"\n        ③ shelf.py deploy，然后在仓库根提交推送")
     save(items)
 
 
@@ -240,8 +259,56 @@ def cmd_ls(a):
         print(f"{i['id']:<22} {i.get('shelf', ''):<4} {'+'.join(i['sources']):<8} {' '.join('#'+t for t in i['tags']):<24} {i.get('name') or i['title']}")
 
 
+SHELVES = {"音乐", "番剧", "舞蹈", "听歌", "音乐剧"}  # 加新架先改这里和 README
+
+
+def check():
+    """返回 (errors, warnings)。errors 会挡住 deploy。"""
+    from PIL import Image, ImageFilter, ImageStat
+    items, errs, warns = load(), [], []
+    seen_ids, seen_urls = set(), set()
+    for it in items:
+        i = it["id"]
+        if i in seen_ids: errs.append(f"{i}：id 重复")
+        seen_ids.add(i)
+        for s in it["sources"].values():
+            if s["url"] in seen_urls: errs.append(f"{i}：链接和别的条目重复 {s['url']}")
+            seen_urls.add(s["url"])
+        if it.get("shelf") not in SHELVES: errs.append(f"{i}：未知分类「{it.get('shelf')}」")
+        if it.get("shelf") == "番剧" and not (it.get("name") and it.get("sub")):
+            errs.append(f"{i}：番剧要有中文规范名 + 副标题（shelf.py name）")
+        if re.search(r"\sp\d+\b", it.get("name") or it["title"]):
+            errs.append(f"{i}：标题残留分 P 号「{it.get('name') or it['title']}」")
+        cov = SITE / it.get("cover", "")
+        if not it.get("cover") or not cov.is_file():
+            errs.append(f"{i}：没有封面文件"); continue
+        im = Image.open(cov)
+        want = (600, 600) if it.get("shelf") in SQUARE_SHELVES else (720, 405)
+        if im.size != want:
+            errs.append(f"{i}：封面 {im.size[0]}×{im.size[1]}，应为 {want[0]}×{want[1]}（shelf.py cover {i} 重裁）")
+        elif ImageStat.Stat(im.convert("L").filter(ImageFilter.FIND_EDGES)).mean[0] < 3:
+            warns.append(f"{i}：封面细节很少（可能糊，也可能只是扁平画风），肉眼看一下 {it['cover']}")
+    used = {Path(it.get("cover", "")).name for it in items}
+    for f in COVERS.glob("*.jpg"):
+        if f.name not in used: warns.append(f"孤儿封面 {f.name}（可删）")
+    return errs, warns
+
+
+def cmd_check(a):
+    errs, warns = check()
+    for w in warns: print("⚠️ ", w)
+    for e in errs: print("❌", e)
+    print(f"{len(load())} 条：{len(errs)} 错 · {len(warns)} 提醒")
+    sys.exit(1 if errs else 0)
+
+
 def cmd_deploy(a):
-    subprocess.run(["rsync", "-az", "--delete", f"{SITE}/", REMOTE], check=True)
+    errs, warns = check()
+    for w in warns: print("⚠️ ", w)
+    if errs:
+        for e in errs: print("❌", e)
+        sys.exit("有错，先修再部署（shelf.py check 看全部）")
+    subprocess.run(["rsync", "-az", "--delete", f"{SITE}/", env("DIMPAGE_SHELVES_REMOTE")], check=True)
     print("已部署 → https://shelves.dimpurrc.com")
 
 
@@ -254,5 +321,6 @@ s = sub.add_parser("name"); s.add_argument("id"); s.add_argument("name"); s.add_
 s = sub.add_parser("cover"); s.add_argument("id"); s.add_argument("url", nargs="?"); s.add_argument("--square", action="store_true"); s.set_defaults(f=cmd_cover)
 s = sub.add_parser("rm"); s.add_argument("id"); s.set_defaults(f=cmd_rm)
 s = sub.add_parser("ls"); s.set_defaults(f=cmd_ls)
+s = sub.add_parser("check"); s.set_defaults(f=cmd_check)
 s = sub.add_parser("deploy"); s.set_defaults(f=cmd_deploy)
 a = p.parse_args(); a.f(a)
