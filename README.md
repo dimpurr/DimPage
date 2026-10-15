@@ -33,7 +33,7 @@
 | `dp-univer-2022/` | ≥2022 | 上一版 + 现实身份 + 国际版入口 |
 | `dp-ornate/` | 2026.03 | 单文件，CSS 内联，零 JS |
 | `dp-ornate-colle/` | 2026.08 | 现行版。在上一版基础上加了中英切换和一个收藏展示层（用过的设备 / 喜欢的角色），数据在 `data/` 里，跟页面分开放 |
-| `dp-shelves/` | 2026.10 | 不是主页，是旁支：喜欢的视频收藏架 <https://shelves.dimpurrc.com>。音乐 / 番剧 / 舞蹈 / 听歌 / 音乐剧分区、B 站 + YouTube 双源。流程与规范见 `dp-shelves/README.md`，刻意设计见 `BY-DESIGN.md` |
+| `dp-shelves/` | 2026.10 | 不是主页，是旁支：喜欢的视频收藏架 <https://shelves.dimpurrc.com>。音乐 / 番剧 / 舞蹈 / 听歌 / 音乐剧 / 漫画分区、B 站 + YouTube 双源。流程与规范见 `dp-shelves/README.md`，刻意设计见 `BY-DESIGN.md` |
 
 ## dimchen 谱系
 

@@ -2,10 +2,11 @@
 """dimshelves：喜欢的视频收藏架（https://shelves.dimpurrc.com）。
 
   shelf.py add <url> [-s 分类] [-t 标签 ...] [--into <id>] [--new]   加视频（分类默认「音乐」）；同一视频的 B 站 / YouTube 源自动合并
+  shelf.py book <id> <名> --sub 副标题 --cover 图片URL [-s 漫画] [-t 标签 ...]   加不链到任何地方的条目（漫画）
   shelf.py mv <id> <分类>                                   换分类
   shelf.py name <id> <显示名> [--sub 副标题]                改显示名（如番剧正式译名）；副标题顶替 UP 主那一行
   shelf.py tag <id> 标签 ...  [--rm]                        加 / 去标签
-  shelf.py cover <id> [图片URL] [--square]                              换封面（不给 URL 就只去黑边重裁）；文件名换版本号，躲开 30 天缓存
+  shelf.py cover <id> [图片URL]                             换封面（不给 URL 就只去黑边重裁）；比例按架定；文件名换版本号，躲开 30 天缓存
   shelf.py rm <id>                                          删条目
   shelf.py ls                                               列出
   shelf.py check                                            自检（缺中文名、封面不对、标题残留分 P 号…）
@@ -22,6 +23,12 @@ SITE = ROOT / "site"
 DATA = SITE / "videos.json"
 COVERS = SITE / "covers"
 SQUARE_SHELVES = {"听歌"}  # 和 index.html 的 SQUARE 保持一致
+PORTRAIT_SHELVES = {"漫画"}  # 和 index.html 的 PORTRAIT 保持一致；书封竖版 2:3
+SIZES = {"wide": (720, 405), "square": (600, 600), "portrait": (400, 600)}
+
+
+def shape_of(shelf):
+    return "square" if shelf in SQUARE_SHELVES else "portrait" if shelf in PORTRAIT_SHELVES else "wide"
 ENV_FILES = [Path(os.environ["DIMPAGE_ENV"])] if os.environ.get("DIMPAGE_ENV") else [
     Path.home() / p / ".env.project" for p in
     ("WorkflowUser/Code/Project/dimresearchcode", "WorkflowUser/Code/Personal/dimresearchcode", "Workflow/code/project/dimresearchcode")]
@@ -120,8 +127,8 @@ def probe(url):
     }
 
 
-def tidy_cover(path, square=False):
-    """去掉四周纯黑的黑边（letterbox / pillarbox），再居中裁成 16:9（720×405）或正方形（600×600，专辑封面）。"""
+def tidy_cover(path, shape="wide"):
+    """去掉四周纯黑的黑边（letterbox / pillarbox），再居中裁成 SIZES[shape]：16:9 / 方形专辑 / 竖版书封。"""
     from PIL import Image
     im = Image.open(path).convert("RGB")
     g = im.convert("L")
@@ -136,22 +143,23 @@ def tidy_cover(path, square=False):
     while r > w * 2 // 3 and dark_col(r): r -= 1
     im = im.crop((l, t, r + 1, b + 1))
     w, h = im.size
-    ratio = 1 if square else 16 / 9
+    W, H = SIZES[shape]
+    ratio = W / H
     if w / h > ratio:
         nw = round(h * ratio); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
     else:
         nh = round(w / ratio); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
-    im.resize((600, 600) if square else (720, 405), Image.LANCZOS).save(path, quality=86)
+    im.resize((W, H), Image.LANCZOS).save(path, quality=86)
 
 
-def fetch_cover(src, key):
+def fetch_cover(src, key, shape="wide"):
     COVERS.mkdir(parents=True, exist_ok=True)
     dst = COVERS / f"{key}.jpg"
     req = urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/"})
     dst.write_bytes(urllib.request.urlopen(req, timeout=30).read())
     subprocess.run(["sips", "-s", "format", "jpeg", "-s", "formatOptions", "78", "--resampleWidth", "720",
                     str(dst), "--out", str(dst)], capture_output=True)
-    tidy_cover(dst)
+    tidy_cover(dst, shape)
     return f"covers/{dst.name}"
 
 
@@ -188,7 +196,7 @@ def cmd_add(a):
         vid = f"{info['platform']}-{info['vid']}"
         items.insert(0, {
             "id": vid, "title": info["title"], "uploader": info["uploader"], "duration": info["duration"],
-            "cover": fetch_cover(info["thumbnail"], vid) if info["thumbnail"] else "",
+            "cover": fetch_cover(info["thumbnail"], vid, shape_of(a.s)) if info["thumbnail"] else "",
             "shelf": a.s, "tags": sorted(set(a.t or [])), "added": time.strftime("%Y-%m-%d"),
             "sources": {info["platform"]: src},
         })
@@ -197,6 +205,20 @@ def cmd_add(a):
               f"\n        ② 看封面 site/covers/{vid}.jpg，糊 / 裁坏 / 不合适就 shelf.py cover {vid} <图URL>"
               f"\n        ③ shelf.py deploy，然后在仓库根提交推送")
     save(items)
+
+
+def cmd_book(a):
+    """没有视频、也不链到任何地方的条目（漫画）：只有名字、副标题、封面。"""
+    items = load()
+    if any(i["id"] == a.id for i in items):
+        sys.exit(f"已有 {a.id}")
+    items.insert(0, {
+        "id": a.id, "title": a.name, "name": a.name, "sub": a.sub, "uploader": "", "duration": 0,
+        "cover": fetch_cover(a.cover, a.id, shape_of(a.s)), "shelf": a.s, "tags": sorted(set(a.t or [])),
+        "added": time.strftime("%Y-%m-%d"), "sources": {},
+    })
+    save(items)
+    print(f"新增 {a.id}「{a.name}」；看封面 site/covers/{a.id}.jpg，然后 shelf.py deploy 并提交推送")
 
 
 def cmd_tag(a):
@@ -237,7 +259,7 @@ def cmd_cover(a):
         new.write_bytes(urllib.request.urlopen(req, timeout=30).read())
     else:
         new.write_bytes(old.read_bytes())
-    tidy_cover(new, square=a.square)
+    tidy_cover(new, shape_of(it.get("shelf")))
     if old and old.exists() and old != new:
         old.unlink()
     it["cover"] = f"covers/{new.name}"
@@ -259,7 +281,7 @@ def cmd_ls(a):
         print(f"{i['id']:<22} {i.get('shelf', ''):<4} {'+'.join(i['sources']):<8} {' '.join('#'+t for t in i['tags']):<24} {i.get('name') or i['title']}")
 
 
-SHELVES = {"音乐", "番剧", "舞蹈", "听歌", "音乐剧"}  # 加新架先改这里和 README
+SHELVES = {"音乐", "番剧", "舞蹈", "听歌", "音乐剧", "漫画"}  # 加新架先改这里和 README
 
 
 def check():
@@ -275,15 +297,15 @@ def check():
             if s["url"] in seen_urls: errs.append(f"{i}：链接和别的条目重复 {s['url']}")
             seen_urls.add(s["url"])
         if it.get("shelf") not in SHELVES: errs.append(f"{i}：未知分类「{it.get('shelf')}」")
-        if it.get("shelf") == "番剧" and not (it.get("name") and it.get("sub")):
-            errs.append(f"{i}：番剧要有中文规范名 + 副标题（shelf.py name）")
+        if it.get("shelf") in ("番剧", "漫画") and not (it.get("name") and it.get("sub")):
+            errs.append(f"{i}：{it['shelf']}要有中文规范名 + 副标题（shelf.py name）")
         if re.search(r"\sp\d+\b", it.get("name") or it["title"]):
             errs.append(f"{i}：标题残留分 P 号「{it.get('name') or it['title']}」")
         cov = SITE / it.get("cover", "")
         if not it.get("cover") or not cov.is_file():
             errs.append(f"{i}：没有封面文件"); continue
         im = Image.open(cov)
-        want = (600, 600) if it.get("shelf") in SQUARE_SHELVES else (720, 405)
+        want = SIZES[shape_of(it.get("shelf"))]
         if im.size != want:
             errs.append(f"{i}：封面 {im.size[0]}×{im.size[1]}，应为 {want[0]}×{want[1]}（shelf.py cover {i} 重裁）")
         elif ImageStat.Stat(im.convert("L").filter(ImageFilter.FIND_EDGES)).mean[0] < 3:
@@ -315,10 +337,11 @@ def cmd_deploy(a):
 p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 sub = p.add_subparsers(dest="cmd", required=True)
 s = sub.add_parser("add"); s.add_argument("url"); s.add_argument("-s", default="音乐"); s.add_argument("-t", nargs="*"); s.add_argument("--into"); s.add_argument("--new", action="store_true"); s.set_defaults(f=cmd_add)
+s = sub.add_parser("book"); s.add_argument("id"); s.add_argument("name"); s.add_argument("--sub", required=True); s.add_argument("--cover", required=True); s.add_argument("-s", default="漫画"); s.add_argument("-t", nargs="*"); s.set_defaults(f=cmd_book)
 s = sub.add_parser("tag"); s.add_argument("id"); s.add_argument("tags", nargs="+"); s.add_argument("--rm", action="store_true"); s.set_defaults(f=cmd_tag)
 s = sub.add_parser("mv"); s.add_argument("id"); s.add_argument("shelf"); s.set_defaults(f=cmd_mv)
 s = sub.add_parser("name"); s.add_argument("id"); s.add_argument("name"); s.add_argument("--sub"); s.set_defaults(f=cmd_name)
-s = sub.add_parser("cover"); s.add_argument("id"); s.add_argument("url", nargs="?"); s.add_argument("--square", action="store_true"); s.set_defaults(f=cmd_cover)
+s = sub.add_parser("cover"); s.add_argument("id"); s.add_argument("url", nargs="?"); s.add_argument("--square", action="store_true", help="已无用：比例按架自动定"); s.set_defaults(f=cmd_cover)
 s = sub.add_parser("rm"); s.add_argument("id"); s.set_defaults(f=cmd_rm)
 s = sub.add_parser("ls"); s.set_defaults(f=cmd_ls)
 s = sub.add_parser("check"); s.set_defaults(f=cmd_check)

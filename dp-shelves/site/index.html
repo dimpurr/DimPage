@@ -66,6 +66,9 @@ h1 button.on{color:var(--ink)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:38px 26px}
 .grid.square{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:30px 22px}
 .grid.square .art{aspect-ratio:1/1;border-radius:10px}
+.grid.portrait{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:30px 22px}
+.grid.portrait .art{aspect-ratio:2/3;border-radius:8px}
+div.art.still{cursor:default}
 .item{min-width:0}
 .art{position:relative;display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;cursor:pointer;
   box-shadow:var(--shadow);background:var(--accent-soft);
@@ -97,7 +100,7 @@ h1 button.on{color:var(--ink)}
 .s em{font-style:normal;color:var(--ink3)}
 .empty{color:var(--ink2);padding:80px 0;text-align:center}
 footer{color:var(--ink3);font-size:12px;text-align:center;padding:30px 0 50px}
-@media (max-width:560px){.grid,.grid.square{grid-template-columns:1fr 1fr;gap:26px 14px}.t{font-size:13.5px}.s{font-size:12px}.top .brand{display:none}#q{width:100%}}
+@media (max-width:560px){.grid,.grid.square,.grid.portrait{grid-template-columns:1fr 1fr;gap:26px 14px}.t{font-size:13.5px}.s{font-size:12px}.top .brand{display:none}#q{width:100%}}
 </style>
 </head>
 <body>
@@ -119,13 +122,16 @@ const NAMES = {bili: "哔哩哔哩", yt: "YouTube"};
 let items = [], active = null, shelf = decodeURIComponent(location.hash.slice(1)) || null;
 const SHELF = i => i.shelf || "音乐";
 const SQUARE = new Set(["听歌"]);  // 几乎没画面的歌：按专辑方块显示
+const PORTRAIT = new Set(["漫画"]);  // 书：竖版封面，不链到任何地方
+const UNIT = s => SQUARE.has(s) ? "首" : PORTRAIT.has(s) ? "部" : "个视频";
 const inShelf = () => items.filter(i => SHELF(i) === shelf);
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmt = s => s ? `${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}` : "";
 
 function renderShelves(){
-  const names = [...new Set(items.map(SHELF))];
+  const ORDER = ["音乐", "番剧", "舞蹈", "听歌", "音乐剧", "漫画"];  // 固定顺序，别按最近加的条目漂移
+  const names = [...new Set(items.map(SHELF))].sort((x, y) => (ORDER.indexOf(x)+1 || 99) - (ORDER.indexOf(y)+1 || 99));
   if (!names.includes(shelf)) shelf = names[0];
   $("#shelves").innerHTML = names.map(n => `<button class="${n===shelf?"on":""}" data-shelf="${esc(n)}">${esc(n)}</button>`).join("");
 }
@@ -140,14 +146,17 @@ function render(){
   const q = $("#q").value.trim().toLowerCase();
   const list = inShelf().filter(i => (!active || i.tags.includes(active)) &&
     (!q || (i.title+" "+(i.name||"")+" "+(i.sub||"")+" "+i.uploader+" "+i.tags.join(" ")+" "+Object.values(i.sources).map(s=>s.title+" "+s.uploader).join(" ")).toLowerCase().includes(q)));
-  $("#count").textContent = `${inShelf().length} ${SQUARE.has(shelf) ? "首" : "个视频"}`;
+  $("#count").textContent = `${inShelf().length} ${UNIT(shelf)}`;
   $("#grid").classList.toggle("square", SQUARE.has(shelf));
+  $("#grid").classList.toggle("portrait", PORTRAIT.has(shelf));
   $("#empty").hidden = list.length > 0;
   $("#grid").innerHTML = list.map(i => {
     const src = Object.entries(i.sources);
     const one = src.length === 1;
-    const inner = `${i.cover ? `<img loading="lazy" src="${esc(i.cover)}" alt="">` : ""}<span class="play"></span>`;
-    const art = one
+    const img = i.cover ? `<img loading="lazy" src="${esc(i.cover)}" alt="">` : "";
+    const inner = `${img}<span class="play"></span>`;
+    const art = !src.length ? `<div class="art still">${img}</div>`
+      : one
       ? `<a class="art" href="${esc(src[0][1].url)}" target="_blank" rel="noopener">${inner}</a>`
       : `<div class="art" role="button" tabindex="0" data-multi="${esc(i.id)}">${inner}</div>`;
     return `<div class="item">
